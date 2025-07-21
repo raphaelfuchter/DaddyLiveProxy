@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv>
-  <channel id="ch.MATCHPremierRussia">
-    <display-name>MATCH! Premier Russia</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-premier-ru.png" />
-  </channel>
-  <channel id="ch.MATCHTVRussia">
-    <display-name>MATCH TV Russia</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-ru.png" />
-  </channel>
-  <channel id="ch.TVPSportPoland">
-    <display-name>TVP Sport Poland</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp-sport-pl.png" />
-  </channel>
-  <channel id="ch.maxExtra1Sweden">
-    <display-name>max Extra 1 Sweden</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
-  </channel>
-  <channel id="ch.maxExtra2Sweden">
-    <display-name>max Extra 2 Sweden</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
-  </channel>
-  <channel id="ch.maxExtra3Sweden">
-    <display-name>max Extra 3 Sweden</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
-  </channel>
   <channel id="ch.Arena1PremiumSerbia">
     <display-name>Arena 1 Premium Serbia</display-name>
     <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-1-premium-rs.png" />
@@ -54,11 +30,11 @@
   </channel>
   <channel id="ch.SD-8176694">
     <display-name>SD-8176694</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.TVIPortugal">
     <display-name>TVI Portugal</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.FoxDeportes">
     <display-name>Fox Deportes</display-name>
@@ -78,7 +54,7 @@
   </channel>
   <channel id="ch.ESPN2Mexico">
     <display-name>ESPN2 Mexico</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.SportingTVPortugal">
     <display-name>Sporting TV Portugal</display-name>
@@ -98,7 +74,7 @@
   </channel>
   <channel id="ch.SD-8266978">
     <display-name>SD-8266978</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.TyCSportsArgentina">
     <display-name>TyC Sports Argentina</display-name>
@@ -106,7 +82,7 @@
   </channel>
   <channel id="ch.ESPNArgentina">
     <display-name>ESPN Argentina</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.FoxSports1USA">
     <display-name>Fox Sports 1 USA</display-name>
@@ -126,7 +102,7 @@
   </channel>
   <channel id="ch.DIRECTVSportsArgentina">
     <display-name>DIRECTV Sports Argentina</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.Sport2Israel">
     <display-name>Sport 2 Israel</display-name>
@@ -163,10 +139,6 @@
   <channel id="ch.CBSNYUSA">
     <display-name>CBSNY USA</display-name>
     <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sny-us.png" />
-  </channel>
-  <channel id="ch.PBSUSA">
-    <display-name>PBS USA</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/pbs-us.png" />
   </channel>
   <channel id="ch.NICKUSA">
     <display-name>NICK USA</display-name>
@@ -294,35 +266,15 @@
   </channel>
   <channel id="ch.TennisStream8">
     <display-name>Tennis Stream 8</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8298774">
-    <display-name>SD-8298774</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8298723">
-    <display-name>SD-8298723</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8298729">
-    <display-name>SD-8298729</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8303312">
     <display-name>SD-8303312</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8308682">
     <display-name>SD-8308682</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.TNTSports2UK">
-    <display-name>TNT Sports 2 UK</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-2-uk.png" />
-  </channel>
-  <channel id="ch.SkySport4NZ">
-    <display-name>Sky Sport 4 NZ</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-4-nz.png" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.DAZN2DE">
     <display-name>DAZN2 DE</display-name>
@@ -330,110 +282,24 @@
   </channel>
   <channel id="ch.SkySportsActionUKCH-37SkySportsMainEvent">
     <display-name>Sky Sports Action UK (CH-37) } Sky Sports Main Event</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png?raw=true" />
   </channel>
   <channel id="ch.TV3SportDenmark">
     <display-name>TV3 Sport Denmark</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png?raw=true" />
   </channel>
   <channel id="ch.SkySport3NZ">
     <display-name>Sky Sport 3 NZ</display-name>
     <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-3-nz.png" />
   </channel>
-  <channel id="ch.TNTSports4UK">
-    <display-name>TNT Sports 4 UK</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-4-uk.png" />
+  <channel id="ch.SkySportsActionUK">
+    <display-name>Sky Sports Action UK</display-name>
+    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-action-uk.png" />
   </channel>
-  <channel id="ch.EuroSport1Poland">
-    <display-name>EuroSport 1 Poland</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/eurosport-1-ro.png" />
+  <channel id="ch.SkySportsMainEvent">
+    <display-name>Sky Sports Main Event</display-name>
+    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-main-event-uk.png" />
   </channel>
-  <channel id="ch.EuroSport1Spain">
-    <display-name>EuroSport 1 Spain</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/india/eurosport-in.png" />
-  </channel>
-  <channel id="ch.EuroSport1France">
-    <display-name>EuroSport 1 France</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/eurosport-1-fr.png" />
-  </channel>
-  <channel id="ch.Eurosport1SE">
-    <display-name>Eurosport 1 SE</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-1-rs.png" />
-  </channel>
-  <channel id="ch.EuroSport1Italy">
-    <display-name>EuroSport 1 Italy</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/netherlands/eurosport-1-nl.png" />
-  </channel>
-  <channel id="ch.EuroSport1Greece">
-    <display-name>EuroSport 1 Greece</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-1-rs.png" />
-  </channel>
-  <programme start="20250720030000 +0000" stop="20250721163000 +0000" channel="ch.MATCHPremierRussia">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721163000 +0000" stop="20250721183000 +0000" channel="ch.MATCHPremierRussia">
-    <title lang="pt">MATCH! Premier Russia</title>
-    <desc lang="pt">Russia - FNL : Rodina Moskva vs Chernomorets</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721183000 +0000" stop="20250723030000 +0000" channel="ch.MATCHPremierRussia">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721163000 +0000" channel="ch.MATCHTVRussia">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721163000 +0000" stop="20250721183000 +0000" channel="ch.MATCHTVRussia">
-    <title lang="pt">MATCH TV Russia</title>
-    <desc lang="pt">Russia - FNL : Rodina Moskva vs Chernomorets</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721183000 +0000" stop="20250723030000 +0000" channel="ch.MATCHTVRussia">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.TVPSportPoland">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.TVPSportPoland">
-    <title lang="pt">TVP Sport Poland</title>
-    <desc lang="pt">Poland - I Liga : Puszcza Niepołomice vs Ruch Chorzów</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.TVPSportPoland">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.maxExtra1Sweden">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.maxExtra1Sweden">
-    <title lang="pt">max Extra 1 Sweden</title>
-    <desc lang="pt">Sweden - Allsvenskan : Norrköping vs Värnamo</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.maxExtra1Sweden">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.maxExtra2Sweden">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.maxExtra2Sweden">
-    <title lang="pt">max Extra 2 Sweden</title>
-    <desc lang="pt">Sweden - Superettan : Landskrona vs Trelleborg FF</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.maxExtra2Sweden">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.maxExtra3Sweden">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.maxExtra3Sweden">
-    <title lang="pt">max Extra 3 Sweden</title>
-    <desc lang="pt">Sweden - Superettan : Utsikten vs Helsingborg</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.maxExtra3Sweden">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
   <programme start="20250720030000 +0000" stop="20250721180000 +0000" channel="ch.Arena1PremiumSerbia">
     <title lang="pt">Evento não iniciado</title>
   </programme>
@@ -861,28 +727,6 @@
     <category lang="pt">Automobilismo</category>
   </programme>
   <programme start="20250721233000 +0000" stop="20250723030000 +0000" channel="ch.truTVUSA">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721163000 +0000" channel="ch.CBSNYUSA">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721163000 +0000" stop="20250721183000 +0000" channel="ch.CBSNYUSA">
-    <title lang="pt">CBSNY USA</title>
-    <desc lang="pt">The Young and the Restless Season 52, Episode 200</desc>
-    <category lang="pt">Programas de TV</category>
-  </programme>
-  <programme start="20250721183000 +0000" stop="20250723030000 +0000" channel="ch.CBSNYUSA">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721163000 +0000" channel="ch.PBSUSA">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721163000 +0000" stop="20250721183000 +0000" channel="ch.PBSUSA">
-    <title lang="pt">PBS USA</title>
-    <desc lang="pt">Molly of Denali Season 4, Episode 15</desc>
-    <category lang="pt">Programas de TV</category>
-  </programme>
-  <programme start="20250721183000 +0000" stop="20250723030000 +0000" channel="ch.PBSUSA">
     <title lang="pt">Evento finalizado</title>
   </programme>
   <programme start="20250720030000 +0000" stop="20250721180000 +0000" channel="ch.CBSNYUSA">
@@ -1347,39 +1191,6 @@
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.TennisStream8">
     <title lang="pt">Evento finalizado</title>
   </programme>
-  <programme start="20250720030000 +0000" stop="20250721165000 +0000" channel="ch.SD-8298774">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721165000 +0000" stop="20250721185000 +0000" channel="ch.SD-8298774">
-    <title lang="pt">SD-8298774</title>
-    <desc lang="pt">ATP - Umag (CRO) - Double : M.Dodig/N.Serdarusic vs R.Arneodo/M.Guinard</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721185000 +0000" stop="20250723030000 +0000" channel="ch.SD-8298774">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721165000 +0000" channel="ch.SD-8298723">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721165000 +0000" stop="20250721185000 +0000" channel="ch.SD-8298723">
-    <title lang="pt">SD-8298723</title>
-    <desc lang="pt">ATP - Umag (CRO) : Roberto Carballes Baena vs Nikoloz Basilashvili</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721185000 +0000" stop="20250723030000 +0000" channel="ch.SD-8298723">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721165000 +0000" channel="ch.SD-8298729">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721165000 +0000" stop="20250721185000 +0000" channel="ch.SD-8298729">
-    <title lang="pt">SD-8298729</title>
-    <desc lang="pt">ATP - Umag (CRO) : Tomas Barrios Vera vs Mariano Navone</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721185000 +0000" stop="20250723030000 +0000" channel="ch.SD-8298729">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
   <programme start="20250720030000 +0000" stop="20250721181500 +0000" channel="ch.SD-8303312">
     <title lang="pt">Evento não iniciado</title>
   </programme>
@@ -1400,28 +1211,6 @@
     <category lang="pt">Tênis</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SD-8308682">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.TNTSports2UK">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.TNTSports2UK">
-    <title lang="pt">TNT Sports 2 UK</title>
-    <desc lang="pt">Ultimate Pool Pairs Cup | Mixed | Group Stage</desc>
-    <category lang="pt">Sinuca</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.TNTSports2UK">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.SkySport4NZ">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.SkySport4NZ">
-    <title lang="pt">Sky Sport 4 NZ</title>
-    <desc lang="pt">Ultimate Pool Pairs Cup | Mixed | Group Stage</desc>
-    <category lang="pt">Sinuca</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.SkySport4NZ">
     <title lang="pt">Evento finalizado</title>
   </programme>
   <programme start="20250720030000 +0000" stop="20250721180000 +0000" channel="ch.VodafoneSport">
@@ -1501,15 +1290,26 @@
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.DAZN2DE">
     <title lang="pt">Evento finalizado</title>
   </programme>
-  <programme start="20250720030000 +0000" stop="20250721190000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
+  <programme start="20250720030000 +0000" stop="20250721190000 +0000" channel="ch.SkySportsActionUK">
     <title lang="pt">Evento não iniciado</title>
   </programme>
-  <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
-    <title lang="pt">Sky Sports Action UK (CH-37) } Sky Sports Main Event</title>
+  <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SkySportsActionUK">
+    <title lang="pt">Sky Sports Action UK</title>
     <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
     <category lang="pt">Darts</category>
   </programme>
-  <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
+  <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsActionUK">
+    <title lang="pt">Evento finalizado</title>
+  </programme>
+  <programme start="20250720030000 +0000" stop="20250721190000 +0000" channel="ch.SkySportsMainEvent">
+    <title lang="pt">Evento não iniciado</title>
+  </programme>
+  <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SkySportsMainEvent">
+    <title lang="pt">Sky Sports Main Event</title>
+    <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
+    <category lang="pt">Darts</category>
+  </programme>
+  <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsMainEvent">
     <title lang="pt">Evento finalizado</title>
   </programme>
   <programme start="20250720030000 +0000" stop="20250721190000 +0000" channel="ch.TV3SportDenmark">
@@ -1642,94 +1442,6 @@
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.SkySport3NZ">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.TNTSports4UK">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.TNTSports4UK">
-    <title lang="pt">TNT Sports 4 UK</title>
-    <desc lang="pt">FISU Summer World University Games - Rhine-Ruhr: Swimming Day 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.TNTSports4UK">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.EuroSport1Poland">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.EuroSport1Poland">
-    <title lang="pt">EuroSport 1 Poland</title>
-    <desc lang="pt">World University Games Rhine-Ruhr | Matchday 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.EuroSport1Poland">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.EuroSport1Spain">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.EuroSport1Spain">
-    <title lang="pt">EuroSport 1 Spain</title>
-    <desc lang="pt">World University Games Rhine-Ruhr | Matchday 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.EuroSport1Spain">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.EuroSport1France">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.EuroSport1France">
-    <title lang="pt">EuroSport 1 France</title>
-    <desc lang="pt">World University Games Rhine-Ruhr | Matchday 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.EuroSport1France">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.Eurosport1SE">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.Eurosport1SE">
-    <title lang="pt">Eurosport 1 SE</title>
-    <desc lang="pt">World University Games Rhine-Ruhr | Matchday 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.Eurosport1SE">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.EuroSport1Italy">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.EuroSport1Italy">
-    <title lang="pt">EuroSport 1 Italy</title>
-    <desc lang="pt">World University Games Rhine-Ruhr | Matchday 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.EuroSport1Italy">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.EuroSport1France">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.EuroSport1France">
-    <title lang="pt">EuroSport 1 France</title>
-    <desc lang="pt">World University Games Rhine-Ruhr | Matchday 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.EuroSport1France">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.EuroSport1Greece">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721170000 +0000" stop="20250721190000 +0000" channel="ch.EuroSport1Greece">
-    <title lang="pt">EuroSport 1 Greece</title>
-    <desc lang="pt">World University Games Rhine-Ruhr | Matchday 5</desc>
-    <category lang="pt">Water Sports</category>
-  </programme>
-  <programme start="20250721190000 +0000" stop="20250723030000 +0000" channel="ch.EuroSport1Greece">
     <title lang="pt">Evento finalizado</title>
   </programme>
 </tv>

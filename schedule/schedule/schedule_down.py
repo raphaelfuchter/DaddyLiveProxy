@@ -19,8 +19,9 @@ import unicodedata
 
 # --- Configuração ---
 SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
-M3U8_OUTPUT_FILENAME = "../server/playlist/schedule_playlist.m3u8"
-EPG_OUTPUT_FILENAME = "../server/playlist/epg.xml"
+# Saída em pastas dedicadas para facilitar o mapeamento com Docker
+M3U8_OUTPUT_FILENAME = "output/schedule_playlist.m3u8"
+EPG_OUTPUT_FILENAME = "output/epg.xml"
 EPG_EVENT_DURATION_HOURS = 2
 GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Programas de TV", "Beisebol", "Tênis"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 1
@@ -33,31 +34,32 @@ GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countri
 LOGO_CACHE_FILE = "cache/logo_cache.json"
 LOGO_CACHE_EXPIRATION_HOURS = 48
 
-DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png?raw=true"
+# --- URLs dos Ícones - VERSÃO FINAL COM NOMES DE ARQUIVO CORRETOS ---
+DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png"
 
 SPORT_ICON_MAP = {
-    "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true",
-    "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/basketball.png?raw=true",
-    "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/americanfootball.png?raw=true",
-    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/motorsport.png?raw=true",
-    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/tv.png?raw=true",
-    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true",
-    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/hockey.png?raw=true",
-    "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png?raw=true",
+    "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png",
+    "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/basketball.png",
+    "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/americanfootball.png",
+    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/motorsport.png",
+    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/tv.png",
+    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png",
+    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/hockey.png",
+    "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png",
 }
+
 SPORT_TRANSLATION_MAP = {
-    "Soccer": "Futebol", 
-    "Basketball": "Basquete", 
+    "Soccer": "Futebol",
+    "Basketball": "Basquete",
     "Am. Football": "Futebol Americano",
-    "Tennis": "Tênis", 
-    "Motorsport": "Automobilismo", 
+    "Tennis": "Tênis",
+    "Motorsport": "Automobilismo",
     "Snooker": "Sinuca",
-    "Ice Hockey": "Hóquei no Gelo", 
+    "Ice Hockey": "Hóquei no Gelo",
     "Baseball": "Beisebol",
     "TV Shows": "Programas de TV",
-    "Cricket": "Críquete", 
-    "Tennis": "Tênis", 
-    "WWE": "Luta Livre", 
+    "Cricket": "Críquete",
+    "WWE": "Luta Livre",
     "Badminton": "Badminton"
 }
 # --- Fim da Configuração ---
@@ -103,7 +105,7 @@ def find_best_logo_url(source_name: str, logo_cache: dict, sport_icon: str) -> s
     if not logo_cache or not source_name: return sport_icon
     normalized_source = normalize_text(source_name)
     if not hasattr(find_best_logo_url, "normalized_keys"):
-         find_best_logo_url.normalized_keys = {normalize_text(k): k for k in logo_cache.keys()}
+       find_best_logo_url.normalized_keys = {normalize_text(k): k for k in logo_cache.keys()}
     normalized_keys = find_best_logo_url.normalized_keys
     best_match = difflib.get_close_matches(normalized_source, normalized_keys.keys(), n=1, cutoff=0.7)
     if best_match:
@@ -121,6 +123,30 @@ def parse_date_from_key(date_key: str) -> datetime.date:
     except ValueError:
         print(f"AVISO: Não foi possível parsear a data '{date_key}'. Usando data de hoje como fallback.")
         return datetime.now().date()
+
+def reformat_event_name(original_name: str) -> str:
+    """
+    Reformata o nome do evento de 'Liga : Jogo (Canal)' para 'Jogo : Liga'.
+    """
+    try:
+        # Divide a string no primeiro ':' para separar a liga do resto
+        league_part, match_part_full = original_name.split(':', 1)
+        
+        # Remove a informação do canal, que geralmente está entre parênteses
+        if '(' in match_part_full:
+            match_part = match_part_full.split('(', 1)[0]
+        else:
+            match_part = match_part_full
+
+        # Remove espaços em branco extras das partes
+        league_part = league_part.strip()
+        match_part = match_part.strip()
+        
+        # Retorna a string no novo formato
+        return f"{match_part} : {league_part}"
+    except (ValueError, IndexError):
+        # Se a string não tiver o formato esperado (ex: sem ':'), retorna o nome original
+        return original_name
 
 def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache: dict) -> list:
     print(f"Navegando para: {url} com o Selenium...")
@@ -180,7 +206,7 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                             stream_list.append({
                                 'id': channel_id,
                                 'stream_url': f"{base_url}/stream/{channel_id}.m3u8",
-                                'event_name': event['event'],
+                                'event_name': reformat_event_name(event['event']),
                                 'sport': translated_sport,
                                 'source_name': channel_name,
                                 'start_timestamp_ms': str(start_timestamp_ms),
@@ -257,12 +283,12 @@ def generate_xmltv_epg(stream_list: list) -> str:
                 xml_lines.append('    <title lang="pt">Evento não iniciado</title>')
                 xml_lines.append('  </programme>')
 
-            # Bloco 2: O evento real --- *** A CORREÇÃO ESTÁ AQUI *** ---
+            # Bloco 2: O evento real
             start_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
             stop_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
             xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
-            xml_lines.append(f'    <title lang="pt">{html.escape(stream["source_name"])}</title>')
-            xml_lines.append(f'    <desc lang="pt">{html.escape(stream["event_name"])}</desc>')
+            xml_lines.append(f'    <title lang="pt">{html.escape(stream["event_name"])}</title>')
+            xml_lines.append(f'    <desc lang="pt">{html.escape(stream["source_name"])}</desc>')
             xml_lines.append(f'    <category lang="pt">{html.escape(stream["sport"])}</category>')
             xml_lines.append('  </programme>')
 
@@ -282,7 +308,7 @@ def generate_xmltv_epg(stream_list: list) -> str:
     return "\n".join(xml_lines)
 
 def main():
-    print("--- Gerador de Playlist e EPG (v80 - Título EPG Corrigido) ---")
+    print("--- Gerador de Playlist e EPG ---")
     logo_cache = obter_urls_logos_com_cache(GITHUB_API_URL)
     
     options = webdriver.ChromeOptions()
@@ -322,12 +348,14 @@ def main():
     epg_content = generate_xmltv_epg(filtered_streams)
 
     try:
+        os.makedirs(os.path.dirname(M3U8_OUTPUT_FILENAME), exist_ok=True)
         with open(M3U8_OUTPUT_FILENAME, "w", encoding="utf-8") as f:
             f.write(m3u8_content)
         print(f"✅ Sucesso! Arquivo '{M3U8_OUTPUT_FILENAME}' gerado.")
     except IOError as e:
         print(f"❌ ERRO ao salvar M3U8: {e}")
     try:
+        os.makedirs(os.path.dirname(EPG_OUTPUT_FILENAME), exist_ok=True)
         with open(EPG_OUTPUT_FILENAME, "w", encoding="utf-8") as f:
             f.write(epg_content)
         print(f"✅ Sucesso! Arquivo '{EPG_OUTPUT_FILENAME}' gerado.")
