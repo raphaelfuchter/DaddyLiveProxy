@@ -41,11 +41,16 @@ SPORT_ICON_MAP = {
     "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png",
     "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/basketball.png",
     "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/americanfootball.png",
-    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/motorsport.png",
-    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/tv.png",
-    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png",
+    "Automobilismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/motorsport.png",
+    "Programas de TV": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tv.png",
+    "Beisebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png",
     "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/hockey.png",
     "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png",
+    "Atletismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/Athletics.png",
+    "Corrida de Cavalos": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/horse.png",
+    "Críquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/cricket.png",
+    "Ciclismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/bike.png",
+    "Sinuca": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/snooker.png"
 }
 
 SPORT_TRANSLATION_MAP = {
@@ -60,7 +65,13 @@ SPORT_TRANSLATION_MAP = {
     "TV Shows": "Programas de TV",
     "Cricket": "Críquete",
     "WWE": "Luta Livre",
-    "Badminton": "Badminton"
+    "Badminton": "Badminton",
+    "Darts": "Dardos",
+    "Boxing": "Boxe",
+    "Athletics": "Atletismo",
+    "Cycling": "Ciclismo",
+    "Bowling": "Boliche"  ,
+    "Horse Racing": "Corrida de Cavalos"    
 }
 # --- Fim da Configuração ---
 
@@ -270,6 +281,10 @@ def generate_xmltv_epg(stream_list: list) -> str:
             start_dt_utc = datetime.fromtimestamp(timestamp_ms / 1000, tz=timezone.utc)
             end_dt_utc = start_dt_utc + timedelta(hours=EPG_EVENT_DURATION_HOURS)
             
+            safe_event_name = html.escape(stream['event_name'])
+            safe_channel_name = html.escape(stream['source_name'])
+            safe_sport_name = html.escape(stream['sport'])
+            
             start_dt_local = start_dt_utc.astimezone(local_tz)
             local_day_start = start_dt_local.replace(hour=0, minute=0, second=0, microsecond=0)
             local_day_end = local_day_start + timedelta(days=1)
@@ -287,9 +302,9 @@ def generate_xmltv_epg(stream_list: list) -> str:
             start_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
             stop_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
             xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
-            xml_lines.append(f'    <title lang="pt">{html.escape(stream["event_name"])}</title>')
-            xml_lines.append(f'    <desc lang="pt">{html.escape(stream["source_name"])}</desc>')
-            xml_lines.append(f'    <category lang="pt">{html.escape(stream["sport"])}</category>')
+            xml_lines.append(f'    <title lang="pt">{safe_channel_name}</title>')
+            xml_lines.append(f'    <desc lang="pt">{safe_event_name}</desc>')
+            xml_lines.append(f'    <category lang="pt">{safe_sport_name}</category>')
             xml_lines.append('  </programme>')
 
             # Bloco 3: "Evento finalizado"
