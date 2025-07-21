@@ -19,8 +19,8 @@ import unicodedata
 
 # --- Configuração ---
 SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
-M3U8_OUTPUT_FILENAME = "playlist/schedule_playlist.m3u8"
-EPG_OUTPUT_FILENAME = "playlist/epg.xml"
+M3U8_OUTPUT_FILENAME = "server/playlist/schedule_playlist.m3u8"
+EPG_OUTPUT_FILENAME = "server/playlist/epg.xml"
 EPG_EVENT_DURATION_HOURS = 2
 GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Programas de TV", "Beisebol", "Tênis"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 1
