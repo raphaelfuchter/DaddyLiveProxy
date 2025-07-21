@@ -30,11 +30,11 @@
   </channel>
   <channel id="ch.SD-8176694">
     <display-name>SD-8176694</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" />
   </channel>
   <channel id="ch.TVIPortugal">
     <display-name>TVI Portugal</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" />
   </channel>
   <channel id="ch.FoxDeportes">
     <display-name>Fox Deportes</display-name>
@@ -54,7 +54,7 @@
   </channel>
   <channel id="ch.ESPN2Mexico">
     <display-name>ESPN2 Mexico</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" />
   </channel>
   <channel id="ch.SportingTVPortugal">
     <display-name>Sporting TV Portugal</display-name>
@@ -74,7 +74,7 @@
   </channel>
   <channel id="ch.SD-8266978">
     <display-name>SD-8266978</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" />
   </channel>
   <channel id="ch.TyCSportsArgentina">
     <display-name>TyC Sports Argentina</display-name>
@@ -82,7 +82,7 @@
   </channel>
   <channel id="ch.ESPNArgentina">
     <display-name>ESPN Argentina</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" />
   </channel>
   <channel id="ch.FoxSports1USA">
     <display-name>Fox Sports 1 USA</display-name>
@@ -102,7 +102,7 @@
   </channel>
   <channel id="ch.DIRECTVSportsArgentina">
     <display-name>DIRECTV Sports Argentina</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" />
   </channel>
   <channel id="ch.Sport2Israel">
     <display-name>Sport 2 Israel</display-name>
@@ -170,7 +170,7 @@
   </channel>
   <channel id="ch.VodafoneSport">
     <display-name>Vodafone Sport</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png" />
   </channel>
   <channel id="ch.beINSportsMAX4France">
     <display-name>beIN Sports MAX 4 France</display-name>
@@ -178,7 +178,7 @@
   </channel>
   <channel id="ch.Sport5LiveIsrael">
     <display-name>Sport 5 Live Israel</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png" />
   </channel>
   <channel id="ch.SportsNetPittsburgh">
     <display-name>SportsNet Pittsburgh</display-name>
@@ -186,7 +186,7 @@
   </channel>
   <channel id="ch.FanDuelSportsNetworkDetroit">
     <display-name>FanDuel Sports Network Detroit</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png" />
   </channel>
   <channel id="ch.FanDuelSportsNetworkFlorida">
     <display-name>FanDuel Sports Network Florida</display-name>
@@ -210,7 +210,7 @@
   </channel>
   <channel id="ch.YESUSA">
     <display-name>YES USA</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png" />
   </channel>
   <channel id="ch.SportsnetEast">
     <display-name>Sportsnet East</display-name>
@@ -266,15 +266,15 @@
   </channel>
   <channel id="ch.TennisStream8">
     <display-name>Tennis Stream 8</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" />
   </channel>
   <channel id="ch.SD-8303312">
     <display-name>SD-8303312</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" />
   </channel>
   <channel id="ch.SD-8308682">
     <display-name>SD-8308682</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" />
   </channel>
   <channel id="ch.DAZN2DE">
     <display-name>DAZN2 DE</display-name>
@@ -282,11 +282,11 @@
   </channel>
   <channel id="ch.SkySportsActionUKCH-37SkySportsMainEvent">
     <display-name>Sky Sports Action UK (CH-37) } Sky Sports Main Event</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" />
   </channel>
   <channel id="ch.TV3SportDenmark">
     <display-name>TV3 Sport Denmark</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" />
   </channel>
   <channel id="ch.SkySport3NZ">
     <display-name>Sky Sport 3 NZ</display-name>
@@ -304,8 +304,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.Arena1PremiumSerbia">
-    <title lang="pt">Arena 1 Premium Serbia</title>
-    <desc lang="pt">Serbia - Super Liga : OFK Beograd vs Spartak Subotica</desc>
+    <title lang="pt">OFK Beograd vs Spartak Subotica : Serbia - Super Liga</title>
+    <desc lang="pt">Arena 1 Premium Serbia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.Arena1PremiumSerbia">
@@ -315,8 +315,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721181500 +0000" stop="20250721201500 +0000" channel="ch.DiemaSportBulgaria">
-    <title lang="pt">Diema Sport Bulgaria</title>
-    <desc lang="pt">Bulgaria - Parva Liga : Spartak Varna vs Beroe</desc>
+    <title lang="pt">Spartak Varna vs Beroe : Bulgaria - Parva Liga</title>
+    <desc lang="pt">Diema Sport Bulgaria</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721201500 +0000" stop="20250723030000 +0000" channel="ch.DiemaSportBulgaria">
@@ -326,8 +326,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721181500 +0000" stop="20250721201500 +0000" channel="ch.Sportklub4Croatia">
-    <title lang="pt">Sportklub 4 Croatia</title>
-    <desc lang="pt">Bulgaria - Parva Liga : Spartak Varna vs Beroe</desc>
+    <title lang="pt">Spartak Varna vs Beroe : Bulgaria - Parva Liga</title>
+    <desc lang="pt">Sportklub 4 Croatia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721201500 +0000" stop="20250723030000 +0000" channel="ch.Sportklub4Croatia">
@@ -337,8 +337,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.DigiSport1Romania">
-    <title lang="pt">Digi Sport 1 Romania</title>
-    <desc lang="pt">Romania - Liga I : Dinamo Bucureşti vs Botoşani</desc>
+    <title lang="pt">Dinamo Bucureşti vs Botoşani : Romania - Liga I</title>
+    <desc lang="pt">Digi Sport 1 Romania</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.DigiSport1Romania">
@@ -348,8 +348,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.PrimaSport1Romania">
-    <title lang="pt">Prima Sport 1 Romania</title>
-    <desc lang="pt">Romania - Liga I : Dinamo Bucureşti vs Botoşani</desc>
+    <title lang="pt">Dinamo Bucureşti vs Botoşani : Romania - Liga I</title>
+    <desc lang="pt">Prima Sport 1 Romania</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.PrimaSport1Romania">
@@ -359,8 +359,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.Arena3PremiumSerbia">
-    <title lang="pt">Arena 3 Premium Serbia</title>
-    <desc lang="pt">Romania - Liga I : Dinamo Bucureşti vs Botoşani</desc>
+    <title lang="pt">Dinamo Bucureşti vs Botoşani : Romania - Liga I</title>
+    <desc lang="pt">Arena 3 Premium Serbia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.Arena3PremiumSerbia">
@@ -370,8 +370,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.ArenaSport2Croatia">
-    <title lang="pt">Arena Sport 2 Croatia</title>
-    <desc lang="pt">Romania - Liga I : Dinamo Bucureşti vs Botoşani</desc>
+    <title lang="pt">Dinamo Bucureşti vs Botoşani : Romania - Liga I</title>
+    <desc lang="pt">Arena Sport 2 Croatia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.ArenaSport2Croatia">
@@ -381,8 +381,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.SD-8176694">
-    <title lang="pt">SD-8176694</title>
-    <desc lang="pt">Romania - Liga I : Dinamo Bucureşti vs Botoşani</desc>
+    <title lang="pt">Dinamo Bucureşti vs Botoşani : Romania - Liga I</title>
+    <desc lang="pt">SD-8176694</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.SD-8176694">
@@ -392,8 +392,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.TVIPortugal">
-    <title lang="pt">TVI Portugal</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">TVI Portugal</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.TVIPortugal">
@@ -403,8 +403,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.FoxDeportes">
-    <title lang="pt">Fox Deportes</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">Fox Deportes</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.FoxDeportes">
@@ -414,8 +414,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.Arena2PremiumSerbia">
-    <title lang="pt">Arena 2 Premium Serbia</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">Arena 2 Premium Serbia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.Arena2PremiumSerbia">
@@ -425,8 +425,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.ArenaSport1Croatia">
-    <title lang="pt">Arena Sport 1 Croatia</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">Arena Sport 1 Croatia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.ArenaSport1Croatia">
@@ -436,8 +436,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.beINSPORTSAustralia3">
-    <title lang="pt">beIN SPORTS Australia 3</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">beIN SPORTS Australia 3</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.beINSPORTSAustralia3">
@@ -447,8 +447,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.ESPN2Mexico">
-    <title lang="pt">ESPN2 Mexico</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">ESPN2 Mexico</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.ESPN2Mexico">
@@ -458,8 +458,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SportingTVPortugal">
-    <title lang="pt">Sporting TV Portugal</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">Sporting TV Portugal</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SportingTVPortugal">
@@ -469,8 +469,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.beINSports1Malaysia">
-    <title lang="pt">beIN Sports 1 Malaysia</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">beIN Sports 1 Malaysia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.beINSports1Malaysia">
@@ -480,8 +480,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.ESPN4Brazil">
-    <title lang="pt">ESPN4 Brazil</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">ESPN4 Brazil</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.ESPN4Brazil">
@@ -491,8 +491,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.Sport1Israel">
-    <title lang="pt">Sport 1 Israel</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">Sport 1 Israel</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.Sport1Israel">
@@ -502,8 +502,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SD-8266978">
-    <title lang="pt">SD-8266978</title>
-    <desc lang="pt">World - Club Friendly : Sporting CP vs Sunderland</desc>
+    <title lang="pt">Sporting CP vs Sunderland : World - Club Friendly</title>
+    <desc lang="pt">SD-8266978</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SD-8266978">
@@ -513,8 +513,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.TyCSportsArgentina">
-    <title lang="pt">TyC Sports Argentina</title>
-    <desc lang="pt">Argentina - Primera B Metropolitana : Dock Sud vs Flandria</desc>
+    <title lang="pt">Dock Sud vs Flandria : Argentina - Primera B Metropolitana</title>
+    <desc lang="pt">TyC Sports Argentina</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.TyCSportsArgentina">
@@ -524,8 +524,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.FoxDeportes">
-    <title lang="pt">Fox Deportes</title>
-    <desc lang="pt">World COTIF Tournament U20 : ADH Brazil vs Valencia</desc>
+    <title lang="pt">ADH Brazil vs Valencia : World COTIF Tournament U20</title>
+    <desc lang="pt">Fox Deportes</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.FoxDeportes">
@@ -535,8 +535,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721203000 +0000" stop="20250721223000 +0000" channel="ch.FoxDeportes">
-    <title lang="pt">Fox Deportes</title>
-    <desc lang="pt">World COTIF Tournament : Argentina U20 vs Chile U20</desc>
+    <title lang="pt">Argentina U20 vs Chile U20 : World COTIF Tournament</title>
+    <desc lang="pt">Fox Deportes</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.FoxDeportes">
@@ -546,8 +546,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721203000 +0000" stop="20250721223000 +0000" channel="ch.ESPNArgentina">
-    <title lang="pt">ESPN Argentina</title>
-    <desc lang="pt">World COTIF Tournament : Argentina U20 vs Chile U20</desc>
+    <title lang="pt">Argentina U20 vs Chile U20 : World COTIF Tournament</title>
+    <desc lang="pt">ESPN Argentina</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.ESPNArgentina">
@@ -557,8 +557,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.FoxSports1USA">
-    <title lang="pt">Fox Sports 1 USA</title>
-    <desc lang="pt">Copa América Femenina : Argentina vs Peru</desc>
+    <title lang="pt">Argentina vs Peru : Copa América Femenina</title>
+    <desc lang="pt">Fox Sports 1 USA</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.FoxSports1USA">
@@ -568,8 +568,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.SportTV1Portugal">
-    <title lang="pt">Sport TV1 Portugal</title>
-    <desc lang="pt">Copa América Femenina : Argentina vs Peru</desc>
+    <title lang="pt">Argentina vs Peru : Copa América Femenina</title>
+    <desc lang="pt">Sport TV1 Portugal</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.SportTV1Portugal">
@@ -579,8 +579,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.SporTVBR">
-    <title lang="pt">SporTV BR</title>
-    <desc lang="pt">Copa América Femenina : Argentina vs Peru</desc>
+    <title lang="pt">Argentina vs Peru : Copa América Femenina</title>
+    <desc lang="pt">SporTV BR</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.SporTVBR">
@@ -590,8 +590,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.TUDNUSA">
-    <title lang="pt">TUDN USA</title>
-    <desc lang="pt">Copa América Femenina : Argentina vs Peru</desc>
+    <title lang="pt">Argentina vs Peru : Copa América Femenina</title>
+    <desc lang="pt">TUDN USA</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.TUDNUSA">
@@ -601,8 +601,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.DIRECTVSportsArgentina">
-    <title lang="pt">DIRECTV Sports Argentina</title>
-    <desc lang="pt">Copa América Femenina : Argentina vs Peru</desc>
+    <title lang="pt">Argentina vs Peru : Copa América Femenina</title>
+    <desc lang="pt">DIRECTV Sports Argentina</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.DIRECTVSportsArgentina">
@@ -612,8 +612,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.Sport2Israel">
-    <title lang="pt">Sport 2 Israel</title>
-    <desc lang="pt">Copa América Femenina : Argentina vs Peru</desc>
+    <title lang="pt">Argentina vs Peru : Copa América Femenina</title>
+    <desc lang="pt">Sport 2 Israel</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.Sport2Israel">
@@ -623,8 +623,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721220000 +0000" stop="20250722000000 +0000" channel="ch.ESPNPremiumArgentina">
-    <title lang="pt">ESPN Premium Argentina</title>
-    <desc lang="pt">Argentina - Primera División : Estudiantes vs Huracán</desc>
+    <title lang="pt">Estudiantes vs Huracán : Argentina - Primera División</title>
+    <desc lang="pt">ESPN Premium Argentina</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250722000000 +0000" stop="20250723030000 +0000" channel="ch.ESPNPremiumArgentina">
@@ -634,8 +634,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721220000 +0000" stop="20250722000000 +0000" channel="ch.SportTV2Portugal">
-    <title lang="pt">Sport TV2 Portugal</title>
-    <desc lang="pt">Argentina - Primera División : Estudiantes vs Huracán</desc>
+    <title lang="pt">Estudiantes vs Huracán : Argentina - Primera División</title>
+    <desc lang="pt">Sport TV2 Portugal</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250722000000 +0000" stop="20250723030000 +0000" channel="ch.SportTV2Portugal">
@@ -645,8 +645,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721220000 +0000" stop="20250722000000 +0000" channel="ch.Arena1PremiumSerbia">
-    <title lang="pt">Arena 1 Premium Serbia</title>
-    <desc lang="pt">Argentina - Primera División : Estudiantes vs Huracán</desc>
+    <title lang="pt">Estudiantes vs Huracán : Argentina - Primera División</title>
+    <desc lang="pt">Arena 1 Premium Serbia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250722000000 +0000" stop="20250723030000 +0000" channel="ch.Arena1PremiumSerbia">
@@ -656,8 +656,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721220000 +0000" stop="20250722000000 +0000" channel="ch.ArenaSport1Croatia">
-    <title lang="pt">Arena Sport 1 Croatia</title>
-    <desc lang="pt">Argentina - Primera División : Estudiantes vs Huracán</desc>
+    <title lang="pt">Estudiantes vs Huracán : Argentina - Primera División</title>
+    <desc lang="pt">Arena Sport 1 Croatia</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250722000000 +0000" stop="20250723030000 +0000" channel="ch.ArenaSport1Croatia">
@@ -667,8 +667,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721220000 +0000" stop="20250722000000 +0000" channel="ch.Sport1Israel">
-    <title lang="pt">Sport 1 Israel</title>
-    <desc lang="pt">Argentina - Primera División : Estudiantes vs Huracán</desc>
+    <title lang="pt">Estudiantes vs Huracán : Argentina - Primera División</title>
+    <desc lang="pt">Sport 1 Israel</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250722000000 +0000" stop="20250723030000 +0000" channel="ch.Sport1Israel">
@@ -678,8 +678,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230000 +0000" stop="20250722010000 +0000" channel="ch.TNTSPORTSPremiumChile">
-    <title lang="pt">TNT SPORTS Premium Chile</title>
-    <desc lang="pt">Chile - Primera Division : Huachipato vs O&#x27;Higgins</desc>
+    <title lang="pt">Huachipato vs O&#x27;Higgins : Chile - Primera Division</title>
+    <desc lang="pt">TNT SPORTS Premium Chile</desc>
     <category lang="pt">Futebol</category>
   </programme>
   <programme start="20250722010000 +0000" stop="20250723030000 +0000" channel="ch.TNTSPORTSPremiumChile">
@@ -689,8 +689,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721213000 +0000" stop="20250721233000 +0000" channel="ch.SpaceCityHomeNetwork">
-    <title lang="pt">Space City Home Network</title>
-    <desc lang="pt">NBA Summer League Basketball : Houston Rockets vs. Minnesota Timberwolves</desc>
+    <title lang="pt">Houston Rockets vs. Minnesota Timberwolves : NBA Summer League Basketball</title>
+    <desc lang="pt">Space City Home Network</desc>
     <category lang="pt">Basquete</category>
   </programme>
   <programme start="20250721233000 +0000" stop="20250723030000 +0000" channel="ch.SpaceCityHomeNetwork">
@@ -700,8 +700,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721220000 +0000" stop="20250722000000 +0000" channel="ch.FoxSports2USA">
-    <title lang="pt">Fox Sports 2 USA</title>
-    <desc lang="pt">The Basketball Tournament : Green Mountain vs. Stars of Storrs</desc>
+    <title lang="pt">Green Mountain vs. Stars of Storrs : The Basketball Tournament</title>
+    <desc lang="pt">Fox Sports 2 USA</desc>
     <category lang="pt">Basquete</category>
   </programme>
   <programme start="20250722000000 +0000" stop="20250723030000 +0000" channel="ch.FoxSports2USA">
@@ -711,8 +711,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.TNTSports1UK">
-    <title lang="pt">TNT Sports 1 UK</title>
-    <desc lang="pt">Premiership Speedway - Leicester Lions vs Sheffield Tigers</desc>
+    <title lang="pt">Premiership Speedway - Leicester Lions vs Sheffield Tigers</title>
+    <desc lang="pt">TNT Sports 1 UK</desc>
     <category lang="pt">Automobilismo</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.TNTSports1UK">
@@ -722,8 +722,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721213000 +0000" stop="20250721233000 +0000" channel="ch.truTVUSA">
-    <title lang="pt">truTV USA</title>
-    <desc lang="pt">NASCAR Cup Series : Autotrader EchoPark Automotive 400</desc>
+    <title lang="pt">Autotrader EchoPark Automotive 400 : NASCAR Cup Series</title>
+    <desc lang="pt">truTV USA</desc>
     <category lang="pt">Automobilismo</category>
   </programme>
   <programme start="20250721233000 +0000" stop="20250723030000 +0000" channel="ch.truTVUSA">
@@ -733,8 +733,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.CBSNYUSA">
-    <title lang="pt">CBSNY USA</title>
-    <desc lang="pt">Beyond the Gates Season 1, Episode 94</desc>
+    <title lang="pt">Beyond the Gates Season 1, Episode 94</title>
+    <desc lang="pt">CBSNY USA</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.CBSNYUSA">
@@ -744,8 +744,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.NICKUSA">
-    <title lang="pt">NICK USA</title>
-    <desc lang="pt">The Smurfs Season 3, Episode 36</desc>
+    <title lang="pt">The Smurfs Season 3, Episode 36</title>
+    <desc lang="pt">NICK USA</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.NICKUSA">
@@ -755,8 +755,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721183000 +0000" stop="20250721203000 +0000" channel="ch.OutdoorChannel">
-    <title lang="pt">Outdoor Channel</title>
-    <desc lang="pt">The Flush Season 14, Episode 4</desc>
+    <title lang="pt">The Flush Season 14, Episode 4</title>
+    <desc lang="pt">Outdoor Channel</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250721203000 +0000" stop="20250723030000 +0000" channel="ch.OutdoorChannel">
@@ -766,8 +766,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.ABCNYUSA">
-    <title lang="pt">ABC NY USA</title>
-    <desc lang="pt">General Hospital Season 62, Episode 218</desc>
+    <title lang="pt">General Hospital Season 62, Episode 218</title>
+    <desc lang="pt">ABC NY USA</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.ABCNYUSA">
@@ -777,8 +777,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.MLBNetworkUSA">
-    <title lang="pt">MLB Network USA</title>
-    <desc lang="pt">MLB Tonight National Pregame Show Episode 3 • Live</desc>
+    <title lang="pt">MLB Tonight National Pregame Show Episode 3 • Live</title>
+    <desc lang="pt">MLB Network USA</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.MLBNetworkUSA">
@@ -788,8 +788,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721210000 +0000" stop="20250721230000 +0000" channel="ch.GameShowNetworkUSA">
-    <title lang="pt">Game Show Network USA</title>
-    <desc lang="pt">Flip Side Season 1, Episode 90</desc>
+    <title lang="pt">Flip Side Season 1, Episode 90</title>
+    <desc lang="pt">Game Show Network USA</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250721230000 +0000" stop="20250723030000 +0000" channel="ch.GameShowNetworkUSA">
@@ -799,8 +799,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721213000 +0000" stop="20250721233000 +0000" channel="ch.OutdoorChannel">
-    <title lang="pt">Outdoor Channel</title>
-    <desc lang="pt">Addicted to the Outdoors Season 18, Episode 4</desc>
+    <title lang="pt">Addicted to the Outdoors Season 18, Episode 4</title>
+    <desc lang="pt">Outdoor Channel</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250721233000 +0000" stop="20250723030000 +0000" channel="ch.OutdoorChannel">
@@ -810,8 +810,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230000 +0000" stop="20250722010000 +0000" channel="ch.ABCNYUSA">
-    <title lang="pt">ABC NY USA</title>
-    <desc lang="pt">Jeopardy! Season 41, Episode 226</desc>
+    <title lang="pt">Jeopardy! Season 41, Episode 226</title>
+    <desc lang="pt">ABC NY USA</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250722010000 +0000" stop="20250723030000 +0000" channel="ch.ABCNYUSA">
@@ -821,8 +821,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230000 +0000" stop="20250722010000 +0000" channel="ch.TelemundoUSA">
-    <title lang="pt">Telemundo USA</title>
-    <desc lang="pt">Miss Universe Latina, el reality Season 1, Episode 42 • Finale</desc>
+    <title lang="pt">Miss Universe Latina, el reality Season 1, Episode 42 • Finale</title>
+    <desc lang="pt">Telemundo USA</desc>
     <category lang="pt">Programas de TV</category>
   </programme>
   <programme start="20250722010000 +0000" stop="20250723030000 +0000" channel="ch.TelemundoUSA">
@@ -832,8 +832,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Baltimore Orioles vs Cleveland Guardians</desc>
+    <title lang="pt">Baltimore Orioles vs Cleveland Guardians : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -843,8 +843,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Vodafone Sport</title>
-    <desc lang="pt">MLB : Baltimore Orioles vs Cleveland Guardians</desc>
+    <title lang="pt">Baltimore Orioles vs Cleveland Guardians : MLB</title>
+    <desc lang="pt">Vodafone Sport</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.VodafoneSport">
@@ -854,8 +854,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.beINSportsMAX4France">
-    <title lang="pt">beIN Sports MAX 4 France</title>
-    <desc lang="pt">MLB : Baltimore Orioles vs Cleveland Guardians</desc>
+    <title lang="pt">Baltimore Orioles vs Cleveland Guardians : MLB</title>
+    <desc lang="pt">beIN Sports MAX 4 France</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.beINSportsMAX4France">
@@ -865,8 +865,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.Sport5LiveIsrael">
-    <title lang="pt">Sport 5 Live Israel</title>
-    <desc lang="pt">MLB : Baltimore Orioles vs Cleveland Guardians</desc>
+    <title lang="pt">Baltimore Orioles vs Cleveland Guardians : MLB</title>
+    <desc lang="pt">Sport 5 Live Israel</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.Sport5LiveIsrael">
@@ -876,8 +876,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Pittsburgh Pirates vs Detroit Tigers</desc>
+    <title lang="pt">Pittsburgh Pirates vs Detroit Tigers : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -887,8 +887,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.SportsNetPittsburgh">
-    <title lang="pt">SportsNet Pittsburgh</title>
-    <desc lang="pt">MLB : Pittsburgh Pirates vs Detroit Tigers</desc>
+    <title lang="pt">Pittsburgh Pirates vs Detroit Tigers : MLB</title>
+    <desc lang="pt">SportsNet Pittsburgh</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.SportsNetPittsburgh">
@@ -898,8 +898,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.FanDuelSportsNetworkDetroit">
-    <title lang="pt">FanDuel Sports Network Detroit</title>
-    <desc lang="pt">MLB : Pittsburgh Pirates vs Detroit Tigers</desc>
+    <title lang="pt">Pittsburgh Pirates vs Detroit Tigers : MLB</title>
+    <desc lang="pt">FanDuel Sports Network Detroit</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.FanDuelSportsNetworkDetroit">
@@ -909,8 +909,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Miami Marlins vs San Diego Padres</desc>
+    <title lang="pt">Miami Marlins vs San Diego Padres : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -920,8 +920,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224000 +0000" stop="20250722004000 +0000" channel="ch.FanDuelSportsNetworkFlorida">
-    <title lang="pt">FanDuel Sports Network Florida</title>
-    <desc lang="pt">MLB : Miami Marlins vs San Diego Padres</desc>
+    <title lang="pt">Miami Marlins vs San Diego Padres : MLB</title>
+    <desc lang="pt">FanDuel Sports Network Florida</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004000 +0000" stop="20250723030000 +0000" channel="ch.FanDuelSportsNetworkFlorida">
@@ -931,8 +931,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224500 +0000" stop="20250722004500 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Boston Red Sox vs Philadelphia Phillies</desc>
+    <title lang="pt">Boston Red Sox vs Philadelphia Phillies : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004500 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -942,8 +942,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224500 +0000" stop="20250722004500 +0000" channel="ch.NESNUSA">
-    <title lang="pt">NESN USA</title>
-    <desc lang="pt">MLB : Boston Red Sox vs Philadelphia Phillies</desc>
+    <title lang="pt">Boston Red Sox vs Philadelphia Phillies : MLB</title>
+    <desc lang="pt">NESN USA</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004500 +0000" stop="20250723030000 +0000" channel="ch.NESNUSA">
@@ -953,8 +953,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224500 +0000" stop="20250722004500 +0000" channel="ch.NBCSportsPhiladelphia">
-    <title lang="pt">NBC Sports Philadelphia</title>
-    <desc lang="pt">MLB : Boston Red Sox vs Philadelphia Phillies</desc>
+    <title lang="pt">Boston Red Sox vs Philadelphia Phillies : MLB</title>
+    <desc lang="pt">NBC Sports Philadelphia</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004500 +0000" stop="20250723030000 +0000" channel="ch.NBCSportsPhiladelphia">
@@ -964,8 +964,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721224500 +0000" stop="20250722004500 +0000" channel="ch.SportsnetOne">
-    <title lang="pt">Sportsnet One</title>
-    <desc lang="pt">MLB : Boston Red Sox vs Philadelphia Phillies</desc>
+    <title lang="pt">Boston Red Sox vs Philadelphia Phillies : MLB</title>
+    <desc lang="pt">Sportsnet One</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722004500 +0000" stop="20250723030000 +0000" channel="ch.SportsnetOne">
@@ -975,8 +975,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230700 +0000" stop="20250722010700 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Toronto Blue Jays vs New York Yankees</desc>
+    <title lang="pt">Toronto Blue Jays vs New York Yankees : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722010700 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -986,8 +986,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230700 +0000" stop="20250722010700 +0000" channel="ch.TVASportsCA">
-    <title lang="pt">TVA Sports CA</title>
-    <desc lang="pt">MLB : Toronto Blue Jays vs New York Yankees</desc>
+    <title lang="pt">Toronto Blue Jays vs New York Yankees : MLB</title>
+    <desc lang="pt">TVA Sports CA</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722010700 +0000" stop="20250723030000 +0000" channel="ch.TVASportsCA">
@@ -997,8 +997,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230700 +0000" stop="20250722010700 +0000" channel="ch.YESUSA">
-    <title lang="pt">YES USA</title>
-    <desc lang="pt">MLB : Toronto Blue Jays vs New York Yankees</desc>
+    <title lang="pt">Toronto Blue Jays vs New York Yankees : MLB</title>
+    <desc lang="pt">YES USA</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722010700 +0000" stop="20250723030000 +0000" channel="ch.YESUSA">
@@ -1008,8 +1008,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230700 +0000" stop="20250722010700 +0000" channel="ch.SportsnetEast">
-    <title lang="pt">Sportsnet East</title>
-    <desc lang="pt">MLB : Toronto Blue Jays vs New York Yankees</desc>
+    <title lang="pt">Toronto Blue Jays vs New York Yankees : MLB</title>
+    <desc lang="pt">Sportsnet East</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722010700 +0000" stop="20250723030000 +0000" channel="ch.SportsnetEast">
@@ -1019,8 +1019,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230700 +0000" stop="20250722010700 +0000" channel="ch.SportsnetOntario">
-    <title lang="pt">Sportsnet Ontario</title>
-    <desc lang="pt">MLB : Toronto Blue Jays vs New York Yankees</desc>
+    <title lang="pt">Toronto Blue Jays vs New York Yankees : MLB</title>
+    <desc lang="pt">Sportsnet Ontario</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722010700 +0000" stop="20250723030000 +0000" channel="ch.SportsnetOntario">
@@ -1030,8 +1030,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721230700 +0000" stop="20250722010700 +0000" channel="ch.SportsnetWest">
-    <title lang="pt">Sportsnet West</title>
-    <desc lang="pt">MLB : Toronto Blue Jays vs New York Yankees</desc>
+    <title lang="pt">Toronto Blue Jays vs New York Yankees : MLB</title>
+    <desc lang="pt">Sportsnet West</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722010700 +0000" stop="20250723030000 +0000" channel="ch.SportsnetWest">
@@ -1041,8 +1041,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231000 +0000" stop="20250722011000 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Los Angeles Angels vs New York Mets</desc>
+    <title lang="pt">Los Angeles Angels vs New York Mets : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011000 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -1052,8 +1052,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231000 +0000" stop="20250722011000 +0000" channel="ch.SportsNetNewYorkUSA">
-    <title lang="pt">SportsNet New York USA</title>
-    <desc lang="pt">MLB : Los Angeles Angels vs New York Mets</desc>
+    <title lang="pt">Los Angeles Angels vs New York Mets : MLB</title>
+    <desc lang="pt">SportsNet New York USA</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011000 +0000" stop="20250723030000 +0000" channel="ch.SportsNetNewYorkUSA">
@@ -1063,8 +1063,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231000 +0000" stop="20250722011000 +0000" channel="ch.FanDuelSportsNetworkWest">
-    <title lang="pt">FanDuel Sports Network West</title>
-    <desc lang="pt">MLB : Los Angeles Angels vs New York Mets</desc>
+    <title lang="pt">Los Angeles Angels vs New York Mets : MLB</title>
+    <desc lang="pt">FanDuel Sports Network West</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011000 +0000" stop="20250723030000 +0000" channel="ch.FanDuelSportsNetworkWest">
@@ -1074,8 +1074,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231500 +0000" stop="20250722011500 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Atlanta Braves vs San Francisco Giants</desc>
+    <title lang="pt">Atlanta Braves vs San Francisco Giants : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011500 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -1085,8 +1085,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231500 +0000" stop="20250722011500 +0000" channel="ch.NBCSBayAreaUSA">
-    <title lang="pt">NBCS Bay Area USA</title>
-    <desc lang="pt">MLB : Atlanta Braves vs San Francisco Giants</desc>
+    <title lang="pt">Atlanta Braves vs San Francisco Giants : MLB</title>
+    <desc lang="pt">NBCS Bay Area USA</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011500 +0000" stop="20250723030000 +0000" channel="ch.NBCSBayAreaUSA">
@@ -1096,8 +1096,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231500 +0000" stop="20250722011500 +0000" channel="ch.TSN1">
-    <title lang="pt">TSN1</title>
-    <desc lang="pt">MLB : Atlanta Braves vs San Francisco Giants</desc>
+    <title lang="pt">Atlanta Braves vs San Francisco Giants : MLB</title>
+    <desc lang="pt">TSN1</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011500 +0000" stop="20250723030000 +0000" channel="ch.TSN1">
@@ -1107,8 +1107,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231500 +0000" stop="20250722011500 +0000" channel="ch.TSN5">
-    <title lang="pt">TSN5</title>
-    <desc lang="pt">MLB : Atlanta Braves vs San Francisco Giants</desc>
+    <title lang="pt">Atlanta Braves vs San Francisco Giants : MLB</title>
+    <desc lang="pt">TSN5</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011500 +0000" stop="20250723030000 +0000" channel="ch.TSN5">
@@ -1118,8 +1118,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231500 +0000" stop="20250722011500 +0000" channel="ch.TSN4">
-    <title lang="pt">TSN4</title>
-    <desc lang="pt">MLB : Atlanta Braves vs San Francisco Giants</desc>
+    <title lang="pt">Atlanta Braves vs San Francisco Giants : MLB</title>
+    <desc lang="pt">TSN4</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011500 +0000" stop="20250723030000 +0000" channel="ch.TSN4">
@@ -1129,8 +1129,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231500 +0000" stop="20250722011500 +0000" channel="ch.FanDuelSportsNetworkSouth">
-    <title lang="pt">FanDuel Sports Network South</title>
-    <desc lang="pt">MLB : Atlanta Braves vs San Francisco Giants</desc>
+    <title lang="pt">Atlanta Braves vs San Francisco Giants : MLB</title>
+    <desc lang="pt">FanDuel Sports Network South</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011500 +0000" stop="20250723030000 +0000" channel="ch.FanDuelSportsNetworkSouth">
@@ -1140,8 +1140,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721231500 +0000" stop="20250722011500 +0000" channel="ch.FanDuelSportsNetworkSoutheast">
-    <title lang="pt">FanDuel Sports Network Southeast</title>
-    <desc lang="pt">MLB : Atlanta Braves vs San Francisco Giants</desc>
+    <title lang="pt">Atlanta Braves vs San Francisco Giants : MLB</title>
+    <desc lang="pt">FanDuel Sports Network Southeast</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722011500 +0000" stop="20250723030000 +0000" channel="ch.FanDuelSportsNetworkSoutheast">
@@ -1151,8 +1151,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721233500 +0000" stop="20250722013500 +0000" channel="ch.MLBLeaguePass">
-    <title lang="pt">MLB League Pass</title>
-    <desc lang="pt">MLB : Tampa Bay Rays vs Chicago White Sox</desc>
+    <title lang="pt">Tampa Bay Rays vs Chicago White Sox : MLB</title>
+    <desc lang="pt">MLB League Pass</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722013500 +0000" stop="20250723030000 +0000" channel="ch.MLBLeaguePass">
@@ -1162,8 +1162,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721233500 +0000" stop="20250722013500 +0000" channel="ch.BallySportsSun">
-    <title lang="pt">Bally Sports Sun</title>
-    <desc lang="pt">MLB : Tampa Bay Rays vs Chicago White Sox</desc>
+    <title lang="pt">Tampa Bay Rays vs Chicago White Sox : MLB</title>
+    <desc lang="pt">Bally Sports Sun</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722013500 +0000" stop="20250723030000 +0000" channel="ch.BallySportsSun">
@@ -1173,8 +1173,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721233500 +0000" stop="20250722013500 +0000" channel="ch.ChicagoSportsNetwork">
-    <title lang="pt">Chicago Sports Network</title>
-    <desc lang="pt">MLB : Tampa Bay Rays vs Chicago White Sox</desc>
+    <title lang="pt">Tampa Bay Rays vs Chicago White Sox : MLB</title>
+    <desc lang="pt">Chicago Sports Network</desc>
     <category lang="pt">Beisebol</category>
   </programme>
   <programme start="20250722013500 +0000" stop="20250723030000 +0000" channel="ch.ChicagoSportsNetwork">
@@ -1184,8 +1184,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.TennisStream8">
-    <title lang="pt">Tennis Stream 8</title>
-    <desc lang="pt">ATP - UMAG : Guillen Meza A. vs Wawrinka S.</desc>
+    <title lang="pt">Guillen Meza A. vs Wawrinka S. : ATP - UMAG</title>
+    <desc lang="pt">Tennis Stream 8</desc>
     <category lang="pt">Tênis</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.TennisStream8">
@@ -1195,8 +1195,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721181500 +0000" stop="20250721201500 +0000" channel="ch.SD-8303312">
-    <title lang="pt">SD-8303312</title>
-    <desc lang="pt">Challenger - Zug (ELV) : Henry Bernet vs Murkel Dellien</desc>
+    <title lang="pt">Henry Bernet vs Murkel Dellien : Challenger - Zug (ELV)</title>
+    <desc lang="pt">SD-8303312</desc>
     <category lang="pt">Tênis</category>
   </programme>
   <programme start="20250721201500 +0000" stop="20250723030000 +0000" channel="ch.SD-8303312">
@@ -1206,8 +1206,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SD-8308682">
-    <title lang="pt">SD-8308682</title>
-    <desc lang="pt">ATP - Umag (CRO) : Alvaro Guillen Meza vs Stan Wawrinka</desc>
+    <title lang="pt">Alvaro Guillen Meza vs Stan Wawrinka : ATP - Umag (CRO)</title>
+    <desc lang="pt">SD-8308682</desc>
     <category lang="pt">Tênis</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SD-8308682">
@@ -1217,8 +1217,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Vodafone Sport</title>
-    <desc lang="pt">World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo</desc>
+    <title lang="pt">Dobey, Chris vs. Pietreczko, Ricardo : World Matchplay 2025</title>
+    <desc lang="pt">Vodafone Sport</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.VodafoneSport">
@@ -1228,8 +1228,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.DAZN2DE">
-    <title lang="pt">DAZN2 DE</title>
-    <desc lang="pt">World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo</desc>
+    <title lang="pt">Dobey, Chris vs. Pietreczko, Ricardo : World Matchplay 2025</title>
+    <desc lang="pt">DAZN2 DE</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.DAZN2DE">
@@ -1239,8 +1239,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
-    <title lang="pt">Sky Sports Action UK (CH-37) } Sky Sports Main Event</title>
-    <desc lang="pt">World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo</desc>
+    <title lang="pt">Dobey, Chris vs. Pietreczko, Ricardo : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sports Action UK (CH-37) } Sky Sports Main Event</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
@@ -1250,8 +1250,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.TV3SportDenmark">
-    <title lang="pt">TV3 Sport Denmark</title>
-    <desc lang="pt">World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo</desc>
+    <title lang="pt">Dobey, Chris vs. Pietreczko, Ricardo : World Matchplay 2025</title>
+    <desc lang="pt">TV3 Sport Denmark</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.TV3SportDenmark">
@@ -1261,8 +1261,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721180000 +0000" stop="20250721200000 +0000" channel="ch.SkySport3NZ">
-    <title lang="pt">Sky Sport 3 NZ</title>
-    <desc lang="pt">World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo</desc>
+    <title lang="pt">Dobey, Chris vs. Pietreczko, Ricardo : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sport 3 NZ</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721200000 +0000" stop="20250723030000 +0000" channel="ch.SkySport3NZ">
@@ -1272,8 +1272,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Vodafone Sport</title>
-    <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
+    <title lang="pt">Price, Gerwyn vs. Gurney, Daryl : World Matchplay 2025</title>
+    <desc lang="pt">Vodafone Sport</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.VodafoneSport">
@@ -1283,8 +1283,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.DAZN2DE">
-    <title lang="pt">DAZN2 DE</title>
-    <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
+    <title lang="pt">Price, Gerwyn vs. Gurney, Daryl : World Matchplay 2025</title>
+    <desc lang="pt">DAZN2 DE</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.DAZN2DE">
@@ -1294,8 +1294,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SkySportsActionUK">
-    <title lang="pt">Sky Sports Action UK</title>
-    <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
+    <title lang="pt">Price, Gerwyn vs. Gurney, Daryl : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sports Action UK</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsActionUK">
@@ -1305,8 +1305,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SkySportsMainEvent">
-    <title lang="pt">Sky Sports Main Event</title>
-    <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
+    <title lang="pt">Price, Gerwyn vs. Gurney, Daryl : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sports Main Event</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsMainEvent">
@@ -1316,8 +1316,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.TV3SportDenmark">
-    <title lang="pt">TV3 Sport Denmark</title>
-    <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
+    <title lang="pt">Price, Gerwyn vs. Gurney, Daryl : World Matchplay 2025</title>
+    <desc lang="pt">TV3 Sport Denmark</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.TV3SportDenmark">
@@ -1327,8 +1327,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721190000 +0000" stop="20250721210000 +0000" channel="ch.SkySport3NZ">
-    <title lang="pt">Sky Sport 3 NZ</title>
-    <desc lang="pt">World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl</desc>
+    <title lang="pt">Price, Gerwyn vs. Gurney, Daryl : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sport 3 NZ</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SkySport3NZ">
@@ -1338,8 +1338,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721195000 +0000" stop="20250721215000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Vodafone Sport</title>
-    <desc lang="pt">World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond</desc>
+    <title lang="pt">van Gerwen, Michael vs. van Barneveld, Raymond : World Matchplay 2025</title>
+    <desc lang="pt">Vodafone Sport</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721215000 +0000" stop="20250723030000 +0000" channel="ch.VodafoneSport">
@@ -1349,8 +1349,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721195000 +0000" stop="20250721215000 +0000" channel="ch.DAZN2DE">
-    <title lang="pt">DAZN2 DE</title>
-    <desc lang="pt">World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond</desc>
+    <title lang="pt">van Gerwen, Michael vs. van Barneveld, Raymond : World Matchplay 2025</title>
+    <desc lang="pt">DAZN2 DE</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721215000 +0000" stop="20250723030000 +0000" channel="ch.DAZN2DE">
@@ -1360,8 +1360,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721195000 +0000" stop="20250721215000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
-    <title lang="pt">Sky Sports Action UK (CH-37) } Sky Sports Main Event</title>
-    <desc lang="pt">World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond</desc>
+    <title lang="pt">van Gerwen, Michael vs. van Barneveld, Raymond : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sports Action UK (CH-37) } Sky Sports Main Event</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721215000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
@@ -1371,8 +1371,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721195000 +0000" stop="20250721215000 +0000" channel="ch.TV3SportDenmark">
-    <title lang="pt">TV3 Sport Denmark</title>
-    <desc lang="pt">World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond</desc>
+    <title lang="pt">van Gerwen, Michael vs. van Barneveld, Raymond : World Matchplay 2025</title>
+    <desc lang="pt">TV3 Sport Denmark</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721215000 +0000" stop="20250723030000 +0000" channel="ch.TV3SportDenmark">
@@ -1382,8 +1382,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721195000 +0000" stop="20250721215000 +0000" channel="ch.SkySport3NZ">
-    <title lang="pt">Sky Sport 3 NZ</title>
-    <desc lang="pt">World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond</desc>
+    <title lang="pt">van Gerwen, Michael vs. van Barneveld, Raymond : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sport 3 NZ</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721215000 +0000" stop="20250723030000 +0000" channel="ch.SkySport3NZ">
@@ -1393,8 +1393,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721203000 +0000" stop="20250721223000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Vodafone Sport</title>
-    <desc lang="pt">World Matchplay 2025 : Smith, Ross vs. Rock, Josh</desc>
+    <title lang="pt">Smith, Ross vs. Rock, Josh : World Matchplay 2025</title>
+    <desc lang="pt">Vodafone Sport</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.VodafoneSport">
@@ -1404,8 +1404,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721203000 +0000" stop="20250721223000 +0000" channel="ch.DAZN2DE">
-    <title lang="pt">DAZN2 DE</title>
-    <desc lang="pt">World Matchplay 2025 : Smith, Ross vs. Rock, Josh</desc>
+    <title lang="pt">Smith, Ross vs. Rock, Josh : World Matchplay 2025</title>
+    <desc lang="pt">DAZN2 DE</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.DAZN2DE">
@@ -1415,8 +1415,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721203000 +0000" stop="20250721223000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
-    <title lang="pt">Sky Sports Action UK (CH-37) } Sky Sports Main Event</title>
-    <desc lang="pt">World Matchplay 2025 : Smith, Ross vs. Rock, Josh</desc>
+    <title lang="pt">Smith, Ross vs. Rock, Josh : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sports Action UK (CH-37) } Sky Sports Main Event</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsActionUKCH-37SkySportsMainEvent">
@@ -1426,8 +1426,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721203000 +0000" stop="20250721223000 +0000" channel="ch.TV3SportDenmark">
-    <title lang="pt">TV3 Sport Denmark</title>
-    <desc lang="pt">World Matchplay 2025 : Smith, Ross vs. Rock, Josh</desc>
+    <title lang="pt">Smith, Ross vs. Rock, Josh : World Matchplay 2025</title>
+    <desc lang="pt">TV3 Sport Denmark</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.TV3SportDenmark">
@@ -1437,8 +1437,8 @@
     <title lang="pt">Evento não iniciado</title>
   </programme>
   <programme start="20250721203000 +0000" stop="20250721223000 +0000" channel="ch.SkySport3NZ">
-    <title lang="pt">Sky Sport 3 NZ</title>
-    <desc lang="pt">World Matchplay 2025 : Smith, Ross vs. Rock, Josh</desc>
+    <title lang="pt">Smith, Ross vs. Rock, Josh : World Matchplay 2025</title>
+    <desc lang="pt">Sky Sport 3 NZ</desc>
     <category lang="pt">Darts</category>
   </programme>
   <programme start="20250721223000 +0000" stop="20250723030000 +0000" channel="ch.SkySport3NZ">
