@@ -1,5 +1,23 @@
+# Docker
+Dockerfile
+.dockerignore
+
+# Python - ADICIONE ESTAS LINHAS
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+
+# Suas linhas existentes - MANTENHA-AS
 .web
 !.web/bun.lockb
 !.web/package.json
 .states
 .venv
+
+# IDE / OS files
+.vscode/
+.idea/
+*.DS_Store
