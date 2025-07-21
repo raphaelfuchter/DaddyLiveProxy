@@ -1,0 +1,331 @@
+import time
+import json
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+from webdriver_manager.chrome import ChromeDriverManager
+import os
+from bs4 import BeautifulSoup
+from datetime import datetime, timedelta, timezone
+import html
+import re
+import requests
+import difflib
+from urllib.parse import unquote
+import unicodedata
+
+# --- Configuração ---
+SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
+M3U8_OUTPUT_FILENAME = "schedule_playlist.m3u8"
+EPG_OUTPUT_FILENAME = "epg.xml"
+EPG_EVENT_DURATION_HOURS = 2
+GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Programas de TV", "Beisebol", "Tênis"]
+EPG_PAST_EVENT_CUTOFF_HOURS = 1
+
+# Fuso horário para a lógica de "dia inteiro" do EPG (UTC-3 para Horário de Brasília)
+EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
+
+# Repositório de logos e cache local
+GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
+LOGO_CACHE_FILE = "logo_cache.json"
+LOGO_CACHE_EXPIRATION_HOURS = 24
+
+DEFAULT_SPORT_ICON = "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/sports.png?raw=true"
+
+SPORT_ICON_MAP = {
+    "Futebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/soccer.png?raw=true",
+    "Basquete": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/basketball.png?raw=true",
+    "Futebol Americano": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/americanfootball.png?raw=true",
+    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/motorsport.png?raw=true",
+    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/tv.png?raw=true",
+    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/baseball.png?raw=true",
+    "Hóquei no Gelo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/hockey.png?raw=true",
+    "Tênis": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/tennis.png?raw=true",
+}
+SPORT_TRANSLATION_MAP = {
+    "Soccer": "Futebol", "Basketball": "Basquete", "Am. Football": "Futebol Americano",
+    "Tennis": "Tênis", "Motorsport": "Automobilismo", "Snooker": "Sinuca",
+    "Ice Hockey": "Hóquei no Gelo", "Baseball": "Beisebol", "TV Shows": "Programas de TV",
+    "Cricket": "Críquete", "Tennis ATP - KITZBUHEL": "Tênis", "Tennis ATP - UMAG": "Tênis",
+    "Tennis ATP - WASHINGTON": "Tênis", "Tennis WTA - PRAGUE": "Tênis",
+    "Tennis WTA - WASHINGTON": "Tênis", "WWE": "Luta Livre", "Badminton": "Badminton"
+}
+# --- Fim da Configuração ---
+
+def obter_urls_logos_com_cache(api_url: str) -> dict:
+    if os.path.exists(LOGO_CACHE_FILE):
+        file_mod_time = datetime.fromtimestamp(os.path.getmtime(LOGO_CACHE_FILE))
+        if (datetime.now() - file_mod_time) < timedelta(hours=LOGO_CACHE_EXPIRATION_HOURS):
+            print("Carregando logos do cache local (válido).")
+            with open(LOGO_CACHE_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+    print("\nBuscando catálogo de logos do GitHub...")
+    logo_cache = {}
+    try:
+        response = requests.get(api_url)
+        response.raise_for_status()
+        countries = response.json()
+        for country in countries:
+            if country['type'] == 'dir':
+                country_resp = requests.get(country['url'])
+                country_resp.raise_for_status()
+                logos = country_resp.json()
+                for logo in logos:
+                    if logo['type'] == 'file' and any(logo['name'].endswith(ext) for ext in ['.png', '.jpg', '.svg']):
+                        file_name_without_ext = os.path.splitext(unquote(logo['name']))[0]
+                        logo_cache[file_name_without_ext] = logo['download_url']
+        with open(LOGO_CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(logo_cache, f, indent=2)
+        print(f"Catálogo de {len(logo_cache)} logos carregado e salvo em cache.")
+    except requests.exceptions.RequestException as e:
+        print(f"AVISO: Falha ao buscar logos do GitHub. Erro: {e}")
+    return logo_cache
+
+def normalize_text(text: str) -> str:
+    if not text: return ""
+    text = text.lower()
+    text = ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
+    text = re.sub(r'\b(hd|sd|fhd|uhd|4k|24h|ao vivo|multiaudio)\b', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'[^a-z0-9]', '', text)
+    return text
+
+def find_best_logo_url(source_name: str, logo_cache: dict, sport_icon: str) -> str:
+    if not logo_cache or not source_name: return sport_icon
+    normalized_source = normalize_text(source_name)
+    if not hasattr(find_best_logo_url, "normalized_keys"):
+         find_best_logo_url.normalized_keys = {normalize_text(k): k for k in logo_cache.keys()}
+    normalized_keys = find_best_logo_url.normalized_keys
+    best_match = difflib.get_close_matches(normalized_source, normalized_keys.keys(), n=1, cutoff=0.7)
+    if best_match:
+        original_key = normalized_keys[best_match[0]]
+        return logo_cache[original_key]
+    return sport_icon
+
+def sanitize_id(name: str) -> str:
+    return re.sub(r'[^a-zA-Z0-9.-]', '', name.replace(' ', ''))
+
+def parse_date_from_key(date_key: str) -> datetime.date:
+    date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_key.split(' - ')[0])
+    try:
+        return datetime.strptime(date_str_cleaned, '%A %d %B %Y').date()
+    except ValueError:
+        print(f"AVISO: Não foi possível parsear a data '{date_key}'. Usando data de hoje como fallback.")
+        return datetime.now().date()
+
+def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache: dict) -> list:
+    print(f"Navegando para: {url} com o Selenium...")
+    driver.get(url)
+    try:
+        WebDriverWait(driver, 60).until_not(EC.text_to_be_present_in_element((By.TAG_NAME, 'body'), 'Carregando...'))
+        print("Página carregada. Extraindo dados...")
+    except TimeoutException:
+        print("ERRO: A página demorou demais para carregar.")
+        return []
+
+    soup = BeautifulSoup(driver.page_source, 'lxml')
+    json_tag = soup.find('code', class_='language-json')
+    if not json_tag:
+        print("ERRO: Não foi possível encontrar a tag com os dados JSON na página final.")
+        return []
+    
+    stream_list = []
+    order_counter = 0
+    base_url = url.split('/api/')[0]
+    
+    try:
+        full_text = json_tag.get_text()
+        start_index = full_text.find('{')
+        end_index = full_text.rfind('}')
+        if start_index == -1 or end_index == -1: raise ValueError("JSON object boundaries not found")
+        json_only_text = full_text[start_index : end_index + 1]
+        json_cleaned = re.sub(r'^\s*\d+\s*', '', json_only_text, flags=re.MULTILINE)
+        data = json.loads(json_cleaned)
+        
+        for date_key, categories in data.items():
+            event_date = parse_date_from_key(date_key)
+            if not event_date: continue
+            
+            for sport_category, events in categories.items():
+                translated_sport = SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
+                if "Tennis" in sport_category: translated_sport = "Tênis"
+
+                for event in events:
+                    channels1_data = event.get('channels', [])
+                    channels2_data = event.get('channels2', [])
+                    list1 = [channels1_data] if isinstance(channels1_data, dict) else (channels1_data or [])
+                    list2 = [channels2_data] if isinstance(channels2_data, dict) else (channels2_data or [])
+                    all_channels = list1 + list2
+                    
+                    for channel in all_channels:
+                        try:
+                            channel_name = channel['channel_name']
+                            channel_id = channel['channel_id']
+                            event_time_obj = datetime.strptime(event['time'], '%H:%M').time()
+                            start_dt_utc = datetime.combine(event_date, event_time_obj).replace(tzinfo=timezone.utc)
+                            start_timestamp_ms = int(start_dt_utc.timestamp() * 1000)
+
+                            sport_icon = SPORT_ICON_MAP.get(translated_sport, DEFAULT_SPORT_ICON)
+                            logo_url = find_best_logo_url(channel_name, logo_cache, sport_icon)
+
+                            stream_list.append({
+                                'id': channel_id,
+                                'stream_url': f"{base_url}/stream/{channel_id}.m3u8",
+                                'event_name': event['event'],
+                                'sport': translated_sport,
+                                'source_name': channel_name,
+                                'start_timestamp_ms': str(start_timestamp_ms),
+                                'original_order': order_counter,
+                                'logo_url': logo_url,
+                            })
+                            order_counter += 1
+                        except (KeyError, ValueError) as e:
+                            print(f"AVISO: Pulando canal mal formatado. Detalhes: {e} | Canal: {channel}")
+    except Exception as e:
+        print(f"ERRO CRÍTICO: Falha ao processar o JSON da página. Detalhes: {e}")
+
+    print(f"Extração com Selenium concluída. {len(stream_list)} streams encontrados.")
+    return stream_list
+
+def generate_m3u8_content(stream_list: list) -> str:
+    """Gera o M3U8 com ID único POR CANAL para agrupar no EPG."""
+    m3u8_lines = ["#EXTM3U"]
+    if not stream_list: return "\n".join(m3u8_lines)
+    
+    print("\nOrdenando streams e gerando M3U8...")
+    sort_map = {group.lower(): i for i, group in enumerate(GROUP_SORT_ORDER)}
+    stream_list.sort(key=lambda s: (sort_map.get(s['sport'].lower(), len(sort_map)), s['original_order']))
+
+    for stream in stream_list:
+        unique_channel_id = sanitize_id(f"ch.{stream['source_name']}")
+        
+        display_title = f"{stream['event_name']} ({stream['source_name']})"
+        
+        extinf = (f'#EXTINF:-1 tvg-id="{unique_channel_id}" '
+                  f'tvg-logo="{stream["logo_url"]}" '
+                  f'group-title="{stream["sport"]}",'
+                  f'{display_title}')
+        m3u8_lines.extend([extinf, stream['stream_url']])
+    return "\n".join(m3u8_lines)
+
+def generate_xmltv_epg(stream_list: list) -> str:
+    """Gera EPG de dia inteiro com canais únicos e programação agrupada."""
+    if not stream_list: return ""
+    print("Gerando EPG XML de dia inteiro...")
+
+    xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
+    local_tz = timezone(timedelta(hours=EPG_LOCAL_TIMEZONE_OFFSET_HOURS))
+    
+    unique_channels = {}
+    for stream in stream_list:
+        if stream['source_name'] not in unique_channels:
+            unique_channels[stream['source_name']] = stream['logo_url']
+            
+    for name, logo in unique_channels.items():
+        channel_id = sanitize_id(f"ch.{name}")
+        xml_lines.append(f'  <channel id="{channel_id}">')
+        xml_lines.append(f'    <display-name>{html.escape(name)}</display-name>')
+        xml_lines.append(f'    <icon src="{html.escape(logo)}" />')
+        xml_lines.append('  </channel>')
+
+    for stream in stream_list:
+        try:
+            channel_id = sanitize_id(f"ch.{stream['source_name']}")
+            timestamp_ms = int(stream['start_timestamp_ms'])
+            start_dt_utc = datetime.fromtimestamp(timestamp_ms / 1000, tz=timezone.utc)
+            end_dt_utc = start_dt_utc + timedelta(hours=EPG_EVENT_DURATION_HOURS)
+            
+            start_dt_local = start_dt_utc.astimezone(local_tz)
+            local_day_start = start_dt_local.replace(hour=0, minute=0, second=0, microsecond=0)
+            local_day_end = local_day_start + timedelta(days=1)
+
+            # Bloco 1: "Evento não iniciado"
+            if start_dt_utc > local_day_start.astimezone(timezone.utc):
+                local_day_start = local_day_start - timedelta(days=1)
+                start_str = local_day_start.astimezone(timezone.utc).strftime('%Y%m%d%H%M%S %z')
+                stop_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
+                xml_lines.append('    <title lang="pt">Evento não iniciado</title>')
+                xml_lines.append('  </programme>')
+
+            # Bloco 2: O evento real --- *** A CORREÇÃO ESTÁ AQUI *** ---
+            start_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
+            stop_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
+            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
+            xml_lines.append(f'    <title lang="pt">{html.escape(stream["source_name"])}</title>')
+            xml_lines.append(f'    <desc lang="pt">{html.escape(stream["event_name"])}</desc>')
+            xml_lines.append(f'    <category lang="pt">{html.escape(stream["sport"])}</category>')
+            xml_lines.append('  </programme>')
+
+            # Bloco 3: "Evento finalizado"
+            if end_dt_utc < local_day_end.astimezone(timezone.utc):
+                start_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
+                local_day_end = local_day_end + timedelta(days=1)
+                stop_str = local_day_end.astimezone(timezone.utc).strftime('%Y%m%d%H%M%S %z')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
+                xml_lines.append('    <title lang="pt">Evento finalizado</title>')
+                xml_lines.append('  </programme>')
+                
+        except (ValueError, TypeError):
+            continue
+            
+    xml_lines.append('</tv>')
+    return "\n".join(xml_lines)
+
+def main():
+    print("--- Gerador de Playlist e EPG (v80 - Título EPG Corrigido) ---")
+    logo_cache = obter_urls_logos_com_cache(GITHUB_API_URL)
+    
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    options.add_argument('--log-level=3')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--no-sandbox')
+    
+    stream_data = []
+    try:
+        service = ChromeService(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+        stream_data = extract_streams_with_selenium(driver, SCHEDULE_PAGE_URL, logo_cache)
+    finally:
+        if 'driver' in locals() and driver:
+            print("\nProcesso de extração finalizado. Fechando o navegador.")
+            driver.quit()
+
+    if not stream_data:
+        print("\nNenhum stream foi extraído. Nenhum arquivo será gerado.")
+        return
+
+    now_utc = datetime.now(timezone.utc)
+    cutoff_time = now_utc - timedelta(hours=EPG_PAST_EVENT_CUTOFF_HOURS)
+    
+    filtered_streams = [
+        s for s in stream_data
+        if (datetime.fromtimestamp(int(s['start_timestamp_ms']) / 1000, tz=timezone.utc) + timedelta(hours=EPG_EVENT_DURATION_HOURS)) >= cutoff_time
+    ]
+    print(f"\nTotal de streams extraídos: {len(stream_data)}. Válidos após filtro de tempo: {len(filtered_streams)}.")
+
+    if not filtered_streams:
+        print("Nenhum evento futuro ou em andamento encontrado.")
+        return
+
+    m3u8_content = generate_m3u8_content(filtered_streams)
+    epg_content = generate_xmltv_epg(filtered_streams)
+
+    try:
+        with open(M3U8_OUTPUT_FILENAME, "w", encoding="utf-8") as f:
+            f.write(m3u8_content)
+        print(f"✅ Sucesso! Arquivo '{M3U8_OUTPUT_FILENAME}' gerado.")
+    except IOError as e:
+        print(f"❌ ERRO ao salvar M3U8: {e}")
+    try:
+        with open(EPG_OUTPUT_FILENAME, "w", encoding="utf-8") as f:
+            f.write(epg_content)
+        print(f"✅ Sucesso! Arquivo '{EPG_OUTPUT_FILENAME}' gerado.")
+    except IOError as e:
+        print(f"❌ ERRO ao salvar EPG: {e}")
+
+if __name__ == "__main__":
+    main()
