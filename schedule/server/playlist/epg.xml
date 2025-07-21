@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tv>
+  <channel id="ch.MATCHPremierRussia">
+    <display-name>MATCH! Premier Russia</display-name>
+    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-premier-ru.png" />
+  </channel>
+  <channel id="ch.MATCHTVRussia">
+    <display-name>MATCH TV Russia</display-name>
+    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-ru.png" />
+  </channel>
+  <channel id="ch.TVPSportPoland">
+    <display-name>TVP Sport Poland</display-name>
+    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp-sport-pl.png" />
+  </channel>
+  <channel id="ch.maxExtra1Sweden">
+    <display-name>max Extra 1 Sweden</display-name>
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+  </channel>
+  <channel id="ch.maxExtra2Sweden">
+    <display-name>max Extra 2 Sweden</display-name>
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+  </channel>
+  <channel id="ch.maxExtra3Sweden">
+    <display-name>max Extra 3 Sweden</display-name>
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
+  </channel>
+  <channel id="ch.Arena1PremiumSerbia">
+    <display-name>Arena 1 Premium Serbia</display-name>
+    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-1-premium-rs.png" />
+  </channel>
   <channel id="ch.DiemaSportBulgaria">
     <display-name>Diema Sport Bulgaria</display-name>
     <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/bulgaria/diema-sport-hd-bg.png" />
@@ -16,53 +44,21 @@
     <display-name>Prima Sport 1 Romania</display-name>
     <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/prima-sport-1-ro.png" />
   </channel>
-  <channel id="ch.ArenaSport2Croatia">
-    <display-name>Arena Sport 2 Croatia</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-2-rs.png" />
-  </channel>
-  <channel id="ch.SD-8176720">
-    <display-name>SD-8176720</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
-  </channel>
-  <channel id="ch.MATCHPremierRussia">
-    <display-name>MATCH! Premier Russia</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-premier-ru.png" />
-  </channel>
-  <channel id="ch.MATCHTVRussia">
-    <display-name>MATCH TV Russia</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-ru.png" />
-  </channel>
-  <channel id="ch.TVPSportPoland">
-    <display-name>TVP Sport Poland</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp-sport-pl.png" />
-  </channel>
-  <channel id="ch.maxExtra1Sweden">
-    <display-name>max Extra 1 Sweden</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
-  </channel>
-  <channel id="ch.maxExtra2Sweden">
-    <display-name>max Extra 2 Sweden</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
-  </channel>
-  <channel id="ch.maxExtra3Sweden">
-    <display-name>max Extra 3 Sweden</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
-  </channel>
-  <channel id="ch.Arena1PremiumSerbia">
-    <display-name>Arena 1 Premium Serbia</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-1-premium-rs.png" />
-  </channel>
   <channel id="ch.Arena3PremiumSerbia">
     <display-name>Arena 3 Premium Serbia</display-name>
     <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-3-premium-rs.png" />
   </channel>
+  <channel id="ch.ArenaSport2Croatia">
+    <display-name>Arena Sport 2 Croatia</display-name>
+    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-2-rs.png" />
+  </channel>
   <channel id="ch.SD-8176694">
     <display-name>SD-8176694</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.TVIPortugal">
     <display-name>TVI Portugal</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.FoxDeportes">
     <display-name>Fox Deportes</display-name>
@@ -82,7 +78,7 @@
   </channel>
   <channel id="ch.ESPN2Mexico">
     <display-name>ESPN2 Mexico</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.SportingTVPortugal">
     <display-name>Sporting TV Portugal</display-name>
@@ -102,7 +98,7 @@
   </channel>
   <channel id="ch.SD-8266978">
     <display-name>SD-8266978</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.TyCSportsArgentina">
     <display-name>TyC Sports Argentina</display-name>
@@ -110,7 +106,7 @@
   </channel>
   <channel id="ch.ESPNArgentina">
     <display-name>ESPN Argentina</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.FoxSports1USA">
     <display-name>Fox Sports 1 USA</display-name>
@@ -130,7 +126,7 @@
   </channel>
   <channel id="ch.DIRECTVSportsArgentina">
     <display-name>DIRECTV Sports Argentina</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.Sport2Israel">
     <display-name>Sport 2 Israel</display-name>
@@ -202,7 +198,7 @@
   </channel>
   <channel id="ch.VodafoneSport">
     <display-name>Vodafone Sport</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.beINSportsMAX4France">
     <display-name>beIN Sports MAX 4 France</display-name>
@@ -210,7 +206,7 @@
   </channel>
   <channel id="ch.Sport5LiveIsrael">
     <display-name>Sport 5 Live Israel</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.SportsNetPittsburgh">
     <display-name>SportsNet Pittsburgh</display-name>
@@ -218,7 +214,7 @@
   </channel>
   <channel id="ch.FanDuelSportsNetworkDetroit">
     <display-name>FanDuel Sports Network Detroit</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.FanDuelSportsNetworkFlorida">
     <display-name>FanDuel Sports Network Florida</display-name>
@@ -242,7 +238,7 @@
   </channel>
   <channel id="ch.YESUSA">
     <display-name>YES USA</display-name>
-    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.SportsnetEast">
     <display-name>Sportsnet East</display-name>
@@ -298,59 +294,27 @@
   </channel>
   <channel id="ch.TennisStream8">
     <display-name>Tennis Stream 8</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8308680">
-    <display-name>SD-8308680</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8298780">
-    <display-name>SD-8298780</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8308683">
-    <display-name>SD-8308683</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8298728">
-    <display-name>SD-8298728</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298774">
     <display-name>SD-8298774</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298723">
     <display-name>SD-8298723</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298729">
     <display-name>SD-8298729</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8303312">
     <display-name>SD-8303312</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8308682">
     <display-name>SD-8308682</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SkySportsMixUK">
-    <display-name>Sky Sports Mix UK</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-mix-uk.png" />
-  </channel>
-  <channel id="ch.SkySport2NZ">
-    <display-name>Sky Sport 2 NZ</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-2-nz.png" />
-  </channel>
-  <channel id="ch.SportKlub3Croatia">
-    <display-name>Sport Klub 3 Croatia</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/sportklub-3-hr.png" />
-  </channel>
-  <channel id="ch.SkySport1NZ">
-    <display-name>Sky Sport 1 NZ</display-name>
-    <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-1-nz.png" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.TNTSports2UK">
     <display-name>TNT Sports 2 UK</display-name>
@@ -366,11 +330,11 @@
   </channel>
   <channel id="ch.SkySportsActionUKCH-37SkySportsMainEvent">
     <display-name>Sky Sports Action UK (CH-37) } Sky Sports Main Event</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/sports.png?raw=true" />
   </channel>
   <channel id="ch.TV3SportDenmark">
     <display-name>TV3 Sport Denmark</display-name>
-    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/sports.png?raw=true" />
   </channel>
   <channel id="ch.SkySport3NZ">
     <display-name>Sky Sport 3 NZ</display-name>
@@ -404,72 +368,6 @@
     <display-name>EuroSport 1 Greece</display-name>
     <icon src="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-1-rs.png" />
   </channel>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.DiemaSportBulgaria">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.DiemaSportBulgaria">
-    <title lang="pt">Diema Sport Bulgaria</title>
-    <desc lang="pt">Bulgaria - Parva Liga : Lokomotiv Plovdiv vs Dobrudzha 1919</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.DiemaSportBulgaria">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.Sportklub4Croatia">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.Sportklub4Croatia">
-    <title lang="pt">Sportklub 4 Croatia</title>
-    <desc lang="pt">Bulgaria - Parva Liga : Lokomotiv Plovdiv vs Dobrudzha 1919</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.Sportklub4Croatia">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.DigiSport1Romania">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.DigiSport1Romania">
-    <title lang="pt">Digi Sport 1 Romania</title>
-    <desc lang="pt">Romania - Liga I : Unirea Slobozia vs Csikszereda</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.DigiSport1Romania">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.PrimaSport1Romania">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.PrimaSport1Romania">
-    <title lang="pt">Prima Sport 1 Romania</title>
-    <desc lang="pt">Romania - Liga I : Unirea Slobozia vs Csikszereda</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.PrimaSport1Romania">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.ArenaSport2Croatia">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.ArenaSport2Croatia">
-    <title lang="pt">Arena Sport 2 Croatia</title>
-    <desc lang="pt">Romania - Liga I : Unirea Slobozia vs Csikszereda</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.ArenaSport2Croatia">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.SD-8176720">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.SD-8176720">
-    <title lang="pt">SD-8176720</title>
-    <desc lang="pt">Romania - Liga I : Unirea Slobozia vs Csikszereda</desc>
-    <category lang="pt">Futebol</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.SD-8176720">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
   <programme start="20250720030000 +0000" stop="20250721163000 +0000" channel="ch.MATCHPremierRussia">
     <title lang="pt">Evento não iniciado</title>
   </programme>
@@ -1438,17 +1336,6 @@
   <programme start="20250722013500 +0000" stop="20250723030000 +0000" channel="ch.ChicagoSportsNetwork">
     <title lang="pt">Evento finalizado</title>
   </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.TennisStream8">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.TennisStream8">
-    <title lang="pt">Tennis Stream 8</title>
-    <desc lang="pt">ATP - UMAG : Lajovic D. vs Atmane T.</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.TennisStream8">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
   <programme start="20250720030000 +0000" stop="20250721190000 +0000" channel="ch.TennisStream8">
     <title lang="pt">Evento não iniciado</title>
   </programme>
@@ -1458,50 +1345,6 @@
     <category lang="pt">Tênis</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.TennisStream8">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721154000 +0000" channel="ch.SD-8308680">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721154000 +0000" stop="20250721174000 +0000" channel="ch.SD-8308680">
-    <title lang="pt">SD-8308680</title>
-    <desc lang="pt">ATP - Umag (CRO) : Kamil Majchrzak vs Pablo Llamas Ruiz</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721174000 +0000" stop="20250723030000 +0000" channel="ch.SD-8308680">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721154000 +0000" channel="ch.SD-8298780">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721154000 +0000" stop="20250721174000 +0000" channel="ch.SD-8298780">
-    <title lang="pt">SD-8298780</title>
-    <desc lang="pt">ATP - Umag (CRO) - Double : M.Demoliner/S.Gille vs G.Duran/C.Ugo Carabelli</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721174000 +0000" stop="20250723030000 +0000" channel="ch.SD-8298780">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721154000 +0000" channel="ch.SD-8308683">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721154000 +0000" stop="20250721174000 +0000" channel="ch.SD-8308683">
-    <title lang="pt">SD-8308683</title>
-    <desc lang="pt">ATP - Umag (CRO) : Titouan Droguet vs Cristian Garin</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721174000 +0000" stop="20250723030000 +0000" channel="ch.SD-8308683">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.SD-8298728">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.SD-8298728">
-    <title lang="pt">SD-8298728</title>
-    <desc lang="pt">ATP - Umag (CRO) : Dusan Lajovic vs Terence Atmane</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.SD-8298728">
     <title lang="pt">Evento finalizado</title>
   </programme>
   <programme start="20250720030000 +0000" stop="20250721165000 +0000" channel="ch.SD-8298774">
@@ -1557,61 +1400,6 @@
     <category lang="pt">Tênis</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.SD-8308682">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.SkySportsMixUK">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.SkySportsMixUK">
-    <title lang="pt">Sky Sports Mix UK</title>
-    <desc lang="pt">WPA World Championship Pool - Day 1</desc>
-    <category lang="pt">Sinuca</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.SkySportsMixUK">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.SkySport2NZ">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.SkySport2NZ">
-    <title lang="pt">Sky Sport 2 NZ</title>
-    <desc lang="pt">WPA World Championship Pool - Day 1</desc>
-    <category lang="pt">Sinuca</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.SkySport2NZ">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.SportKlub3Croatia">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.SportKlub3Croatia">
-    <title lang="pt">Sport Klub 3 Croatia</title>
-    <desc lang="pt">WPA World Championship Pool - Day 1</desc>
-    <category lang="pt">Sinuca</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.SportKlub3Croatia">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Vodafone Sport</title>
-    <desc lang="pt">Championship League Snooker : Stuart Bingham vs Liam James Davies</desc>
-    <category lang="pt">Sinuca</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.VodafoneSport">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721160000 +0000" channel="ch.SkySport1NZ">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721160000 +0000" stop="20250721180000 +0000" channel="ch.SkySport1NZ">
-    <title lang="pt">Sky Sport 1 NZ</title>
-    <desc lang="pt">Championship League Snooker : Stuart Bingham vs Liam James Davies</desc>
-    <category lang="pt">Sinuca</category>
-  </programme>
-  <programme start="20250721180000 +0000" stop="20250723030000 +0000" channel="ch.SkySport1NZ">
     <title lang="pt">Evento finalizado</title>
   </programme>
   <programme start="20250720030000 +0000" stop="20250721170000 +0000" channel="ch.TNTSports2UK">
