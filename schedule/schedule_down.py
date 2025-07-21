@@ -31,27 +31,34 @@ EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
 # Repositório de logos e cache local
 GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
 LOGO_CACHE_FILE = "logo_cache.json"
-LOGO_CACHE_EXPIRATION_HOURS = 24
+LOGO_CACHE_EXPIRATION_HOURS = 48
 
-DEFAULT_SPORT_ICON = "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/sports.png?raw=true"
+DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true"
 
 SPORT_ICON_MAP = {
-    "Futebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/soccer.png?raw=true",
-    "Basquete": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/basketball.png?raw=true",
-    "Futebol Americano": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/americanfootball.png?raw=true",
-    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/motorsport.png?raw=true",
-    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/tv.png?raw=true",
-    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/baseball.png?raw=true",
-    "Hóquei no Gelo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/hockey.png?raw=true",
-    "Tênis": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/main/Logos/tennis.png?raw=true",
+    "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true",
+    "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/basketball.png?raw=true",
+    "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/americanfootball.png?raw=true",
+    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/motorsport.png?raw=true",
+    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/tv.png?raw=true",
+    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true",
+    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/hockey.png?raw=true",
+    "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true",
 }
 SPORT_TRANSLATION_MAP = {
-    "Soccer": "Futebol", "Basketball": "Basquete", "Am. Football": "Futebol Americano",
-    "Tennis": "Tênis", "Motorsport": "Automobilismo", "Snooker": "Sinuca",
-    "Ice Hockey": "Hóquei no Gelo", "Baseball": "Beisebol", "TV Shows": "Programas de TV",
-    "Cricket": "Críquete", "Tennis ATP - KITZBUHEL": "Tênis", "Tennis ATP - UMAG": "Tênis",
-    "Tennis ATP - WASHINGTON": "Tênis", "Tennis WTA - PRAGUE": "Tênis",
-    "Tennis WTA - WASHINGTON": "Tênis", "WWE": "Luta Livre", "Badminton": "Badminton"
+    "Soccer": "Futebol", 
+    "Basketball": "Basquete", 
+    "Am. Football": "Futebol Americano",
+    "Tennis": "Tênis", 
+    "Motorsport": "Automobilismo", 
+    "Snooker": "Sinuca",
+    "Ice Hockey": "Hóquei no Gelo", 
+    "Baseball": "Beisebol",
+    "TV Shows": "Programas de TV",
+    "Cricket": "Críquete", 
+    "Tennis": "Tênis", 
+    "WWE": "Luta Livre", 
+    "Badminton": "Badminton"
 }
 # --- Fim da Configuração ---
 
