@@ -9,7 +9,7 @@ http://192.168.68.19:3000/stream/400.m3u8
 http://192.168.68.19:3000/stream/583.m3u8
 #EXTINF:-1 tvg-id="ch.ArenaSport2Croatia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-2-rs.png" group-title="Futebol",Romania - Liga I : Unirea Slobozia vs Csikszereda (Arena Sport 2 Croatia)
 http://192.168.68.19:3000/stream/433.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8176720" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",Romania - Liga I : Unirea Slobozia vs Csikszereda (SD-8176720)
+#EXTINF:-1 tvg-id="ch.SD-8176720" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",Romania - Liga I : Unirea Slobozia vs Csikszereda (SD-8176720)
 http://192.168.68.19:3000/stream/8176720.m3u8
 #EXTINF:-1 tvg-id="ch.MATCHPremierRussia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-premier-ru.png" group-title="Futebol",Russia - FNL : Rodina Moskva vs Chernomorets (MATCH! Premier Russia)
 http://192.168.68.19:3000/stream/573.m3u8
@@ -17,11 +17,11 @@ http://192.168.68.19:3000/stream/573.m3u8
 http://192.168.68.19:3000/stream/127.m3u8
 #EXTINF:-1 tvg-id="ch.TVPSportPoland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp-sport-pl.png" group-title="Futebol",Poland - I Liga : Puszcza Niepołomice vs Ruch Chorzów (TVP Sport Poland)
 http://192.168.68.19:3000/stream/128.m3u8
-#EXTINF:-1 tvg-id="ch.maxExtra1Sweden" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",Sweden - Allsvenskan : Norrköping vs Värnamo (max Extra 1 Sweden)
+#EXTINF:-1 tvg-id="ch.maxExtra1Sweden" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",Sweden - Allsvenskan : Norrköping vs Värnamo (max Extra 1 Sweden)
 http://192.168.68.19:3000/stream/2.m3u8
-#EXTINF:-1 tvg-id="ch.maxExtra2Sweden" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",Sweden - Superettan : Landskrona vs Trelleborg FF (max Extra 2 Sweden)
+#EXTINF:-1 tvg-id="ch.maxExtra2Sweden" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",Sweden - Superettan : Landskrona vs Trelleborg FF (max Extra 2 Sweden)
 http://192.168.68.19:3000/stream/3.m3u8
-#EXTINF:-1 tvg-id="ch.maxExtra3Sweden" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",Sweden - Superettan : Utsikten vs Helsingborg (max Extra 3 Sweden)
+#EXTINF:-1 tvg-id="ch.maxExtra3Sweden" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",Sweden - Superettan : Utsikten vs Helsingborg (max Extra 3 Sweden)
 http://192.168.68.19:3000/stream/4.m3u8
 #EXTINF:-1 tvg-id="ch.Arena1PremiumSerbia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-1-premium-rs.png" group-title="Futebol",Serbia - Super Liga : OFK Beograd vs Spartak Subotica (Arena 1 Premium Serbia)
 http://192.168.68.19:3000/stream/134.m3u8
@@ -37,9 +37,9 @@ http://192.168.68.19:3000/stream/583.m3u8
 http://192.168.68.19:3000/stream/139.m3u8
 #EXTINF:-1 tvg-id="ch.ArenaSport2Croatia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-2-rs.png" group-title="Futebol",Romania - Liga I : Dinamo Bucureşti vs Botoşani (Arena Sport 2 Croatia)
 http://192.168.68.19:3000/stream/433.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8176694" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",Romania - Liga I : Dinamo Bucureşti vs Botoşani (SD-8176694)
+#EXTINF:-1 tvg-id="ch.SD-8176694" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",Romania - Liga I : Dinamo Bucureşti vs Botoşani (SD-8176694)
 http://192.168.68.19:3000/stream/8176694.m3u8
-#EXTINF:-1 tvg-id="ch.TVIPortugal" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (TVI Portugal)
+#EXTINF:-1 tvg-id="ch.TVIPortugal" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (TVI Portugal)
 http://192.168.68.19:3000/stream/723.m3u8
 #EXTINF:-1 tvg-id="ch.FoxDeportes" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-deportes-us.png" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (Fox Deportes)
 http://192.168.68.19:3000/stream/643.m3u8
@@ -49,7 +49,7 @@ http://192.168.68.19:3000/stream/135.m3u8
 http://192.168.68.19:3000/stream/432.m3u8
 #EXTINF:-1 tvg-id="ch.beINSPORTSAustralia3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (beIN SPORTS Australia 3)
 http://192.168.68.19:3000/stream/493.m3u8
-#EXTINF:-1 tvg-id="ch.ESPN2Mexico" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (ESPN2 Mexico)
+#EXTINF:-1 tvg-id="ch.ESPN2Mexico" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (ESPN2 Mexico)
 http://192.168.68.19:3000/stream/926.m3u8
 #EXTINF:-1 tvg-id="ch.SportingTVPortugal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sporting-tv-pt.png" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (Sporting TV Portugal)
 http://192.168.68.19:3000/stream/716.m3u8
@@ -59,7 +59,7 @@ http://192.168.68.19:3000/stream/712.m3u8
 http://192.168.68.19:3000/stream/85.m3u8
 #EXTINF:-1 tvg-id="ch.Sport1Israel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/israel/sport1-il.png" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (Sport 1 Israel)
 http://192.168.68.19:3000/stream/140.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8266978" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (SD-8266978)
+#EXTINF:-1 tvg-id="ch.SD-8266978" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",World - Club Friendly : Sporting CP vs Sunderland (SD-8266978)
 http://192.168.68.19:3000/stream/8266978.m3u8
 #EXTINF:-1 tvg-id="ch.TyCSportsArgentina" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/argentina/tyc-sports-ar.png" group-title="Futebol",Argentina - Primera B Metropolitana : Dock Sud vs Flandria (TyC Sports Argentina)
 http://192.168.68.19:3000/stream/746.m3u8
@@ -67,7 +67,7 @@ http://192.168.68.19:3000/stream/746.m3u8
 http://192.168.68.19:3000/stream/643.m3u8
 #EXTINF:-1 tvg-id="ch.FoxDeportes" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-deportes-us.png" group-title="Futebol",World COTIF Tournament : Argentina U20 vs Chile U20 (Fox Deportes)
 http://192.168.68.19:3000/stream/643.m3u8
-#EXTINF:-1 tvg-id="ch.ESPNArgentina" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",World COTIF Tournament : Argentina U20 vs Chile U20 (ESPN Argentina)
+#EXTINF:-1 tvg-id="ch.ESPNArgentina" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",World COTIF Tournament : Argentina U20 vs Chile U20 (ESPN Argentina)
 http://192.168.68.19:3000/stream/149.m3u8
 #EXTINF:-1 tvg-id="ch.FoxSports1USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-1-us.png" group-title="Futebol",Copa América Femenina : Argentina vs Peru (Fox Sports 1 USA)
 http://192.168.68.19:3000/stream/39.m3u8
@@ -77,7 +77,7 @@ http://192.168.68.19:3000/stream/49.m3u8
 http://192.168.68.19:3000/stream/78.m3u8
 #EXTINF:-1 tvg-id="ch.TUDNUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tudn-us.png" group-title="Futebol",Copa América Femenina : Argentina vs Peru (TUDN USA)
 http://192.168.68.19:3000/stream/66.m3u8
-#EXTINF:-1 tvg-id="ch.DIRECTVSportsArgentina" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" group-title="Futebol",Copa América Femenina : Argentina vs Peru (DIRECTV Sports Argentina)
+#EXTINF:-1 tvg-id="ch.DIRECTVSportsArgentina" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" group-title="Futebol",Copa América Femenina : Argentina vs Peru (DIRECTV Sports Argentina)
 http://192.168.68.19:3000/stream/1.m3u8
 #EXTINF:-1 tvg-id="ch.Sport2Israel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/israel/sport2-il.png" group-title="Futebol",Copa América Femenina : Argentina vs Peru (Sport 2 Israel)
 http://192.168.68.19:3000/stream/141.m3u8
@@ -125,17 +125,17 @@ http://192.168.68.19:3000/stream/766.m3u8
 http://192.168.68.19:3000/stream/131.m3u8
 #EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",MLB : Baltimore Orioles vs Cleveland Guardians (MLB League Pass)
 http://192.168.68.19:3000/stream/3.m3u8
-#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Baltimore Orioles vs Cleveland Guardians (Vodafone Sport)
+#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Baltimore Orioles vs Cleveland Guardians (Vodafone Sport)
 http://192.168.68.19:3000/stream/260.m3u8
 #EXTINF:-1 tvg-id="ch.beINSportsMAX4France" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/bein-sports-fr.png" group-title="Beisebol",MLB : Baltimore Orioles vs Cleveland Guardians (beIN Sports MAX 4 France)
 http://192.168.68.19:3000/stream/494.m3u8
-#EXTINF:-1 tvg-id="ch.Sport5LiveIsrael" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Baltimore Orioles vs Cleveland Guardians (Sport 5 Live Israel)
+#EXTINF:-1 tvg-id="ch.Sport5LiveIsrael" tvg-logo="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Baltimore Orioles vs Cleveland Guardians (Sport 5 Live Israel)
 http://192.168.68.19:3000/stream/146.m3u8
 #EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",MLB : Pittsburgh Pirates vs Detroit Tigers (MLB League Pass)
 http://192.168.68.19:3000/stream/4.m3u8
 #EXTINF:-1 tvg-id="ch.SportsNetPittsburgh" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sportsnet-pittsburgh-us.png" group-title="Beisebol",MLB : Pittsburgh Pirates vs Detroit Tigers (SportsNet Pittsburgh)
 http://192.168.68.19:3000/stream/922.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkDetroit" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Pittsburgh Pirates vs Detroit Tigers (FanDuel Sports Network Detroit)
+#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkDetroit" tvg-logo="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Pittsburgh Pirates vs Detroit Tigers (FanDuel Sports Network Detroit)
 http://192.168.68.19:3000/stream/891.m3u8
 #EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",MLB : Miami Marlins vs San Diego Padres (MLB League Pass)
 http://192.168.68.19:3000/stream/5.m3u8
@@ -153,7 +153,7 @@ http://192.168.68.19:3000/stream/411.m3u8
 http://192.168.68.19:3000/stream/8.m3u8
 #EXTINF:-1 tvg-id="ch.TVASportsCA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/tva-sports-ca.png" group-title="Beisebol",MLB : Toronto Blue Jays vs New York Yankees (TVA Sports CA)
 http://192.168.68.19:3000/stream/833.m3u8
-#EXTINF:-1 tvg-id="ch.YESUSA" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Toronto Blue Jays vs New York Yankees (YES USA)
+#EXTINF:-1 tvg-id="ch.YESUSA" tvg-logo="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" group-title="Beisebol",MLB : Toronto Blue Jays vs New York Yankees (YES USA)
 http://192.168.68.19:3000/stream/763.m3u8
 #EXTINF:-1 tvg-id="ch.SportsnetEast" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-east-hd-ca.png" group-title="Beisebol",MLB : Toronto Blue Jays vs New York Yankees (Sportsnet East)
 http://192.168.68.19:3000/stream/408.m3u8
@@ -187,29 +187,27 @@ http://192.168.68.19:3000/stream/11.m3u8
 http://192.168.68.19:3000/stream/905.m3u8
 #EXTINF:-1 tvg-id="ch.ChicagoSportsNetwork" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-sports-network-us.png" group-title="Beisebol",MLB : Tampa Bay Rays vs Chicago White Sox (Chicago Sports Network)
 http://192.168.68.19:3000/stream/776.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream8" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - UMAG : Lajovic D. vs Atmane T. (Tennis Stream 8)
+#EXTINF:-1 tvg-id="ch.TennisStream8" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - UMAG : Lajovic D. vs Atmane T. (Tennis Stream 8)
 http://192.168.68.19:3000/stream/1508.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream8" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - UMAG : Guillen Meza A. vs Wawrinka S. (Tennis Stream 8)
+#EXTINF:-1 tvg-id="ch.TennisStream8" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - UMAG : Guillen Meza A. vs Wawrinka S. (Tennis Stream 8)
 http://192.168.68.19:3000/stream/1508.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8304222" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",Challenger - Segovia (SPA) : Mario Gonzalez Fernandez vs Hugo Grenier (SD-8304222)
-http://192.168.68.19:3000/stream/8304222.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8308680" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Kamil Majchrzak vs Pablo Llamas Ruiz (SD-8308680)
+#EXTINF:-1 tvg-id="ch.SD-8308680" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Kamil Majchrzak vs Pablo Llamas Ruiz (SD-8308680)
 http://192.168.68.19:3000/stream/8308680.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8298780" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) - Double : M.Demoliner/S.Gille vs G.Duran/C.Ugo Carabelli (SD-8298780)
+#EXTINF:-1 tvg-id="ch.SD-8298780" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) - Double : M.Demoliner/S.Gille vs G.Duran/C.Ugo Carabelli (SD-8298780)
 http://192.168.68.19:3000/stream/8298780.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8308683" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Titouan Droguet vs Cristian Garin (SD-8308683)
+#EXTINF:-1 tvg-id="ch.SD-8308683" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Titouan Droguet vs Cristian Garin (SD-8308683)
 http://192.168.68.19:3000/stream/8308683.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8298728" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Dusan Lajovic vs Terence Atmane (SD-8298728)
+#EXTINF:-1 tvg-id="ch.SD-8298728" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Dusan Lajovic vs Terence Atmane (SD-8298728)
 http://192.168.68.19:3000/stream/8298728.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8298774" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) - Double : M.Dodig/N.Serdarusic vs R.Arneodo/M.Guinard (SD-8298774)
+#EXTINF:-1 tvg-id="ch.SD-8298774" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) - Double : M.Dodig/N.Serdarusic vs R.Arneodo/M.Guinard (SD-8298774)
 http://192.168.68.19:3000/stream/8298774.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8298723" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Roberto Carballes Baena vs Nikoloz Basilashvili (SD-8298723)
+#EXTINF:-1 tvg-id="ch.SD-8298723" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Roberto Carballes Baena vs Nikoloz Basilashvili (SD-8298723)
 http://192.168.68.19:3000/stream/8298723.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8298729" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Tomas Barrios Vera vs Mariano Navone (SD-8298729)
+#EXTINF:-1 tvg-id="ch.SD-8298729" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Tomas Barrios Vera vs Mariano Navone (SD-8298729)
 http://192.168.68.19:3000/stream/8298729.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8303312" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",Challenger - Zug (ELV) : Henry Bernet vs Murkel Dellien (SD-8303312)
+#EXTINF:-1 tvg-id="ch.SD-8303312" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",Challenger - Zug (ELV) : Henry Bernet vs Murkel Dellien (SD-8303312)
 http://192.168.68.19:3000/stream/8303312.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8308682" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Alvaro Guillen Meza vs Stan Wawrinka (SD-8308682)
+#EXTINF:-1 tvg-id="ch.SD-8308682" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" group-title="Tênis",ATP - Umag (CRO) : Alvaro Guillen Meza vs Stan Wawrinka (SD-8308682)
 http://192.168.68.19:3000/stream/8308682.m3u8
 #EXTINF:-1 tvg-id="ch.SkySportsMixUK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-mix-uk.png" group-title="Sinuca",WPA World Championship Pool - Day 1 (Sky Sports Mix UK)
 http://192.168.68.19:3000/stream/449.m3u8
@@ -217,7 +215,7 @@ http://192.168.68.19:3000/stream/449.m3u8
 http://192.168.68.19:3000/stream/589.m3u8
 #EXTINF:-1 tvg-id="ch.SportKlub3Croatia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/sportklub-3-hr.png" group-title="Sinuca",WPA World Championship Pool - Day 1 (Sport Klub 3 Croatia)
 http://192.168.68.19:3000/stream/103.m3u8
-#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Sinuca",Championship League Snooker : Stuart Bingham vs Liam James Davies (Vodafone Sport)
+#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Sinuca",Championship League Snooker : Stuart Bingham vs Liam James Davies (Vodafone Sport)
 http://192.168.68.19:3000/stream/260.m3u8
 #EXTINF:-1 tvg-id="ch.SkySport1NZ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-1-nz.png" group-title="Sinuca",Championship League Snooker : Stuart Bingham vs Liam James Davies (Sky Sport 1 NZ)
 http://192.168.68.19:3000/stream/588.m3u8
@@ -225,43 +223,43 @@ http://192.168.68.19:3000/stream/588.m3u8
 http://192.168.68.19:3000/stream/32.m3u8
 #EXTINF:-1 tvg-id="ch.SkySport4NZ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-4-nz.png" group-title="Sinuca",Ultimate Pool Pairs Cup | Mixed | Group Stage (Sky Sport 4 NZ)
 http://192.168.68.19:3000/stream/591.m3u8
-#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (Vodafone Sport)
+#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (Vodafone Sport)
 http://192.168.68.19:3000/stream/260.m3u8
 #EXTINF:-1 tvg-id="ch.DAZN2DE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/dazn2-de.png" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (DAZN2 DE)
 http://192.168.68.19:3000/stream/427.m3u8
-#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
+#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
 http://192.168.68.19:3000/stream/38.m3u8
-#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (TV3 Sport Denmark)
+#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (TV3 Sport Denmark)
 http://192.168.68.19:3000/stream/809.m3u8
 #EXTINF:-1 tvg-id="ch.SkySport3NZ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-3-nz.png" group-title="Darts",World Matchplay 2025 : Dobey, Chris vs. Pietreczko, Ricardo (Sky Sport 3 NZ)
 http://192.168.68.19:3000/stream/590.m3u8
-#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (Vodafone Sport)
+#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (Vodafone Sport)
 http://192.168.68.19:3000/stream/260.m3u8
 #EXTINF:-1 tvg-id="ch.DAZN2DE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/dazn2-de.png" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (DAZN2 DE)
 http://192.168.68.19:3000/stream/427.m3u8
-#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
+#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
 http://192.168.68.19:3000/stream/38.m3u8
-#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (TV3 Sport Denmark)
+#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (TV3 Sport Denmark)
 http://192.168.68.19:3000/stream/809.m3u8
 #EXTINF:-1 tvg-id="ch.SkySport3NZ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-3-nz.png" group-title="Darts",World Matchplay 2025 : Price, Gerwyn vs. Gurney, Daryl (Sky Sport 3 NZ)
 http://192.168.68.19:3000/stream/590.m3u8
-#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (Vodafone Sport)
+#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (Vodafone Sport)
 http://192.168.68.19:3000/stream/260.m3u8
 #EXTINF:-1 tvg-id="ch.DAZN2DE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/dazn2-de.png" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (DAZN2 DE)
 http://192.168.68.19:3000/stream/427.m3u8
-#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
+#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
 http://192.168.68.19:3000/stream/38.m3u8
-#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (TV3 Sport Denmark)
+#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (TV3 Sport Denmark)
 http://192.168.68.19:3000/stream/809.m3u8
 #EXTINF:-1 tvg-id="ch.SkySport3NZ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-3-nz.png" group-title="Darts",World Matchplay 2025 : van Gerwen, Michael vs. van Barneveld, Raymond (Sky Sport 3 NZ)
 http://192.168.68.19:3000/stream/590.m3u8
-#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (Vodafone Sport)
+#EXTINF:-1 tvg-id="ch.VodafoneSport" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (Vodafone Sport)
 http://192.168.68.19:3000/stream/260.m3u8
 #EXTINF:-1 tvg-id="ch.DAZN2DE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/dazn2-de.png" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (DAZN2 DE)
 http://192.168.68.19:3000/stream/427.m3u8
-#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
+#EXTINF:-1 tvg-id="ch.SkySportsActionUKCH-37SkySportsMainEvent" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (Sky Sports Action UK (CH-37) } Sky Sports Main Event)
 http://192.168.68.19:3000/stream/38.m3u8
-#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (TV3 Sport Denmark)
+#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (TV3 Sport Denmark)
 http://192.168.68.19:3000/stream/809.m3u8
 #EXTINF:-1 tvg-id="ch.SkySport3NZ" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-3-nz.png" group-title="Darts",World Matchplay 2025 : Smith, Ross vs. Rock, Josh (Sky Sport 3 NZ)
 http://192.168.68.19:3000/stream/590.m3u8

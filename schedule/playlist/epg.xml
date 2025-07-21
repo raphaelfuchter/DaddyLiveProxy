@@ -22,7 +22,7 @@
   </channel>
   <channel id="ch.SD-8176720">
     <display-name>SD-8176720</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.MATCHPremierRussia">
     <display-name>MATCH! Premier Russia</display-name>
@@ -38,15 +38,15 @@
   </channel>
   <channel id="ch.maxExtra1Sweden">
     <display-name>max Extra 1 Sweden</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.maxExtra2Sweden">
     <display-name>max Extra 2 Sweden</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.maxExtra3Sweden">
     <display-name>max Extra 3 Sweden</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.Arena1PremiumSerbia">
     <display-name>Arena 1 Premium Serbia</display-name>
@@ -58,11 +58,11 @@
   </channel>
   <channel id="ch.SD-8176694">
     <display-name>SD-8176694</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.TVIPortugal">
     <display-name>TVI Portugal</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.FoxDeportes">
     <display-name>Fox Deportes</display-name>
@@ -82,7 +82,7 @@
   </channel>
   <channel id="ch.ESPN2Mexico">
     <display-name>ESPN2 Mexico</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.SportingTVPortugal">
     <display-name>Sporting TV Portugal</display-name>
@@ -102,7 +102,7 @@
   </channel>
   <channel id="ch.SD-8266978">
     <display-name>SD-8266978</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.TyCSportsArgentina">
     <display-name>TyC Sports Argentina</display-name>
@@ -110,7 +110,7 @@
   </channel>
   <channel id="ch.ESPNArgentina">
     <display-name>ESPN Argentina</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.FoxSports1USA">
     <display-name>Fox Sports 1 USA</display-name>
@@ -130,7 +130,7 @@
   </channel>
   <channel id="ch.DIRECTVSportsArgentina">
     <display-name>DIRECTV Sports Argentina</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/soccer.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true" />
   </channel>
   <channel id="ch.Sport2Israel">
     <display-name>Sport 2 Israel</display-name>
@@ -202,7 +202,7 @@
   </channel>
   <channel id="ch.VodafoneSport">
     <display-name>Vodafone Sport</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.beINSportsMAX4France">
     <display-name>beIN Sports MAX 4 France</display-name>
@@ -210,7 +210,7 @@
   </channel>
   <channel id="ch.Sport5LiveIsrael">
     <display-name>Sport 5 Live Israel</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.SportsNetPittsburgh">
     <display-name>SportsNet Pittsburgh</display-name>
@@ -218,7 +218,7 @@
   </channel>
   <channel id="ch.FanDuelSportsNetworkDetroit">
     <display-name>FanDuel Sports Network Detroit</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.FanDuelSportsNetworkFlorida">
     <display-name>FanDuel Sports Network Florida</display-name>
@@ -242,7 +242,7 @@
   </channel>
   <channel id="ch.YESUSA">
     <display-name>YES USA</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/baseball.png?raw=true" />
+    <icon src="https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true" />
   </channel>
   <channel id="ch.SportsnetEast">
     <display-name>Sportsnet East</display-name>
@@ -298,47 +298,43 @@
   </channel>
   <channel id="ch.TennisStream8">
     <display-name>Tennis Stream 8</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
-  </channel>
-  <channel id="ch.SD-8304222">
-    <display-name>SD-8304222</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8308680">
     <display-name>SD-8308680</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298780">
     <display-name>SD-8298780</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8308683">
     <display-name>SD-8308683</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298728">
     <display-name>SD-8298728</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298774">
     <display-name>SD-8298774</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298723">
     <display-name>SD-8298723</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8298729">
     <display-name>SD-8298729</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8303312">
     <display-name>SD-8303312</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SD-8308682">
     <display-name>SD-8308682</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/tennis.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true" />
   </channel>
   <channel id="ch.SkySportsMixUK">
     <display-name>Sky Sports Mix UK</display-name>
@@ -370,11 +366,11 @@
   </channel>
   <channel id="ch.SkySportsActionUKCH-37SkySportsMainEvent">
     <display-name>Sky Sports Action UK (CH-37) } Sky Sports Main Event</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" />
   </channel>
   <channel id="ch.TV3SportDenmark">
     <display-name>TV3 Sport Denmark</display-name>
-    <icon src="https://github.com/raphaelfuchter/StepDaddyLiveHD-Lives/blob/main/Logos/sports.png?raw=true" />
+    <icon src="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true" />
   </channel>
   <channel id="ch.SkySport3NZ">
     <display-name>Sky Sport 3 NZ</display-name>
@@ -1462,17 +1458,6 @@
     <category lang="pt">Tênis</category>
   </programme>
   <programme start="20250721210000 +0000" stop="20250723030000 +0000" channel="ch.TennisStream8">
-    <title lang="pt">Evento finalizado</title>
-  </programme>
-  <programme start="20250720030000 +0000" stop="20250721153000 +0000" channel="ch.SD-8304222">
-    <title lang="pt">Evento não iniciado</title>
-  </programme>
-  <programme start="20250721153000 +0000" stop="20250721173000 +0000" channel="ch.SD-8304222">
-    <title lang="pt">SD-8304222</title>
-    <desc lang="pt">Challenger - Segovia (SPA) : Mario Gonzalez Fernandez vs Hugo Grenier</desc>
-    <category lang="pt">Tênis</category>
-  </programme>
-  <programme start="20250721173000 +0000" stop="20250723030000 +0000" channel="ch.SD-8304222">
     <title lang="pt">Evento finalizado</title>
   </programme>
   <programme start="20250720030000 +0000" stop="20250721154000 +0000" channel="ch.SD-8308680">

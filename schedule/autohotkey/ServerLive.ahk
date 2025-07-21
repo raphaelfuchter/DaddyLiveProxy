@@ -2,8 +2,8 @@
 Persistent
 
 ; --- CONFIGURAÇÕES DO USUÁRIO ---
-CaminhoDoBat := "C:\Users\RF17\Documents\GitHub\StepDaddyLiveHD-Lives\server.bat"
-CaminhoDoIcone := "C:\Users\RF17\Documents\GitHub\StepDaddyLiveHD-Lives\server.ico"
+CaminhoDoBat := "C:\Users\RF17\Documents\GitHub\DaddyLiveProxy\schedule\server.bat"
+CaminhoDoIcone := "C:\Users\RF17\Documents\GitHub\DaddyLiveProxy\schedule\server.ico"
 TextoDica := "LivesServer"
 
 ; --- LÓGICA DO SCRIPT (VERSÃO CORRIGIDA E SIMPLIFICADA) ---

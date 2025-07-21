@@ -19,8 +19,8 @@ import unicodedata
 
 # --- Configuração ---
 SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
-M3U8_OUTPUT_FILENAME = "schedule_playlist.m3u8"
-EPG_OUTPUT_FILENAME = "epg.xml"
+M3U8_OUTPUT_FILENAME = "playlist/schedule_playlist.m3u8"
+EPG_OUTPUT_FILENAME = "playlist/epg.xml"
 EPG_EVENT_DURATION_HOURS = 2
 GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Programas de TV", "Beisebol", "Tênis"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 1
@@ -30,20 +30,20 @@ EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
 
 # Repositório de logos e cache local
 GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
-LOGO_CACHE_FILE = "logo_cache.json"
+LOGO_CACHE_FILE = "cache/logo_cache.json"
 LOGO_CACHE_EXPIRATION_HOURS = 48
 
-DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/sports.png?raw=true"
+DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/sports.png?raw=true"
 
 SPORT_ICON_MAP = {
-    "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/soccer.png?raw=true",
-    "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/basketball.png?raw=true",
-    "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/americanfootball.png?raw=true",
-    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/motorsport.png?raw=true",
-    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/tv.png?raw=true",
-    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/Logos/baseball.png?raw=true",
-    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/hockey.png?raw=true",
-    "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/Logos/tennis.png?raw=true",
+    "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/soccer.png?raw=true",
+    "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/basketball.png?raw=true",
+    "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/americanfootball.png?raw=true",
+    "Automobilismo": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/motorsport.png?raw=true",
+    "Programas de TV": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/tv.png?raw=true",
+    "Beisebol": "https://github.com/raphaelfuchter/DaddyLiveProxy/blob/master/schedule/logos/baseball.png?raw=true",
+    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/hockey.png?raw=true",
+    "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/logos/tennis.png?raw=true",
 }
 SPORT_TRANSLATION_MAP = {
     "Soccer": "Futebol", 
