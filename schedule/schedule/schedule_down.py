@@ -245,7 +245,7 @@ def generate_m3u8_content(stream_list: list) -> str:
     for stream in stream_list:
         unique_channel_id = sanitize_id(f"ch.{stream['source_name']}")
         
-        display_title = f"{stream['event_name']} ({stream['source_name']})"
+        display_title = f"{stream['event_name']}"
         
         extinf = (f'#EXTINF:-1 tvg-id="{unique_channel_id}" '
                   f'tvg-logo="{stream["logo_url"]}" '

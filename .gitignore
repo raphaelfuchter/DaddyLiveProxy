@@ -8,3 +8,4 @@ __pycache__/
 /.idea/
 schedule/server/playlist/schedule_playlist.m3u8
 schedule/server/playlist/epg.xml
+/schedule/server/playlist
