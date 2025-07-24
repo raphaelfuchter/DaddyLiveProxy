@@ -27,8 +27,9 @@ class StepDaddy:
         # Substituímos a string única por uma lista de URLs a serem testadas.
         self._base_urls = [
             "https://thedaddy.sx",
-            "https://thedaddy.to",
-            "https://thedaddy.click"
+            "https://dlhd.click",
+            "https://thedaddy.click",
+            "https://thedaddy.to"                        
         ]
         
         self.channels = []
