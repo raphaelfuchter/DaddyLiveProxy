@@ -71,7 +71,12 @@ SPORT_TRANSLATION_MAP = {
     "Athletics": "Atletismo",
     "Cycling": "Ciclismo",
     "Bowling": "Boliche"  ,
-    "Horse Racing": "Corrida de Cavalos"    
+    "Horse Racing": "Corrida de Cavalos",
+    "Volleyball": "Volei",
+    "Water polo": "Polo Aquático",
+    "Water Sports": "Esportes Aquáticos",
+    "Fencing": "Esgrima",
+    "Field Hockey": "Hóquei na Grama"
 }
 # --- Fim da Configuração ---
 
