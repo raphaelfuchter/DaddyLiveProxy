@@ -16,6 +16,7 @@ import requests
 import difflib
 from urllib.parse import unquote
 import unicodedata
+import collections
 
 # --- Configuração ---
 SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
@@ -23,7 +24,7 @@ SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
 M3U8_OUTPUT_FILENAME = "output/schedule_playlist.m3u8"
 EPG_OUTPUT_FILENAME = "output/epg.xml"
 EPG_EVENT_DURATION_HOURS = 2
-GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Programas de TV", "Beisebol", "Tênis"]
+GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Beisebol", "Programas de TV", "Tênis", "Futsal", "MMA"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 1
 
 # Fuso horário para a lógica de "dia inteiro" do EPG (UTC-3 para Horário de Brasília)
@@ -76,7 +77,10 @@ SPORT_TRANSLATION_MAP = {
     "Water polo": "Polo Aquático",
     "Water Sports": "Esportes Aquáticos",
     "Fencing": "Esgrima",
-    "Field Hockey": "Hóquei na Grama"
+    "Field Hockey": "Hóquei na Grama",
+    "Handball": "Handebol",
+    "Gymnastics": "Ginástica",
+    "PPV Events": "Eventos PPV"
 }
 # --- Fim da Configuração ---
 
@@ -239,20 +243,24 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
     return stream_list
 
 def generate_m3u8_content(stream_list: list) -> str:
-    """Gera o M3U8 com ID único POR CANAL para agrupar no EPG."""
+    """Gera o M3U8 com um ID de evento único para cada entrada, garantindo o mapeamento 1-para-1 com o EPG."""
     m3u8_lines = ["#EXTM3U"]
     if not stream_list: return "\n".join(m3u8_lines)
     
-    print("\nOrdenando streams e gerando M3U8...")
+    print("\nOrdenando streams e gerando M3U8 com IDs de evento únicos...")
     sort_map = {group.lower(): i for i, group in enumerate(GROUP_SORT_ORDER)}
-    stream_list.sort(key=lambda s: (sort_map.get(s['sport'].lower(), len(sort_map)), s['original_order']))
+    stream_list.sort(key=lambda s: (sort_map.get(s['sport'].lower(), len(sort_map)), int(s['start_timestamp_ms'])))
 
     for stream in stream_list:
-        unique_channel_id = sanitize_id(f"ch.{stream['source_name']}")
+        # --- ALTERAÇÃO PRINCIPAL ---
+        # ID agora é único POR EVENTO, combinando canal e horário.
+        # Isso garante que cada linha do M3U tenha seu próprio EPG isolado.
+        unique_event_id = sanitize_id(f"evt.{stream['source_name']}.{stream['start_timestamp_ms']}")
         
+        # O nome que aparece na lista é o nome do evento.
         display_title = f"{stream['event_name']}"
         
-        extinf = (f'#EXTINF:-1 tvg-id="{unique_channel_id}" '
+        extinf = (f'#EXTINF:-1 tvg-id="{unique_event_id}" '
                   f'tvg-logo="{stream["logo_url"]}" '
                   f'group-title="{stream["sport"]}",'
                   f'{display_title}')
@@ -260,68 +268,77 @@ def generate_m3u8_content(stream_list: list) -> str:
     return "\n".join(m3u8_lines)
 
 def generate_xmltv_epg(stream_list: list) -> str:
-    """Gera EPG de dia inteiro com canais únicos e programação agrupada."""
+    """Gera EPG onde cada evento é um canal virtual isolado, preenchendo o dia inteiro com status."""
     if not stream_list: return ""
-    print("Gerando EPG XML de dia inteiro...")
+    print("Gerando EPG com canais virtuais (dia inteiro) por evento...")
 
     xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
     local_tz = timezone(timedelta(hours=EPG_LOCAL_TIMEZONE_OFFSET_HOURS))
-    
-    unique_channels = {}
-    for stream in stream_list:
-        if stream['source_name'] not in unique_channels:
-            unique_channels[stream['source_name']] = stream['logo_url']
-            
-    for name, logo in unique_channels.items():
-        channel_id = sanitize_id(f"ch.{name}")
-        xml_lines.append(f'  <channel id="{channel_id}">')
-        xml_lines.append(f'    <display-name>{html.escape(name)}</display-name>')
-        xml_lines.append(f'    <icon src="{html.escape(logo)}" />')
-        xml_lines.append('  </channel>')
+    generated_channel_ids = set()
 
+    # Itera em cada stream para criar um canal e uma grade de dia inteiro para cada um
     for stream in stream_list:
         try:
-            channel_id = sanitize_id(f"ch.{stream['source_name']}")
+            # ID único do evento, deve ser IDÊNTICO ao usado no M3U8
+            unique_event_id = sanitize_id(f"evt.{stream['source_name']}.{stream['start_timestamp_ms']}")
+
+            # Adiciona a tag <channel> para nosso canal virtual (apenas uma vez)
+            if unique_event_id not in generated_channel_ids:
+                xml_lines.append(f'  <channel id="{unique_event_id}">')
+                xml_lines.append(f'    <display-name>{html.escape(stream["source_name"])}</display-name>')
+                xml_lines.append(f'    <icon src="{html.escape(stream["logo_url"])}" />')
+                xml_lines.append('  </channel>')
+                generated_channel_ids.add(unique_event_id)
+
+            # --- Lógica para preencher o dia ---
             timestamp_ms = int(stream['start_timestamp_ms'])
             start_dt_utc = datetime.fromtimestamp(timestamp_ms / 1000, tz=timezone.utc)
             end_dt_utc = start_dt_utc + timedelta(hours=EPG_EVENT_DURATION_HOURS)
-            
-            safe_event_name = html.escape(stream['event_name'])
-            safe_channel_name = html.escape(stream['source_name'])
-            safe_sport_name = html.escape(stream['sport'])
-            
+
+            # Calcula os limites do dia no fuso horário local para o evento
             start_dt_local = start_dt_utc.astimezone(local_tz)
             local_day_start = start_dt_local.replace(hour=0, minute=0, second=0, microsecond=0)
             local_day_end = local_day_start + timedelta(days=1)
+            
+            # Converte os limites do dia para UTC para usar no XML
+            day_start_utc = local_day_start.astimezone(timezone.utc)
+            day_end_utc = local_day_end.astimezone(timezone.utc)
 
-            # Bloco 1: "Evento não iniciado"
-            if start_dt_utc > local_day_start.astimezone(timezone.utc):
-                local_day_start = local_day_start - timedelta(days=1)
-                start_str = local_day_start.astimezone(timezone.utc).strftime('%Y%m%d%H%M%S %z')
+            safe_event_name = html.escape(stream['event_name'])
+            safe_channel_name = html.escape(stream['source_name'])
+
+            # Bloco 1: "Evento não iniciado" (do início do dia até o começo do evento)
+            if start_dt_utc > day_start_utc:
+                
+                day_start_utc = day_start_utc - timedelta(days=1)
+                
+                start_str = day_start_utc.strftime('%Y%m%d%H%M%S %z')
                 stop_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
-                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
-                xml_lines.append('    <title lang="pt">Evento não iniciado</title>')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{unique_event_id}">')
+                xml_lines.append('    <title lang="pt">Não iniciado</title>')
                 xml_lines.append('  </programme>')
 
             # Bloco 2: O evento real
             start_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
             stop_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
-            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
+            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{unique_event_id}">')
             xml_lines.append(f'    <title lang="pt">{safe_channel_name}</title>')
             xml_lines.append(f'    <desc lang="pt">{safe_event_name}</desc>')
-            xml_lines.append(f'    <category lang="pt">{safe_sport_name}</category>')
             xml_lines.append('  </programme>')
 
-            # Bloco 3: "Evento finalizado"
-            if end_dt_utc < local_day_end.astimezone(timezone.utc):
-                start_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
-                local_day_end = local_day_end + timedelta(days=1)
-                stop_str = local_day_end.astimezone(timezone.utc).strftime('%Y%m%d%H%M%S %z')
-                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel_id}">')
-                xml_lines.append('    <title lang="pt">Evento finalizado</title>')
-                xml_lines.append('  </programme>')
+            # Bloco 3: "Evento finalizado" (do fim do evento até o fim do dia)
+            if end_dt_utc < day_end_utc:
                 
-        except (ValueError, TypeError):
+                day_end_utc = day_end_utc + timedelta(days=1)
+                
+                start_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
+                stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{unique_event_id}">')
+                xml_lines.append('    <title lang="pt">Finalizado</title>')
+                xml_lines.append('  </programme>')
+            
+        except (ValueError, TypeError) as e:
+            print(f"AVISO: Pulando evento no EPG devido a erro de dados: {e}")
             continue
             
     xml_lines.append('</tv>')
