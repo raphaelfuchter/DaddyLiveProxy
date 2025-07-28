@@ -26,6 +26,7 @@ EPG_OUTPUT_FILENAME = "output/epg.xml"
 EPG_EVENT_DURATION_HOURS = 2
 GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Beisebol", "Programas de TV", "Tênis", "Futsal", "MMA"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 1
+EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL = 0.5
 
 # Fuso horário para a lógica de "dia inteiro" do EPG (UTC-3 para Horário de Brasília)
 EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
@@ -377,14 +378,23 @@ def main():
         print("\nNenhum stream foi extraído. Nenhum arquivo será gerado.")
         return
 
+    # --- INÍCIO DA ALTERAÇÃO ---
     now_utc = datetime.now(timezone.utc)
-    cutoff_time = now_utc - timedelta(hours=EPG_PAST_EVENT_CUTOFF_HOURS)
     
-    filtered_streams = [
-        s for s in stream_data
-        if (datetime.fromtimestamp(int(s['start_timestamp_ms']) / 1000, tz=timezone.utc) + timedelta(hours=EPG_EVENT_DURATION_HOURS)) >= cutoff_time
-    ]
+    filtered_streams = []
+    for stream in stream_data:
+        # Define o tempo de corte: 30 min para Futebol, padrão para os demais
+        cutoff_hours = EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL if stream['sport'] == 'Futebol' else EPG_PAST_EVENT_CUTOFF_HOURS
+        cutoff_time = now_utc - timedelta(hours=cutoff_hours)
+
+        event_end_time = (datetime.fromtimestamp(int(stream['start_timestamp_ms']) / 1000, tz=timezone.utc) + 
+                          timedelta(hours=EPG_EVENT_DURATION_HOURS))
+
+        if event_end_time >= cutoff_time:
+            filtered_streams.append(stream)
+
     print(f"\nTotal de streams extraídos: {len(stream_data)}. Válidos após filtro de tempo: {len(filtered_streams)}.")
+    # --- FIM DA ALTERAÇÃO ---
 
     if not filtered_streams:
         print("Nenhum evento futuro ou em andamento encontrado.")
