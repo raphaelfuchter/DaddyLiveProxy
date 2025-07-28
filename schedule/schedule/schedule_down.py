@@ -252,7 +252,13 @@ def generate_m3u8_content(stream_list: list) -> str:
     
     print("\nOrdenando streams e gerando M3U8 com IDs de evento únicos...")
     sort_map = {group.lower(): i for i, group in enumerate(GROUP_SORT_ORDER)}
-    stream_list.sort(key=lambda s: (sort_map.get(s['sport'].lower(), len(sort_map)), int(s['start_timestamp_ms'])))
+    
+    # --- ALTERAÇÃO DA LÓGICA DE ORDENAÇÃO ---
+    stream_list.sort(key=lambda s: (
+        s['sport'].lower() not in sort_map,  # Prioridade 1: Esportes fora da lista vêm depois (True > False)
+        sort_map.get(s['sport'].lower(), s['sport'].lower()), # Prioridade 2: Ordena pela lista ou por nome (alfabético)
+        int(s['start_timestamp_ms']) # Prioridade 3: Ordena por tempo
+    ))
 
     for stream in stream_list:
         # --- ALTERAÇÃO PRINCIPAL ---
