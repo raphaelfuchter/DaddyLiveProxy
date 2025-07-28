@@ -1,307 +1,477 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="ch.ArenaSport1BiH" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/arena-sport-1-hr.png" group-title="Futebol",Slovan Bratislava vs Zrinjski : UEFA Champions League
-http://192.168.68.19:3000/stream/579.m3u8
-#EXTINF:-1 tvg-id="ch.FoxDeportes" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-deportes-us.png" group-title="Futebol",Saudi Arabia U20 vs. Mauritania U20 : COTIF L'Alcúdia International U-20 Soccer Tournament
-http://192.168.68.19:3000/stream/643.m3u8
-#EXTINF:-1 tvg-id="ch.TVP1Poland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp1-pl.png" group-title="Futebol",Lech Poznań vs Breidablik : UEFA Champions League
-http://192.168.68.19:3000/stream/560.m3u8
-#EXTINF:-1 tvg-id="ch.SNSport1Iceland" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Lech Poznań vs Breidablik : UEFA Champions League
-http://192.168.68.19:3000/stream/7.m3u8
-#EXTINF:-1 tvg-id="ch.ViaplaySports1UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-1-uk.png" group-title="Futebol",Rangers vs Panathinaikos : UEFA Champions League
-http://192.168.68.19:3000/stream/451.m3u8
-#EXTINF:-1 tvg-id="ch.PremierSports1Ireland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/premier-sports-1-uk.png" group-title="Futebol",Rangers vs Panathinaikos : UEFA Champions League
-http://192.168.68.19:3000/stream/771.m3u8
-#EXTINF:-1 tvg-id="ch.CytavisionSports1Cyprus" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Rangers vs Panathinaikos : UEFA Champions League
-http://192.168.68.19:3000/stream/911.m3u8
-#EXTINF:-1 tvg-id="ch.CosmoteSport1Greece" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/greece/cosmote-sport-1-gr.png" group-title="Futebol",Rangers vs Panathinaikos : UEFA Champions League
-http://192.168.68.19:3000/stream/622.m3u8
-#EXTINF:-1 tvg-id="ch.DiemaSportBulgaria" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/bulgaria/diema-sport-hd-bg.png" group-title="Futebol",Rijeka vs Ludogorets : UEFA Champions League
+#EXTINF:-1 tvg-id="evt.SD-8337120.1753707600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Philippines U23 vs Thailand U23 : Campionatul U22 AFF
+http://192.168.68.19:3000/stream/8337120.m3u8
+#EXTINF:-1 tvg-id="evt.MatchTVRussia.1753709400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-ru.png" group-title="Futebol",Ural vs Chernomorets : Russia - FNL
+http://192.168.68.19:3000/stream/127.m3u8
+#EXTINF:-1 tvg-id="evt.MATCHPremierRussia.1753709400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/russia/match-premier-ru.png" group-title="Futebol",Ural vs Chernomorets : Russia - FNL
+http://192.168.68.19:3000/stream/573.m3u8
+#EXTINF:-1 tvg-id="evt.DiemaSportBulgaria.1753718400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/bulgaria/diema-sport-hd-bg.png" group-title="Futebol",Dobrudzha 1919 vs Slavia Sofia : Bulgaria - Parva Liga
 http://192.168.68.19:3000/stream/465.m3u8
-#EXTINF:-1 tvg-id="ch.MAXSport1Croatia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/maxsport1-hr.png" group-title="Futebol",Rijeka vs Ludogorets : UEFA Champions League
-http://192.168.68.19:3000/stream/779.m3u8
-#EXTINF:-1 tvg-id="ch.5PLUSIsrael" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/israel/5plus-il.png" group-title="Futebol",Rijeka vs Ludogorets : UEFA Champions League
-http://192.168.68.19:3000/stream/145.m3u8
-#EXTINF:-1 tvg-id="ch.ViaplaySports2UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-2-uk.png" group-title="Futebol",Motherwell vs Greenock Morton : Scottish League Cup
-http://192.168.68.19:3000/stream/550.m3u8
-#EXTINF:-1 tvg-id="ch.PremierSports2Ireland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/premier-sports-2-uk.png" group-title="Futebol",Motherwell vs Greenock Morton : Scottish League Cup
-http://192.168.68.19:3000/stream/799.m3u8
-#EXTINF:-1 tvg-id="ch.SportdigitalFUSSBALLDE" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Motherwell vs Greenock Morton : Scottish League Cup
-http://192.168.68.19:3000/stream/571.m3u8
-#EXTINF:-1 tvg-id="ch.CytavisionSports2Cyprus" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Motherwell vs Greenock Morton : Scottish League Cup
-http://192.168.68.19:3000/stream/912.m3u8
-#EXTINF:-1 tvg-id="ch.DigiSport3Romania" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/digi-sport-3-ro.png" group-title="Futebol",Motherwell vs Greenock Morton : Scottish League Cup
-http://192.168.68.19:3000/stream/402.m3u8
-#EXTINF:-1 tvg-id="ch.CosmoteSport2Greece" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/greece/cosmote-sport-2-gr.png" group-title="Futebol",Motherwell vs Greenock Morton : Scottish League Cup
-http://192.168.68.19:3000/stream/623.m3u8
-#EXTINF:-1 tvg-id="ch.FOXNetworkUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/food-network-us.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/54.m3u8
-#EXTINF:-1 tvg-id="ch.ITV1UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-1-uk.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/350.m3u8
-#EXTINF:-1 tvg-id="ch.RAI1IT" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/italy/rai-1-it.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/850.m3u8
-#EXTINF:-1 tvg-id="ch.OptusSport" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/australia/optus-sport-au.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/8.m3u8
-#EXTINF:-1 tvg-id="ch.FOXNYUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-us.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/768.m3u8
-#EXTINF:-1 tvg-id="ch.1TVGeorgia" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/9.m3u8
-#EXTINF:-1 tvg-id="ch.RTE2Ireland" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/365.m3u8
-#EXTINF:-1 tvg-id="ch.RDSCA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/rds-hd-ca.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/839.m3u8
-#EXTINF:-1 tvg-id="ch.TSN4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/tsn-4-hd-ca.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/114.m3u8
-#EXTINF:-1 tvg-id="ch.TSN1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/tsn-1-hd-ca.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/111.m3u8
-#EXTINF:-1 tvg-id="ch.DAZN1DE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/dazn1-de.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/426.m3u8
-#EXTINF:-1 tvg-id="ch.ZDFDE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/zdf-de.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/727.m3u8
-#EXTINF:-1 tvg-id="ch.ORF1Austria" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/austria/orf1-at.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/10.m3u8
-#EXTINF:-1 tvg-id="ch.TRTSporTurkey" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/trt-spor-tr.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/889.m3u8
-#EXTINF:-1 tvg-id="ch.SRFzwei" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/switzerland/srf-zwei-ch.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/262.m3u8
-#EXTINF:-1 tvg-id="ch.TeledeporteSpainTDP" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/eleven-sports-int.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/529.m3u8
-#EXTINF:-1 tvg-id="ch.SportTV1Portugal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sport-tv-1-pt.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/49.m3u8
-#EXTINF:-1 tvg-id="ch.RTP2Portugal" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/720.m3u8
-#EXTINF:-1 tvg-id="ch.TVPSportPoland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp-sport-pl.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/128.m3u8
-#EXTINF:-1 tvg-id="ch.TVP1Poland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp1-pl.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/560.m3u8
-#EXTINF:-1 tvg-id="ch.TMCFrance" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/rt-france-fr.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/955.m3u8
-#EXTINF:-1 tvg-id="ch.M4SportsHungary" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/hungary/m4-sport-hu.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/265.m3u8
-#EXTINF:-1 tvg-id="ch.TSportCzech" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/ct-sport-cz.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/1033.m3u8
-#EXTINF:-1 tvg-id="ch.YLETV2Finland" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/11.m3u8
-#EXTINF:-1 tvg-id="ch.ETV2Estonia" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/12.m3u8
-#EXTINF:-1 tvg-id="ch.RTSHSportAlbania" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/albania/rtsh-sport-al.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/13.m3u8
-#EXTINF:-1 tvg-id="ch.NPO1NL" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/netherlands/npo1-nl.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/14.m3u8
-#EXTINF:-1 tvg-id="ch.TV2DirekteNorway" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/15.m3u8
-#EXTINF:-1 tvg-id="ch.TipikBelgium" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/belgium/tipik-be.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/16.m3u8
-#EXTINF:-1 tvg-id="ch.ESPNMexico" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-icon-us.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/925.m3u8
-#EXTINF:-1 tvg-id="ch.TV3SportDenmark" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/809.m3u8
-#EXTINF:-1 tvg-id="ch.ViaplaySportsSweden" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-2-uk.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/21.m3u8
-#EXTINF:-1 tvg-id="ch.RTS2Serbia" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/17.m3u8
-#EXTINF:-1 tvg-id="ch.HRT2Croatia" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/18.m3u8
-#EXTINF:-1 tvg-id="ch.ERT2Greece" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/greece/ert2-gr.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/19.m3u8
-#EXTINF:-1 tvg-id="ch.SVT1Sweden" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/20.m3u8
-#EXTINF:-1 tvg-id="ch.BNT3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/bulgaria/bnt-3-bg.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/478.m3u8
-#EXTINF:-1 tvg-id="ch.ESPN2Argentina" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/150.m3u8
-#EXTINF:-1 tvg-id="ch.SuperSportFootball" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/south-africa/supersport-football-za.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/56.m3u8
-#EXTINF:-1 tvg-id="ch.SuperSportMXimo1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/south-africa/supersport-maximo1-za.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/572.m3u8
-#EXTINF:-1 tvg-id="ch.beINSportsMENA1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/malaysia/bein-sports-max-hz-my.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/91.m3u8
-#EXTINF:-1 tvg-id="ch.beINSportsMENAEnglish1" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/61.m3u8
-#EXTINF:-1 tvg-id="ch.Sport3Israel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/israel/sport3-il.png" group-title="Futebol",England vs Italy : UEFA Women's Euro
-http://192.168.68.19:3000/stream/142.m3u8
-#EXTINF:-1 tvg-id="ch.beINSPORTSUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="Futebol",Semi Final 2 : Morocco vs Ghana : Africa Women Cup of Nations W
-http://192.168.68.19:3000/stream/425.m3u8
-#EXTINF:-1 tvg-id="ch.AzamSportsHD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/a-spor-tr.png" group-title="Futebol",Semi Final 2 : Morocco vs Ghana : Africa Women Cup of Nations W
-http://192.168.68.19:3000/stream/2.m3u8
-#EXTINF:-1 tvg-id="ch.beINSPORTSenEspaol" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-espanol-us.png" group-title="Futebol",Semi Final 2 : Morocco vs Ghana : Africa Women Cup of Nations W
-http://192.168.68.19:3000/stream/372.m3u8
-#EXTINF:-1 tvg-id="ch.beINSportsMENA6" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-6-us.png" group-title="Futebol",Semi Final 2 : Morocco vs Ghana : Africa Women Cup of Nations W
-http://192.168.68.19:3000/stream/96.m3u8
-#EXTINF:-1 tvg-id="ch.SportTV1Portugal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sport-tv-1-pt.png" group-title="Futebol",Semi Final 2 : Morocco vs Ghana : Africa Women Cup of Nations W
-http://192.168.68.19:3000/stream/49.m3u8
-#EXTINF:-1 tvg-id="ch.SuperSportPSL" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/south-africa/supersport-psl-za.png" group-title="Futebol",Semi Final 2 : Morocco vs Ghana : Africa Women Cup of Nations W
-http://192.168.68.19:3000/stream/413.m3u8
-#EXTINF:-1 tvg-id="ch.beINSports1Malaysia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/malaysia/bein-sports-max-hz-my.png" group-title="Futebol",Semi Final 2 : Morocco vs Ghana : Africa Women Cup of Nations W
-http://192.168.68.19:3000/stream/712.m3u8
-#EXTINF:-1 tvg-id="ch.FoxDeportes" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-deportes-us.png" group-title="Futebol",Uruguay U20 vs. Venezuela U20 : COTIF L'Alcúdia International U-20 Tournament
-http://192.168.68.19:3000/stream/643.m3u8
-#EXTINF:-1 tvg-id="ch.WinFutbolColombia" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Alianza Petrolera vs Deportes Tolima : Colombia - Primera A
-http://192.168.68.19:3000/stream/392.m3u8
-#EXTINF:-1 tvg-id="ch.FoxSports1USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-1-us.png" group-title="Futebol",Colombia vs Bolivia : Copa América Femenina
-http://192.168.68.19:3000/stream/39.m3u8
-#EXTINF:-1 tvg-id="ch.TUDNUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tudn-us.png" group-title="Futebol",Colombia vs Bolivia : Copa América Femenina
-http://192.168.68.19:3000/stream/66.m3u8
-#EXTINF:-1 tvg-id="ch.CaracolTVColombia" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Colombia vs Bolivia : Copa América Femenina
-http://192.168.68.19:3000/stream/1.m3u8
-#EXTINF:-1 tvg-id="ch.SportTV2Portugal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sport-tv-2-pt.png" group-title="Futebol",Colombia vs Bolivia : Copa América Femenina
-http://192.168.68.19:3000/stream/74.m3u8
-#EXTINF:-1 tvg-id="ch.SporTVBR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/brazil/sportv-br.png" group-title="Futebol",Colombia vs Bolivia : Copa América Femenina
-http://192.168.68.19:3000/stream/78.m3u8
-#EXTINF:-1 tvg-id="ch.Sport2Israel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/israel/sport2-il.png" group-title="Futebol",Colombia vs Bolivia : Copa América Femenina
-http://192.168.68.19:3000/stream/141.m3u8
-#EXTINF:-1 tvg-id="ch.beINSPORTSUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/425.m3u8
-#EXTINF:-1 tvg-id="ch.beINSPORTSenEspaol" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-espanol-us.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/372.m3u8
-#EXTINF:-1 tvg-id="ch.SportdigitalFUSSBALLDE" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/571.m3u8
-#EXTINF:-1 tvg-id="ch.SportTV1Portugal" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sport-tv-1-pt.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/49.m3u8
-#EXTINF:-1 tvg-id="ch.Arena1PremiumSerbia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-1-premium-rs.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/134.m3u8
-#EXTINF:-1 tvg-id="ch.ArenaSport1Croatia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-1-rs.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
+#EXTINF:-1 tvg-id="evt.SD-8267101.1753718400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Dobrudzha 1919 vs Slavia Sofia : Bulgaria - Parva Liga
+http://192.168.68.19:3000/stream/8267101.m3u8
+#EXTINF:-1 tvg-id="evt.DigiSport1Romania.1753718400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/digi-sport-1-ro.png" group-title="Futebol",Botoşani vs Unirea Slobozia : Romania - Liga I
+http://192.168.68.19:3000/stream/400.m3u8
+#EXTINF:-1 tvg-id="evt.PrimaSport1Romania.1753718400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/prima-sport-1-ro.png" group-title="Futebol",Botoşani vs Unirea Slobozia : Romania - Liga I
+http://192.168.68.19:3000/stream/583.m3u8
+#EXTINF:-1 tvg-id="evt.ArenaSport3Serbia.1753718400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-3-rs.png" group-title="Futebol",Botoşani vs Unirea Slobozia : Romania - Liga I
+http://192.168.68.19:3000/stream/431.m3u8
+#EXTINF:-1 tvg-id="evt.ArenaSport1Croatia.1753718400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-1-rs.png" group-title="Futebol",Botoşani vs Unirea Slobozia : Romania - Liga I
 http://192.168.68.19:3000/stream/432.m3u8
-#EXTINF:-1 tvg-id="ch.DirectvSportsArgentina" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/17.m3u8
-#EXTINF:-1 tvg-id="ch.ESPN4Brazil" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/brazil/espn-4-br.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/85.m3u8
-#EXTINF:-1 tvg-id="ch.beINSportsMENA6" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-6-us.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/96.m3u8
-#EXTINF:-1 tvg-id="ch.beINSportsMENAEnglish1" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/61.m3u8
-#EXTINF:-1 tvg-id="ch.Sport3Israel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/israel/sport3-il.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/142.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8059208" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Cerro Largo vs Central Córdoba SdE : Copa Sudamericana
-http://192.168.68.19:3000/stream/8059208.m3u8
-#EXTINF:-1 tvg-id="ch.WinFutbolColombia" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Santa Fe vs Rionegro Águilas : Colombia - Primera A
-http://192.168.68.19:3000/stream/392.m3u8
-#EXTINF:-1 tvg-id="ch.FoxSports2USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-2-us.png" group-title="Basquete",La Familia vs. Eberlein Drive : The Basketball Tournament
-http://192.168.68.19:3000/stream/758.m3u8
-#EXTINF:-1 tvg-id="ch.ABCNYUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-us.png" group-title="Programas de TV",General Hospital Season 62, Episode 219
-http://192.168.68.19:3000/stream/766.m3u8
-#EXTINF:-1 tvg-id="ch.GameShowNetwork" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/game-show-network-us.png" group-title="Programas de TV",Flip Side A Great Wingman Season 1, Episode 91
-http://192.168.68.19:3000/stream/319.m3u8
-#EXTINF:-1 tvg-id="ch.OutdoorChannel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/outdoor-channel-us.png" group-title="Programas de TV",Drury's Thirteen Season 12, Episode 4
-http://192.168.68.19:3000/stream/848.m3u8
-#EXTINF:-1 tvg-id="ch.ABCNYUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-us.png" group-title="Programas de TV",Jeopardy! Season 41, Episode 227
-http://192.168.68.19:3000/stream/766.m3u8
-#EXTINF:-1 tvg-id="ch.TelemundoUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/telemundo-us.png" group-title="Programas de TV",Top Chef VIP Season 4, Episode 1 • Premiere
-http://192.168.68.19:3000/stream/131.m3u8
-#EXTINF:-1 tvg-id="ch.ESPN2USA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-2-us.png" group-title="Beisebol",Volts vs Talons : Athletes Unlimited Softball League
-http://192.168.68.19:3000/stream/45.m3u8
-#EXTINF:-1 tvg-id="ch.TSN5" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/tsn-5-hd-ca.png" group-title="Beisebol",Volts vs Talons : Athletes Unlimited Softball League
-http://192.168.68.19:3000/stream/115.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Cleveland Guardians vs Baltimore Orioles : MLB
+#EXTINF:-1 tvg-id="evt.SD-8181082.1753718400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Botoşani vs Unirea Slobozia : Romania - Liga I
+http://192.168.68.19:3000/stream/8181082.m3u8
+#EXTINF:-1 tvg-id="evt.SD-7886764.1753718400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",IF Gnistan vs HJK Helsinki : Finland - Veikkausliiga
+http://192.168.68.19:3000/stream/7886764.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8267095.1753718400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Tartu JK Welco Elekter vs Nomme United : Estonia - Esiliiga A
+http://192.168.68.19:3000/stream/8267095.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8267096.1753718400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Viimsi vs Tallinna Kalev U21 : Estonia - Esiliiga A
+http://192.168.68.19:3000/stream/8267096.m3u8
+#EXTINF:-1 tvg-id="evt.maxExtra1Sweden.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Elfsborg vs IFK Göteborg : Sweden - Allsvenskan
+http://192.168.68.19:3000/stream/1.m3u8
+#EXTINF:-1 tvg-id="evt.SD-7881747.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Elfsborg vs IFK Göteborg : Sweden - Allsvenskan
+http://192.168.68.19:3000/stream/7881747.m3u8
+#EXTINF:-1 tvg-id="evt.maxExtra2Sweden.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Helsingborg vs Varberg : Sweden - Superettan
 http://192.168.68.19:3000/stream/2.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103656" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Cleveland Guardians vs Baltimore Orioles : MLB
-http://192.168.68.19:3000/stream/8103656.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Pittsburgh Pirates vs Detroit Tigers : MLB
+#EXTINF:-1 tvg-id="evt.SD-8267104.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Helsingborg vs Varberg : Sweden - Superettan
+http://192.168.68.19:3000/stream/8267104.m3u8
+#EXTINF:-1 tvg-id="evt.maxExtra3Sweden.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Västerås SK vs Trelleborg FF : Sweden - Superettan
 http://192.168.68.19:3000/stream/3.m3u8
-#EXTINF:-1 tvg-id="ch.SportsNetPittsburgh" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sportsnet-pittsburgh-us.png" group-title="Beisebol",Pittsburgh Pirates vs Detroit Tigers : MLB
-http://192.168.68.19:3000/stream/922.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkDetroit" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Pittsburgh Pirates vs Detroit Tigers : MLB
-http://192.168.68.19:3000/stream/891.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103649" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Pittsburgh Pirates vs Detroit Tigers : MLB
-http://192.168.68.19:3000/stream/8103649.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Miami Marlins vs San Diego Padres : MLB
+#EXTINF:-1 tvg-id="evt.SD-8267107.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Västerås SK vs Trelleborg FF : Sweden - Superettan
+http://192.168.68.19:3000/stream/8267107.m3u8
+#EXTINF:-1 tvg-id="evt.TV2SportXDenmark.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Midtjylland vs SønderjyskE : Denmark - Super Liga
+http://192.168.68.19:3000/stream/808.m3u8
+#EXTINF:-1 tvg-id="evt.SportKlub1Croatia.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/sportklub-1-hr.png" group-title="Futebol",Midtjylland vs SønderjyskE : Denmark - Super Liga
+http://192.168.68.19:3000/stream/101.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8206405.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Midtjylland vs SønderjyskE : Denmark - Super Liga
+http://192.168.68.19:3000/stream/8206405.m3u8
+#EXTINF:-1 tvg-id="evt.TVPSportPoland.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/tvp-sport-pl.png" group-title="Futebol",Odra Opole vs Miedź Legnica : Poland - I Liga
+http://192.168.68.19:3000/stream/128.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8178492.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Odra Opole vs Miedź Legnica : Poland - I Liga
+http://192.168.68.19:3000/stream/8178492.m3u8
+#EXTINF:-1 tvg-id="evt.CanalSport3Poland.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/canal-plus-sport-3-pl.png" group-title="Futebol",Katowice vs Zagłębie Lubin : Poland - Ekstraklasa
+http://192.168.68.19:3000/stream/259.m3u8
+#EXTINF:-1 tvg-id="evt.beINSPORTSUSA.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="Futebol",Katowice vs Zagłębie Lubin : Poland - Ekstraklasa
+http://192.168.68.19:3000/stream/425.m3u8
+#EXTINF:-1 tvg-id="evt.beINSPORTSenEspaol.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-espanol-us.png" group-title="Futebol",Katowice vs Zagłębie Lubin : Poland - Ekstraklasa
+http://192.168.68.19:3000/stream/372.m3u8
+#EXTINF:-1 tvg-id="evt.CanalSport5Poland.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/canal-plus-sport-5-pl.png" group-title="Futebol",Katowice vs Zagłębie Lubin : Poland - Ekstraklasa
+http://192.168.68.19:3000/stream/75.m3u8
+#EXTINF:-1 tvg-id="evt.Arena2PremiumSerbia.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-2-premium-rs.png" group-title="Futebol",Katowice vs Zagłębie Lubin : Poland - Ekstraklasa
+http://192.168.68.19:3000/stream/135.m3u8
+#EXTINF:-1 tvg-id="evt.ArenaSport3Croatia.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-3-rs.png" group-title="Futebol",Katowice vs Zagłębie Lubin : Poland - Ekstraklasa
+http://192.168.68.19:3000/stream/434.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8083407.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Katowice vs Zagłębie Lubin : Poland - Ekstraklasa
+http://192.168.68.19:3000/stream/8083407.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8338292.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Almeria vs Al Jazira : Interclub friendly
+http://192.168.68.19:3000/stream/8338292.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8191173.1753722000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Hegelmann vs Riteriai : Lithuania - A Lyga
+http://192.168.68.19:3000/stream/8191173.m3u8
+#EXTINF:-1 tvg-id="evt.SportKlub1Slovenia.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Koper vs Primorje : Slovenia - Prva Liga
 http://192.168.68.19:3000/stream/4.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkFlorida" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/world-latin-america/adrenalina-sports-network-lam.png" group-title="Beisebol",Miami Marlins vs San Diego Padres : MLB
-http://192.168.68.19:3000/stream/892.m3u8
-#EXTINF:-1 tvg-id="ch.beINSports4MaxFrance" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/bein-sports-fr.png" group-title="Beisebol",Miami Marlins vs San Diego Padres : MLB
-http://192.168.68.19:3000/stream/494.m3u8
-#EXTINF:-1 tvg-id="ch.Sport5StarsIsrael" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Miami Marlins vs San Diego Padres : MLB
-http://192.168.68.19:3000/stream/147.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103652" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Miami Marlins vs San Diego Padres : MLB
-http://192.168.68.19:3000/stream/8103652.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Philadelphia Phillies vs Boston Red Sox : MLB
-http://192.168.68.19:3000/stream/5.m3u8
-#EXTINF:-1 tvg-id="ch.truTVUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tru-tv-us.png" group-title="Beisebol",Philadelphia Phillies vs Boston Red Sox : MLB
-http://192.168.68.19:3000/stream/341.m3u8
-#EXTINF:-1 tvg-id="ch.NESNUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nesn-us.png" group-title="Beisebol",Philadelphia Phillies vs Boston Red Sox : MLB
-http://192.168.68.19:3000/stream/762.m3u8
-#EXTINF:-1 tvg-id="ch.TBSUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tbs-us.png" group-title="Beisebol",Philadelphia Phillies vs Boston Red Sox : MLB
-http://192.168.68.19:3000/stream/336.m3u8
-#EXTINF:-1 tvg-id="ch.NBCSportsPhiladelphia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbcsn-philadelphia-us.png" group-title="Beisebol",Philadelphia Phillies vs Boston Red Sox : MLB
-http://192.168.68.19:3000/stream/777.m3u8
-#EXTINF:-1 tvg-id="ch.SportsnetOne" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-one-hd-ca.png" group-title="Beisebol",Philadelphia Phillies vs Boston Red Sox : MLB
-http://192.168.68.19:3000/stream/411.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103659" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Philadelphia Phillies vs Boston Red Sox : MLB
-http://192.168.68.19:3000/stream/8103659.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Washington Nationals vs Cincinnati Reds : MLB
+#EXTINF:-1 tvg-id="evt.SportKlub3Croatia.1753725600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/sportklub-3-hr.png" group-title="Futebol",Koper vs Primorje : Slovenia - Prva Liga
+http://192.168.68.19:3000/stream/103.m3u8
+#EXTINF:-1 tvg-id="evt.DiemaSportBulgaria.1753726500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/bulgaria/diema-sport-hd-bg.png" group-title="Futebol",Montana vs Lokomotiv Plovdiv : Bulgaria - Parva Liga
+http://192.168.68.19:3000/stream/465.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8267124.1753726500000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Montana vs Lokomotiv Plovdiv : Bulgaria - Parva Liga
+http://192.168.68.19:3000/stream/8267124.m3u8
+#EXTINF:-1 tvg-id="evt.DigiSport1Romania.1753727400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/digi-sport-1-ro.png" group-title="Futebol",CSU Craiova vs Universitatea Cluj : Romania - Liga I
+http://192.168.68.19:3000/stream/400.m3u8
+#EXTINF:-1 tvg-id="evt.PrimaSport1Romania.1753727400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/prima-sport-1-ro.png" group-title="Futebol",CSU Craiova vs Universitatea Cluj : Romania - Liga I
+http://192.168.68.19:3000/stream/583.m3u8
+#EXTINF:-1 tvg-id="evt.ArenaSport3Serbia.1753727400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-3-rs.png" group-title="Futebol",CSU Craiova vs Universitatea Cluj : Romania - Liga I
+http://192.168.68.19:3000/stream/431.m3u8
+#EXTINF:-1 tvg-id="evt.ArenaSport2Croatia.1753727400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/arena-sport-2-rs.png" group-title="Futebol",CSU Craiova vs Universitatea Cluj : Romania - Liga I
+http://192.168.68.19:3000/stream/433.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8181085.1753727400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",CSU Craiova vs Universitatea Cluj : Romania - Liga I
+http://192.168.68.19:3000/stream/8181085.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSportsArgentina.1753729200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/argentina/tnt-sports-ar.png" group-title="Futebol",Deportivo Riestra vs Atlético Tucumán : Argentina - Primera División
+http://192.168.68.19:3000/stream/388.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8254706.1753729200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Deportivo Riestra vs Atlético Tucumán : Argentina - Primera División
+http://192.168.68.19:3000/stream/8254706.m3u8
+#EXTINF:-1 tvg-id="evt.SNSport1Iceland.1753730100000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Stjarnan vs Afturelding : Iceland - Besta deild karla
 http://192.168.68.19:3000/stream/6.m3u8
-#EXTINF:-1 tvg-id="ch.MASNUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/masn-us.png" group-title="Beisebol",Washington Nationals vs Cincinnati Reds : MLB
+#EXTINF:-1 tvg-id="evt.SD-8170565.1753730100000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Stjarnan vs Afturelding : Iceland - Besta deild karla
+http://192.168.68.19:3000/stream/8170565.m3u8
+#EXTINF:-1 tvg-id="evt.ESPNPremiumArgentina.1753736400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/argentina/espn-premium-ar.png" group-title="Futebol",Central Córdoba SdE vs Defensa y Justicia : Argentina - Primera División
+http://192.168.68.19:3000/stream/387.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8245799.1753736400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Central Córdoba SdE vs Defensa y Justicia : Argentina - Primera División
+http://192.168.68.19:3000/stream/8245799.m3u8
+#EXTINF:-1 tvg-id="evt.FoxSports2USA.1753736400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-2-us.png" group-title="Futebol",5th Place : Chile vs Paraguay : Copa America Femenina
+http://192.168.68.19:3000/stream/758.m3u8
+#EXTINF:-1 tvg-id="evt.SporTVBR.1753736400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/brazil/sportv-br.png" group-title="Futebol",5th Place : Chile vs Paraguay : Copa America Femenina
+http://192.168.68.19:3000/stream/78.m3u8
+#EXTINF:-1 tvg-id="evt.MovistarLigadeCampeones.1753736400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",5th Place : Chile vs Paraguay : Copa America Femenina
+http://192.168.68.19:3000/stream/435.m3u8
+#EXTINF:-1 tvg-id="evt.MEllasvamos.1753736400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",5th Place : Chile vs Paraguay : Copa America Femenina
+http://192.168.68.19:3000/stream/19.m3u8
+#EXTINF:-1 tvg-id="evt.TUDNUSA.1753736400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tudn-us.png" group-title="Futebol",5th Place : Chile vs Paraguay : Copa America Femenina
+http://192.168.68.19:3000/stream/66.m3u8
+#EXTINF:-1 tvg-id="evt.DIRECTVSportsArgentina.1753736400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",5th Place : Chile vs Paraguay : Copa America Femenina
+http://192.168.68.19:3000/stream/1.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSPORTSPremiumChile.1753740000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/world-latin-america/tnt-sports-premium-lam.png" group-title="Futebol",Unión La Calera vs Universidad Chile : Chile - Primera Division
+http://192.168.68.19:3000/stream/642.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8230614.1753740000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Unión La Calera vs Universidad Chile : Chile - Primera Division
+http://192.168.68.19:3000/stream/8230614.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8143571.1753740000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Guarani SP vs Primavera SP : Brazil - Cup Paulista - Gr.3
+http://192.168.68.19:3000/stream/8143571.m3u8
+#EXTINF:-1 tvg-id="evt.ESPNBR.1753740000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/brazil/espn-5-br.png" group-title="Futebol",Avaí vs Botafogo-SP : Brasileirão Série B
+http://192.168.68.19:3000/stream/81.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSportsArgentina.1753743600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/argentina/tnt-sports-ar.png" group-title="Futebol",Banfield vs Barracas Central : Argentina - Primera División
+http://192.168.68.19:3000/stream/388.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8245798.1753743600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Banfield vs Barracas Central : Argentina - Primera División
+http://192.168.68.19:3000/stream/8245798.m3u8
+#EXTINF:-1 tvg-id="evt.WinFutbolColombia.1753743600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Atlético Bucaramanga vs Deportivo Cali : Colombia - Primera A
+http://192.168.68.19:3000/stream/392.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8230554.1753743600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png" group-title="Futebol",Atlético Bucaramanga vs Deportivo Cali : Colombia - Primera A
+http://192.168.68.19:3000/stream/8230554.m3u8
+#EXTINF:-1 tvg-id="evt.Sport5PlusIsrael.1753711200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/turkey/s-sport-plus-tr.png" group-title="Basquete",Israel U18 vs Italy U18 : EuroBasket U18
+http://192.168.68.19:3000/stream/145.m3u8
+#EXTINF:-1 tvg-id="evt.SportKlub1Croatia.1753736400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/sportklub-1-hr.png" group-title="Basquete",Cameroon W vs Mali W : AfroBasket Women
+http://192.168.68.19:3000/stream/101.m3u8
+#EXTINF:-1 tvg-id="evt.FOXSports1USA.1753740000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-1-us.png" group-title="Basquete",Best Virginia vs Shell Shock : The Basketball Tournament
+http://192.168.68.19:3000/stream/39.m3u8
+#EXTINF:-1 tvg-id="evt.WNBALeaguePass.1753743600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/wnba-league-pass-us.png" group-title="Basquete",Connecticut Sun W vs Seattle Storm W : WNBA
+http://192.168.68.19:3000/stream/20.m3u8
+#EXTINF:-1 tvg-id="evt.NBCSBostonUSA.1753743600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbcsn-boston-us.png" group-title="Basquete",Connecticut Sun W vs Seattle Storm W : WNBA
+http://192.168.68.19:3000/stream/754.m3u8
+#EXTINF:-1 tvg-id="evt.truTVUSA.1753738200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tru-tv-us.png" group-title="Automobilismo",NASCAR Cup Series Brickyard 400
+http://192.168.68.19:3000/stream/341.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753742100000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Baltimore Orioles vs Toronto Blue Jays : MLB
+http://192.168.68.19:3000/stream/3.m3u8
+#EXTINF:-1 tvg-id="evt.MASNUSA.1753742100000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/masn-us.png" group-title="Beisebol",Baltimore Orioles vs Toronto Blue Jays : MLB
 http://192.168.68.19:3000/stream/829.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkOhio" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/philippines/all-sports-network-ph.png" group-title="Beisebol",Washington Nationals vs Cincinnati Reds : MLB
-http://192.168.68.19:3000/stream/899.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkIndiana" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Washington Nationals vs Cincinnati Reds : MLB
-http://192.168.68.19:3000/stream/894.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103653" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Washington Nationals vs Cincinnati Reds : MLB
-http://192.168.68.19:3000/stream/8103653.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Toronto Blue Jays vs New York Yankees : MLB
-http://192.168.68.19:3000/stream/7.m3u8
-#EXTINF:-1 tvg-id="ch.YESUSA" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Toronto Blue Jays vs New York Yankees : MLB
-http://192.168.68.19:3000/stream/763.m3u8
-#EXTINF:-1 tvg-id="ch.TVASportsCA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/tva-sports-ca.png" group-title="Beisebol",Toronto Blue Jays vs New York Yankees : MLB
-http://192.168.68.19:3000/stream/833.m3u8
-#EXTINF:-1 tvg-id="ch.SportsnetEast" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-east-hd-ca.png" group-title="Beisebol",Toronto Blue Jays vs New York Yankees : MLB
+#EXTINF:-1 tvg-id="evt.SportsnetEast.1753742100000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-east-hd-ca.png" group-title="Beisebol",Baltimore Orioles vs Toronto Blue Jays : MLB
 http://192.168.68.19:3000/stream/408.m3u8
-#EXTINF:-1 tvg-id="ch.SportsnetOntario" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-ontario-hd-ca.png" group-title="Beisebol",Toronto Blue Jays vs New York Yankees : MLB
+#EXTINF:-1 tvg-id="evt.SportsnetOntario.1753742100000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-ontario-hd-ca.png" group-title="Beisebol",Baltimore Orioles vs Toronto Blue Jays : MLB
 http://192.168.68.19:3000/stream/406.m3u8
-#EXTINF:-1 tvg-id="ch.SportsnetWest" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-west-hd-ca.png" group-title="Beisebol",Toronto Blue Jays vs New York Yankees : MLB
+#EXTINF:-1 tvg-id="evt.SportsnetWest.1753742100000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-west-hd-ca.png" group-title="Beisebol",Baltimore Orioles vs Toronto Blue Jays : MLB
 http://192.168.68.19:3000/stream/407.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103654" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Toronto Blue Jays vs New York Yankees : MLB
-http://192.168.68.19:3000/stream/8103654.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",New York Mets vs Los Angeles Angels : MLB
-http://192.168.68.19:3000/stream/8.m3u8
-#EXTINF:-1 tvg-id="ch.SportsNetNewYorkUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-sports-network-us.png" group-title="Beisebol",New York Mets vs Los Angeles Angels : MLB
-http://192.168.68.19:3000/stream/759.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkWest" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fubo-sports-network-us.png" group-title="Beisebol",New York Mets vs Los Angeles Angels : MLB
-http://192.168.68.19:3000/stream/906.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103660" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",New York Mets vs Los Angeles Angels : MLB
-http://192.168.68.19:3000/stream/8103660.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Atlanta Braves vs San Francisco Giants : MLB
-http://192.168.68.19:3000/stream/9.m3u8
-#EXTINF:-1 tvg-id="ch.NBCSBayAreaUSA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbcsn-bay-area-us.png" group-title="Beisebol",Atlanta Braves vs San Francisco Giants : MLB
-http://192.168.68.19:3000/stream/753.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkSouth" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/philippines/all-sports-network-ph.png" group-title="Beisebol",Atlanta Braves vs San Francisco Giants : MLB
-http://192.168.68.19:3000/stream/903.m3u8
-#EXTINF:-1 tvg-id="ch.FanDuelSportsNetworkSoutheast" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fubo-sports-network-us.png" group-title="Beisebol",Atlanta Braves vs San Francisco Giants : MLB
-http://192.168.68.19:3000/stream/904.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8103650" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Atlanta Braves vs San Francisco Giants : MLB
-http://192.168.68.19:3000/stream/8103650.m3u8
-#EXTINF:-1 tvg-id="ch.MLBLeaguePass" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Tampa Bay Rays vs Chicago White Sox : MLB
-http://192.168.68.19:3000/stream/10.m3u8
-#EXTINF:-1 tvg-id="ch.TNTSports1UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-1-uk.png" group-title="Beisebol",Tampa Bay Rays vs Chicago White Sox : MLB
-http://192.168.68.19:3000/stream/31.m3u8
-#EXTINF:-1 tvg-id="ch.BallySportsSun" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bally-sports-sun-us.png" group-title="Beisebol",Tampa Bay Rays vs Chicago White Sox : MLB
+#EXTINF:-1 tvg-id="evt.Sport5LiveIsrael.1753742100000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Baltimore Orioles vs Toronto Blue Jays : MLB
+http://192.168.68.19:3000/stream/146.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133949.1753742100000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Baltimore Orioles vs Toronto Blue Jays : MLB
+http://192.168.68.19:3000/stream/8133949.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753742400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Detroit Tigers vs Arizona Diamondbacks : MLB
+http://192.168.68.19:3000/stream/4.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkDetroit.1753742400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Detroit Tigers vs Arizona Diamondbacks : MLB
+http://192.168.68.19:3000/stream/891.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753742400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Cleveland Guardians vs Colorado Rockies : MLB
+http://192.168.68.19:3000/stream/5.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133954.1753742400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Cleveland Guardians vs Colorado Rockies : MLB
+http://192.168.68.19:3000/stream/8133954.m3u8
+#EXTINF:-1 tvg-id="evt.ESPN2USA.1753743600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-2-us.png" group-title="Beisebol",Bandits vs Talons : Athletes Unlimited Softball League
+http://192.168.68.19:3000/stream/45.m3u8
+#EXTINF:-1 tvg-id="evt.TSN2.1753743600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/tsn-2-hd-ca.png" group-title="Beisebol",Bandits vs Talons : Athletes Unlimited Softball League
+http://192.168.68.19:3000/stream/112.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753743900000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",New York Yankees vs Tampa Bay Rays : MLB
+http://192.168.68.19:3000/stream/6.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkSun.1753743900000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fubo-sports-network-us.png" group-title="Beisebol",New York Yankees vs Tampa Bay Rays : MLB
 http://192.168.68.19:3000/stream/905.m3u8
-#EXTINF:-1 tvg-id="ch.ChicagoSportsNetwork" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-sports-network-us.png" group-title="Beisebol",Tampa Bay Rays vs Chicago White Sox : MLB
-http://192.168.68.19:3000/stream/776.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream8" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Prizmic D. vs Moller E. : ATP - UMAG
-http://192.168.68.19:3000/stream/1508.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream14" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Marozsan F. vs Diallo G. : ATP - WASHINGTON
-http://192.168.68.19:3000/stream/1514.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream11" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Michelsen A. vs Evans D. : ATP - WASHINGTON
-http://192.168.68.19:3000/stream/1511.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream9" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Shelton B. vs McDonald M. : ATP - WASHINGTON
-http://192.168.68.19:3000/stream/1509.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream10" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Muller A. vs Rune H. : ATP - WASHINGTON
-http://192.168.68.19:3000/stream/1510.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream3" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Kostyuk M. vs Raducanu E. : WTA - WASHINGTON
-http://192.168.68.19:3000/stream/1503.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream4" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Osaka N. vs Putintseva Y. : WTA - WASHINGTON
-http://192.168.68.19:3000/stream/1504.m3u8
-#EXTINF:-1 tvg-id="ch.TennisStream3" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Williams V. vs Stearns P. : WTA - WASHINGTON
-http://192.168.68.19:3000/stream/1503.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8313598" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Dominic Stephan Stricker vs Roman Andres Burruchaga : Challenger - Zug (ELV)
-http://192.168.68.19:3000/stream/8313598.m3u8
-#EXTINF:-1 tvg-id="ch.SD-8298726" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Dino Prizmic vs Elmer Moller : ATP - Umag (CRO)
-http://192.168.68.19:3000/stream/8298726.m3u8
-#EXTINF:-1 tvg-id="ch.Floracing" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="PPV Events",2025 Summer Shootout at Charlotte Motor Speedway
-http://192.168.68.19:3000/stream/55.m3u8
-#EXTINF:-1 tvg-id="ch.EventPPV" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="PPV Events",Millbridge Sprints Speedway
-http://192.168.68.19:3000/stream/59.m3u8
-#EXTINF:-1 tvg-id="ch.TNTSports2UK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-2-uk.png" group-title="Críquete",West Indies vs Australia : 2nd T20
+#EXTINF:-1 tvg-id="evt.YESUSA.1753743900000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",New York Yankees vs Tampa Bay Rays : MLB
+http://192.168.68.19:3000/stream/763.m3u8
+#EXTINF:-1 tvg-id="evt.RDSCA.1753743900000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/rds-hd-ca.png" group-title="Beisebol",New York Yankees vs Tampa Bay Rays : MLB
+http://192.168.68.19:3000/stream/839.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133957.1753743900000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",New York Yankees vs Tampa Bay Rays : MLB
+http://192.168.68.19:3000/stream/8133957.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753744200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Cincinnati Reds vs Los Angeles Dodgers : MLB
+http://192.168.68.19:3000/stream/7.m3u8
+#EXTINF:-1 tvg-id="evt.SpectrumSportsNetLA.1753744200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/spectrum-sportsnet-la-us.png" group-title="Beisebol",Cincinnati Reds vs Los Angeles Dodgers : MLB
+http://192.168.68.19:3000/stream/764.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkIndiana.1753744200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Cincinnati Reds vs Los Angeles Dodgers : MLB
+http://192.168.68.19:3000/stream/894.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkOhio.1753744200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/philippines/all-sports-network-ph.png" group-title="Beisebol",Cincinnati Reds vs Los Angeles Dodgers : MLB
+http://192.168.68.19:3000/stream/899.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133948.1753744200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Cincinnati Reds vs Los Angeles Dodgers : MLB
+http://192.168.68.19:3000/stream/8133948.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Kansas City Royals vs Atlanta Braves : MLB
+http://192.168.68.19:3000/stream/8.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkKansasCity.1753746000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Kansas City Royals vs Atlanta Braves : MLB
+http://192.168.68.19:3000/stream/895.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkSouth.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/philippines/all-sports-network-ph.png" group-title="Beisebol",Kansas City Royals vs Atlanta Braves : MLB
+http://192.168.68.19:3000/stream/903.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkSoutheast.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fubo-sports-network-us.png" group-title="Beisebol",Kansas City Royals vs Atlanta Braves : MLB
+http://192.168.68.19:3000/stream/904.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133947.1753746000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Kansas City Royals vs Atlanta Braves : MLB
+http://192.168.68.19:3000/stream/8133947.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Minnesota Twins vs Boston Red Sox : MLB
+http://192.168.68.19:3000/stream/9.m3u8
+#EXTINF:-1 tvg-id="evt.NESNUSA.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nesn-us.png" group-title="Beisebol",Minnesota Twins vs Boston Red Sox : MLB
+http://192.168.68.19:3000/stream/762.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133956.1753746000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Minnesota Twins vs Boston Red Sox : MLB
+http://192.168.68.19:3000/stream/8133956.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Milwaukee Brewers vs Chicago Cubs : MLB
+http://192.168.68.19:3000/stream/10.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSports2UK.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-2-uk.png" group-title="Beisebol",Milwaukee Brewers vs Chicago Cubs : MLB
 http://192.168.68.19:3000/stream/32.m3u8
-#EXTINF:-1 tvg-id="ch.SuperSportCricket" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/south-africa/supersport-cricket-za.png" group-title="Críquete",West Indies vs Australia : 2nd T20
+#EXTINF:-1 tvg-id="evt.MarqueeSportsNetworkUSA.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/marquee-sports-network-us.png" group-title="Beisebol",Milwaukee Brewers vs Chicago Cubs : MLB
+http://192.168.68.19:3000/stream/770.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkWisconsin.1753746000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Milwaukee Brewers vs Chicago Cubs : MLB
+http://192.168.68.19:3000/stream/907.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133959.1753746000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Milwaukee Brewers vs Chicago Cubs : MLB
+http://192.168.68.19:3000/stream/8133959.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",Chicago White Sox vs Philadelphia Phillies : MLB
+http://192.168.68.19:3000/stream/11.m3u8
+#EXTINF:-1 tvg-id="evt.NBCSPhiladelphiaUSA.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbcsn-philadelphia-us.png" group-title="Beisebol",Chicago White Sox vs Philadelphia Phillies : MLB
+http://192.168.68.19:3000/stream/777.m3u8
+#EXTINF:-1 tvg-id="evt.ChicagoSportsNetwork.1753746000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-sports-network-us.png" group-title="Beisebol",Chicago White Sox vs Philadelphia Phillies : MLB
+http://192.168.68.19:3000/stream/776.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133946.1753746000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",Chicago White Sox vs Philadelphia Phillies : MLB
+http://192.168.68.19:3000/stream/8133946.m3u8
+#EXTINF:-1 tvg-id="evt.MLBLeaguePass.1753746300000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-league-pass-us.png" group-title="Beisebol",St. Louis Cardinals vs Miami Marlins : MLB
+http://192.168.68.19:3000/stream/12.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkFlorida.1753746300000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/world-latin-america/adrenalina-sports-network-lam.png" group-title="Beisebol",St. Louis Cardinals vs Miami Marlins : MLB
+http://192.168.68.19:3000/stream/892.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkMidwest.1753746300000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",St. Louis Cardinals vs Miami Marlins : MLB
+http://192.168.68.19:3000/stream/896.m3u8
+#EXTINF:-1 tvg-id="evt.FanDuelSportsNetworkOklahoma.1753746300000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/world-latin-america/adrenalina-sports-network-lam.png" group-title="Beisebol",St. Louis Cardinals vs Miami Marlins : MLB
+http://192.168.68.19:3000/stream/900.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8133943.1753746300000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png" group-title="Beisebol",St. Louis Cardinals vs Miami Marlins : MLB
+http://192.168.68.19:3000/stream/8133943.m3u8
+#EXTINF:-1 tvg-id="evt.CBSNYUSA.1753725600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sny-us.png" group-title="Programas de TV",Beyond the Gates Season 1, Episode 99
+http://192.168.68.19:3000/stream/767.m3u8
+#EXTINF:-1 tvg-id="evt.OutdoorChannel.1753727400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/outdoor-channel-us.png" group-title="Programas de TV",The Flush Brady's First Bird Season 14, Episode 5
+http://192.168.68.19:3000/stream/848.m3u8
+#EXTINF:-1 tvg-id="evt.ABCNYUSA.1753729200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-us.png" group-title="Programas de TV",General Hospital Season 62, Episode 223
+http://192.168.68.19:3000/stream/766.m3u8
+#EXTINF:-1 tvg-id="evt.NFLNetworkUSA.1753732800000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nfl-network-us.png" group-title="Programas de TV",Inside Training Camp Live
+http://192.168.68.19:3000/stream/405.m3u8
+#EXTINF:-1 tvg-id="evt.OutdoorChannel.1753738200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/outdoor-channel-us.png" group-title="Programas de TV",Addicted to the Outdoors Season 18, Episode 5
+http://192.168.68.19:3000/stream/848.m3u8
+#EXTINF:-1 tvg-id="evt.HBO2USA.1753740000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-2-us.png" group-title="Programas de TV",The Gilded Age Season 3, Episode 6
+http://192.168.68.19:3000/stream/689.m3u8
+#EXTINF:-1 tvg-id="evt.ESPNUUSA.1753740000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-u-us.png" group-title="Programas de TV",International Invitational : Cornhole ACL World Championships
+http://192.168.68.19:3000/stream/316.m3u8
+#EXTINF:-1 tvg-id="evt.TelemundoUSA.1753743600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/telemundo-us.png" group-title="Programas de TV",Top Chef VIP Season 4, Episode 6
+http://192.168.68.19:3000/stream/131.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8346085.1753700400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",H.Dart/M.Lumsden vs M.Skoch/J.Maleckova : WTA 125K Warsaw, Poland Women Doubles
+http://192.168.68.19:3000/stream/8346085.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8340953.1753700400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Patrick Zahraj vs Daniel Michalski : Challenger - Liberec (CEH)
+http://192.168.68.19:3000/stream/8340953.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8343903.1753700400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Polona Hercog vs Victoria Jimenez Kasintseva : WTA 125 - Varsovia (POL)
+http://192.168.68.19:3000/stream/8343903.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8343905.1753700400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Sofia Costoulas vs Martyna Kubka : WTA 125 - Varsovia (POL)
+http://192.168.68.19:3000/stream/8343905.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8341597.1753705200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Jie Cui vs Alejandro Moro Canas : Challenger - Porto (POR)
+http://192.168.68.19:3000/stream/8341597.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8341598.1753705200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Radu Albot vs Eliakim Coulibaly : Challenger - Porto (POR)
+http://192.168.68.19:3000/stream/8341598.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8340876.1753705800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Benjamin Hassan vs Clement Tabur : Challenger - Hagen (GER)
+http://192.168.68.19:3000/stream/8340876.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8340870.1753705800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Jan Choinski vs Lorenzo Giustino : Challenger - Hagen (GER)
+http://192.168.68.19:3000/stream/8340870.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8341593.1753707600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Jaime Faria vs Elias Ymer : Challenger - Porto (POR)
+http://192.168.68.19:3000/stream/8341593.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8340947.1753707600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Jonas Kucera vs Alex Barrena : Challenger - Liberec (CEH)
+http://192.168.68.19:3000/stream/8340947.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8343908.1753707600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Katerina Siniakova vs Lanlana Tararudee : WTA 125 - Varsovia (POL)
+http://192.168.68.19:3000/stream/8343908.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8343899.1753707600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Xinyu Gao vs Tamara Korpatsch : WTA 125 - Varsovia (POL)
+http://192.168.68.19:3000/stream/8343899.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8340875.1753710000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Jerome Kym vs Kimmer Coppejans : Challenger - Hagen (GER)
+http://192.168.68.19:3000/stream/8340875.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8341600.1753711800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Antoine Escoffier vs Daniel Merida Aguilar : Challenger - Porto (POR)
+http://192.168.68.19:3000/stream/8341600.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8339401.1753711800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",J.Jermar/O.Prihodko vs H.Barton/M.Karol : Challenger - Liberec (CEH) - Double
+http://192.168.68.19:3000/stream/8339401.m3u8
+#EXTINF:-1 tvg-id="evt.TennisChannel.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tennis-channel-us.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/40.m3u8
+#EXTINF:-1 tvg-id="evt.SkySportsTennisUK.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-tennis-uk.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/46.m3u8
+#EXTINF:-1 tvg-id="evt.TV4Tennis.1753713000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/701.m3u8
+#EXTINF:-1 tvg-id="evt.SportsnetOne.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-one-hd-ca.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/411.m3u8
+#EXTINF:-1 tvg-id="evt.SportsnetOntario.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-ontario-hd-ca.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/406.m3u8
+#EXTINF:-1 tvg-id="evt.SportsnetWest.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-west-hd-ca.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/407.m3u8
+#EXTINF:-1 tvg-id="evt.SportsnetEast.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/sportsnet-east-hd-ca.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/408.m3u8
+#EXTINF:-1 tvg-id="evt.TVASports.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/tva-sports-ca.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/833.m3u8
+#EXTINF:-1 tvg-id="evt.PolsatSport1Poland.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/poland/polsat-sport-1-pl.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/47.m3u8
+#EXTINF:-1 tvg-id="evt.SportTV2Portugal.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sport-tv-2-pt.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/74.m3u8
+#EXTINF:-1 tvg-id="evt.ZiggoSport1NL.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/netherlands/ziggo-sport-nl.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/393.m3u8
+#EXTINF:-1 tvg-id="evt.ZiggoSport4NL.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/netherlands/ziggo-sport-4-nl.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/396.m3u8
+#EXTINF:-1 tvg-id="evt.beINSPORTSAustralia1.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/491.m3u8
+#EXTINF:-1 tvg-id="evt.beINSPORTSAustralia2.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/492.m3u8
+#EXTINF:-1 tvg-id="evt.MaxSport1Bulgaria.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/bulgaria/max-sport-1-bg.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/472.m3u8
+#EXTINF:-1 tvg-id="evt.beINSports2Malaysia.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-2-us.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/713.m3u8
+#EXTINF:-1 tvg-id="evt.beINSports3Malaysia.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-3-us.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/714.m3u8
+#EXTINF:-1 tvg-id="evt.SportKlub2Croatia.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/sportklub-2-hr.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/102.m3u8
+#EXTINF:-1 tvg-id="evt.SportKlub1Croatia.1753713000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/croatia/sportklub-1-hr.png" group-title="Tênis",ATP National Bank Open | ATP &amp; WTA Canadian Open | Masters 1000 Toronto | WTA Montreal Open | Day 1
+http://192.168.68.19:3000/stream/101.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8345276.1753713000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Colton Smith vs Learner Tien : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8345276.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336242.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Ethan Quinn vs Yoshihito Nishioka : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336242.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336241.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Mackenzie McDonald vs David Goffin : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336241.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336245.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Vit Kopriva vs Yunchaokete Bu : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336245.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8340868.1753716600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Lautaro Midon vs Vilius Gaubas : Challenger - Hagen (GER)
+http://192.168.68.19:3000/stream/8340868.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336253.1753719000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Aleksandar Vukic vs Pedro Martinez : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336253.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336243.1753719000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Mattia Bellucci vs Hugo Gaston : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336243.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8345281.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Dan Martin vs Jaume Munar : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8345281.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336249.1753723200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Francisco Comesana vs Damir Dzumhur : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336249.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8345282.1753724400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Tristan Schoolkate vs Joao Fonseca : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8345282.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336246.1753727400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Roberto Carballes Baena vs Camilo Ugo Carabelli : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336246.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336239.1753736400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Borna Coric vs Matteo Gigante : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336239.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336251.1753740600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Fabian Marozsan vs Hugo Dellien : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336251.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8336248.1753743600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png" group-title="Tênis",Liam Draxl vs Pablo Carreno-Busta : ATP - Toronto (CAN)
+http://192.168.68.19:3000/stream/8336248.m3u8
+#EXTINF:-1 tvg-id="evt.France3.1753700400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-3-fr.png" group-title="Esportes Aquáticos",World Championships : Swimming
+http://192.168.68.19:3000/stream/951.m3u8
+#EXTINF:-1 tvg-id="evt.RTP2Portugal.1753700400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="Esportes Aquáticos",World Championships : Swimming
+http://192.168.68.19:3000/stream/720.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSports2UK.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-2-uk.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/32.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport2Poland.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/eurosport-2-ro.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/58.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport2Spain.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/india/eurosport-in.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/525.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport2France.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/eurosport-2-fr.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/773.m3u8
+#EXTINF:-1 tvg-id="evt.Eurosport2SE.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-2-rs.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/232.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport2Italy.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/netherlands/eurosport-2-nl.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/879.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport2France.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/eurosport-2-fr.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/773.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport2Greece.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-2-rs.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/42.m3u8
+#EXTINF:-1 tvg-id="evt.Eurosport2SE.1753702200000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-2-rs.png" group-title="Sinuca",Neil Robertson vs Pang Junxu : Shanghai Masters Round 1 | Day1
+http://192.168.68.19:3000/stream/232.m3u8
+#EXTINF:-1 tvg-id="evt.SD-8267053.1753702200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/snooker.png" group-title="Sinuca",Neil Robertson vs Pang Junxu Shanghai Masters : Shanghai Masters
+http://192.168.68.19:3000/stream/8267053.m3u8
+#EXTINF:-1 tvg-id="evt.SkySportsRacingUK.1753704000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-racing-uk.png" group-title="Corrida de Cavalos",Live racing from around the UK
+http://192.168.68.19:3000/stream/554.m3u8
+#EXTINF:-1 tvg-id="evt.RacingTvUK.1753705800000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/racing-tv-uk.png" group-title="Corrida de Cavalos",Live racing from Ayr and Galway
+http://192.168.68.19:3000/stream/555.m3u8
+#EXTINF:-1 tvg-id="evt.France2.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-2-fr.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/950.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSports1UK.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-1-uk.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/31.m3u8
+#EXTINF:-1 tvg-id="evt.SkySport1NZ.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-1-nz.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/588.m3u8
+#EXTINF:-1 tvg-id="evt.ESPN3BR.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/brazil/espn-5-br.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/83.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport1Poland.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/romania/eurosport-1-ro.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/57.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport1Spain.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/india/eurosport-in.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/524.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport1France.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/eurosport-1-fr.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/772.m3u8
+#EXTINF:-1 tvg-id="evt.Eurosport1SE.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-1-rs.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/231.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport1Italy.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/netherlands/eurosport-1-nl.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/878.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport1France.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/eurosport-1-fr.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/772.m3u8
+#EXTINF:-1 tvg-id="evt.EuroSport1Greece.1753708500000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/serbia/eurosport-1-rs.png" group-title="Ciclismo",Women's Tour de France Flat | 162 km
+http://192.168.68.19:3000/stream/41.m3u8
+#EXTINF:-1 tvg-id="evt.Sport5LiveIsrael.1753711200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="Esgrima",Finals : World Fencing Championships
+http://192.168.68.19:3000/stream/146.m3u8
+#EXTINF:-1 tvg-id="evt.ESPN2Argentina.1753713000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="Hóquei na Grama",Argentina W vs Paraguay W : orld Pan American Cup Women
+http://192.168.68.19:3000/stream/150.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Kopriva V. vs Bu Y. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1510.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",McDonald M. vs Goffin D. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1508.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",O'Connell C. vs Tseng C. H. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1511.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Quinn E. vs Nishioka Y. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1509.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Maria T. vs Siegemund L. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1502.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Putintseva Y. vs Guo H. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1504.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Rakhimova K. vs Cross K. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1501.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753714800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Wang Y. vs Starodubtseva Y. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1503.m3u8
+#EXTINF:-1 tvg-id="evt.SportTV6Poutugal.1753718400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sport-tv-6-pt.png" group-title="Squash",Tarragona P1 - Premier Padel : Padel
+http://192.168.68.19:3000/stream/291.m3u8
+#EXTINF:-1 tvg-id="evt.beINSports3Malaysia.1753718400000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-3-us.png" group-title="Squash",Tarragona P1 - Premier Padel : Padel
+http://192.168.68.19:3000/stream/714.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Bellucci M. vs Gaston H. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1508.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Blockx A. vs Svrcina D. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1511.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Martin D. vs Munar J. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1507.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Vukic A. vs Martinez P. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1509.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Watanuki Y. vs Altmaier D. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1510.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Cirstea S. vs Sun L. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1502.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Dolehide C. vs Blinkova A. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1504.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Ruse G. vs Raducanu E. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1501.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Ruse G. vs Raducanu E. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1515.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753720200000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Uchijima M. vs Bouzkova M. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1503.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSports1UK.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-1-uk.png" group-title="Sinuca",Ultimate Pool Pairs Cup | Mixed | Group Stage
+http://192.168.68.19:3000/stream/31.m3u8
+#EXTINF:-1 tvg-id="evt.SkySport1NZ.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/sky-sport-1-nz.png" group-title="Sinuca",Ultimate Pool Pairs Cup | Mixed | Group Stage
+http://192.168.68.19:3000/stream/588.m3u8
+#EXTINF:-1 tvg-id="evt.beINSports1Malaysia.1753722000000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/malaysia/bein-sports-max-hz-my.png" group-title="Sinuca",Ultimate Pool Pairs Cup | Mixed | Group Stage
+http://192.168.68.19:3000/stream/712.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Boyer T. vs Kovacevic A. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1510.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Comesana F. vs Dzumhur D. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1509.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Giron M. vs Mannarino A. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1508.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Schoolkate T. vs Fonseca J. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1507.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Arseneault A. vs Osaka N. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1501.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Boulter K. vs Zarazua R. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1502.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Lys E. vs Jeanjean L. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1504.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753725600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Mandlik E. vs Bronzetti L. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1503.m3u8
+#EXTINF:-1 tvg-id="evt.SportTV6Poutugal.1753725600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/portugal/sport-tv-6-pt.png" group-title="Squash",Tarragona P1 - Premier Padel : Padel
+http://192.168.68.19:3000/stream/291.m3u8
+#EXTINF:-1 tvg-id="evt.beINSports3Malaysia.1753725600000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-3-us.png" group-title="Squash",Tarragona P1 - Premier Padel : Padel
+http://192.168.68.19:3000/stream/714.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753731000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Carballes Baena R. vs Ugo Carabelli C. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1509.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753736400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Coric B. vs Gigante M. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1508.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753740000000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Tomljanovic A. vs Sevastova A. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1502.m3u8
+#EXTINF:-1 tvg-id="evt.TNTSports1UK.1753741800000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-1-uk.png" group-title="Críquete",West Indies vs Australia : 5th T20
+http://192.168.68.19:3000/stream/31.m3u8
+#EXTINF:-1 tvg-id="evt.SuperSportCricket.1753741800000" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/south-africa/supersport-cricket-za.png" group-title="Críquete",West Indies vs Australia : 5th T20
 http://192.168.68.19:3000/stream/368.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753741800000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Marozsan F. vs Dellien H. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1508.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753743600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="ATP - TORONTO",Draxl L. vs Carreno-Busta P. : ATP - TORONTO
+http://192.168.68.19:3000/stream/1507.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753743600000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Bouchard E. vs Arango E. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1501.m3u8
+#EXTINF:-1 tvg-id="evt.TennisStream.1753745400000" tvg-logo="https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png" group-title="WTA - MONTREAL",Ruzic A. vs Potapova A. : WTA - MONTREAL
+http://192.168.68.19:3000/stream/1502.m3u8
