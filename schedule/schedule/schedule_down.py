@@ -51,7 +51,8 @@ SPORT_ICON_MAP = {
     "Corrida de Cavalos": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/horse.png",
     "Críquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/cricket.png",
     "Ciclismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/bike.png",
-    "Sinuca": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/snooker.png"
+    "Sinuca": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/snooker.png",
+    "Golfe": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/golf.png"
 }
 
 SPORT_TRANSLATION_MAP = {
@@ -80,7 +81,9 @@ SPORT_TRANSLATION_MAP = {
     "Field Hockey": "Hóquei na Grama",
     "Handball": "Handebol",
     "Gymnastics": "Ginástica",
-    "PPV Events": "Eventos PPV"
+    "PPV Events": "Eventos PPV",
+    "Aussie rules": "Futebol australiano",
+    "Golf": "Golfe"
 }
 # --- Fim da Configuração ---
 
