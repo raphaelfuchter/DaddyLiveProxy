@@ -18,7 +18,9 @@ WORKDIR /app
 
 # Install python app requirements and reflex in the container
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+# --- MODIFICADO ---
+# Adicionado "&& pip install --upgrade curl_cffi" para garantir a versão mais recente.
+RUN pip install -r requirements.txt && pip install --upgrade curl_cffi
 
 # Install reflex helper utilities like bun/node
 COPY rxconfig.py ./
@@ -35,8 +37,10 @@ RUN REFLEX_API_URL=${API_URL:-http://localhost:$PORT} reflex export --loglevel d
 # Final image with only necessary files
 FROM python:3.13-slim
 
-# Install Caddy and redis server inside image
-RUN apt-get update -y && apt-get install -y caddy redis-server && rm -rf /var/lib/apt/lists/*
+# --- MODIFICADO ---
+# Adicionado "curl" e "dnsutils" para permitir diagnósticos de rede dentro do container.
+# dnsutils nos dá a ferramenta "nslookup".
+RUN apt-get update -y && apt-get install -y caddy redis-server curl dnsutils && rm -rf /var/lib/apt/lists/*
 
 ARG PORT API_URL
 ENV PATH="/app/.venv/bin:$PATH" PORT=$PORT REFLEX_API_URL=${API_URL:-http://localhost:$PORT} REDIS_URL=redis://localhost PYTHONUNBUFFERED=1 PROXY_CONTENT=${PROXY_CONTENT:-TRUE} SOCKS5=${SOCKS5:-""}
