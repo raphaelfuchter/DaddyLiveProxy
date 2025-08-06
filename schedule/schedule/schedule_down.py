@@ -17,6 +17,7 @@ import difflib
 from urllib.parse import unquote
 import unicodedata
 import collections
+from typing import Union
 
 # --- Configuração ---
 SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
@@ -34,7 +35,7 @@ EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
 # Repositório de logos e cache local
 GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
 LOGO_CACHE_FILE = "cache/logo_cache.json"
-LOGO_CACHE_EXPIRATION_HOURS = 48
+LOGO_CACHE_EXPIRATION_HOURS = 4
 
 # --- URLs dos Ícones - VERSÃO FINAL COM NOMES DE ARQUIVO CORRETOS ---
 DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png"
@@ -83,38 +84,62 @@ SPORT_TRANSLATION_MAP = {
     "Handball": "Handebol",
     "Gymnastics": "Ginástica",
     "PPV Events": "Eventos PPV",
-    "Aussie rules": "Futebol australiano",
+    "Aussie rules": "Futebol Australiano",
     "Golf": "Golfe"
 }
 # --- Fim da Configuração ---
 
-def obter_urls_logos_com_cache(api_url: str) -> dict:
+def obter_urls_logos_com_cache(api_url: str, github_token: Union[str, None]) -> dict:
+    """
+    Busca os URLs dos logos a partir da API do GitHub, utilizando um cache local para
+    evitar requisições repetidas. Se um github_token for fornecido, ele é usado para
+    autenticar a requisição e aumentar o limite de taxa da API.
+    """
     if os.path.exists(LOGO_CACHE_FILE):
         file_mod_time = datetime.fromtimestamp(os.path.getmtime(LOGO_CACHE_FILE))
         if (datetime.now() - file_mod_time) < timedelta(hours=LOGO_CACHE_EXPIRATION_HOURS):
             print("Carregando logos do cache local (válido).")
             with open(LOGO_CACHE_FILE, 'r', encoding='utf-8') as f:
                 return json.load(f)
+
     print("\nBuscando catálogo de logos do GitHub...")
+    
+    # Prepara o cabeçalho de autenticação se um token for fornecido
+    headers = {}
+    if github_token:
+        headers["Authorization"] = f"Bearer {github_token}"
+        print("Usando token do GitHub para autenticação e aumentar o limite de requisições.")
+    
     logo_cache = {}
     try:
-        response = requests.get(api_url)
+        # Usa o cabeçalho na requisição principal para a API
+        response = requests.get(api_url, headers=headers)
         response.raise_for_status()
         countries = response.json()
+
         for country in countries:
             if country['type'] == 'dir':
-                country_resp = requests.get(country['url'])
+                # Usa o cabeçalho também nas requisições secundárias para cada pasta de país
+                country_resp = requests.get(country['url'], headers=headers)
                 country_resp.raise_for_status()
                 logos = country_resp.json()
                 for logo in logos:
                     if logo['type'] == 'file' and any(logo['name'].endswith(ext) for ext in ['.png', '.jpg', '.svg']):
                         file_name_without_ext = os.path.splitext(unquote(logo['name']))[0]
                         logo_cache[file_name_without_ext] = logo['download_url']
+
+        # Salva o novo cache em disco
         with open(LOGO_CACHE_FILE, 'w', encoding='utf-8') as f:
             json.dump(logo_cache, f, indent=2)
         print(f"Catálogo de {len(logo_cache)} logos carregado e salvo em cache.")
+    
     except requests.exceptions.RequestException as e:
         print(f"AVISO: Falha ao buscar logos do GitHub. Erro: {e}")
+        if isinstance(e, requests.exceptions.HTTPError) and e.response.status_code == 401:
+            print("DICA: O token do GitHub pode ser inválido ou expirou.")
+        elif isinstance(e, requests.exceptions.HTTPError) and e.response.status_code == 403:
+            print("DICA: O limite de requisições foi excedido. Verifique se o token está sendo enviado corretamente ou se o token em si atingiu seu limite.")
+
     return logo_cache
 
 def normalize_text(text: str) -> str:
@@ -141,12 +166,37 @@ def sanitize_id(name: str) -> str:
     return re.sub(r'[^a-zA-Z0-9.-]', '', name.replace(' ', ''))
 
 def parse_date_from_key(date_key: str) -> datetime.date:
-    date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_key.split(' - ')[0])
-    try:
-        return datetime.strptime(date_str_cleaned, '%A %d %B %Y').date()
-    except ValueError:
-        print(f"AVISO: Não foi possível parsear a data '{date_key}'. Usando data de hoje como fallback.")
-        return datetime.now().date()
+    """
+    Extrai e converte a data de uma chave de texto, como 'Wednesday 06th Aug 2025 - ...'.
+    Esta versão é robusta e tenta múltiplos formatos de data (mês abreviado e por extenso).
+    """
+    # Isola a parte da data da string completa, ex: "Wednesday 06th Aug 2025"
+    date_str_part = date_key.split(' - ')[0]
+    
+    # Remove os sufixos "st", "nd", "rd", "th" dos números, ex: "Wednesday 06 Aug 2025"
+    date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str_part)
+    
+    # --- INÍCIO DA ALTERAÇÃO ---
+    # Lista de formatos de data para tentar, do mais provável para o menos provável.
+    # %b = Mês abreviado (ex: Aug)
+    # %B = Mês por extenso (ex: August)
+    possible_formats = [
+        '%A %d %b %Y',  # Formato novo (ex: Wednesday 06 Aug 2025)
+        '%A %d %B %Y',  # Formato antigo (ex: Wednesday 06 August 2025)
+    ]
+    
+    for date_format in possible_formats:
+        try:
+            # Tenta converter a string usando o formato da vez
+            return datetime.strptime(date_str_cleaned, date_format).date()
+        except ValueError:
+            # Se o formato não for o correto, o loop continua para tentar o próximo
+            continue
+            
+    # Se o loop terminar sem encontrar um formato válido, emitimos o aviso e usamos o fallback.
+    print(f"AVISO: Não foi possível parsear a data '{date_key}' com nenhum dos formatos conhecidos. Usando data de hoje como fallback.")
+    return datetime.now().date()
+    # --- FIM DA ALTERAÇÃO ---
 
 def reformat_event_name(original_name: str) -> str:
     """
@@ -356,7 +406,17 @@ def generate_xmltv_epg(stream_list: list) -> str:
 
 def main():
     print("--- Gerador de Playlist e EPG ---")
-    logo_cache = obter_urls_logos_com_cache(GITHUB_API_URL)
+    
+    # --- INÍCIO DA ALTERAÇÃO ---
+    # Carrega o token da variável de ambiente
+    GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+    if not GITHUB_TOKEN:
+        print("\nAVISO: A variável de ambiente GITHUB_TOKEN não foi definida.")
+        print("       As requisições para o GitHub serão feitas sem autenticação, o que pode levar a limites de taxa.")
+    
+    # Passa o token (ou None) para a função de cache
+    logo_cache = obter_urls_logos_com_cache(GITHUB_API_URL, GITHUB_TOKEN)
+    # --- FIM DA ALTERAÇÃO ---
     
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
