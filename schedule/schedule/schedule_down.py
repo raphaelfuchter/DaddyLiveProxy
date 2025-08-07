@@ -260,11 +260,24 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                 if "Tennis" in sport_category: translated_sport = "Tênis"
 
                 for event in events:
-                    channels1_data = event.get('channels', [])
-                    channels2_data = event.get('channels2', [])
-                    list1 = [channels1_data] if isinstance(channels1_data, dict) else (channels1_data or [])
-                    list2 = [channels2_data] if isinstance(channels2_data, dict) else (channels2_data or [])
-                    all_channels = list1 + list2
+                    all_channels = []
+                    # Itera sobre os possíveis campos de canais ('channels' e 'channels2')
+                    for channels_data in [event.get('channels'), event.get('channels2')]:
+                        if not channels_data:
+                            continue # Pula se o campo for nulo ou vazio
+
+                        # Caso 1: A API retornou uma LISTA de canais (formato ideal)
+                        if isinstance(channels_data, list):
+                            all_channels.extend(channels_data)
+                        
+                        # Caso 2: A API retornou um DICIONÁRIO
+                        elif isinstance(channels_data, dict):
+                            # Sub-caso 2.1: É um dicionário representando UM ÚNICO canal
+                            if 'channel_name' in channels_data:
+                                all_channels.append(channels_data)
+                            # Sub-caso 2.2: É o dicionário de canais que causou o erro
+                            else:
+                                all_channels.extend(list(channels_data.values()))
                     
                     for channel in all_channels:
                         try:
