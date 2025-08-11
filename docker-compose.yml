@@ -1,5 +1,6 @@
 services:
   step-daddy-live-hd:
+    container_name: proxy
     build:
       context: .
       dockerfile: Dockerfile
