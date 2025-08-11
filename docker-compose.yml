@@ -1,4 +1,5 @@
 services:
+  # SEU SERVIÇO EXISTENTE (sem alterações)
   step-daddy-live-hd:
     container_name: proxy
     build:
@@ -18,4 +19,20 @@ services:
       - "${PORT}:${PORT}"
     restart: unless-stopped
     env_file:
+      - .env
+
+  # SERVIÇO 'gerador-live' ATUALIZADO COM AS NOVAS INFORMAÇÕES
+  gerador-live:
+    image: gerador-m3u-live
+    container_name: live
+    restart: always  # Traduzido do --restart always
+    ports:
+      - "8007:8007"
+    environment:
+      # Puxa a variável GITHUB_TOKEN do arquivo .env
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      # Define o Timezone diretamente
+      - TZ=America/Sao_Paulo
+    env_file:
+      # Aponta para o mesmo arquivo .env que o outro serviço usa
       - .env
