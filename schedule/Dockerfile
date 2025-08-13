@@ -1,4 +1,4 @@
-# Dockerfile para o projeto do Gerador
+# Dockerfile para o projeto do Gerador (Estrutura Refatorada)
 
 # 1. Imagem base com Python
 FROM python:3.9-slim
@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # 3. Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# 4. Instala dependências do sistema e o Google Chrome de forma segura e otimizada
+# 4. Instala dependências do sistema e o Google Chrome (MANTIDO 100% IGUAL AO SEU ORIGINAL)
 RUN apt-get update && apt-get install -y \
     # Dependências para o Chrome e outras ferramentas
     wget \
@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     libnss3 \
     libfontconfig1 \
-    # O pacote problemático libgconf-2-4 foi REMOVIDO
     && \
     # Instalação SEGURA do Google Chrome (método moderno)
     wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg && \
@@ -28,20 +27,21 @@ RUN apt-get update && apt-get install -y \
     # Limpa o cache do apt para reduzir o tamanho da imagem
     rm -rf /var/lib/apt/lists/*
 
-# 5. Copia o arquivo de dependências do Python
+# 5. Copia o arquivo de dependências do Python primeiro, para otimizar o cache do Docker
 COPY requirements.txt .
 
 # 6. Instala as bibliotecas Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 7. Copia o seu script Python para o contêiner
-COPY app.py .
+# 7. --- ALTERADO --- Copia os novos arquivos do projeto
+COPY main.py .
+COPY gerador_playlist/ ./gerador_playlist/
 
-# 8. Cria as pastas que o script precisa (opcional, mas mantido do seu original)
+# 8. Cria as pastas necessárias (mantido do seu original por segurança)
 RUN mkdir -p output cache
 
 # 9. Expõe a porta que o servidor HTTP irá usar
 EXPOSE 8007
 
-# 10. Comando para executar o script em tempo real
-CMD ["python", "-u", "app.py"]
+# 10. --- ALTERADO --- Comando para executar o novo script de entrada
+CMD ["python", "-u", "main.py"]
