@@ -15,7 +15,7 @@ def get_youtube_live_title(channel_url: str) -> Union[str, None]:
         headers = {"User-Agent": "Mozilla/5.0", "Accept-Language": "en-US,en;q=0.5"}
         response = requests.get(channel_url, headers=headers, timeout=10)
         response.raise_for_status()
-        if '"isLive":true' in response.text:
+        if '"isLiveNow":true' in response.text:
             soup = BeautifulSoup(response.text, 'lxml')
             title_tag = soup.find('meta', property='og:title')
             if title_tag and title_tag.get('content'):
