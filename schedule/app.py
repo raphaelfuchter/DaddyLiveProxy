@@ -292,11 +292,18 @@ def get_youtube_live_title(channel_url: str) -> Union[str, None]:
     return None
 
 def get_kick_live_title(channel_url: str) -> Union[str, None]:
-    # ... (código mantido 100% igual ao seu)
+    """Verifica um canal do Kick via API e retorna o título da live."""
     try:
         slug = channel_url.split('/')[-1]
         api_url = f"https://kick.com/api/v2/channels/{slug}"
-        response = requests.get(api_url, timeout=10)
+        
+        # --- LINHA ADICIONADA ---
+        # Adiciona o cabeçalho para simular um navegador
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
+        
+        # Passa os headers na requisição
+        response = requests.get(api_url, headers=headers, timeout=10)
+        
         response.raise_for_status()
         data = response.json()
         if data.get('livestream'):
