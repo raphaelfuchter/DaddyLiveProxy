@@ -64,6 +64,43 @@ SPORT_TRANSLATION_MAP = {
 SERVER_IP = "192.168.68.19"
 SERVER_PORT = 8007
 
+PLACEHOLDER_TEXT = "Programação Não Disponível"
+
+# --- NOVA CONFIGURAÇÃO DE CANAIS ESTÁTICOS ---
+# Adicione ou remova canais aqui facilmente
+STATIC_CHANNELS = [
+    {
+        "id": "cazetv.br", "name": "CazéTV", "platform": "youtube",
+        "url": "https://www.youtube.com/@CazeTV/live",
+        "logo": "https://yt3.googleusercontent.com/o6S4_2-y_2pA_0_f5q2I_D2aO2eWSUj1SOK2IeI2O5W2w_imACs_yGNQY8Y-r3tO9k4c_d2a=s176-c-k-c0x00ffffff-no-rj",
+        "stream_url": "https://www.youtube.com/@CazeTV/live" # URL de exemplo
+    },
+    {
+        "id": "gaules.br", "name": "Gaules", "platform": "kick",
+        "url": "https://kick.com/gaules",
+        "logo": "https://files.kick.com/images/user/6313/profile_image/conversion/c5109b43-234b-4375-ba19-72f13386663f-full.webp",
+        "stream_url": "https://kick.com/gaules"
+    },
+    {
+        "id": "zigueira.br", "name": "Zigueira", "platform": "kick",
+        "url": "https://kick.com/zigueira",
+        "logo": "https://files.kick.com/images/user/158654/profile_image/conversion/b7325619-813c-43f1-bd12-70b9ac44a86f-full.webp",
+        "stream_url": "https://kick.com/zigueira"
+    },
+    {
+        "id": "thedarkness.br", "name": "Piores Gamers do Mundo", "platform": "youtube",
+        "url": "https://www.youtube.com/@pioresgamersdomundo/live",
+        "logo": "https://yt3.googleusercontent.com/ytc/AIdro_k62oYF2_5BD29f2pP_LraNqKBCnkb8vLdD8d5s-Q=s176-c-k-c0x00ffffff-no-rj",
+        "stream_url": "https://www.youtube.com/@pioresgamersdomundo/live"
+    },
+    {
+        "id": "alanzoka.br", "name": "Alanzoka", "platform": "twitch",
+        "url": "https://www.twitch.tv/alanzoka",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/15cec952-c1ba-4ff8-a79c-53c2fa5bd269-profile_image-300x300.png",
+        "stream_url": "https://www.twitch.tv/alanzoka"
+    }
+]
+
 # --- Funções do Gerador ---
 def obter_urls_logos_com_cache(api_url: str, github_token: Union[str, None]) -> dict:
     if os.path.exists(LOGO_CACHE_FILE):
@@ -226,16 +263,171 @@ def generate_m3u8_content(stream_list: list) -> str:
         m3u8_lines.extend([extinf, stream['stream_url']])
     return "\n".join(m3u8_lines)
 
-# ===================================================================
-# --- FUNÇÃO DE GERAÇÃO DE EPG CORRIGIDA ---
-# (As duas linhas que estendem a duração foram restauradas)
-# ===================================================================
+def parse_viewer_count(viewer_text: str) -> int:
+    """Converte texto de visualização (ex: '1,2 mil espectadores') em um inteiro."""
+    if not viewer_text:
+        return 0
+    
+    text = viewer_text.lower()
+    number_part = re.sub(r'[^0-9,.]', '', text).replace(',', '.')
+    
+    if not number_part:
+        return 0
+        
+    number = float(number_part)
+
+    if 'mil' in text or 'k' in text:
+        number *= 1000
+    elif 'mi' in text or 'm' in text:
+        number *= 1000000
+        
+    return int(number)
+
+
+def format_youtube_title(title: str) -> str:
+    if not title: return "Evento Ao Vivo"
+    cleaned_title = re.sub(r'ao vivo:?\s*\|?\s*', '', title, flags=re.IGNORECASE).strip()
+    return cleaned_title.title()
+
+def get_youtube_live_title(channel_url: str) -> Union[str, None]:
+    """Verifica um canal do YouTube e retorna o título da live, se houver."""
+    try:
+        headers = {"User-Agent": "Mozilla/5.0", "Accept-Language": "en-US,en;q=0.5"}
+        response = requests.get(channel_url, headers=headers, timeout=10)
+        response.raise_for_status()
+        if '"isLive":true' in response.text:
+            soup = BeautifulSoup(response.text, 'lxml')
+            title_tag = soup.find('meta', property='og:title')
+            if title_tag and title_tag.get('content'):
+                return format_youtube_title(title_tag.get('content'))
+            return "Evento Ao Vivo"
+    except requests.exceptions.RequestException as e:
+        print(f"  - AVISO: Falha ao verificar YouTube ({channel_url}). Erro: {e}")
+    return None
+
+def get_kick_live_title(channel_url: str) -> Union[str, None]:
+    """Verifica um canal do Kick via API e retorna o título da live."""
+    try:
+        slug = channel_url.split('/')[-1]
+        api_url = f"https://kick.com/api/v2/channels/{slug}"
+        response = requests.get(api_url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        if data.get('livestream'):
+            return data['livestream'].get('session_title', 'Evento Ao Vivo')
+    except requests.exceptions.RequestException as e:
+        print(f"  - AVISO: Falha ao verificar Kick ({channel_url}). Erro: {e}")
+    return None
+
+def get_twitch_live_title(channel_url: str) -> Union[str, None]:
+    """Verifica um canal da Twitch e retorna o título da live."""
+    try:
+        headers = {"User-Agent": "Mozilla/5.0"}
+        response = requests.get(channel_url, headers=headers, timeout=10)
+        response.raise_for_status()
+        if 'isLiveBroadcast' in response.text:
+            soup = BeautifulSoup(response.text, 'lxml')
+            # O título da live na Twitch costuma estar em uma tag h1 ou h2 com um atributo data-a-target
+            title_tag = soup.select_one('h1[data-a-target="stream-title"], h2[data-a-target="stream-title"]')
+            if title_tag:
+                return title_tag.text
+            return "Evento Ao Vivo"
+    except requests.exceptions.RequestException as e:
+        print(f"  - AVISO: Falha ao verificar Twitch ({channel_url}). Erro: {e}")
+    return None
+
+def format_youtube_title(title: str) -> str:
+    """Remove tags como 'AO VIVO' e formata o título do YouTube."""
+    if not title:
+        return "Evento Ao Vivo"
+    # Usa regex para remover "AO VIVO" e variações, ignorando maiúsculas/minúsculas
+    cleaned_title = re.sub(r'ao vivo:?\s*\|?\s*', '', title, flags=re.IGNORECASE).strip()
+    # Converte para o formato "Primeira Letra Maiúscula"
+    return cleaned_title.title()
+
+def generate_static_channels_epg(xml_lines: list):
+    """Gera o EPG para a lista de canais estáticos (YouTube, Kick, Twitch, etc.)."""
+    print("\nVerificando status dos canais estáticos para o EPG...")
+    local_tz = timezone(timedelta(hours=EPG_LOCAL_TIMEZONE_OFFSET_HOURS))
+    
+    platform_checkers = {
+        'youtube': get_youtube_live_title,
+        'kick': get_kick_live_title,
+        'twitch': get_twitch_live_title,
+    }
+
+    for channel in STATIC_CHANNELS:
+        print(f"- Verificando {channel['name']} ({channel['platform']})...")
+        checker_func = platform_checkers.get(channel['platform'])
+        live_title = None
+        if checker_func:
+            live_title = checker_func(channel['url'])
+        
+        # Adiciona a definição do canal ao XML
+        xml_lines.append(f'  <channel id="{channel["id"]}">')
+        xml_lines.append(f'    <display-name>{html.escape(channel["name"])}</display-name>')
+        xml_lines.append(f'    <icon src="{html.escape(channel["logo"])}" />')
+        xml_lines.append('  </channel>')
+
+        # Lógica de geração de programa (a mesma de antes, agora nesta função)
+        now_utc = datetime.now(timezone.utc)
+        if live_title:
+            print(f"  -> {channel['name']} está AO VIVO: {live_title}")
+            event_start_utc = now_utc
+            event_end_utc = event_start_utc + timedelta(hours=EPG_EVENT_DURATION_HOURS)
+            now_local = now_utc.astimezone(local_tz)
+            local_day_start = now_local.replace(hour=0, minute=0, second=0, microsecond=0)
+            local_day_end = local_day_start + timedelta(days=1)
+            day_start_utc = local_day_start.astimezone(timezone.utc)
+            day_end_utc = local_day_end.astimezone(timezone.utc)
+
+            # Placeholder ANTES
+            if event_start_utc > day_start_utc:
+                day_start_utc = day_start_utc - timedelta(days=1) # Sua lógica customizada
+                start_str = day_start_utc.strftime('%Y%m%d%H%M%S %z')
+                stop_str = event_start_utc.strftime('%Y%m%d%H%M%S %z')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
+                xml_lines.append(f'    <title lang="pt">{PLACEHOLDER_TEXT}</title>')
+                xml_lines.append('  </programme>')
+
+            # Evento Principal
+            start_str = event_start_utc.strftime('%Y%m%d%H%M%S %z')
+            stop_str = event_end_utc.strftime('%Y%m%d%H%M%S %z')
+            safe_prog_title = html.escape(live_title)
+            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
+            xml_lines.append(f'    <title lang="pt">{safe_prog_title}</title>')
+            xml_lines.append(f'    <desc lang="pt">{safe_prog_title}</desc>')
+            xml_lines.append('  </programme>')
+
+            # Placeholder DEPOIS
+            if event_end_utc < day_end_utc:
+                start_str = event_end_utc.strftime('%Y%m%d%H%M%S %z')
+                stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
+                xml_lines.append(f'    <title lang="pt">{PLACEHOLDER_TEXT}</title>')
+                xml_lines.append('  </programme>')
+        else:
+            print(f"  -> {channel['name']} está offline.")
+            start_str = now_utc.strftime('%Y%m%d%H%M%S %z')
+            now_local = now_utc.astimezone(local_tz)
+            local_day_end = now_local.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
+            day_end_utc = local_day_end.astimezone(timezone.utc)
+            stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
+            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
+            xml_lines.append(f'    <title lang="pt">{PLACEHOLDER_TEXT}</title>')
+            xml_lines.append('  </programme>')
+
 def generate_xmltv_epg(stream_list: list) -> str:
     if not stream_list: return ""
     print("Gerando EPG com canais virtuais...")
     xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<tv>']
     local_tz = timezone(timedelta(hours=EPG_LOCAL_TIMEZONE_OFFSET_HOURS))
     generated_channel_ids = set()
+    
+    
+    # 1. Gera o EPG para os canais que monitoramos estaticamente
+    generate_static_channels_epg(xml_lines)
+    
     for stream in stream_list:
         try:
             unique_event_id = sanitize_id(f"evt.{stream['source_name']}.{stream['start_timestamp_ms']}")
@@ -258,7 +450,6 @@ def generate_xmltv_epg(stream_list: list) -> str:
             safe_channel_name = html.escape(stream['source_name'])
 
             if start_dt_utc > day_start_utc:
-                # --- LINHA RESTAURADA ---
                 day_start_utc = day_start_utc - timedelta(days=1)
                 start_str = day_start_utc.strftime('%Y%m%d%H%M%S %z')
                 stop_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
@@ -274,7 +465,6 @@ def generate_xmltv_epg(stream_list: list) -> str:
             xml_lines.append('  </programme>')
 
             if end_dt_utc < day_end_utc:
-                # --- LINHA RESTAURADA ---
                 day_end_utc = day_end_utc + timedelta(days=1)
                 start_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
                 stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
@@ -365,8 +555,7 @@ def iniciar_servidor():
         print(f"\nLinks para uso na sua rede local:")
         print(f"  Playlist M3U8: http://{SERVER_IP}:{SERVER_PORT}/{M3U8_OUTPUT_FILENAME}")
         print(f"  Guia EPG XML:  http://{SERVER_IP}:{SERVER_PORT}/{EPG_OUTPUT_FILENAME}")
-        print(f"\nAtualizações automáticas a cada :00 e :30 de cada hora.")
-        print(f"Para parar tudo, pressione Ctrl+C.")
+        print(f"\nAtualizações automáticas a cada :00 e :30 de cada hora.")        
         httpd.serve_forever()
 
 # --- Bloco de Execução Principal ---
