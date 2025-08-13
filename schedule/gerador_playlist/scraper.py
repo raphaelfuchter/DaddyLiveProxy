@@ -1,4 +1,4 @@
-# gerador_playlist/scraper.py
+# Localização: gerador_playlist/scraper.py
 
 import re
 import json
@@ -9,11 +9,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+
+# Importando de outros módulos do nosso pacote
 from . import config
 from .utils import find_best_logo_url
 
 
 def _parse_date_from_key(date_key: str) -> datetime.date:
+    """Extrai e converte a data a partir da chave do JSON (ex: 'Monday 12 Aug 2024')."""
     date_str_part = date_key.split(' - ')[0]
     date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str_part)
     possible_formats = ['%A %d %b %Y', '%A %d %B %Y']
@@ -27,6 +30,7 @@ def _parse_date_from_key(date_key: str) -> datetime.date:
 
 
 def _reformat_event_name(original_name: str) -> str:
+    """Re-formata o nome do evento para 'Partida : Liga'."""
     try:
         league_part, match_part_full = original_name.split(':', 1)
         match_part = match_part_full.split('(', 1)[0] if '(' in match_part_full else match_part_full
@@ -36,6 +40,10 @@ def _reformat_event_name(original_name: str) -> str:
 
 
 def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache: dict) -> list:
+    """
+    Navega até a URL, aguarda o carregamento, extrai o JSON da página,
+    e o transforma em uma lista estruturada de streams.
+    """
     print(f"Navegando para: {url} com o Selenium...")
     driver.get(url)
     try:
@@ -59,6 +67,7 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
         start_index = full_text.find('{')
         end_index = full_text.rfind('}')
         if start_index == -1 or end_index == -1: raise ValueError("JSON object boundaries not found")
+
         json_only_text = full_text[start_index: end_index + 1]
         json_cleaned = re.sub(r'^\s*\d+\s*', '', json_only_text, flags=re.MULTILINE)
         data = json.loads(json_cleaned)
@@ -66,12 +75,13 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
         for date_key, categories in data.items():
             event_date = _parse_date_from_key(date_key)
             if not event_date: continue
+
             for sport_category, events in categories.items():
                 translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
                 if "Tennis" in sport_category: translated_sport = "Tênis"
+
                 for event in events:
                     all_channels = []
-                    # ... (resto da lógica de extração idêntica ao original) ...
                     for channels_data in [event.get('channels'), event.get('channels2')]:
                         if not channels_data: continue
                         if isinstance(channels_data, list):
@@ -81,6 +91,7 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                                 all_channels.append(channels_data)
                             else:
                                 all_channels.extend(list(channels_data.values()))
+
                     for channel in all_channels:
                         try:
                             channel_name = channel['channel_name']
@@ -90,11 +101,16 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                             start_timestamp_ms = int(start_dt_utc.timestamp() * 1000)
                             sport_icon = config.SPORT_ICON_MAP.get(translated_sport, config.DEFAULT_SPORT_ICON)
                             logo_url = find_best_logo_url(channel_name, logo_cache, sport_icon)
+
                             stream_list.append({
-                                'id': channel_id, 'stream_url': f"{base_url}/stream/{channel_id}.m3u8",
-                                'event_name': _reformat_event_name(event['event']), 'sport': translated_sport,
-                                'source_name': channel_name, 'start_timestamp_ms': str(start_timestamp_ms),
-                                'original_order': order_counter, 'logo_url': logo_url,
+                                'id': channel_id,
+                                'stream_url': f"{base_url}/stream/{channel_id}.m3u8",
+                                'event_name': _reformat_event_name(event['event']),
+                                'sport': translated_sport,
+                                'source_name': channel_name,
+                                'start_timestamp_ms': str(start_timestamp_ms),
+                                'original_order': order_counter,
+                                'logo_url': logo_url,
                             })
                             order_counter += 1
                         except (KeyError, ValueError) as e:
