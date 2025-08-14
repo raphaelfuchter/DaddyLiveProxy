@@ -51,26 +51,46 @@ STATIC_CHANNELS = [
     {
         "id": "cazetv.br", "name": "CazéTV", "platform": "youtube",
         "url": "https://www.youtube.com/@CazeTV/live",
-        "logo": "https://yt3.googleusercontent.com/o6S4_2-y_2pA_0_f5q2I_D2aO2eWSUj1SOK2IeI2O5W2w_imACs_yGNQY8Y-r3tO9k4c_d2a=s176-c-k-c0x00ffffff-no-rj",
+        "logo": "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
     },
     {
         "id": "gaules.br", "name": "Gaules", "platform": "kick",
         "url": "https://kick.com/gaules",
-        "logo": "https://files.kick.com/images/user/6313/profile_image/conversion/c5109b43-234b-4375-ba19-72f13386663f-full.webp",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
     {
         "id": "zigueira.br", "name": "Zigueira", "platform": "kick",
         "url": "https://kick.com/zigueira",
-        "logo": "https://files.kick.com/images/user/158654/profile_image/conversion/b7325619-813c-43f1-bd12-70b9ac44a86f-full.webp",
+        "logo": "https://files.kick.com/images/user/55276375/profile_image/bc9947ee-9f86-4036-8236-82252e8c4d9c",
     },
     {
         "id": "thedarkness.br", "name": "Piores Gamers do Mundo", "platform": "youtube",
         "url": "https://www.youtube.com/@pioresgamersdomundo/live",
-        "logo": "https://yt3.googleusercontent.com/ytc/AIdro_k62oYF2_5BD29f2pP_LraNqKBCnkb8vLdD8d5s-Q=s176-c-k-c0x00ffffff-no-rj",
+        "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
     },
     {
         "id": "alanzoka.br", "name": "Alanzoka", "platform": "twitch",
         "url": "https://www.twitch.tv/alanzoka",
-        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/15cec952-c1ba-4ff8-a79c-53c2fa5bd269-profile_image-300x300.png",
+        "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS_r8bzfeP-s6NqswOn5rtypcmAy5gjJk4xNr9JI5mJDSdTB0sP_Ds-O4aeAjOEGKDWnCggyVPKjCzBXBb-5FOzTeu8O6ATeVo1hFooEb1CMk6Dlyta_l4ZIPjNdLwJzYRqsNySmdK1-pi/s1600/c46b05a0-db41-4c66-b736-3ff018df99ec-profile_ima",
+    },
+    {
+        "id": "canalgoat.br", "name": "Canal Goat", "platform": "youtube",
+        "url": "https://www.youtube.com/@canalgoatbr/live",
+        "logo": "https://canalgoat.com.br/wp-content/uploads/2024/10/Canal-Goat-Escudo-Color.png",
+    },
+    {
+        "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/@TopTVSports/live",
+        "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
+    },
+    {
+        "id": "funky.br", "name": "FunkyBlackCat", "platform": "youtube",
+        "url": "https://www.youtube.com/@funkyblackcat/live",
+        "logo": "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/74034541867565.56070a2d84cd4.png",
+    },
+    {
+        "id": "metropoles.br", "name": "Metrópoles", "platform": "youtube",
+        "url": "https://www.youtube.com/c/Metr%C3%B3polesTV/live",
+        "logo": "https://play-lh.googleusercontent.com/Eod-arKwRBPDNBTlZXrXGUvNb4vX1KF038waVYZnDW5jpULjX6MLyd2NHeiXk9EkHQ",
     }
 ]
