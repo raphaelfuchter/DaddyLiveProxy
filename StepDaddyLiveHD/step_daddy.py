@@ -87,45 +87,57 @@ class StepDaddy:
         return Channel(id=channel_id, name=channel_name, tags=meta.get("tags", []), logo=logo)
 
     async def stream(self, channel_id: str):
-        response = None  # Inicializa a variável para garantir que ela exista no bloco except
-        url = "N/A"      # Inicializa a URL para o log de erro
-        
+        response = None
+        url = "N/A"
+
         print(f"[LOG] Iniciando busca de stream para o canal ID: {channel_id}")
-        
+
         for base_url in self._base_urls:
             try:
                 print(f"\n[LOG] Usando base_url: {base_url}")
-                
+
                 prefixes = ["stream", "cast", "watch", "player", "casting"]
                 for prefix in prefixes:
                     print(f"  [LOG] Tentando prefixo: '{prefix}'")
-                    
+
                     if len(channel_id) > 3:
                         url = f"{base_url}/{prefix}/bet.php?id=bet{channel_id}"
                     else:
                         url = f"{base_url}/{prefix}/stream-{channel_id}.php"
-                    
+
                     print(f"    [LOG] Construindo URL da página: {url}")
                     print(f"    [LOG] Fazendo requisição POST para a página...")
                     response = await self._session.post(url, headers=self._headers(referer=base_url))
                     response.raise_for_status()
 
                     print(f"    [LOG] Procurando pelo iframe na resposta...")
-                    matches = re.compile("iframe.*?src=\"(.*?)\"").findall(response.text)
-                    
+                    matches = re.compile("iframe.*?src=\"(https?://.*?)\"").findall(response.text)
+
                     if not matches:
                         print(f"    [AVISO] Padrão do iframe não encontrado em {url}. Tentando próximo prefixo.")
                         continue
 
                     source_url = matches[0]
+
+                    # --- MUDANÇAS AQUI ---
+                    # 1. Limpa quaisquer caracteres invisíveis ou espaços em branco da URL
+                    source_url = source_url.strip()
+
+                    # 2. Valida se a URL é de um tipo que podemos requisitar (HTTP/HTTPS)
+                    if not source_url.startswith("http"):
+                        print(f"    [AVISO] Iframe com URL inválida encontrada: '{source_url}'. Ignorando.")
+                        continue
+                    # --- FIM DAS MUDANÇAS ---
+
                     print(f"    [LOG] Iframe encontrado! source_url: {source_url}")
-                    
+
                     print(f"      > [DEBUG] Acessando source_url: {source_url}")
                     print(f"      > [DEBUG] Enviando referer: {url}")
                     source_response = await self._session.get(source_url, headers=self._headers(referer=url))
                     source_response.raise_for_status()
 
                     print(f"    [LOG] Extraindo channelKey...")
+
                     channel_key_match = re.compile(r"var\s+channelKey\s*=\s*\"(.*?)\";").findall(source_response.text)
                     if not channel_key_match:
                         print("    [ERRO] Não foi possível encontrar 'channelKey' no script do player.")
@@ -139,7 +151,7 @@ class StepDaddy:
                     auth_path = extract_and_decode_var("__b", source_response.text)
                     auth_rnd = extract_and_decode_var("__d", source_response.text)
                     auth_url = extract_and_decode_var("__a", source_response.text)
-                    print(f"      > auth_url: {auth_url}, auth_path: {auth_path}, auth_ts: {auth_ts}...") # Log resumido
+                    print(f"      > auth_url: {auth_url}, auth_path: {auth_path}, auth_ts: {auth_ts}...")
 
                     auth_request_url = f"{auth_url}{auth_path}?channel_id={channel_key}&ts={auth_ts}&rnd={auth_rnd}&sig={auth_sig}"
                     print(f"    [LOG] Construindo URL de autorização: {auth_request_url}")
@@ -154,43 +166,45 @@ class StepDaddy:
                     print(f"    [LOG] Fazendo requisição de busca do servidor...")
                     key_response = await self._session.get(key_url, headers=self._headers(referer=source_url))
                     key_response.raise_for_status()
-                    
+
                     server_key = key_response.json().get("server_key")
                     if not server_key:
                         raise ValueError("Chave 'server_key' não encontrada na resposta JSON.")
                     print(f"    [LOG] Chave do servidor encontrada: {server_key}")
-                    
+
                     if server_key == "top1/cdn":
                         server_url = f"https://top1.newkso.ru/top1/cdn/{channel_key}/mono.m3u8"
                     else:
                         server_url = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
                     print(f"    [LOG] Construindo URL final do M3U8: {server_url}")
-                    
+
                     print(f"    [LOG] Baixando playlist M3U8...")
                     m3u8 = await self._session.get(server_url, headers=self._headers(referer=quote(str(source_url))))
                     m3u8.raise_for_status()
-                    
+
                     print(f"    [LOG] Processando playlist M3U8 para ajustar URLs da chave...")
                     m3u8_data = ""
                     for line in m3u8.text.split("\n"):
                         if line.startswith("#EXT-X-KEY:"):
                             original_url = re.search(r'URI="(.*?)"', line).group(1)
-                            line = line.replace(original_url, f"{config.api_url}/key/{encrypt(original_url)}/{encrypt(urlparse(source_url).netloc)}")
+                            line = line.replace(original_url,
+                                                f"{config.api_url}/key/{encrypt(original_url)}/{encrypt(urlparse(source_url).netloc)}")
                         elif line.startswith("http") and config.proxy_content:
                             line = f"{config.api_url}/content/{encrypt(line)}"
                         m3u8_data += line + "\n"
-                    
+
                     print(f"\n[SUCESSO] Stream obtido e processado com sucesso de: {base_url}")
                     return m3u8_data
-                    
-                raise ValueError(f"Não foi possível encontrar um source_url válido para os prefixos testados em {base_url}")
+
+                raise ValueError(
+                    f"Não foi possível encontrar um source_url válido para os prefixos testados em {base_url}")
 
             except Exception as e:
                 print(f"\n  [ERRO] Ocorreu uma falha durante a tentativa com a base_url '{base_url}'.")
                 print(f"  [ERRO] A última URL tentada foi: {url}")
                 print(f"  [ERRO] Detalhe da exceção: {e}")
                 print("  [INFO] Tentando próxima base_url...\n")
-        
+
         raise Exception("Erro: Falha ao obter o stream de todas as URLs disponíveis.")
 
     async def key(self, url: str, host: str):
