@@ -20,7 +20,7 @@ def get_youtube_live_title(channel_url: str) -> Union[str, None]:
             title_tag = soup.find('meta', property='og:title')
             if title_tag and title_tag.get('content'):
                 return _format_youtube_title(title_tag.get('content'))
-            return "Evento Ao Vivo"
+            return "Ao Vivo"
     except requests.exceptions.RequestException as e:
         print(f"  - AVISO: Falha ao verificar YouTube ({channel_url}). Erro: {e}")
     return None
@@ -34,7 +34,7 @@ def get_kick_live_title(channel_url: str) -> Union[str, None]:
         response.raise_for_status()
         data = response.json()
         if data.get('livestream'):
-            return data['livestream'].get('session_title', 'Evento Ao Vivo')
+            return data['livestream'].get('session_title', 'Ao Vivo')
     except requests.exceptions.RequestException as e:
         print(f"  - AVISO: Falha ao verificar Kick ({channel_url}). Erro: {e}")
     return None
@@ -49,7 +49,7 @@ def get_twitch_live_title(channel_url: str) -> Union[str, None]:
             title_tag = soup.select_one('h1[data-a-target="stream-title"], h2[data-a-target="stream-title"]')
             if title_tag:
                 return title_tag.text
-            return "Evento Ao Vivo"
+            return "Ao Vivo"
     except requests.exceptions.RequestException as e:
         print(f"  - AVISO: Falha ao verificar Twitch ({channel_url}). Erro: {e}")
     return None
