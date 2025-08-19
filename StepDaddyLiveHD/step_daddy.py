@@ -26,7 +26,7 @@ class StepDaddy:
         # Lista de URLs base ---
         self._base_urls = [
             "https://thedaddy.sx",
-            "https://thedaddy.top"  
+            "https://dlhd.click"                                       
         ]
         
         self.channels = []
