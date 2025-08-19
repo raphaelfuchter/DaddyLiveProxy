@@ -4,7 +4,8 @@ import reflex as rx
 from urllib.parse import quote, urlparse
 from curl_cffi import AsyncSession
 from typing import List
-from .utils import encrypt, decrypt, urlsafe_base64, extract_and_decode_var
+import base64
+from .utils import encrypt, decrypt, urlsafe_base64
 from rxconfig import config
 
 
@@ -22,13 +23,12 @@ class StepDaddy:
             self._session = AsyncSession(proxy="socks5://" + socks5)
         else:
             self._session = AsyncSession(timeout=60, allow_redirects=True)
-        
-        # Lista de URLs base ---
+
         self._base_urls = [
             "https://thedaddy.sx",
-            "https://dlhd.click"                                       
+            "https://thedaddy.top"
         ]
-        
+
         self.channels = []
         with open("StepDaddyLiveHD/meta.json", "r") as f:
             self._meta = json.load(f)
@@ -46,26 +46,28 @@ class StepDaddy:
         channels = []
         for base_url in self._base_urls:
             try:
-                print(f"Tentando carregar canais de: {base_url}")
-                response = await self._session.get(f"{base_url}/24-7-channels.php", headers={"user-agent": "Mozilla/5.0..."})
+                print(f"> Carregando canais de: {base_url}")
+                response = await self._session.get(f"{base_url}/24-7-channels.php",
+                                                   headers={"user-agent": "Mozilla/5.0..."})
                 response.raise_for_status()
-                
-                channels_block = re.compile("<center><h1(.+?)tab-2", re.MULTILINE | re.DOTALL).findall(str(response.text))
+
+                channels_block = re.compile("<center><h1(.+?)tab-2", re.MULTILINE | re.DOTALL).findall(
+                    str(response.text))
                 if not channels_block:
                     continue
-                
+
                 channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(channels_block[0])
                 for channel_data in channels_data:
                     channels.append(self._get_channel(channel_data))
-                
-                print(f"Canais carregados com sucesso de: {base_url}")
+
+                print(f"> Canais carregados com sucesso de: {base_url}")
                 self.channels = sorted(channels, key=lambda channel: (channel.name.startswith("18"), channel.name))
                 return
-            
+
             except Exception as e:
-                print(f"Falha ao carregar de {base_url}: {e} - Tentando próxima URL...")
-        
-        print("Erro: Não foi possível carregar os canais de nenhuma das URLs fornecidas.")
+                print(f"> Falha ao carregar de {base_url}: {e}")
+
+        print("! Erro: Não foi possível carregar os canais de nenhuma das URLs fornecidas.")
         self.channels = []
 
     def _get_channel(self, channel_data) -> Channel:
@@ -90,99 +92,87 @@ class StepDaddy:
         response = None
         url = "N/A"
 
-        print(f"[LOG] Iniciando busca de stream para o canal ID: {channel_id}")
+        print(f"\n[INFO] Iniciando busca de stream para o canal ID: {channel_id}")
 
         for base_url in self._base_urls:
             try:
-                print(f"\n[LOG] Usando base_url: {base_url}")
-
+                print(f"[INFO] Usando base: {base_url}")
                 prefixes = ["stream", "cast", "watch", "player", "casting"]
                 for prefix in prefixes:
-                    print(f"  [LOG] Tentando prefixo: '{prefix}'")
-
                     if len(channel_id) > 3:
                         url = f"{base_url}/{prefix}/bet.php?id=bet{channel_id}"
                     else:
                         url = f"{base_url}/{prefix}/stream-{channel_id}.php"
 
-                    print(f"    [LOG] Construindo URL da página: {url}")
-                    print(f"    [LOG] Fazendo requisição POST para a página...")
+                    print(f"  > Tentando URL: {url}")
                     response = await self._session.post(url, headers=self._headers(referer=base_url))
                     response.raise_for_status()
 
-                    print(f"    [LOG] Procurando pelo iframe na resposta...")
                     matches = re.compile("iframe.*?src=\"(https?://.*?)\"").findall(response.text)
-
                     if not matches:
-                        print(f"    [AVISO] Padrão do iframe não encontrado em {url}. Tentando próximo prefixo.")
                         continue
 
-                    source_url = matches[0]
-
-                    # --- MUDANÇAS AQUI ---
-                    # 1. Limpa quaisquer caracteres invisíveis ou espaços em branco da URL
-                    source_url = source_url.strip()
-
-                    # 2. Valida se a URL é de um tipo que podemos requisitar (HTTP/HTTPS)
+                    source_url = matches[0].strip()
                     if not source_url.startswith("http"):
-                        print(f"    [AVISO] Iframe com URL inválida encontrada: '{source_url}'. Ignorando.")
                         continue
-                    # --- FIM DAS MUDANÇAS ---
 
-                    print(f"    [LOG] Iframe encontrado! source_url: {source_url}")
-
-                    print(f"      > [DEBUG] Acessando source_url: {source_url}")
-                    print(f"      > [DEBUG] Enviando referer: {url}")
+                    print(f"  > Iframe encontrado: {source_url}")
                     source_response = await self._session.get(source_url, headers=self._headers(referer=url))
                     source_response.raise_for_status()
 
-                    print(f"    [LOG] Extraindo channelKey...")
-
-                    channel_key_match = re.compile(r"var\s+channelKey\s*=\s*\"(.*?)\";").findall(source_response.text)
+                    channel_key_match = re.search(r'const CHANNEL_KEY = "([^"]+)"', source_response.text)
                     if not channel_key_match:
-                        print("    [ERRO] Não foi possível encontrar 'channelKey' no script do player.")
+                        print("    ! Erro: 'CHANNEL_KEY' não encontrada no script do player.")
                         continue
-                    channel_key = channel_key_match[-1]
-                    print(f"      > channelKey: {channel_key}")
+                    channel_key = channel_key_match.group(1)
 
-                    print(f"    [LOG] Extraindo variáveis de autenticação...")
-                    auth_ts = extract_and_decode_var("__c", source_response.text)
-                    auth_sig = extract_and_decode_var("__e", source_response.text)
-                    auth_path = extract_and_decode_var("__b", source_response.text)
-                    auth_rnd = extract_and_decode_var("__d", source_response.text)
-                    auth_url = extract_and_decode_var("__a", source_response.text)
-                    print(f"      > auth_url: {auth_url}, auth_path: {auth_path}, auth_ts: {auth_ts}...")
+                    bundle_match = re.search(r'const BUNDLE = "([^"]+)"', source_response.text)
+                    if not bundle_match:
+                        print("    ! Erro: 'BUNDLE' não encontrado no script do player.")
+                        continue
+                    bundle = bundle_match.group(1)
 
-                    auth_request_url = f"{auth_url}{auth_path}?channel_id={channel_key}&ts={auth_ts}&rnd={auth_rnd}&sig={auth_sig}"
-                    print(f"    [LOG] Construindo URL de autorização: {auth_request_url}")
-                    print(f"    [LOG] Fazendo requisição de autorização...")
+                    try:
+                        decoded_json_str = base64.b64decode(bundle).decode('utf-8')
+                        parts_encoded = json.loads(decoded_json_str)
+                        parts = {k: base64.b64decode(v).decode('utf-8') for k, v in parts_encoded.items()}
+                    except Exception as e:
+                        print(f"    ! Erro: Falha ao decodificar o BUNDLE: {e}")
+                        continue
+
+                    auth_request_url = (
+                        f"{parts['b_host']}{parts['b_script']}"
+                        f"?channel_id={quote(channel_key)}"
+                        f"&ts={quote(parts['b_ts'])}"
+                        f"&rnd={quote(parts['b_rnd'])}"
+                        f"&sig={quote(parts['b_sig'])}"
+                    )
+
+                    print(f"    > URL de autorização: {auth_request_url[:80]}...")
                     auth_response = await self._session.get(auth_request_url, headers=self._headers(referer=source_url))
                     auth_response.raise_for_status()
-                    print(f"      > Autorização OK (Status: {auth_response.status_code})")
+                    print(f"    > Autorização OK (Status: {auth_response.status_code})")
 
                     parsed_source_url = urlparse(source_url)
                     key_url = f"{parsed_source_url.scheme}://{parsed_source_url.netloc}/server_lookup.php?channel_id={channel_key}"
-                    print(f"    [LOG] Construindo URL de busca do servidor: {key_url}")
-                    print(f"    [LOG] Fazendo requisição de busca do servidor...")
+                    print(f"    > Buscando servidor: {key_url}")
                     key_response = await self._session.get(key_url, headers=self._headers(referer=source_url))
                     key_response.raise_for_status()
 
                     server_key = key_response.json().get("server_key")
                     if not server_key:
                         raise ValueError("Chave 'server_key' não encontrada na resposta JSON.")
-                    print(f"    [LOG] Chave do servidor encontrada: {server_key}")
+                    print(f"    > Chave do servidor: {server_key}")
 
                     if server_key == "top1/cdn":
                         server_url = f"https://top1.newkso.ru/top1/cdn/{channel_key}/mono.m3u8"
                     else:
                         server_url = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
-                    print(f"    [LOG] Construindo URL final do M3U8: {server_url}")
+                    print(f"    > URL do M3U8: {server_url}")
 
-                    print(f"    [LOG] Baixando playlist M3U8...")
                     m3u8 = await self._session.get(server_url, headers=self._headers(referer=quote(str(source_url))))
                     m3u8.raise_for_status()
 
-                    print(f"    [LOG] Processando playlist M3U8 para ajustar URLs da chave...")
                     m3u8_data = ""
                     for line in m3u8.text.split("\n"):
                         if line.startswith("#EXT-X-KEY:"):
@@ -193,19 +183,18 @@ class StepDaddy:
                             line = f"{config.api_url}/content/{encrypt(line)}"
                         m3u8_data += line + "\n"
 
-                    print(f"\n[SUCESSO] Stream obtido e processado com sucesso de: {base_url}")
+                    print(f"[SUCESSO] Stream para o canal {channel_id} obtido de {base_url}")
                     return m3u8_data
 
-                raise ValueError(
-                    f"Não foi possível encontrar um source_url válido para os prefixos testados em {base_url}")
+                print(f"  ! Nenhum iframe funcional encontrado para os prefixos em {base_url}")
 
             except Exception as e:
-                print(f"\n  [ERRO] Ocorreu uma falha durante a tentativa com a base_url '{base_url}'.")
-                print(f"  [ERRO] A última URL tentada foi: {url}")
-                print(f"  [ERRO] Detalhe da exceção: {e}")
+                print(f"\n  [ERRO] Falha na tentativa com a base_url '{base_url}'.")
+                print(f"    > Última URL: {url}")
+                print(f"    > Detalhe: {e}")
                 print("  [INFO] Tentando próxima base_url...\n")
 
-        raise Exception("Erro: Falha ao obter o stream de todas as URLs disponíveis.")
+        raise Exception(f"Erro: Falha ao obter o stream para o canal {channel_id} de todas as URLs disponíveis.")
 
     async def key(self, url: str, host: str):
         url = decrypt(url)
@@ -229,12 +218,13 @@ class StepDaddy:
     async def schedule(self):
         for base_url in self._base_urls:
             try:
-                print(f"Tentando carregar schedule de: {base_url}")
-                response = await self._session.get(f"{base_url}/schedule/schedule-generated.php", headers=self._headers(referer=base_url))
+                print(f"> Carregando schedule de: {base_url}")
+                response = await self._session.get(f"{base_url}/schedule/schedule-generated.php",
+                                                   headers=self._headers(referer=base_url))
                 response.raise_for_status()
-                print(f"Schedule carregado com sucesso de: {base_url}")
+                print(f"> Schedule carregado com sucesso de: {base_url}")
                 return response.json()
             except Exception as e:
-                print(f"Falha ao carregar schedule de {base_url}: {e} - Tentando próxima URL...")
-        
-        raise Exception("Erro: Falha ao carregar o schedule de todas as URLs disponíveis.")
+                print(f"> Falha ao carregar schedule de {base_url}: {e}")
+
+        raise Exception("! Erro: Falha ao carregar o schedule de todas as URLs disponíveis.")
