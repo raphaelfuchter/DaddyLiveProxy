@@ -17,7 +17,6 @@ FALLBACK_VIDEO_URL = "https://www.youtube.com/watch?v=9pudYN0rJnk"
 def write_fallback_stream(channel_name: str, channel_id: str, category: str, m3u8_lines: list):
     """Adiciona um stream de fallback à lista de linhas M3U8."""
     print(f"INFO: Nenhuma live ativa para '{channel_name}'. Usando fallback.")
-    # ALTERADO: group-title agora é "Streams"
     m3u8_lines.append(
         f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{channel_name} (Offline)" group-title="Streams",{channel_name} (Offline)')
     m3u8_lines.append(FALLBACK_VIDEO_URL)
@@ -39,13 +38,31 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
 
             for index, video_info in enumerate(live_videos, 1):
                 display_name = f"{name} {index}" if len(live_videos) > 1 else name
-                manifest_url = next((f['url'] for f in reversed(video_info.get('formats', [])) if
-                                     f.get('protocol') == 'm3u8_native' and f.get('vcodec') != 'none'), None)
+
+                # --- LÓGICA DE SELEÇÃO DE QUALIDADE APRIMORADA ---
+                manifest_url = None
+                m3u8_formats = [
+                    f for f in video_info.get('formats', [])
+                    # Filtra por protocolos HLS (m3u8) e garante que há um codec de vídeo
+                    if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none'
+                ]
+
+                if m3u8_formats:
+                    # Ordena os formatos pela altura (resolução), da maior para a menor
+                    m3u8_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
+                    # Seleciona a URL do primeiro item da lista (o de maior qualidade)
+                    manifest_url = m3u8_formats[0]['url']
+                    print(
+                        f"INFO: Stream '{display_name}' encontrada. Melhor qualidade (m3u8): {m3u8_formats[0].get('height')}p")
+                # --- FIM DA LÓGICA APRIMORADA ---
+
                 if manifest_url:
-                    # ALTERADO: group-title agora é "Streams"
                     m3u8_lines.append(
                         f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{display_name}" group-title="Streams",{display_name}')
                     m3u8_lines.append(manifest_url)
+                else:
+                    print(f"AVISO: Nenhum stream M3U8 encontrado para '{display_name}'.")
+
     except Exception as e:
         print(f"DEBUG: Erro ao processar canal '{name}': {e}")
         write_fallback_stream(name, channel_id, category, m3u8_lines)
@@ -57,10 +74,22 @@ def process_single_stream(url: str, name: str, channel_id: str, category: str, m
         with yt_dlp.YoutubeDL({'quiet': True, 'no_warnings': True}) as ydl:
             info = ydl.extract_info(url, download=False)
             if info.get('is_live'):
-                manifest_url = next((f['url'] for f in reversed(info.get('formats', [])) if
-                                     f.get('protocol') == 'm3u8_native' and f.get('vcodec') != 'none'), None)
+
+                # --- LÓGICA DE SELEÇÃO DE QUALIDADE APRIMORADA ---
+                manifest_url = None
+                m3u8_formats = [
+                    f for f in info.get('formats', [])
+                    if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none'
+                ]
+
+                if m3u8_formats:
+                    m3u8_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
+                    manifest_url = m3u8_formats[0]['url']
+                    print(
+                        f"INFO: Stream '{name}' encontrada. Melhor qualidade (m3u8): {m3u8_formats[0].get('height')}p")
+                # --- FIM DA LÓGICA APRIMORADA ---
+
                 if manifest_url:
-                    # ALTERADO: group-title agora é "Streams"
                     m3u8_lines.append(
                         f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{name}" group-title="Streams",{name}')
                     m3u8_lines.append(manifest_url)
