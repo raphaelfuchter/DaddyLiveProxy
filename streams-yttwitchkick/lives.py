@@ -15,7 +15,8 @@ OUTPUT_EPG_FILE = 'epg.xml'
 FALLBACK_VIDEO_URL = "https://www.youtube.com/watch?v=9pudYN0rJnk"
 VIDEOS_A_VERIFICAR = 50
 
-tz = pytz.timezone('Europe/London')
+# ALTERAÇÃO 1: Fuso horário ajustado para São Paulo
+tz = pytz.timezone('America/Sao_Paulo')
 channels = []
 
 
@@ -41,7 +42,7 @@ def build_xml_tv(streams: list) -> bytes:
         name = etree.SubElement(channel, "display-name")
         name.set("lang", "en")
         name.text = stream[0]
-        dt_format = '%Ym%d%H%M%S %z'
+        dt_format = '%Y%m%d%H%M%S %z'
         start_dates, end_dates = generate_times(datetime.now())
         for idx, val in enumerate(start_dates):
             programme = etree.SubElement(data, 'programme')
@@ -75,46 +76,55 @@ def write_fallback_stream(channel_name: str, channel_id: str, category: str):
         print(f"ERRO: Falha crítica ao obter o M3U8 do vídeo de fallback. {fallback_e}")
 
 
+# ALTERAÇÃO 2: Lógica de processamento de canais do YouTube modificada
 def process_youtube_channel(channel_url: str, channel_name: str, channel_id: str, category: str):
-    """Usa um filtro de exclusão com a sintaxe correta para ser rápido e preciso."""
-
-    # Filtro de exclusão com a sintaxe mais simples e direta possível.
+    """
+    Busca por streams ao vivo. Se mais de uma for encontrada para o mesmo canal,
+    enumera cada uma (ex: "Canal 1", "Canal 2").
+    """
     exclusion_filter = yt_dlp_utils.match_filter_func("live_status != 'is_upcoming' & live_status != 'was_live'")
-
     ydl_opts = {
         'quiet': True, 'no_warnings': True,
         'match_filter': exclusion_filter,
         'playlistend': VIDEOS_A_VERIFICAR,
     }
-    found_live_stream = False
     try:
         print(f"INFO: Canal '{channel_name}' - Buscando lives com filtro de exclusão (rápido)...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             playlist_info = ydl.extract_info(channel_url, download=False)
 
-            candidate_videos = playlist_info.get('entries', [])
+            # Filtra apenas os vídeos que estão de fato ao vivo
+            live_videos = [v for v in playlist_info.get('entries', []) if v and v.get('is_live')]
 
-            if candidate_videos:
-                print(f"INFO: {len(candidate_videos)} candidato(s) encontrado(s) após o filtro.")
-                for video_info in candidate_videos:
-                    if video_info and video_info.get('is_live'):
-                        video_title = video_info.get('title', channel_name)
-                        print(f"INFO: LIVE ENCONTRADA! '{channel_name}': {video_title}")
-                        manifest_url = next((f['url'] for f in reversed(video_info.get('formats', [])) if
-                                             f.get('protocol') == 'm3u8_native' and f.get('vcodec') != 'none'), None)
-                        if manifest_url:
-                            found_live_stream = True
-                            with open(OUTPUT_M3U8_FILE, 'a', encoding='utf-8') as m3u8_file:
-                                m3u8_file.write(
-                                    f'\n#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{video_title}" group-title="{category}", {video_title}\n')
-                                m3u8_file.write(f"{manifest_url}\n")
-                            channels.append((video_title, channel_id, category, video_info.get('title'),
-                                             video_info.get('description'), video_info.get('thumbnail')))
+            if not live_videos:
+                # Se nenhuma live for encontrada, chama o fallback
+                write_fallback_stream(channel_name, channel_id, category)
+                return
+
+            print(f"INFO: {len(live_videos)} live(s) encontrada(s) para '{channel_name}'.")
+            # Itera sobre cada vídeo ao vivo encontrado
+            for index, video_info in enumerate(live_videos, 1):
+                # Define o nome a ser exibido: adiciona um número se houver mais de uma live
+                display_name = f"{channel_name} {index}" if len(live_videos) > 1 else channel_name
+
+                print(f"INFO: Processando stream '{display_name}': {video_info.get('title', 'Sem título')}")
+                manifest_url = next((f['url'] for f in reversed(video_info.get('formats', [])) if
+                                     f.get('protocol') == 'm3u8_native' and f.get('vcodec') != 'none'), None)
+
+                if manifest_url:
+                    with open(OUTPUT_M3U8_FILE, 'a', encoding='utf-8') as m3u8_file:
+                        m3u8_file.write(
+                            f'\n#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{display_name}" group-title="{category}", {display_name}\n')
+                        m3u8_file.write(f"{manifest_url}\n")
+                    # Adiciona ao EPG usando o nome correto e as informações do vídeo
+                    channels.append((display_name, channel_id, category, video_info.get('title'),
+                                     video_info.get('description'), video_info.get('thumbnail')))
+                else:
+                    print(f"AVISO: Não foi possível encontrar um manifest M3U8 para a stream '{display_name}'.")
+
     except Exception as e:
-        # Erros podem acontecer se o filtro não encontrar nada ou se houver um problema de rede.
         print(f"DEBUG: Ocorreu uma exceção controlada no processamento do canal '{channel_name}': {e}")
-
-    if not found_live_stream:
+        # Em caso de erro na busca, aciona o fallback para garantir consistência
         write_fallback_stream(channel_name, channel_id, category)
 
 
@@ -132,9 +142,9 @@ def process_single_stream(stream_url: str, channel_name: str, channel_id: str, c
                 if manifest_url:
                     with open(OUTPUT_M3U8_FILE, 'a', encoding='utf-8') as m3u8_file:
                         m3u8_file.write(
-                            f'\n#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{stream_title}" group-title="{category}", {stream_title}\n')
+                            f'\n#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{channel_name}" group-title="{category}", {channel_name}\n')
                         m3u8_file.write(f"{manifest_url}\n")
-                    channels.append((stream_title, channel_id, category, info.get('title'), info.get('description'),
+                    channels.append((channel_name, channel_id, category, info.get('title'), info.get('description'),
                                      info.get('thumbnail')))
                 else:
                     write_fallback_stream(channel_name, channel_id, category)
