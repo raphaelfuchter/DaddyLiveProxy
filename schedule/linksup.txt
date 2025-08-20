@@ -1,0 +1,31 @@
+## FORMAT: Nome do Canal||ID do Canal||Categoria||URL do Logo
+## <channel name> can be anything - either stream or channel name. It will appear on the EPG though.
+## <channel id> is used to match EPG data to the M3U8 playlist, so make it short and with no spaces. End it in '.yt' to show its from YouTube.
+## <category> is used to group streams, so something like 'Music' or 'News' is recommended.
+
+CazéTV || cazetv.br || Live || https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png
+https://www.youtube.com/cazetv/streams
+
+Canal Goat || canalgoat.br || Live || https://canalgoat.com.br/wp-content/uploads/2024/10/Canal-Goat-Escudo-Color.png
+https://www.youtube.com/@canalgoatbr/streams
+
+Gaules || gaules.br || Live || https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png
+https://www.youtube.com/gaules/streams
+
+Zigueira || zigueira.br || Live || https://files.kick.com/images/user/55276375/profile_image/bc9947ee-9f86-4036-8236-82252e8c4d9c
+https://kick.com/zigueira
+
+TheDarkness || thedarkness.br || Live || https://m.media-amazon.com/images/G/01/AdProductsWebsite/long-term-assets/blog/Darkness_Thumbnail_1092x730_type1.png
+https://www.youtube.com/@pioresgamersdomundo/streams
+
+Alanzoka || alanzoka.br || Live || https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS_r8bzfeP-s6NqswOn5rtypcmAy5gjJk4xNr9JI5mJDSdTB0sP_Ds-O4aeAjOEGKDWnCggyVPKjCzBXBb-5FOzTeu8O6ATeVo1hFooEb1CMk6Dlyta_l4ZIPjNdLwJzYRqsNySmdK1-pi/s1600/c46b05a0-db41-4c66-b736-3ff018df99ec-profile_ima
+https://www.twitch.tv/alanzoka
+
+FunkyBlackCat || funky.br || Live || https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/74034541867565.56070a2d84cd4.png
+https://www.youtube.com/@funkyblackcat/streams
+
+TopTV Sports || toptvsports.br || Live || https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg
+https://www.youtube.com/@TopTVSports/streams
+
+Metrópoles || metropoles.br || Live || https://play-lh.googleusercontent.com/Eod-arKwRBPDNBTlZXrXGUvNb4vX1KF038waVYZnDW5jpULjX6MLyd2NHeiXk9EkHQ
+https://www.youtube.com/c/Metr%C3%B3polesTV/streams
