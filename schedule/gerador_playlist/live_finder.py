@@ -10,7 +10,7 @@ from yt_dlp import utils as yt_dlp_utils
 
 # --- CONFIGURAÇÕES ---
 INPUT_FILE = 'links.txt'
-VIDEOS_A_VERIFICAR = 50
+VIDEOS_A_VERIFICAR = 35
 FALLBACK_VIDEO_URL = "https://www.youtube.com/watch?v=9pudYN0rJnk"
 
 
@@ -47,7 +47,10 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
                 return
 
             for index, video_info in enumerate(live_videos, 1):
+                # Lógica para o nome de exibição e ID da TVG
                 display_name = f"{name} {index}" if len(live_videos) > 1 else name
+                # NOVA LÓGICA: Adiciona o número ao ID se houver mais de uma live
+                current_tvg_id = f"{channel_id.split('.')[0]}{index}.{channel_id.split('.')[-1]}" if len(live_videos) > 1 else channel_id
 
                 formats = video_info.get('formats', [])
                 manifest_url = None
@@ -83,7 +86,8 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
 
                 if manifest_url:
                     m3u8_lines.append(
-                        f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{display_name}" group-title="Streams",{display_name}')
+                        # USA O NOVO TVG ID AQUI
+                        f'#EXTINF:-1 tvg-id="{current_tvg_id}" tvg-name="{display_name}" group-title="Streams",{display_name}')
                     m3u8_lines.append(manifest_url)
                 else:
                     print(f"AVISO: Nenhum stream M3U8 válido encontrado para '{display_name}'.")
