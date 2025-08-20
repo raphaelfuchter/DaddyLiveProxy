@@ -1,7 +1,7 @@
 # Dockerfile para o projeto do Gerador (Estrutura Refatorada)
 
 # 1. Imagem base com Python
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # 2. Evita prompts interativos durante a construção da imagem
 ENV DEBIAN_FRONTEND=noninteractive
@@ -9,39 +9,32 @@ ENV DEBIAN_FRONTEND=noninteractive
 # 3. Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# 4. Instala dependências do sistema e o Google Chrome (MANTIDO 100% IGUAL AO SEU ORIGINAL)
+# 4. Instala dependências do sistema e o Google Chrome
 RUN apt-get update && apt-get install -y \
-    # Dependências para o Chrome e outras ferramentas
-    wget \
-    gnupg \
-    unzip \
-    libglib2.0-0 \
-    libnss3 \
-    libfontconfig1 \
+    wget gnupg unzip libglib2.0-0 libnss3 libfontconfig1 \
     && \
-    # Instalação SEGURA do Google Chrome (método moderno)
     wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg && \
     echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list && \
     apt-get update && \
     apt-get install -y google-chrome-stable && \
-    # Limpa o cache do apt para reduzir o tamanho da imagem
     rm -rf /var/lib/apt/lists/*
 
-# 5. Copia o arquivo de dependências do Python primeiro, para otimizar o cache do Docker
+# 5. Copia o arquivo de dependências do Python
 COPY requirements.txt .
 
 # 6. Instala as bibliotecas Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 7. --- ALTERADO --- Copia os novos arquivos do projeto
+# 7. Copia os arquivos do projeto
 COPY main.py .
 COPY gerador_playlist/ ./gerador_playlist/
+COPY links.txt .
 
-# 8. Cria as pastas necessárias (mantido do seu original por segurança)
+# 8. Cria as pastas necessárias
 RUN mkdir -p output cache
 
 # 9. Expõe a porta que o servidor HTTP irá usar
 EXPOSE 8007
 
-# 10. --- ALTERADO --- Comando para executar o novo script de entrada
+# 10. Comando para executar o script
 CMD ["python", "-u", "main.py"]

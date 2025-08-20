@@ -3,3 +3,5 @@ webdriver-manager
 beautifulsoup4
 lxml
 requests
+yt-dlp
+pytz

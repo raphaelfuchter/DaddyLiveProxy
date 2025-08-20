@@ -64,7 +64,7 @@ STATIC_CHANNELS = [
         "logo": "https://files.kick.com/images/user/55276375/profile_image/bc9947ee-9f86-4036-8236-82252e8c4d9c",
     },
     {
-        "id": "thedarkness.br", "name": "Piores Gamers do Mundo", "platform": "youtube",
+        "id": "thedarkness.br", "name": "TheDarkness", "platform": "youtube",
         "url": "https://www.youtube.com/@pioresgamersdomundo/live",
         "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
     },

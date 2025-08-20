@@ -11,9 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
-# Importando da nossa nova estrutura de pacotes
-from gerador_playlist import config, utils, scraper, generators
-
+from gerador_playlist import config, utils, scraper, generators, live_finder
 
 def gerador_main():
     """Função principal que orquestra a geração da playlist e EPG."""
@@ -58,13 +56,42 @@ def gerador_main():
     else:
         print("\nNenhum stream dinâmico foi extraído.")
 
-    # Gerar e salvar arquivos
-    m3u8_content = generators.generate_m3u8_content(filtered_streams)
+    # --- LÓGICA DE MONTAGEM ALTERADA ---
+
+    # 1. Busca primeiro os streams dinâmicos (YouTube/Twitch/Kick)
+    print("\nBuscando streams dinâmicos (YouTube/Twitch/Kick)...")
+    conteudo_dinamico = live_finder.gerar_m3u8_dinamico()
+    if conteudo_dinamico:
+        print("✅ Streams dinâmicos encontrados.")
+
+    # 2. Gera o conteúdo principal (Selenium)
+    conteudo_principal = generators.generate_m3u8_content(filtered_streams)
+
+    # 3. Monta o arquivo final na ordem correta
+    # Separa o cabeçalho (#EXTM3U) do corpo do conteúdo principal
+    partes_principais = conteudo_principal.split('\n', 1)
+    cabecalho_m3u8 = partes_principais[0]
+    corpo_principal = partes_principais[1] if len(partes_principais) > 1 else ""
+
+    # Começa a montar o conteúdo final
+    m3u8_content_final = cabecalho_m3u8 + "\n"
+
+    # Adiciona o conteúdo dinâmico logo após o cabeçalho
+    if conteudo_dinamico:
+        m3u8_content_final += conteudo_dinamico + "\n"
+        print("✅ Streams dinâmicos adicionados no topo da playlist.")
+
+    # Adiciona o restante do conteúdo principal
+    m3u8_content_final += corpo_principal
+
+    # --- FIM DA LÓGICA ALTERADA ---
+
     epg_content = generators.generate_xmltv_epg(filtered_streams)
 
     try:
+        # Salva o conteúdo final montado
         with open(config.M3U8_OUTPUT_FILENAME, "w", encoding="utf-8") as f:
-            f.write(m3u8_content)
+            f.write(m3u8_content_final)
         print(f"✅ Sucesso! Arquivo '{config.M3U8_OUTPUT_FILENAME}' gerado.")
     except IOError as e:
         print(f"❌ ERRO ao salvar M3U8: {e}")
