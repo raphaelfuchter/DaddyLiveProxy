@@ -1,7 +1,7 @@
 # Dockerfile para o projeto do Gerador (Estrutura Refatorada)
 
 # 1. Imagem base com Python
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # 2. Evita prompts interativos durante a construção da imagem
 ENV DEBIAN_FRONTEND=noninteractive
