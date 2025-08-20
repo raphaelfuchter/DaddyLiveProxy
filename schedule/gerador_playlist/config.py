@@ -50,12 +50,17 @@ SPORT_TRANSLATION_MAP = {
 STATIC_CHANNELS = [
     {
         "id": "cazetv.br", "name": "CazéTV", "platform": "youtube",
-        "url": "https://www.youtube.com/@CazeTV/live",
+        "url": "https://www.youtube.com/@CazeTV/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
     },
     {
-        "id": "gaules.br", "name": "Gaules", "platform": "kick",
-        "url": "https://kick.com/gaules",
+        "id": "canalgoat.br", "name": "Canal Goat", "platform": "youtube",
+        "url": "https://www.youtube.com/@canalgoatbr/streams",
+        "logo": "https://canalgoat.com.br/wp-content/uploads/2024/10/Canal-Goat-Escudo-Color.png",
+    },
+    {
+        "id": "gaules.br", "name": "Gaules", "platform": "youtube",
+        "url": "https://www.youtube.com/gaules/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
     {
@@ -65,7 +70,7 @@ STATIC_CHANNELS = [
     },
     {
         "id": "thedarkness.br", "name": "TheDarkness", "platform": "youtube",
-        "url": "https://www.youtube.com/@pioresgamersdomundo/live",
+        "url": "https://www.youtube.com/@pioresgamersdomundo/streams",
         "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
     },
     {
@@ -74,23 +79,18 @@ STATIC_CHANNELS = [
         "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS_r8bzfeP-s6NqswOn5rtypcmAy5gjJk4xNr9JI5mJDSdTB0sP_Ds-O4aeAjOEGKDWnCggyVPKjCzBXBb-5FOzTeu8O6ATeVo1hFooEb1CMk6Dlyta_l4ZIPjNdLwJzYRqsNySmdK1-pi/s1600/c46b05a0-db41-4c66-b736-3ff018df99ec-profile_ima",
     },
     {
-        "id": "canalgoat.br", "name": "Canal Goat", "platform": "youtube",
-        "url": "https://www.youtube.com/@canalgoatbr/live",
-        "logo": "https://canalgoat.com.br/wp-content/uploads/2024/10/Canal-Goat-Escudo-Color.png",
-    },
-    {
-        "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
-        "url": "https://www.youtube.com/@TopTVSports/live",
-        "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
-    },
-    {
         "id": "funky.br", "name": "FunkyBlackCat", "platform": "youtube",
-        "url": "https://www.youtube.com/@funkyblackcat/live",
+        "url": "https://www.youtube.com/@funkyblackcat/streams",
         "logo": "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/74034541867565.56070a2d84cd4.png",
     },
     {
+        "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/@TopTVSports/streams",
+        "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
+    },
+    {
         "id": "metropoles.br", "name": "Metrópoles", "platform": "youtube",
-        "url": "https://www.youtube.com/c/Metr%C3%B3polesTV/live",
+        "url": "https://www.youtube.com/c/Metr%C3%B3polesTV/streams",
         "logo": "https://play-lh.googleusercontent.com/Eod-arKwRBPDNBTlZXrXGUvNb4vX1KF038waVYZnDW5jpULjX6MLyd2NHeiXk9EkHQ",
     }
 ]

@@ -28,7 +28,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 7. Copia os arquivos do projeto
 COPY main.py .
 COPY gerador_playlist/ ./gerador_playlist/
-COPY links.txt .
 
 # 8. Cria as pastas necessárias
 RUN mkdir -p output cache

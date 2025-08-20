@@ -8,8 +8,10 @@ import pytz
 import yt_dlp
 from yt_dlp import utils as yt_dlp_utils
 
+# Importa a lista de canais estáticos do arquivo de configuração
+from .config import STATIC_CHANNELS
+
 # --- CONFIGURAÇÕES ---
-INPUT_FILE = 'links.txt'
 VIDEOS_A_VERIFICAR = 35
 FALLBACK_VIDEO_URL = "https://www.youtube.com/watch?v=9pudYN0rJnk"
 
@@ -125,30 +127,33 @@ def process_single_stream(url: str, name: str, channel_id: str, category: str, m
 
 
 def gerar_m3u8_dinamico():
-    """Função principal que lê links.txt e retorna o conteúdo M3U8 como string."""
+    """Função principal que itera sobre os canais estáticos e retorna o conteúdo M3U8 como string."""
     m3u8_lines = []
-    try:
-        with open(INPUT_FILE, 'r', encoding='utf-8') as f:
-            channel_name, channel_id, category = '', '', ''
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith('##'): continue
-                if line.startswith('https:'):
-                    if not all([channel_name, channel_id, category]): continue
+    print("INFO: Iniciando a busca por lives dinâmicas a partir da configuração.")
 
-                    if 'youtube.com' in line:
-                        url = line.split('/live')[0].rstrip('/') + '/streams'
-                        process_youtube_channel(url, channel_name, channel_id, category, m3u8_lines)
-                    elif 'twitch.tv' in line or 'kick.com' in line:
-                        process_single_stream(line, channel_name, channel_id, category, m3u8_lines)
-                else:
-                    parts = line.split('||')
-                    if len(parts) == 3:
-                        channel_name, channel_id, category = parts[0].strip(), parts[1].strip(), parts[
-                            2].strip().title()
+    for channel in STATIC_CHANNELS:
+        name = channel.get("name")
+        channel_id = channel.get("id")
+        platform = channel.get("platform")
+        url = channel.get("url")
+        category = "Live"  # A categoria é fixa para "Streams" no M3U8
 
-    except FileNotFoundError:
-        print(f"AVISO: Arquivo '{INPUT_FILE}' não encontrado. Pulando a busca por lives dinâmicas.")
-        return ""
+        if not all([name, channel_id, platform, url]):
+            print(f"AVISO: Entrada de canal incompleta na configuração, pulando: {channel}")
+            continue
+
+        print(f"INFO: Processando canal '{name}' da plataforma '{platform}'.")
+
+        if platform == 'youtube':
+            # A URL do YouTube precisa terminar em /streams para o yt-dlp encontrar os vídeos
+            streams_url = url.split('/live')[0].rstrip('/') + '/streams'
+            process_youtube_channel(streams_url, name, channel_id, category, m3u8_lines)
+        elif platform in ['twitch', 'kick']:
+            process_single_stream(url, name, channel_id, category, m3u8_lines)
+        else:
+            print(f"AVISO: Plataforma '{platform}' não suportada para o canal '{name}'.")
+
+    if not m3u8_lines:
+        print("AVISO: Nenhuma live dinâmica foi encontrada ou processada.")
 
     return "\n".join(m3u8_lines)
