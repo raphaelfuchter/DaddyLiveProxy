@@ -4,9 +4,12 @@ import html
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict
 
+# Adicionando novas importações para verificação de live
+import yt_dlp
+from yt_dlp import utils as yt_dlp_utils
+
 # Importando módulos do nosso pacote
 from . import config
-from . import platform_checkers
 from .utils import sanitize_id
 
 
@@ -35,71 +38,131 @@ def generate_m3u8_content(stream_list: List[Dict]) -> str:
 
 # --- Funções de Geração de EPG (Completas) ---
 
+def get_live_videos(channel: Dict) -> List[Dict]:
+    """
+    Verifica um canal (YouTube, Twitch, Kick) e retorna uma lista de dicionários de vídeos ao vivo.
+    Usa a lógica de yt-dlp para encontrar streams ativos.
+    """
+    platform = channel.get("platform")
+    url = channel.get("url")
+    name = channel.get("name")
+    live_videos = []
+
+    if not all([platform, url, name]):
+        return []
+
+    print(f"- Verificando {name} ({platform})...")
+
+    try:
+        if platform == 'youtube':
+            streams_url = url.split('/live')[0].rstrip('/') + '/streams'
+            exclusion_filter = yt_dlp_utils.match_filter_func("live_status != 'is_upcoming' & live_status != 'was_live'")
+            ydl_opts = {
+                'quiet': True,
+                'no_warnings': True,
+                'playlistend': 10,  # Verifica um número razoável de vídeos
+                'ignoreerrors': True,
+                'match_filter': exclusion_filter
+            }
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                playlist_info = ydl.extract_info(streams_url, download=False, process=True)
+                live_videos = [e for e in playlist_info.get('entries', []) if e is not None]
+
+        elif platform in ['twitch', 'kick']:
+            ydl_opts = {'quiet': True, 'no_warnings': True}
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                info = ydl.extract_info(url, download=False)
+                if info.get('is_live'):
+                    live_videos.append(info)
+    except Exception as e:
+        print(f"  -> AVISO: Erro ao verificar o canal '{name}': {e}")
+
+    return live_videos
+
+
 def _generate_static_channels_epg(xml_lines: List[str]):
     """
-    Gera as entradas de canal e programação para a lista de canais estáticos.
-    (Função interna, chamada por generate_xmltv_epg)
+    Gera as entradas de canal e programação para a lista de canais estáticos,
+    usando uma verificação de live aprimorada com yt-dlp e tratando múltiplos streams.
     """
-    print("\nVerificando status dos canais estáticos para o EPG...")
+    print("\nVerificando status dos canais estáticos para o EPG (lógica aprimorada)...")
 
     for channel in config.STATIC_CHANNELS:
-        print(f"- Verificando {channel['name']} ({channel['platform']})...")
-        checker_func = platform_checkers.PLATFORM_CHECKERS.get(channel['platform'])
-        live_title = checker_func(channel['url']) if checker_func else None
+        base_channel_id = channel["id"]
+        base_channel_name = channel["name"]
+        base_channel_logo = channel["logo"]
 
-        # Adiciona a definição do canal ao XML
-        xml_lines.append(f'  <channel id="{channel["id"]}">')
-        xml_lines.append(f'    <display-name>{html.escape(channel["name"])}</display-name>')
-        xml_lines.append(f'    <icon src="{html.escape(channel["logo"])}" />')
-        xml_lines.append('  </channel>')
-
+        live_videos = get_live_videos(channel)
         now_utc = datetime.now(timezone.utc)
-        if live_title:
-            print(f"  -> {channel['name']} está AO VIVO: {live_title}")
+
+        # Se não houver lives, gera um único canal offline para o ID base
+        if not live_videos:
+            print(f"  -> {base_channel_name} está offline.")
+            xml_lines.append(f'  <channel id="{base_channel_id}">')
+            xml_lines.append(f'    <display-name>{html.escape(base_channel_name)}</display-name>')
+            xml_lines.append(f'    <icon src="{html.escape(base_channel_logo)}" />')
+            xml_lines.append('  </channel>')
+
+            now_local = now_utc.astimezone(config.LOCAL_TZ)
+            local_day_end = now_local.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
+            day_end_utc = local_day_end.astimezone(timezone.utc)
+            start_str = now_utc.strftime('%Y%m%d%H%M%S %z')
+            stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
+            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{base_channel_id}">')
+            xml_lines.append(f'    <title lang="pt">{config.PLACEHOLDER_TEXT}</title>')
+            xml_lines.append('  </programme>')
+            continue
+
+        # Se houver uma ou mais lives, processa cada uma
+        print(f"  -> {base_channel_name} está AO VIVO com {len(live_videos)} stream(s).")
+        for index, video_info in enumerate(live_videos, 1):
+            is_multi_stream = len(live_videos) > 1
+            display_name = f"{base_channel_name} {index}" if is_multi_stream else base_channel_name
+            
+            if is_multi_stream:
+                id_parts = base_channel_id.split('.')
+                current_tvg_id = f"{id_parts[0]}{index}.{id_parts[-1]}"
+            else:
+                current_tvg_id = base_channel_id
+
+            live_title = video_info.get('title', 'Live Stream')
+
+            # Adiciona a definição do canal para cada stream
+            xml_lines.append(f'  <channel id="{current_tvg_id}">')
+            xml_lines.append(f'    <display-name>{html.escape(display_name)}</display-name>')
+            xml_lines.append(f'    <icon src="{html.escape(base_channel_logo)}" />')
+            xml_lines.append('  </channel>')
+
+            # Gera a programação para o canal específico
             event_start_utc = now_utc
             event_end_utc = event_start_utc + timedelta(hours=config.EPG_EVENT_DURATION_HOURS)
             now_local = now_utc.astimezone(config.LOCAL_TZ)
             local_day_start = now_local.replace(hour=0, minute=0, second=0, microsecond=0)
-            local_day_end = local_day_start + timedelta(days=1)
             day_start_utc = local_day_start.astimezone(timezone.utc)
+            local_day_end = local_day_start + timedelta(days=1)
             day_end_utc = local_day_end.astimezone(timezone.utc)
 
-            # Placeholder para antes do evento ao vivo (se aplicável)
             if event_start_utc > day_start_utc:
-                day_start_utc = day_start_utc - timedelta(days=1)
                 start_str = day_start_utc.strftime('%Y%m%d%H%M%S %z')
                 stop_str = event_start_utc.strftime('%Y%m%d%H%M%S %z')
-                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{current_tvg_id}">')
                 xml_lines.append(f'    <title lang="pt">{config.PLACEHOLDER_TEXT}</title>')
                 xml_lines.append('  </programme>')
 
-            # Programa do evento ao vivo
             start_str = event_start_utc.strftime('%Y%m%d%H%M%S %z')
             stop_str = event_end_utc.strftime('%Y%m%d%H%M%S %z')
             safe_prog_title = html.escape(live_title)
-            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
+            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{current_tvg_id}">')
             xml_lines.append(f'    <title lang="pt">{safe_prog_title}</title>')
             xml_lines.append(f'    <desc lang="pt">{safe_prog_title}</desc>')
             xml_lines.append('  </programme>')
 
-            # Placeholder para depois do evento ao vivo
             if event_end_utc < day_end_utc:
                 start_str = event_end_utc.strftime('%Y%m%d%H%M%S %z')
                 stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
-                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
+                xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{current_tvg_id}">')
                 xml_lines.append(f'    <title lang="pt">{config.PLACEHOLDER_TEXT}</title>')
                 xml_lines.append('  </programme>')
-        else:
-            # Se o canal está offline, cria um único placeholder longo
-            print(f"  -> {channel['name']} está offline.")
-            start_str = now_utc.strftime('%Y%m%d%H%M%S %z')
-            now_local = now_utc.astimezone(config.LOCAL_TZ)
-            local_day_end = now_local.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
-            day_end_utc = local_day_end.astimezone(timezone.utc)
-            stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
-            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{channel["id"]}">')
-            xml_lines.append(f'    <title lang="pt">{config.PLACEHOLDER_TEXT}</title>')
-            xml_lines.append('  </programme>')
 
 
 def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict]):
@@ -137,7 +200,6 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
             safe_event_name = html.escape(stream['event_name'])
             safe_channel_name = html.escape(stream['source_name'])
 
-            # Placeholder 'Não iniciado'
             if start_dt_utc > day_start_utc:
                 day_start_utc_mod = day_start_utc - timedelta(days=1)
                 start_str = day_start_utc_mod.strftime('%Y%m%d%H%M%S %z')
@@ -146,7 +208,6 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
                 xml_lines.append('    <title lang="pt">Não iniciado</title>')
                 xml_lines.append('  </programme>')
 
-            # Programa do evento principal
             start_str = start_dt_utc.strftime('%Y%m%d%H%M%S %z')
             stop_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
             xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{unique_event_id}">')
@@ -154,7 +215,6 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
             xml_lines.append(f'    <desc lang="pt">{safe_event_name}</desc>')
             xml_lines.append('  </programme>')
 
-            # Placeholder 'Finalizado'
             if end_dt_utc < day_end_utc:
                 day_end_utc_mod = day_end_utc + timedelta(days=1)
                 start_str = end_dt_utc.strftime('%Y%m%d%H%M%S %z')
