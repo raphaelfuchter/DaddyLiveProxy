@@ -3,7 +3,6 @@
 import re
 import json
 from datetime import datetime, timezone
-import pytz  # ### ALTERADO ###: Importamos a biblioteca pytz
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -16,21 +15,18 @@ from . import config
 from .utils import find_best_logo_url
 
 
-def _parse_date_from_key(date_key: str):  # ### ALTERADO ###: Removido o tipo de retorno para permitir None
+def _parse_date_from_key(date_key: str) -> datetime.date:
     """Extrai e converte a data a partir da chave do JSON (ex: 'Monday 12 Aug 2024')."""
-    try:  # ### ALTERADO ###: Envolvemos em um try/except mais robusto
-        date_str_part = date_key.split(' - ')[0]
-        date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str_part)
-        possible_formats = ['%A %d %b %Y', '%A %d %B %Y']
-        for date_format in possible_formats:
-            try:
-                return datetime.strptime(date_str_cleaned, date_format).date()
-            except ValueError:
-                continue
-        raise ValueError("Nenhum formato de data correspondeu")  # ### ALTERADO ###
-    except (ValueError, IndexError):  # ### ALTERADO ###
-        print(f"AVISO: Não foi possível parsear a data '{date_key}'. Pulando os eventos deste dia.")
-        return None  # ### ALTERADO ###: Retornamos None em caso de falha
+    date_str_part = date_key.split(' - ')[0]
+    date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str_part)
+    possible_formats = ['%A %d %b %Y', '%A %d %B %Y']
+    for date_format in possible_formats:
+        try:
+            return datetime.strptime(date_str_cleaned, date_format).date()
+        except ValueError:
+            continue
+    print(f"AVISO: Não foi possível parsear a data '{date_key}'. Usando data de hoje.")
+    return datetime.now().date()
 
 
 def _reformat_event_name(original_name: str) -> str:
@@ -66,8 +62,6 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
     stream_list = []
     order_counter = 0
     base_url = url.split('/api/')[0]
-    uk_timezone = pytz.timezone("Europe/London")  # ### ALTERADO ###: Definimos o fuso horário do Reino Unido
-
     try:
         full_text = json_tag.get_text()
         start_index = full_text.find('{')
@@ -80,7 +74,7 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
 
         for date_key, categories in data.items():
             event_date = _parse_date_from_key(date_key)
-            if not event_date: continue  # ### ALTERADO ###: Pula para o próximo dia se a data for inválida
+            if not event_date: continue
 
             for sport_category, events in categories.items():
                 translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
@@ -103,13 +97,7 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                             channel_name = channel['channel_name']
                             channel_id = channel['channel_id']
                             event_time_obj = datetime.strptime(event['time'], '%H:%M').time()
-
-                            # --- ### INÍCIO DA LÓGICA DE FUSO HORÁRIO CORRIGIDA ### ---
-                            naive_dt = datetime.combine(event_date, event_time_obj)
-                            local_dt = uk_timezone.localize(naive_dt)
-                            start_dt_utc = local_dt.astimezone(timezone.utc)
-                            # --- ### FIM DA LÓGICA DE FUSO HORÁRIO CORRIGIDA ### ---
-
+                            start_dt_utc = datetime.combine(event_date, event_time_obj).replace(tzinfo=timezone.utc)
                             start_timestamp_ms = int(start_dt_utc.timestamp() * 1000)
                             sport_icon = config.SPORT_ICON_MAP.get(translated_sport, config.DEFAULT_SPORT_ICON)
                             logo_url = find_best_logo_url(channel_name, logo_cache, sport_icon)
