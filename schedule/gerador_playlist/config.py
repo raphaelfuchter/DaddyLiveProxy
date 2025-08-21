@@ -90,7 +90,12 @@ STATIC_CHANNELS = [
     },
     {
         "id": "metropoles.br", "name": "Metrópoles", "platform": "youtube",
-        "url": "https://www.youtube.com/c/Metr%C3%B3polesTV/streams",
+        "url": "https://www.youtube.com/Metr%C3%B3polesTV/streams",
         "logo": "https://play-lh.googleusercontent.com/Eod-arKwRBPDNBTlZXrXGUvNb4vX1KF038waVYZnDW5jpULjX6MLyd2NHeiXk9EkHQ",
+    },
+    {
+        "id": "nbabrasil.br", "name": "NBA Brasil", "platform": "youtube",
+        "url": "https://www.youtube.com/@nbabrasil/streams",
+        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nba-tv-us.png?raw=true",
     }
 ]
