@@ -13,15 +13,6 @@ from .config import STATIC_CHANNELS
 
 # --- CONFIGURAÇÕES ---
 VIDEOS_A_VERIFICAR = 35
-FALLBACK_VIDEO_URL = "https://www.youtube.com/watch?v=9pudYN0rJnk"
-
-
-def write_fallback_stream(channel_name: str, channel_id: str, category: str, m3u8_lines: list):
-    """Adiciona um stream de fallback à lista de linhas M3U8."""
-    print(f"INFO: Nenhuma live ativa para '{channel_name}'. Usando fallback.")
-    m3u8_lines.append(
-        f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{channel_name} (Offline)" group-title="Streams",{channel_name} (Offline)')
-    m3u8_lines.append(FALLBACK_VIDEO_URL)
 
 
 def process_youtube_channel(url: str, name: str, channel_id: str, category: str, m3u8_lines: list):
@@ -45,7 +36,7 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
             live_videos = [e for e in playlist_info.get('entries', []) if e is not None]
 
             if not live_videos:
-                write_fallback_stream(name, channel_id, category, m3u8_lines)
+                print(f"INFO: Nenhuma live ativa para '{name}'.")
                 return
 
             for index, video_info in enumerate(live_videos, 1):
@@ -96,7 +87,6 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
 
     except Exception as e:
         print(f"DEBUG: Erro ao processar canal '{name}': {e}")
-        write_fallback_stream(name, channel_id, category, m3u8_lines)
 
 
 def process_single_stream(url: str, name: str, channel_id: str, category: str, m3u8_lines: list):
@@ -119,11 +109,11 @@ def process_single_stream(url: str, name: str, channel_id: str, category: str, m
                         f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{name}" group-title="Streams",{name}')
                     m3u8_lines.append(manifest_url)
                 else:
-                    write_fallback_stream(name, channel_id, category, m3u8_lines)
+                    print(f"INFO: Nenhuma stream com áudio encontrada para '{name}'.")
             else:
-                write_fallback_stream(name, channel_id, category, m3u8_lines)
-    except Exception:
-        write_fallback_stream(name, channel_id, category, m3u8_lines)
+                print(f"INFO: Stream '{name}' não está ao vivo.")
+    except Exception as e:
+        print(f"DEBUG: Erro ao processar stream '{name}': {e}")
 
 
 def gerar_m3u8_dinamico():
