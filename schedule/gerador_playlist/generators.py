@@ -1,6 +1,7 @@
 # gerador_playlist/generators.py
 
 import html
+import re
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict
 
@@ -126,6 +127,7 @@ def _generate_static_channels_epg(xml_lines: List[str]):
                 current_tvg_id = base_channel_id
 
             live_title = video_info.get('title', 'Live Stream')
+            live_title = _format_title(live_title)
 
             # Adiciona a definição do canal para cada stream
             xml_lines.append(f'  <channel id="{current_tvg_id}">')
@@ -227,6 +229,10 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
             print(f"AVISO: Pulando evento dinâmico no EPG devido a erro de dados: {e}")
             continue
 
+def _format_title(title: str) -> str:
+    if not title: return "Ao Vivo"
+    cleaned_title = re.sub(r'ao vivo:?\s*\|?\s*', '', title, flags=re.IGNORECASE).strip()
+    return cleaned_title.title()
 
 def generate_xmltv_epg(stream_list: List[Dict]) -> str:
     """Orquestra a geração do arquivo EPG completo chamando as funções especializadas."""
