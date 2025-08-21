@@ -12,8 +12,7 @@ from yt_dlp import utils as yt_dlp_utils
 from .config import STATIC_CHANNELS
 
 # --- CONFIGURAÇÕES ---
-VIDEOS_A_VERIFICAR = 35
-
+VIDEOS_A_VERIFICAR = 100
 
 def process_youtube_channel(url: str, name: str, channel_id: str, category: str, m3u8_lines: list):
     """Processa um canal do YouTube com a lógica de filtragem original e seleção flexível em Python."""

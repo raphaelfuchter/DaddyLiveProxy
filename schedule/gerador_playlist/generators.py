@@ -56,17 +56,16 @@ def get_live_videos(channel: Dict) -> List[Dict]:
 
     try:
         if platform == 'youtube':
-            streams_url = url.split('/live')[0].rstrip('/') + '/streams'
             exclusion_filter = yt_dlp_utils.match_filter_func("live_status != 'is_upcoming' & live_status != 'was_live'")
             ydl_opts = {
                 'quiet': True,
                 'no_warnings': True,
-                'playlistend': 10,  # Verifica um número razoável de vídeos
+                'playlistend': 100,  # Verifica um número razoável de vídeos
                 'ignoreerrors': True,
                 'match_filter': exclusion_filter
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                playlist_info = ydl.extract_info(streams_url, download=False, process=True)
+                playlist_info = ydl.extract_info(url, download=False, process=True)
                 live_videos = [e for e in playlist_info.get('entries', []) if e is not None]
 
         elif platform in ['twitch', 'kick']:
