@@ -13,6 +13,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from gerador_playlist import config, utils, scraper, generators, live_finder
 
+# Fuso horário do Brasil (Brasília)
+BR_TIMEZONE = timezone(timedelta(hours=-3))
+
 def gerador_main():
     """Função principal que orquestra a geração da playlist e EPG."""
     print("--- Gerador de Playlist e EPG ---")
@@ -43,10 +46,8 @@ def gerador_main():
     now_utc = datetime.now(timezone.utc)
     filtered_streams = [
         s for s in stream_data
-        if (datetime.fromtimestamp(int(s['start_timestamp_ms']) / 1000, tz=timezone.utc) + timedelta(
-            hours=config.EPG_EVENT_DURATION_HOURS)) >=
-           (now_utc - timedelta(hours=(config.EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL if s[
-                                                                                         'sport'] == 'Futebol' else config.EPG_PAST_EVENT_CUTOFF_HOURS)))
+        if (datetime.fromtimestamp(int(s['start_timestamp_ms']) / 1000, tz=timezone.utc) + timedelta(hours=config.EPG_EVENT_DURATION_HOURS)) >=
+           (now_utc - timedelta(hours=(config.EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL if s['sport'] == 'Futebol' else config.EPG_PAST_EVENT_CUTOFF_HOURS)))
     ] if stream_data else []
 
     if stream_data:

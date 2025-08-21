@@ -2,7 +2,7 @@
 
 import re
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -73,12 +73,15 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
         data = json.loads(json_cleaned)
 
         for date_key, categories in data.items():
-            event_date = _parse_date_from_key(date_key)
-            if not event_date: continue
+            base_event_date = _parse_date_from_key(date_key)
+            if not base_event_date: continue
 
             for sport_category, events in categories.items():
                 translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
                 if "Tennis" in sport_category: translated_sport = "Tênis"
+
+                last_event_time = None
+                current_event_date = base_event_date
 
                 for event in events:
                     all_channels = []
@@ -91,14 +94,24 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                                 all_channels.append(channels_data)
                             else:
                                 all_channels.extend(list(channels_data.values()))
+                    
+                    try:
+                        event_time_obj = datetime.strptime(event['time'], '%H:%M').time()
+                        
+                        # Heurística para detectar a passagem da meia-noite
+                        # Apenas incrementa o dia se a hora anterior for tarde (ex: >=20h) e a atual for cedo (ex: <=6h)
+                        # Isso evita incrementos por dados não ordenados (ex: 15h -> 14h)
+                        if last_event_time and event_time_obj < last_event_time:
+                            if last_event_time.hour >= 20 and event_time_obj.hour <= 6:
+                                current_event_date += timedelta(days=1)
+                        
+                        start_dt_utc = datetime.combine(current_event_date, event_time_obj).replace(tzinfo=timezone.utc)
+                        last_event_time = event_time_obj
+                        start_timestamp_ms = int(start_dt_utc.timestamp() * 1000)
 
-                    for channel in all_channels:
-                        try:
+                        for channel in all_channels:
                             channel_name = channel['channel_name']
                             channel_id = channel['channel_id']
-                            event_time_obj = datetime.strptime(event['time'], '%H:%M').time()
-                            start_dt_utc = datetime.combine(event_date, event_time_obj).replace(tzinfo=timezone.utc)
-                            start_timestamp_ms = int(start_dt_utc.timestamp() * 1000)
                             sport_icon = config.SPORT_ICON_MAP.get(translated_sport, config.DEFAULT_SPORT_ICON)
                             logo_url = find_best_logo_url(channel_name, logo_cache, sport_icon)
 
@@ -113,8 +126,8 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                                 'logo_url': logo_url,
                             })
                             order_counter += 1
-                        except (KeyError, ValueError) as e:
-                            print(f"AVISO: Pulando canal mal formatado. Detalhes: {e} | Canal: {channel}")
+                    except (KeyError, ValueError) as e:
+                        print(f"AVISO: Pulando evento mal formatado. Detalhes: {e} | Evento: {event}")
     except Exception as e:
         print(f"ERRO CRÍTICO: Falha ao processar o JSON da página. Detalhes: {e}")
 
