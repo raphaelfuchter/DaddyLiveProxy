@@ -8,8 +8,9 @@ M3U8_OUTPUT_FILENAME = "schedule_playlist.m3u8"
 EPG_OUTPUT_FILENAME = "epg.xml"
 LOGO_CACHE_FILE = "logo_cache.json"
 EPG_EVENT_DURATION_HOURS = 2
+EPG_EVENT_DURATION_HOURS_FUTEBOL_AMERICANO = 3
 GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Beisebol", "Programas de TV", "Tênis", "Futsal", "MMA"]
-EPG_PAST_EVENT_CUTOFF_HOURS = 1
+EPG_PAST_EVENT_CUTOFF_HOURS = 0.5
 EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL = 0.5
 EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
 GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
@@ -97,5 +98,30 @@ STATIC_CHANNELS = [
         "id": "nbabrasil.br", "name": "NBA Brasil", "platform": "youtube",
         "url": "https://www.youtube.com/@nbabrasil/streams",
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nba-tv-us.png?raw=true",
+    },
+    {
+        "id": "paulista.br", "name": "Paulista", "platform": "youtube",
+        "url": "https://www.youtube.com/@futebolpaulista/streams",
+        "logo": "https://logodownload.org/wp-content/uploads/2020/01/fpf-federacao-paulista-de-futebol-logo-0.png",
+    },
+    {
+        "id": "paulistao.br", "name": "Paulistão", "platform": "youtube",
+        "url": "https://www.youtube.com/paulistao/streams",
+        "logo": "https://logodownload.org/wp-content/uploads/2020/01/fpf-federacao-paulista-de-futebol-logo-0.png",
+    },
+    {
+        "id": "gauchao.br", "name": "Federação Gaúcha", "platform": "youtube",
+        "url": "https://www.youtube.com/@FGFTV/streams",
+        "logo": "https://fgf.com.br/marcas/logo_FGF.png",
+    },
+    {
+        "id": "catarinense.br", "name": "Federação Catarinense", "platform": "youtube",
+        "url": "https://www.youtube.com/@fcf_futebol/streams",
+        "logo": "https://images.seeklogo.com/logo-png/5/2/federacao-catarinense-de-futebol-sc-br-logo-png_seeklogo-53294.png",
+    },
+    {
+        "id": "sportynetbrasil.br", "name": "SportyNet", "platform": "youtube",
+        "url": "https://www.youtube.com/@SportyNetBrasil/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/SportyNet.png/500px-SportyNet.png",
     }
 ]
