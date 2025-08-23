@@ -235,8 +235,9 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
 
 def _format_title(title: str) -> str:
     if not title: return "Ao Vivo"
-    cleaned_title = re.sub(r'ao vivo:?\s*\|?\s*', '', title, flags=re.IGNORECASE).strip()
-    return cleaned_title.title()
+    pattern = r'ao vivo(?: e com imagens)?:?\s*\|?\s*'
+    cleaned_title = re.sub(pattern, '', title, flags=re.IGNORECASE).strip()
+    return cleaned_title.title() if cleaned_title else "Ao Vivo"
 
 def generate_xmltv_epg(stream_list: List[Dict]) -> str:
     """Orquestra a geração do arquivo EPG completo chamando as funções especializadas."""
