@@ -26,7 +26,8 @@ class StepDaddy:
 
         self._base_urls = [
             "https://thedaddy.sx",
-            "https://thedaddy.top"
+            "https://thedaddy.top",
+            "https://daddylivestream.com"
         ]
 
         self.channels = []
@@ -95,10 +96,10 @@ class StepDaddy:
         print(f"\n[INFO] Iniciando busca de stream para o canal ID: {channel_id}")
 
         for base_url in self._base_urls:
-            try:
-                print(f"[INFO] Usando base: {base_url}")
-                prefixes = ["stream", "cast", "watch", "player", "casting"]
-                for prefix in prefixes:
+            print(f"[INFO] Usando base: {base_url}")
+            prefixes = ["stream", "cast", "watch", "player", "casting"]
+            for prefix in prefixes:
+                try:
                     if len(channel_id) > 3:
                         url = f"{base_url}/{prefix}/bet.php?id=bet{channel_id}"
                     else:
@@ -186,13 +187,13 @@ class StepDaddy:
                     print(f"[SUCESSO] Stream para o canal {channel_id} obtido de {base_url}")
                     return m3u8_data
 
-                print(f"  ! Nenhum iframe funcional encontrado para os prefixos em {base_url}")
+                except Exception as e:
+                    print(f"\n  [ERRO] Falha na tentativa com a base_url '{base_url}' e prefixo '{prefix}'.")
+                    print(f"    > Última URL: {url}")
+                    print(f"    > Detalhe: {e}")
+                    print("  [INFO] Tentando próxima combinação...\n")
 
-            except Exception as e:
-                print(f"\n  [ERRO] Falha na tentativa com a base_url '{base_url}'.")
-                print(f"    > Última URL: {url}")
-                print(f"    > Detalhe: {e}")
-                print("  [INFO] Tentando próxima base_url...\n")
+            print(f"  ! Nenhum stream funcional encontrado para os prefixos em {base_url}")
 
         raise Exception(f"Erro: Falha ao obter o stream para o canal {channel_id} de todas as URLs disponíveis.")
 
