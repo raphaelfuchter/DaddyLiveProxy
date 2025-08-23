@@ -133,5 +133,10 @@ STATIC_CHANNELS = [
         "id": "canalcnsl.br", "name": "Canal CN", "platform": "youtube",
         "url": "https://www.youtube.com/@CanalCNSL/streams",
         "logo": "https://instagram.fccm4-1.fna.fbcdn.net/v/t51.2885-19/293333104_802178497622384_7106071998501232957_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby41MzkuY2FuYXJ5In0&_nc_ht=instagram.fccm4-1.fna.fbcdn.net&_nc_cat=108&_nc_oc=Q6cZ2QE9SW7Zwm3tJjB_Kll2sgSzTj-EAesq_4TnvB3REAlexQn0ghD5Ala4n15vGm_lx3I&_nc_ohc=xMibaOswx0cQ7kNvwH3Se4q&_nc_gid=Hxt0n6m_NXWa9RpDxPLS_A&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfUd973zji3tmXwxdovcvv6TWNVQF9JphQmelmKtHlfm4Q&oe=68AEE450&_nc_sid=8b3546",
+    },
+    {
+        "id": "desimpedidos.br", "name": "Desimpedidos", "platform": "youtube",
+        "url": "https://www.youtube.com/desimpedidos/streams",
+        "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/Logo-Desimpedidos.png",
     }
 ]
