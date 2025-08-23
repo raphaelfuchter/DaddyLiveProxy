@@ -104,6 +104,12 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                         if last_event_time and event_time_obj < last_event_time:
                             if last_event_time.hour >= 20 and event_time_obj.hour <= 6:
                                 current_event_date += timedelta(days=1)
+                        # Se a hora "pular" de volta para um horário normal durante o dia,
+                        # e a data já tiver sido incrementada, reseta para a data base.
+                        # Isso corrige casos onde a lista de eventos não está ordenada por hora.
+                        elif last_event_time and current_event_date > base_event_date and event_time_obj.hour > last_event_time.hour:
+                            if last_event_time.hour <= 6: # O evento anterior era de madrugada
+                                current_event_date = base_event_date
                         
                         start_dt_utc = datetime.combine(current_event_date, event_time_obj).replace(tzinfo=timezone.utc)
                         last_event_time = event_time_obj
