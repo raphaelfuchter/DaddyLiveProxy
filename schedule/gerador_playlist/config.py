@@ -112,7 +112,7 @@ STATIC_CHANNELS = [
     {
         "id": "gauchao.br", "name": "Federação Gaúcha", "platform": "youtube",
         "url": "https://www.youtube.com/@FGFTV/streams",
-        "logo": "https://fgf.com.br/marcas/logo_FGF.png",
+        "logo": "https://cdn.freebiesupply.com/logos/large/2x/federacao-gaucha-de-futebol-rs-logo-svg-vector.svg",
     },
     {
         "id": "catarinense.br", "name": "Federação Catarinense", "platform": "youtube",
@@ -127,16 +127,11 @@ STATIC_CHANNELS = [
     {
         "id": "sdplives.br", "name": "SDP", "platform": "youtube",
         "url": "https://www.youtube.com/SDPLivesEsportivas/streams",
-        "logo": "https://yt3.googleusercontent.com/39TgdCB7Creiv2ymMKfksMzmbS2jbbK8d6-ZIBTQKPlLoHjg9KY4bA-AKSZP8S2rrMHh8dPC9qs=s900-c-k-c0x00ffffff-no-rj",
-    },
-    {
-        "id": "canalcnsl.br", "name": "Canal CN", "platform": "youtube",
-        "url": "https://www.youtube.com/@CanalCNSL/streams",
-        "logo": "https://instagram.fccm4-1.fna.fbcdn.net/v/t51.2885-19/293333104_802178497622384_7106071998501232957_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby41MzkuY2FuYXJ5In0&_nc_ht=instagram.fccm4-1.fna.fbcdn.net&_nc_cat=108&_nc_oc=Q6cZ2QE9SW7Zwm3tJjB_Kll2sgSzTj-EAesq_4TnvB3REAlexQn0ghD5Ala4n15vGm_lx3I&_nc_ohc=xMibaOswx0cQ7kNvwH3Se4q&_nc_gid=Hxt0n6m_NXWa9RpDxPLS_A&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfUd973zji3tmXwxdovcvv6TWNVQF9JphQmelmKtHlfm4Q&oe=68AEE450&_nc_sid=8b3546",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SDP_Logo.png",
     },
     {
         "id": "desimpedidos.br", "name": "Desimpedidos", "platform": "youtube",
         "url": "https://www.youtube.com/desimpedidos/streams",
-        "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/Logo-Desimpedidos.png",
+        "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/277-1.png",
     }
 ]
