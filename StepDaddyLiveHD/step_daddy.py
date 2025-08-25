@@ -108,7 +108,8 @@ class StepDaddy:
 
         for base_url in self._base_urls:
             print(f"[INFO] Usando base: {base_url}")
-            prefixes = ["stream", "cast", "watch", "player", "casting"]
+            #prefixes = ["stream", "cast", "watch", "player", "casting"]
+            prefixes = ["stream", "cast"]
             for prefix in prefixes:
                 try:
                     if len(channel_id) > 3:
