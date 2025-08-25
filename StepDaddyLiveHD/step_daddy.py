@@ -3,7 +3,7 @@ import re
 import reflex as rx
 from urllib.parse import quote, urlparse
 from curl_cffi import AsyncSession
-from typing import List
+from typing import List, Optional
 import base64
 from .utils import encrypt, decrypt, urlsafe_base64
 from rxconfig import config
@@ -44,7 +44,6 @@ class StepDaddy:
         return headers
 
     async def load_channels(self):
-        channels = []
         for base_url in self._base_urls:
             try:
                 print(f"> Carregando canais de: {base_url}")
@@ -52,16 +51,22 @@ class StepDaddy:
                                                    headers={"user-agent": "Mozilla/5.0..."})
                 response.raise_for_status()
 
-                channels_block = re.compile("<center><h1(.+?)tab-2", re.MULTILINE | re.DOTALL).findall(
-                    str(response.text))
-                if not channels_block:
+                channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(response.text)
+                if not channels_data:
+                    print(f"> Nenhum canal encontrado em {base_url}")
                     continue
 
-                channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(channels_block[0])
+                channels = []
                 for channel_data in channels_data:
-                    channels.append(self._get_channel(channel_data))
+                    channel = self._get_channel(channel_data)
+                    if channel:
+                        channels.append(channel)
 
-                print(f"> Canais carregados com sucesso de: {base_url}")
+                if not channels:
+                    print(f"> Nenhum canal válido encontrado em {base_url}, tentando próxima URL.")
+                    continue
+
+                print(f"> {len(channels)} canais carregados com sucesso de: {base_url}")
                 self.channels = sorted(channels, key=lambda channel: (channel.name.startswith("18"), channel.name))
                 return
 
@@ -71,8 +76,12 @@ class StepDaddy:
         print("! Erro: Não foi possível carregar os canais de nenhuma das URLs fornecidas.")
         self.channels = []
 
-    def _get_channel(self, channel_data) -> Channel:
-        channel_id = channel_data[0].split('-')[1].replace('.php', '')
+    def _get_channel(self, channel_data) -> Optional[Channel]:
+        link_parts = channel_data[0].split('-')
+        if len(link_parts) < 2:
+            return None
+
+        channel_id = link_parts[1].replace('.php', '')
         channel_name = channel_data[2]
         if channel_id == "666":
             channel_name = "Nick Music"
