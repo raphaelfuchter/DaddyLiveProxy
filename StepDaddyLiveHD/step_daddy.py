@@ -57,10 +57,12 @@ class StepDaddy:
                     continue
 
                 channels = []
+                processed_ids = set()
                 for channel_data in channels_data:
                     channel = self._get_channel(channel_data)
-                    if channel:
+                    if channel and channel.id not in processed_ids:
                         channels.append(channel)
+                        processed_ids.add(channel.id)
 
                 if not channels:
                     print(f"> Nenhum canal válido encontrado em {base_url}, tentando próxima URL.")
