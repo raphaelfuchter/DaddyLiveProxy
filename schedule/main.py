@@ -87,9 +87,9 @@ def gerador_main():
     m3u8_content_final = cabecalho_m3u8 + "\n"
 
     # Adiciona o conteúdo do GloboPlay
-    if conteudo_globoplay:
-        m3u8_content_final += conteudo_globoplay + "\n"
-        print("✅ Streams GloboPlay adicionados na playlist.")
+    #if conteudo_globoplay:
+    #    m3u8_content_final += conteudo_globoplay + "\n"
+    #    print("✅ Streams GloboPlay adicionados na playlist.")
 
     # Adiciona o conteúdo dinâmico logo após o cabeçalho
     if conteudo_dinamico:
