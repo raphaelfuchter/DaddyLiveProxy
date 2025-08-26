@@ -6,13 +6,14 @@ import threading
 import http.server
 import socketserver
 from datetime import datetime, timedelta, timezone
+from urllib.parse import urlparse
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 from gerador_playlist import config, utils, scraper, generators, live_finder
-from gerador_playlist.globoplay import gerar_conteudo_globoplay
+from gerador_playlist.globoplay import gerar_conteudo_globoplay, get_globoplay_stream_url
 
 # Fuso horário do Brasil (Brasília)
 BR_TIMEZONE = timezone(timedelta(hours=-3))
@@ -139,14 +140,41 @@ def loop_de_atualizacao():
             print(f"❌ ERRO INESPERADO DURANTE A EXECUÇÃO DO GERADOR: {e}")
 
 
+class ProxyRequestHandler(http.server.SimpleHTTPRequestHandler):
+    """Manipulador de requisições que faz proxy para streams Globoplay."""
+    def do_GET(self):
+        parsed_path = urlparse(self.path)
+        path = parsed_path.path
+
+        # Verifica se é uma requisição para o stream
+        if path.startswith('/stream/'):
+            channel_id = path.split('/stream/')[1].replace('.m3u8', '')
+            
+            # Obter a URL real do stream
+            stream_url = get_globoplay_stream_url(channel_id)
+            
+            if stream_url:
+                # Redireciona o cliente para a URL do stream
+                self.send_response(302)
+                self.send_header('Location', stream_url)
+                self.end_headers()
+            else:
+                # Se não encontrar a URL, retorna um erro 404
+                self.send_error(404, "Stream not found")
+            return
+
+        # Para todas as outras requisições, usa o comportamento padrão
+        super().do_GET()
+
 def iniciar_servidor():
-    """Inicia um servidor HTTP simples para servir os arquivos gerados."""
-    handler = http.server.SimpleHTTPRequestHandler
-    with socketserver.TCPServer(("0.0.0.0", config.SERVER_PORT), handler) as httpd:
+    """Inicia um servidor HTTP para servir os arquivos e fazer proxy dos streams."""
+    handler = ProxyRequestHandler
+    with socketserver.TCPServer(("", config.SERVER_PORT), handler) as httpd:
         print("\n\n--- Servidor HTTP iniciado ---")
         print(f"Servindo na porta {config.SERVER_PORT}.")
         print(f"Playlist M3U8: http://{config.SERVER_IP}:{config.SERVER_PORT}/{config.M3U8_OUTPUT_FILENAME}")
         print(f"Guia EPG XML:  http://{config.SERVER_IP}:{config.SERVER_PORT}/{config.EPG_OUTPUT_FILENAME}")
+        print("Proxy para streams Globoplay ativado em /stream/")
         httpd.serve_forever()
 
 
