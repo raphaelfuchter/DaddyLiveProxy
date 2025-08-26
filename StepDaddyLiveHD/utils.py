@@ -1,6 +1,7 @@
 import os
 import re
 import base64
+import json
 
 key_bytes = os.urandom(64)
 
@@ -46,3 +47,19 @@ def extract_and_decode_var(var_name: str, response: str) -> str:
         raise ValueError(f"Variable '{var_name}' not found in response")
     b64 = matches[-1]
     return base64.b64decode(b64).decode("utf-8")
+
+
+def decode_bundle(bundle: str) -> dict:
+    decoded_bundle = base64.b64decode(bundle).decode("utf-8")
+    data = json.loads(decoded_bundle)
+    decoded = {}
+    for k, v in data.items():
+        if isinstance(v, str):
+            try:
+                pad = '=' * (-len(v) % 4)
+                decoded[k] = base64.b64decode(v + pad).decode("utf-8")
+            except Exception:
+                decoded[k] = v
+        else:
+            decoded[k] = v
+    return decoded
