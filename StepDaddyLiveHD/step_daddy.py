@@ -117,7 +117,7 @@ class StepDaddy:
 
     async def _get_source(self, channel_id: str):
         self.logger.info(f"Attempting to get source URL for channel ID: {channel_id}")
-        prefixes = ["stream", "cast", "watch"]
+        prefixes = ["cast", "watch", "stream"]
         for prefix in prefixes:
             url = f"{self._base_url}/{prefix}/stream-{channel_id}.php"
             if len(channel_id) > 3:
