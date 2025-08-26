@@ -135,3 +135,56 @@ STATIC_CHANNELS = [
         "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/277-1.png",
     }
 ]
+
+# --- DADOS DOS CANAIS GLOBO PLAY ---
+GLOBOPLAY_CHANNELS = [
+    {
+        "name": "Globo NSC",
+        "video_id": "6120663",
+        "tvg_id": "SÃ£o.Paulo/SP..Globo.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/globo-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "Sportv 1",
+        "video_id": "7339108",
+        "tvg_id": "SÃ£o.Paulo/SP..SporTV.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sportv-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "Sportv 2",
+        "video_id": "7339117",
+        "tvg_id": "SÃ£o.Paulo/SP..SporTV.2.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sportv2-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "Sportv 3",
+        "video_id": "7339123",
+        "tvg_id": "SÃ£o.Paulo/SP..SporTV.3..brr",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sportv3-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "MultiShow",
+        "video_id": "7339131",
+        "tvg_id": "SÃ£o.Paulo/SP..Multishow.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/multishow-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "BIS",
+        "video_id": "7339140",
+        "tvg_id": "SÃ£o.Paulo/SP..Bis.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/bis-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "GloboNews",
+        "video_id": "7339101",
+        "tvg_id": "SÃ£o.Paulo/SP..GloboNews.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/globo-news-br.png?raw=true",
+        "group_title": "GloboPlay"
+    }
+]
