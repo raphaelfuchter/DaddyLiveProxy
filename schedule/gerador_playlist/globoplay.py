@@ -1,5 +1,5 @@
 import requests
-import json
+import os
 
 # --- DADOS DOS CANAIS ---
 channels = [
@@ -37,15 +37,31 @@ channels = [
         "tvg_id": "SÃ£o.Paulo/SP..Multishow.br",
         "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/multishow-br.png?raw=true",
         "group_title": "GloboPlay"
+    },
+    {
+        "name": "BIS",
+        "video_id": "7339140",
+        "tvg_id": "SÃ£o.Paulo/SP..Bis.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/bis-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "GloboNews",
+        "video_id": "7339101",
+        "tvg_id": "SÃ£o.Paulo/SP..GloboNews.br",
+        "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/globo-news-br.png?raw=true",
+        "group_title": "GloboPlay"
     }
 ]
+
+GLOBOPLAY_BEARER = os.getenv("GLOBOPLAY_BEARER")
 
 # --- CONFIGURAÇÃO DA REQUISIÇÃO ---
 playback_api_url = "https://playback.video.globo.com/v4/video-session"
 playback_api_headers = {
     'accept': '*/*',
     'accept-language': 'pt-BR,pt;q=0.8',
-    'authorization': 'Bearer 15299621c38903b7a556b8c286adb7b716d693041304d7830386f546c786e52524b6a36464e49466b525274395a556b597a357778367838534b706875713948524b73395541534a65584c6f4433725658666d5663537a433168694552794362485a385a3134413d3d3a303a7573636c7976766a61776b6e6b63786b7962796f',
+    'authorization': f'Bearer {GLOBOPLAY_BEARER}',
     'cache-control': 'no-cache',
     'content-type': 'application/json',
     'origin': 'https://globoplay.globo.com',
