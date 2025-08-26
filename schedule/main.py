@@ -12,6 +12,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 from gerador_playlist import config, utils, scraper, generators, live_finder
+from gerador_playlist.globoplay import gerar_conteudo_globoplay
 
 # Fuso horário do Brasil (Brasília)
 BR_TIMEZONE = timezone(timedelta(hours=-3))
@@ -60,16 +61,22 @@ def gerador_main():
 
     # --- LÓGICA DE MONTAGEM ALTERADA ---
 
-    # 1. Busca primeiro os streams dinâmicos (YouTube/Twitch/Kick)
+    # 1. Busca os streams do GloboPlay
+    print("\nBuscando streams do GloboPlay...")
+    conteudo_globoplay = gerar_conteudo_globoplay()
+    if conteudo_globoplay:
+        print("✅ Streams GloboPlay encontrados.")
+
+    # 2. Busca primeiro os streams dinâmicos (YouTube/Twitch/Kick)
     print("\nBuscando streams dinâmicos (YouTube/Twitch/Kick)...")
     conteudo_dinamico = live_finder.gerar_m3u8_dinamico()
     if conteudo_dinamico:
         print("✅ Streams dinâmicos encontrados.")
 
-    # 2. Gera o conteúdo principal (Selenium)
+    # 3. Gera o conteúdo principal (Selenium)
     conteudo_principal = generators.generate_m3u8_content(filtered_streams)
 
-    # 3. Monta o arquivo final na ordem correta
+    # 4. Monta o arquivo final na ordem correta
     # Separa o cabeçalho (#EXTM3U) do corpo do conteúdo principal
     partes_principais = conteudo_principal.split('\n', 1)
     cabecalho_m3u8 = partes_principais[0]
@@ -77,6 +84,11 @@ def gerador_main():
 
     # Começa a montar o conteúdo final
     m3u8_content_final = cabecalho_m3u8 + "\n"
+
+    # Adiciona o conteúdo do GloboPlay
+    if conteudo_globoplay:
+        m3u8_content_final += conteudo_globoplay + "\n"
+        print("✅ Streams GloboPlay adicionados na playlist.")
 
     # Adiciona o conteúdo dinâmico logo após o cabeçalho
     if conteudo_dinamico:
@@ -86,7 +98,7 @@ def gerador_main():
     # Adiciona o restante do conteúdo principal
     m3u8_content_final += corpo_principal
 
-    # --- FIM DA LÓGICA ALTERADA ---
+    # --- FIM DA LÓGICA ALTERADA --
 
     epg_content = generators.generate_xmltv_epg(filtered_streams)
 
