@@ -130,7 +130,6 @@ class StepDaddy:
         self.logger.info(f"Tentando obter URL de origem para o canal ID: {channel_id}")
         prefixes = ["cast", "watch", "casting"]
 
-        # ALTERADO: Loop para tentar cada URL base.
         for base_url in self._base_urls:
             self.logger.info(f"Tentando com a base: {base_url}")
             for prefix in prefixes:
@@ -186,7 +185,7 @@ class StepDaddy:
             if not server_key:
                 self.logger.error("Nenhuma chave de servidor encontrada na resposta de server_lookup.php")
                 raise ValueError("No server key found in response")
-            self.logger.info(f"Chave do servidor encontrada: {server_key}")
+            self.logger.debug(f"Chave do servidor encontrada: {server_key}")
 
             if server_key == "top1/cdn":
                 server_url = f"https://top1.newkso.ru/top1/cdn/{channel_key}/mono.m3u8"
@@ -215,7 +214,7 @@ class StepDaddy:
     async def key(self, url: str, host: str):
         decrypted_url = decrypt(url)
         decrypted_host = decrypt(host)
-        self.logger.info(f"Buscando chave da URL descriptografada: {decrypted_url}")
+        self.logger.debug(f"Buscando chave da URL descriptografada: {decrypted_url}")
 
         headers = self._headers(f"https://{decrypted_host}/", decrypted_host)
         self.logger.debug(f"Usando cabeçalhos para a solicitação da chave: {headers}")
@@ -225,7 +224,7 @@ class StepDaddy:
             self.logger.error(f"Falha ao obter a chave. Status: {response.status_code}, URL: {decrypted_url}")
             raise Exception(f"Failed to get key")
 
-        self.logger.info("Chave buscada com sucesso.")
+        self.logger.debug("Chave buscada com sucesso.")
         return response.content
 
     @staticmethod
