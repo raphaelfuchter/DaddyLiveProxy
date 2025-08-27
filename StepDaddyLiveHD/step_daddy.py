@@ -40,9 +40,9 @@ class StepDaddy:
             self.logger.info("Nenhum proxy SOCKS5 configurado.")
 
         self._base_urls = [
-            "https://thedaddy.sx",
+            "https://daddylivestream.com",
             "https://thedaddy.top",
-            "https://daddylivestream.com"
+            "https://thedaddy.sx"
         ]
 
         self.channels = []
