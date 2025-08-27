@@ -4,13 +4,11 @@ import re
 import reflex as rx
 from urllib.parse import quote, urlparse
 from curl_cffi import AsyncSession
-from typing import List
+from typing import List, Optional
 from .utils import encrypt, decrypt, urlsafe_base64, decode_bundle
 from rxconfig import config
 
 # --- Configuração do Logging ---
-# Configura o logger para exibir mensagens no console com um formato claro.
-# Mude level=logging.INFO para level=logging.DEBUG para ver mensagens mais detalhadas.
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -30,7 +28,6 @@ class Channel(rx.Base):
 
 class StepDaddy:
     def __init__(self):
-        # Cria um logger específico para esta classe
         self.logger = logging.getLogger("StepDaddy")
         self.logger.info("Inicializando instância StepDaddy...")
 
@@ -42,7 +39,12 @@ class StepDaddy:
             self._session = AsyncSession()
             self.logger.info("Nenhum proxy SOCKS5 configurado.")
 
-        self._base_url = "https://thedaddy.top"
+        self._base_urls = [
+            "https://thedaddy.sx",
+            "https://thedaddy.top",
+            "https://daddylivestream.com"
+        ]
+
         self.channels = []
         try:
             with open("StepDaddyLiveHD/meta.json", "r") as f:
@@ -57,7 +59,8 @@ class StepDaddy:
 
     def _headers(self, referer: str = None, origin: str = None):
         if referer is None:
-            referer = self._base_url
+            referer = self._base_urls[0]
+
         headers = {
             "Referer": referer,
             "user-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0",
@@ -67,36 +70,47 @@ class StepDaddy:
         return headers
 
     async def load_channels(self):
-        self.logger.info("Iniciando o carregamento de canais...")
-        channels = []
-        url = f"{self._base_url}/24-7-channels.php"
-        try:
-            self.logger.debug(f"Buscando canais de {url}")
-            response = await self._session.get(url, headers=self._headers())
-            response.raise_for_status()  # Lança um erro para status HTTP 4xx/5xx
+        for base_url in self._base_urls:
+            try:
+                print(f"> Carregando canais de: {base_url}")
+                response = await self._session.get(f"{base_url}/24-7-channels.php",
+                                                   headers={"user-agent": "Mozilla/5.0..."})
+                response.raise_for_status()
 
-            channels_block = re.compile("<center><h1(.+?)tab-2", re.MULTILINE | re.DOTALL).findall(str(response.text))
-            if not channels_block:
-                self.logger.error("Não foi possível encontrar o bloco principal de canais na página.")
+                channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(response.text)
+                if not channels_data:
+                    print(f"> Nenhum canal encontrado em {base_url}")
+                    continue
+
+                channels = []
+                processed_ids = set()
+                for channel_data in channels_data:
+                    channel = self._get_channel(channel_data)
+                    if channel and channel.id not in processed_ids:
+                        channels.append(channel)
+                        processed_ids.add(channel.id)
+
+                if not channels:
+                    print(f"> Nenhum canal válido encontrado em {base_url}, tentando próxima URL.")
+                    continue
+
+                print(f"> {len(channels)} canais carregados com sucesso de: {base_url}")
+                self.channels = sorted(channels, key=lambda channel: (channel.name.startswith("18"), channel.name))
                 return
 
-            channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(channels_block[0])
-            self.logger.info(f"Encontrados {len(channels_data)} canais em potencial.")
+            except Exception as e:
+                print(f"> Falha ao carregar de {base_url}: {e}")
 
-            for channel_data in channels_data:
-                channels.append(self._get_channel(channel_data))
+        print("! Erro: Não foi possível carregar os canais de nenhuma das URLs fornecidas.")
+        self.channels = []
 
-        except Exception as e:
-            self.logger.error(f"Falha ao carregar canais de {url}.", exc_info=True)
-        finally:
-            self.channels = sorted(channels, key=lambda channel: (channel.name.startswith("18"), channel.name))
-            self.logger.info(f"Carregamento finalizado. Total de canais carregados e ordenados: {len(self.channels)}")
+    def _get_channel(self, channel_data) -> Optional[Channel]:
+        link_parts = channel_data[0].split('-')
+        if len(link_parts) < 2:
+            return None
 
-    def _get_channel(self, channel_data) -> Channel:
-        channel_id = channel_data[0].split('-')[1].replace('.php', '')
+        channel_id = link_parts[1].replace('.php', '')
         channel_name = channel_data[2]
-
-        # Lógica para nomes especiais de canais
         if channel_id == "666":
             channel_name = "Nick Music"
         if channel_id == "609":
@@ -105,34 +119,40 @@ class StepDaddy:
             channel_name = "Movistar Plus+"
         elif channel_data[2] == "#Vamos Spain":
             channel_name = "Vamos Spain"
-
         clean_channel_name = re.sub(r"\s*\(.*?\)", "", channel_name)
         meta = self._meta.get(clean_channel_name, {})
         logo = meta.get("logo", "/missing.png")
         if logo.startswith("http"):
             logo = f"{config.api_url}/logo/{urlsafe_base64(logo)}"
-
-        self.logger.debug(f"Canal processado: ID={channel_id}, Nome='{channel_name}'")
         return Channel(id=channel_id, name=channel_name, tags=meta.get("tags", []), logo=logo)
 
     async def _get_source(self, channel_id: str):
         self.logger.info(f"Tentando obter URL de origem para o canal ID: {channel_id}")
-        prefixes = ["cast", "watch", "stream"]
-        for prefix in prefixes:
-            url = f"{self._base_url}/{prefix}/stream-{channel_id}.php"
-            if len(channel_id) > 3:
-                url = f"{self._base_url}/{prefix}/bet.php?id=bet{channel_id}"
+        prefixes = ["cast", "watch", "casting"]
 
-            self.logger.debug(f"Tentando URL: {url}")
-            response = await self._session.post(url, headers=self._headers())
-            matches = re.compile("iframe src=\"(.*)\" width").findall(response.text)
+        # ALTERADO: Loop para tentar cada URL base.
+        for base_url in self._base_urls:
+            self.logger.info(f"Tentando com a base: {base_url}")
+            for prefix in prefixes:
+                url = f"{base_url}/{prefix}/stream-{channel_id}.php"
+                if len(channel_id) > 3:
+                    url = f"{base_url}/{prefix}/bet.php?id=bet{channel_id}"
 
-            if matches:
-                source_url = matches[0]
-                self.logger.info(f"URL de origem encontrada com sucesso: {source_url}")
-                return await self._session.post(source_url, headers=self._headers(url)), source_url
+                try:
+                    self.logger.debug(f"Tentando URL: {url}")
+                    response = await self._session.post(url, headers=self._headers())
+                    matches = re.compile("iframe src=\"(.*)\" width").findall(response.text)
 
-        self.logger.error(f"Falha ao encontrar a URL de origem para o canal {channel_id} após tentar todos os prefixos.")
+                    if matches:
+                        source_url = matches[0]
+                        self.logger.info(f"URL de origem encontrada com sucesso: {source_url}")
+                        return await self._session.post(source_url, headers=self._headers(url)), source_url
+                except Exception as e:
+                    self.logger.debug(f"Falha ao tentar {url}: {e}. Continuando...")
+                    continue
+
+        self.logger.error(
+            f"Falha ao encontrar a URL de origem para o canal {channel_id} após tentar todas as bases e prefixos.")
         raise ValueError("Failed to find source URL for channel")
 
     async def stream(self, channel_id: str):
@@ -210,8 +230,6 @@ class StepDaddy:
 
     @staticmethod
     def content_url(path: str):
-        # Logging aqui pode expor URLs de conteúdo, então é melhor evitar a menos que seja para depuração intensa.
-        # logging.getLogger("StepDaddy").debug(f"Decrypting content path: {path}")
         return decrypt(path)
 
     def playlist(self):
@@ -228,13 +246,14 @@ class StepDaddy:
         return data
 
     async def schedule(self):
-        self.logger.info("Buscando a programação...")
-        url = f"{self._base_url}/schedule/schedule-generated.php"
-        try:
-            response = await self._session.get(url, headers=self._headers())
-            response.raise_for_status()
-            self.logger.info("Programação buscada com sucesso.")
-            return response.json()
-        except Exception as e:
-            self.logger.error(f"Falha ao buscar a programação de {url}.", exc_info=True)
-            return {}  # Retorna um dicionário vazio em caso de erro
+        for base_url in self._base_urls:
+            try:
+                print(f"> Carregando schedule de: {base_url}")
+                response = await self._session.get(f"{base_url}/schedule/schedule-generated.php", headers=self._headers(referer=base_url))
+                response.raise_for_status()
+                print(f"> Schedule carregado com sucesso de: {base_url}")
+                return response.json()
+            except Exception as e:
+                print(f"> Falha ao carregar schedule de {base_url}: {e}")
+
+        raise Exception("! Erro: Falha ao carregar o schedule de todas as URLs disponíveis.")
