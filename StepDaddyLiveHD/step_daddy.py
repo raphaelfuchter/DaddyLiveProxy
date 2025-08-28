@@ -1,9 +1,10 @@
 import json
 import re
+import os
 import reflex as rx
 from urllib.parse import quote, urlparse
 from curl_cffi import AsyncSession
-from typing import List
+from typing import List, Dict
 from .utils import encrypt, decrypt, urlsafe_base64, decode_bundle
 from rxconfig import config
 
@@ -67,15 +68,44 @@ class StepDaddy:
             logo = f"{config.api_url}/logo/{urlsafe_base64(logo)}"
         return Channel(id=channel_id, name=channel_name, tags=meta.get("tags", []), logo=logo)
 
+    @staticmethod
+    def _load_settings() -> Dict[str, str]:
+        """Carrega as configurações do arquivo settings.json."""
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        settings_path = os.path.join(current_dir, "settings.json")
+
+        try:
+            with open(settings_path, "r", encoding="utf-8") as f:
+                settings = json.load(f)
+
+                return {
+                    "base_url": settings.get("base_url"),
+                    "prefix": settings.get("prefix")
+                }
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            raise ValueError("Falha ao encontrar ou ler o arquivo settings.json")
+
     # Not generic
     async def stream(self, channel_id: str):
+        settings = self._load_settings()
+        base_url = settings["base_url"]
+        user_prefix = settings["prefix"]
+
         key = "CHANNEL_KEY"
 
-        prefixes = ["stream", "cast", "watch"]
+        # ALTERADO: A lista de prefixes agora usa o valor carregado do settings.json
+        prefixes = [user_prefix]
+
         for prefix in prefixes:
-            url = f"{self._base_url}/{prefix}/stream-{channel_id}.php"
+
+            print("url: " + base_url)
+            print("prefix: " + prefix)
+
+            # ALTERADO: A URL agora é construída com a `base_url` do settings.json
+            url = f"{base_url}/{prefix}/stream-{channel_id}.php"
             if len(channel_id) > 3:
-                url = f"{self._base_url}/{prefix}/bet.php?id=bet{channel_id}"
+                # ALTERADO: A URL agora é construída com a `base_url` do settings.json
+                url = f"{base_url}/{prefix}/bet.php?id=bet{channel_id}"
             response = await self._session.post(url, headers=self._headers())
             matches = re.compile("iframe src=\"(.*)\" width").findall(response.text)
             if matches:
@@ -112,7 +142,8 @@ class StepDaddy:
         for line in m3u8.text.split("\n"):
             if line.startswith("#EXT-X-KEY:"):
                 original_url = re.search(r'URI="(.*?)"', line).group(1)
-                line = line.replace(original_url, f"{config.api_url}/key/{encrypt(original_url)}/{encrypt(urlparse(source_url).netloc)}")
+                line = line.replace(original_url,
+                                    f"{config.api_url}/key/{encrypt(original_url)}/{encrypt(urlparse(source_url).netloc)}")
             elif line.startswith("http") and config.proxy_content:
                 line = f"{config.api_url}/content/{encrypt(line)}"
             m3u8_data += line + "\n"

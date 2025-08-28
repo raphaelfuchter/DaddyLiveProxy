@@ -1,9 +1,41 @@
 import reflex as rx
 from rxconfig import config
 from StepDaddyLiveHD.components import navbar
+import json
+import os
+
+# Construct a reliable path to settings.json
+current_dir = os.path.dirname(os.path.abspath(__file__))
+SETTINGS_PATH = os.path.join(current_dir, "..", "settings.json")
+
+class PlaylistState(rx.State):
+    base_url: str = ""
+    selected_prefix: str = "stream"
+    
+    def load_settings(self):
+        try:
+            with open(SETTINGS_PATH, "r", encoding="utf-8") as f:
+                settings = json.load(f)
+                self.base_url = settings.get("base_url", "")
+                self.selected_prefix = settings.get("prefix", "stream")
+        except Exception as e:
+            print(f"Error loading settings: {e}")
+
+    def save_settings(self):
+        try:
+            settings = {
+                "base_url": self.base_url,
+                "prefix": self.selected_prefix
+            }
+            with open(SETTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(settings, f, indent=4)
+            
+            return rx.toast.info("Settings saved successfully!")
+        except Exception as e:
+            return rx.toast.error(f"Error saving settings: {str(e)}")
 
 
-@rx.page("/playlist")
+@rx.page("/playlist", on_load=PlaylistState.load_settings)
 def playlist() -> rx.Component:
     return rx.box(
         navbar(),
@@ -35,6 +67,31 @@ def playlist() -> rx.Component:
 
                         rx.divider(margin_y="1.5rem"),
 
+                        # Settings Form
+                        rx.heading("Settings", size="5", margin_bottom="1rem"),
+                        rx.text("URL:"),
+                        rx.input(
+                            value=PlaylistState.base_url,
+                            on_change=PlaylistState.set_base_url,
+                            placeholder="Enter the base URL",
+                            width="100%",
+                        ),
+                        rx.text("Prefix:", margin_top="1rem"),
+                        rx.select(
+                            ["stream", "cast", "watch", "player", "casting"],
+                            value=PlaylistState.selected_prefix,
+                            on_change=PlaylistState.set_selected_prefix,
+                            width="100%",
+                        ),
+                        rx.button(
+                            "Salvar",
+                            on_click=PlaylistState.save_settings,
+                            margin_top="1.5rem",
+                            width="100%",
+                        ),
+
+                        rx.divider(margin_y="1.5rem"),
+
                         rx.heading("How to Use", size="5", margin_bottom="0.5rem"),
                         rx.text(
                             "1. Copy the link below or download the playlist file",
@@ -62,7 +119,6 @@ def playlist() -> rx.Component:
                                     rx.toast("Playlist URL copied to clipboard!"),
                                 ],
                                 size="3",
-                                # variant="soft",
                                 color_scheme="gray",
                             ),
                             width="100%",
