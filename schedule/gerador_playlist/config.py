@@ -117,7 +117,7 @@ STATIC_CHANNELS = [
     {
         "id": "catarinense.br", "name": "Federação Catarinense", "platform": "youtube",
         "url": "https://www.youtube.com/@fcf_futebol/streams",
-        "logo": "https://images.seeklogo.com/logo-png/5/2/federacao-catarinense-de-futebol-sc-br-logo-png_seeklogo-53294.png",
+        "logo": "https://upload.wikimedia.org/wikipedia/pt/6/64/FCFsc.png",
     },
     {
         "id": "sportynetbrasil.br", "name": "SportyNet", "platform": "youtube",
