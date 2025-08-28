@@ -14,6 +14,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 
 # -----------------------------
@@ -155,7 +156,6 @@ class StepDaddy:
         raise ValueError("Failed to find source URL for channel")
 
     async def stream(self, channel_id: str):
-        self.logger.info(f"Iniciando processo de stream para o canal ID: {channel_id}")
         try:
             source_response, source_url = await self._get_source(channel_id)
 
