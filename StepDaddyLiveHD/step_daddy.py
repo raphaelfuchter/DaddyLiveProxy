@@ -7,6 +7,14 @@ from curl_cffi import AsyncSession
 from typing import List, Dict
 from .utils import encrypt, decrypt, urlsafe_base64, decode_bundle
 from rxconfig import config
+import logging
+
+# Silencia os logs de INFO da biblioteca subjacente de HTTP
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+logging.getLogger("httpx").setLevel(logging.WARNING) # Adicionado por segurança, caso httpx também seja usado
+
+# Configuração básica do logging para exibir mensagens de nível DEBUG
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 class Channel(rx.Base):
@@ -23,14 +31,17 @@ class StepDaddy:
             self._session = AsyncSession(proxy="socks5://" + socks5)
         else:
             self._session = AsyncSession()
-        self._base_url = "https://thedaddy.top"
+
         self.channels = []
         with open("StepDaddyLiveHD/meta.json", "r") as f:
             self._meta = json.load(f)
 
     def _headers(self, referer: str = None, origin: str = None):
+        settings = self._load_settings()
+        base_url = settings["base_url"]
+
         if referer is None:
-            referer = self._base_url
+            referer = base_url
         headers = {
             "Referer": referer,
             "user-agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0",
@@ -41,8 +52,11 @@ class StepDaddy:
 
     async def load_channels(self):
         channels = []
+        settings = self._load_settings()
+        base_url = settings["base_url"]
+
         try:
-            response = await self._session.get(f"{self._base_url}/24-7-channels.php", headers=self._headers())
+            response = await self._session.get(f"{base_url}/24-7-channels.php", headers=self._headers())
             channels_block = re.compile("<center><h1(.+?)tab-2", re.MULTILINE | re.DOTALL).findall(str(response.text))
             channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(channels_block[0])
             for channel_data in channels_data:
@@ -87,66 +101,127 @@ class StepDaddy:
 
     # Not generic
     async def stream(self, channel_id: str):
+        logging.info(f"Iniciando método stream para o channel_id: {channel_id}")
+
         settings = self._load_settings()
         base_url = settings["base_url"]
         user_prefix = settings["prefix"]
+        logging.info(f"Configurações carregadas: base_url='{base_url}', prefix='{user_prefix}'")
 
         key = "CHANNEL_KEY"
 
         # ALTERADO: A lista de prefixes agora usa o valor carregado do settings.json
         prefixes = [user_prefix]
 
-        for prefix in prefixes:
+        source_url = None
+        source_response = None
 
-            print("url: " + base_url)
-            print("prefix: " + prefix)
+        for prefix in prefixes:
+            logging.debug(f"Tentando com o prefixo: '{prefix}'")
 
             # ALTERADO: A URL agora é construída com a `base_url` do settings.json
             url = f"{base_url}/{prefix}/stream-{channel_id}.php"
             if len(channel_id) > 3:
                 # ALTERADO: A URL agora é construída com a `base_url` do settings.json
-                url = f"{base_url}/{prefix}/bet.php?id=bet{channel_id}"
+                url = f"{base_url}/stream/bet.php?id=bet{channel_id}"
+
+            logging.debug(f"Construindo URL de requisição: {url}")
             response = await self._session.post(url, headers=self._headers())
+            logging.info(f"Resposta recebida de {url} com status: {response.status_code}")
+
             matches = re.compile("iframe src=\"(.*)\" width").findall(response.text)
             if matches:
                 source_url = matches[0]
+                logging.debug(f"Iframe encontrado com source_url: {source_url}")
+
                 source_response = await self._session.post(source_url, headers=self._headers(url))
+                logging.info(f"Resposta recebida do source_url com status: {source_response.status_code}")
+
                 if key in source_response.text:
+                    logging.debug(f"'{key}' encontrada na resposta. Saindo do loop de prefixos.")
                     break
+                else:
+                    logging.debug(f"'{key}' não encontrada na resposta do source_url.")
+            else:
+                logging.debug("Nenhum iframe encontrado na resposta.")
         else:
+            logging.error("Falha ao encontrar uma source_url válida para o canal.")
+            print("")
+            print("")
+            print("")
             raise ValueError("Failed to find source URL for channel")
 
         channel_key = re.compile(rf"const\s+{re.escape(key)}\s*=\s*\"(.*?)\";").findall(source_response.text)[-1]
+        logging.debug(f"Channel key extraída: {channel_key}")
+
         bundle = re.compile(r"const\s+XJZ\s*=\s*\"(.*?)\";").findall(source_response.text)[-1]
+        logging.debug(f"Bundle encontrado: {bundle[:30]}...")  # Loga apenas o início do bundle
+
         data = decode_bundle(bundle)
         auth_ts = data.get("b_ts", "")
         auth_sig = data.get("b_sig", "")
         auth_rnd = data.get("b_rnd", "")
         auth_url = data.get("b_host", "")
+        logging.debug(
+            f"Dados do bundle decodificados: auth_ts='{auth_ts}', auth_sig='{auth_sig}', auth_rnd='{auth_rnd}', auth_url='{auth_url}'")
+
         auth_request_url = f"{auth_url}auth.php?channel_id={channel_key}&ts={auth_ts}&rnd={auth_rnd}&sig={auth_sig}"
+        logging.debug(f"URL de autenticação: {auth_request_url}")
+
         auth_response = await self._session.get(auth_request_url, headers=self._headers(source_url))
+        logging.debug(f"Resposta da autenticação recebida com status: {auth_response.status_code}")
+
         if auth_response.status_code != 200:
+            logging.error("Falha ao obter resposta da autenticação.")
+            print("")
+            print("")
+            print("")
             raise ValueError("Failed to get auth response")
+
         key_url = urlparse(source_url)
         key_url = f"{key_url.scheme}://{key_url.netloc}/server_lookup.php?channel_id={channel_key}"
+        logging.debug(f"URL para lookup do servidor: {key_url}")
+
         key_response = await self._session.get(key_url, headers=self._headers(source_url))
+        logging.debug(f"Resposta do lookup do servidor recebida com status: {key_response.status_code}")
+
         server_key = key_response.json().get("server_key")
+        logging.debug(f"Server key obtida: {server_key}")
+
         if not server_key:
+            logging.error("Nenhuma server_key encontrada na resposta.")
             raise ValueError("No server key found in response")
+
         if server_key == "top1/cdn":
             server_url = f"https://top1.newkso.ru/top1/cdn/{channel_key}/mono.m3u8"
         else:
             server_url = f"https://{server_key}new.newkso.ru/{server_key}/{channel_key}/mono.m3u8"
+        logging.debug(f"URL do m3u8 final: {server_url}")
+
         m3u8 = await self._session.get(server_url, headers=self._headers(quote(str(source_url))))
+        logging.debug(f"m3u8 obtido com status: {m3u8.status_code}")
+
         m3u8_data = ""
         for line in m3u8.text.split("\n"):
             if line.startswith("#EXT-X-KEY:"):
                 original_url = re.search(r'URI="(.*?)"', line).group(1)
-                line = line.replace(original_url,
-                                    f"{config.api_url}/key/{encrypt(original_url)}/{encrypt(urlparse(source_url).netloc)}")
+                new_url = f"{config.api_url}/key/{encrypt(original_url)}/{encrypt(urlparse(source_url).netloc)}"
+                line = line.replace(original_url, new_url)
+                logging.debug(f"Linha de chave #EXT-X-KEY modificada para: {line}")
+
             elif line.startswith("http") and config.proxy_content:
+                original_line = line
                 line = f"{config.api_url}/content/{encrypt(line)}"
+                logging.debug(f"Linha de conteúdo '{original_line}' modificada para proxy: {line}")
+
             m3u8_data += line + "\n"
+
+        logging.info("Processamento do m3u8 finalizado. Retornando dados.")
+        print(m3u8_data)
+
+        print("")
+        print("")
+        print("")
         return m3u8_data
 
     async def key(self, url: str, host: str):
@@ -169,5 +244,8 @@ class StepDaddy:
         return data
 
     async def schedule(self):
-        response = await self._session.get(f"{self._base_url}/schedule/schedule-generated.php", headers=self._headers())
+        settings = self._load_settings()
+        base_url = settings["base_url"]
+
+        response = await self._session.get(f"{base_url}/schedule/schedule-generated.php", headers=self._headers())
         return response.json()
