@@ -133,6 +133,11 @@ STATIC_CHANNELS = [
         "id": "desimpedidos.br", "name": "Desimpedidos", "platform": "youtube",
         "url": "https://www.youtube.com/desimpedidos/streams",
         "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/277-1.png",
+    },
+    {
+        "id": "canaldofabricio.br", "name": "Canal do Fabrício", "platform": "youtube",
+        "url": "https://www.youtube.com/@ocanaldofabricio/streams",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsERCiMmfLUlKzMsTzY_vSABSXO_77HpOgkg&s",
     }
 ]
 
