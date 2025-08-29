@@ -60,6 +60,21 @@ STATIC_CHANNELS = [
         "logo": "https://canalgoat.com.br/wp-content/uploads/2024/10/Canal-Goat-Escudo-Color.png",
     },
     {
+        "id": "desimpedidos.br", "name": "Desimpedidos", "platform": "youtube",
+        "url": "https://www.youtube.com/desimpedidos/streams",
+        "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/277-1.png",
+    },
+    {
+        "id": "sportynetbrasil.br", "name": "SportyNet", "platform": "youtube",
+        "url": "https://www.youtube.com/@SportyNetBrasil/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/SportyNet.png/500px-SportyNet.png",
+    },
+    {
+        "id": "getv.br", "name": "GETV", "platform": "youtube",
+        "url": "https://www.youtube.com/@geglobo/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/pt/d/d7/Logotipo_da_GE_TV.png",
+    },
+    {
         "id": "gaules.br", "name": "Gaules", "platform": "youtube",
         "url": "https://www.youtube.com/gaules/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
@@ -120,19 +135,9 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/pt/6/64/FCFsc.png",
     },
     {
-        "id": "sportynetbrasil.br", "name": "SportyNet", "platform": "youtube",
-        "url": "https://www.youtube.com/@SportyNetBrasil/streams",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/SportyNet.png/500px-SportyNet.png",
-    },
-    {
         "id": "sdplives.br", "name": "SDP", "platform": "youtube",
         "url": "https://www.youtube.com/SDPLivesEsportivas/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SDP_Logo.png",
-    },
-    {
-        "id": "desimpedidos.br", "name": "Desimpedidos", "platform": "youtube",
-        "url": "https://www.youtube.com/desimpedidos/streams",
-        "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/277-1.png",
     },
     {
         "id": "canaldofabricio.br", "name": "Canal do Fabrício", "platform": "youtube",
