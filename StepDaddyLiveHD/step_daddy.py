@@ -116,36 +116,33 @@ class StepDaddy:
             logging.info(f"Configurações carregadas: base_url='{base_url}', prefix='{user_prefix}'")
 
             key = "CHANNEL_KEY"
-            prefixes = [user_prefix]
-            source_url = None
-            source_response = None
+            prefix = user_prefix
+            logging.debug(f"Tentando com o prefixo: '{prefix}'")
+            url = f"{base_url}/{prefix}/stream-{channel_id}.php"
+            if len(channel_id) > 3:
+                url = f"{base_url}/stream/bet.php?id=bet{channel_id}"
 
-            for prefix in prefixes:
-                logging.debug(f"Tentando com o prefixo: '{prefix}'")
-                url = f"{base_url}/{prefix}/stream-{channel_id}.php"
-                if len(channel_id) > 3:
-                    url = f"{base_url}/stream/bet.php?id=bet{channel_id}"
+            logging.debug(f"Construindo URL de requisição: {url}")
+            response = await self._session.post(url, headers=self._headers())
+            logging.info(f"Resposta recebida de {url} com status: {response.status_code}")
 
-                logging.debug(f"Construindo URL de requisição: {url}")
-                response = await self._session.post(url, headers=self._headers())
-                logging.info(f"Resposta recebida de {url} com status: {response.status_code}")
-
-                matches = re.compile('''iframe src=\\"(.*)\\" width''').findall(response.text)
-                if matches:
-                    source_url = matches[0]
-                    logging.debug(f"Iframe encontrado com source_url: {source_url}")
-                    source_response = await self._session.post(source_url, headers=self._headers(url))
-                    logging.info(f"Resposta recebida do source_url com status: {source_response.status_code}")
-                    if key in source_response.text:
-                        logging.debug(f"'{key}' encontrada na resposta. Saindo do loop de prefixos.")
-                        break
-                    else:
-                        logging.debug(f"'{key}' não encontrada na resposta do source_url.")
-                else:
-                    logging.debug("Nenhum iframe encontrado na resposta.")
-            else:
+            matches = re.compile('''iframe src=\\"(.*)\\" width''').findall(response.text)
+            if not matches:
+                logging.debug("Nenhum iframe encontrado na resposta.")
                 logging.error("Falha ao encontrar uma source_url válida para o canal.")
                 raise ValueError("Failed to find source URL for channel")
+
+            source_url = matches[0]
+            logging.debug(f"Iframe encontrado com source_url: {source_url}")
+            source_response = await self._session.post(source_url, headers=self._headers(url))
+            logging.info(f"Resposta recebida do source_url com status: {source_response.status_code}")
+
+            if key not in source_response.text:
+                logging.debug(f"'{key}' não encontrada na resposta do source_url.")
+                logging.error("Falha ao encontrar uma source_url válida para o canal.")
+                raise ValueError("Failed to find source URL for channel")
+
+            logging.debug(f"'{key}' encontrada na resposta.")
 
             channel_key = re.compile(rf'''const\s+{re.escape(key)}\s*=\s*\"(.*?)\";''').findall(source_response.text)[-1]
             logging.debug(f"Channel key extraída: {channel_key}")
