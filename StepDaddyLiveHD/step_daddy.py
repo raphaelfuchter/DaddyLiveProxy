@@ -64,7 +64,7 @@ class StepDaddy:
             processed_ids = set()
             for channel_data in channels_data:
                 channel = self._get_channel(channel_data)
-                if channel and channel.id not in processed_ids:
+                if channel and channel.id not in processed_ids and not re.match(r"18\+ \(Player-\d+\)", channel.name):
                     channels.append(channel)
                     processed_ids.add(channel.id)
         finally:
