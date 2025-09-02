@@ -9,13 +9,13 @@ EPG_OUTPUT_FILENAME = "epg.xml"
 LOGO_CACHE_FILE = "logo_cache.json"
 EPG_EVENT_DURATION_HOURS = 2
 EPG_EVENT_DURATION_HOURS_FUTEBOL_AMERICANO = 3
-GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Beisebol", "Programas de TV", "Tênis", "Futsal", "MMA"]
+GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Beisebol", "Tênis", "Futsal", "MMA"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 0.5
 EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL = 0.5
 EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
 GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
 LOGO_CACHE_EXPIRATION_HOURS = 2
-DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/sports.png"
+DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/sports.png"
 PLACEHOLDER_TEXT = "Offline"
 SERVER_IP = "192.168.68.19"
 SERVER_PORT = 8007
@@ -23,29 +23,52 @@ LOCAL_TZ = timezone(timedelta(hours=EPG_LOCAL_TIMEZONE_OFFSET_HOURS))
 
 # --- Mapeamentos ---
 SPORT_ICON_MAP = {
-    "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/soccer.png",
-    "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/basketball.png",
-    "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/americanfootball.png",
-    "Automobilismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/motorsport.png",
-    "Programas de TV": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tv.png",
-    "Beisebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/baseball.png",
-    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/hockey.png",
-    "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/tennis.png",
-    "Atletismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/Athletics.png",
-    "Corrida de Cavalos": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/horse.png",
-    "Críquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/cricket.png",
-    "Sinuca": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/snooker.png",
-    "Golfe": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/schedule/logos/golf.png"
+    "Futebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/soccer.png",
+    "Basquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/basketball.png",
+    "Futebol Americano": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlistlogos/americanfootball.png",
+    "Automobilismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/motorsport.png",
+    "Programas de TV": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/tv.png",
+    "Beisebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/baseball.png",
+    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/hockey.png",
+    "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/tennis.png",
+    "Atletismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/Athletics.png",
+    "Corrida de Cavalos": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/horse.png",
+    "Críquete": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/cricket.png",
+    "Sinuca": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/snooker.png",
+    "Golfe": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/golf.png",
+    "Polo Aquático": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/golf.png",
+    "Esportes Aquáticos": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/water.png"
 }
 SPORT_TRANSLATION_MAP = {
-    "Soccer": "Futebol", "Basketball": "Basquete", "Am. Football": "Futebol Americano", "Tennis": "Tênis",
-    "Motorsport": "Automobilismo", "Snooker": "Sinuca", "Ice Hockey": "Hóquei no Gelo", "Baseball": "Beisebol",
-    "TV Shows": "Programas de TV", "Cricket": "Críquete", "WWE": "Luta Livre", "Badminton": "Badminton",
-    "Darts": "Dardos", "Boxing": "Boxe", "Athletics": "Atletismo", "Cycling": "Ciclismo", "Bowling": "Boliche",
-    "Horse Racing": "Corrida de Cavalos", "Volleyball": "Volei", "Water polo": "Polo Aquático",
-    "Water Sports": "Esportes Aquáticos", "Fencing": "Esgrima", "Field Hockey": "Hóquei na Grama",
-    "Handball": "Handebol", "Gymnastics": "Ginástica", "PPV Events": "Eventos PPV",
-    "Aussie rules": "Futebol Australiano", "Golf": "Golfe"
+    "Soccer": "Futebol",
+    "Basketball": "Basquete",
+    "Am. Football": "Futebol Americano",
+    "Motorsport": "Automobilismo",
+    "TV Shows": "Programas de TV",
+    "Baseball": "Beisebol",
+    "Ice Hockey": "Hóquei no Gelo",
+    "Tennis": "Tênis",
+    "Athletics": "Atletismo",
+    "Horse Racing": "Corrida de Cavalos",
+    "Cricket": "Críquete",
+    "Snooker": "Sinuca",
+    "Golf": "Golfe",
+    "Water polo": "Polo Aquático",
+    "Water Sports": "Esportes Aquáticos",
+
+    "WWE": "Luta Livre",
+    "Badminton": "Badminton",
+    "Darts": "Dardos",
+    "Boxing": "Boxe",
+    "Cycling": "Ciclismo",
+    "Bowling": "Boliche",
+    "Volleyball": "Volei",
+    "Fencing": "Esgrima",
+    "Field Hockey": "Hóquei na Grama",
+    "Handball": "Handebol",
+    "Gymnastics": "Ginástica",
+    "PPV Events": "Eventos PPV",
+    "Aussie rules": "Futebol Australiano"
 }
 
 STATIC_CHANNELS = [
