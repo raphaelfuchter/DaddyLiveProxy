@@ -15,7 +15,7 @@ from .config import STATIC_CHANNELS
 VIDEOS_A_VERIFICAR = 100
 
 def process_youtube_channel(url: str, name: str, channel_id: str, category: str, m3u8_lines: list):
-    """Processa um canal do YouTube com a lógica de filtragem original e seleção flexível em Python."""
+    """Processa um canal do YouTube com lógica aprimorada para priorizar o manifesto mestre (suporte a 4K)."""
 
     # Usando o seu filtro original e mais confiável para pegar apenas lives ativas
     exclusion_filter = yt_dlp_utils.match_filter_func("live_status != 'is_upcoming' & live_status != 'was_live'")
@@ -25,7 +25,7 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
         'no_warnings': True,
         'playlistend': VIDEOS_A_VERIFICAR,
         'ignoreerrors': True,
-        'match_filter': exclusion_filter  # Filtro para pegar apenas o que está ao vivo agora
+        'match_filter': exclusion_filter
     }
 
     try:
@@ -39,46 +39,49 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
                 return
 
             for index, video_info in enumerate(live_videos, 1):
-                # Lógica para o nome de exibição e ID da TVG
                 display_name = f"{name} {index}" if len(live_videos) > 1 else name
-                # NOVA LÓGICA: Adiciona o número ao ID se houver mais de uma live
                 current_tvg_id = f"{channel_id.split('.')[0]}{index}.{channel_id.split('.')[-1]}" if len(live_videos) > 1 else channel_id
 
-                formats = video_info.get('formats', [])
                 manifest_url = None
 
-                # --- LÓGICA DE SELEÇÃO FINAL EM DUAS ETAPAS ---
+                # --- NOVA LÓGICA DE SELEÇÃO PRIORIZANDO O MANIFESTO MESTRE ---
 
-                # 1. Tenta encontrar os melhores formatos com ÁUDIO E VÍDEO
-                combined_formats = [
-                    f for f in formats
-                    if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none' and f.get(
-                        'acodec') != 'none'
-                ]
-
-                if combined_formats:
-                    # Se encontrou, ordena por resolução e pega o melhor
-                    combined_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
-                    best_format = combined_formats[0]
-                    manifest_url = best_format['url']
-                    print(
-                        f"INFO: Stream '{display_name}' selecionada. Qualidade: {best_format.get('resolution', 'N/A')} (Áudio: True)")
+                # 1. Tenta obter o manifest_url principal. Esta é a melhor abordagem para HLS/DASH (4K).
+                #    Ele contém todas as qualidades e áudios disponíveis.
+                top_level_manifest = video_info.get('manifest_url')
+                if top_level_manifest and top_level_manifest.endswith('.m3u8'):
+                    manifest_url = top_level_manifest
+                    print(f"INFO: Stream '{display_name}' selecionada via manifesto mestre (suporta todas as qualidades, incl. 4K).")
                 else:
-                    # 2. Se não encontrou NENHUM com áudio e vídeo, pega o melhor com APENAS VÍDEO como fallback
-                    video_only_formats = [
+                    # 2. Se não houver manifesto mestre, usa a lógica de fallback (original)
+                    print(f"AVISO: Manifesto mestre não encontrado para '{display_name}'. Usando lógica de fallback.")
+                    formats = video_info.get('formats', [])
+
+                    # Tenta encontrar os melhores formatos com ÁUDIO E VÍDEO (geralmente até 1080p)
+                    combined_formats = [
                         f for f in formats
-                        if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none'
+                        if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none' and f.get('acodec') != 'none'
                     ]
-                    if video_only_formats:
-                        video_only_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
-                        best_format = video_only_formats[0]
+
+                    if combined_formats:
+                        combined_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
+                        best_format = combined_formats[0]
                         manifest_url = best_format['url']
-                        print(
-                            f"AVISO: Nenhuma stream com áudio encontrada para '{display_name}'. Usando fallback de vídeo. Qualidade: {best_format.get('resolution', 'N/A')}")
+                        print(f"INFO: Stream '{display_name}' selecionada (fallback). Qualidade: {best_format.get('resolution', 'N/A')} (Áudio: True)")
+                    else:
+                        # Se não encontrou NENHUM com áudio e vídeo, pega o melhor com APENAS VÍDEO
+                        video_only_formats = [
+                            f for f in formats
+                            if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none'
+                        ]
+                        if video_only_formats:
+                            video_only_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
+                            best_format = video_only_formats[0]
+                            manifest_url = best_format['url']
+                            print(f"AVISO: Nenhuma stream com áudio encontrada para '{display_name}'. Usando fallback de vídeo. Qualidade: {best_format.get('resolution', 'N/A')}")
 
                 if manifest_url:
                     m3u8_lines.append(
-                        # USA O NOVO TVG ID AQUI
                         f'#EXTINF:-1 tvg-id="{current_tvg_id}" tvg-name="{display_name}" group-title="Streams",{display_name}')
                     m3u8_lines.append(manifest_url)
                 else:
