@@ -26,6 +26,7 @@ def generate_m3u8_content(stream_list: List[Dict]) -> str:
     stream_list.sort(key=lambda s: (
         s['sport'].lower() not in sort_map,
         sort_map.get(s['sport'].lower(), float('inf')),
+        s['sport'].lower(),
         int(s['start_timestamp_ms'])
     ))
     for stream in stream_list:
