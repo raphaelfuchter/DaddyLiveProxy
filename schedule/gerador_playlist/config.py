@@ -9,7 +9,7 @@ EPG_OUTPUT_FILENAME = "epg.xml"
 LOGO_CACHE_FILE = "logo_cache.json"
 EPG_EVENT_DURATION_HOURS = 2
 EPG_EVENT_DURATION_HOURS_FUTEBOL_AMERICANO = 3
-GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Automobilismo", "Hóquei no Gelo", "Beisebol", "Tênis", "Futsal", "MMA"]
+GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Hóquei"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 0.5
 EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL = 0.5
 EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
@@ -29,7 +29,7 @@ SPORT_ICON_MAP = {
     "Automobilismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/motorsport.png",
     "Programas de TV": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/tv.png",
     "Beisebol": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/baseball.png",
-    "Hóquei no Gelo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/hockey.png",
+    "Hóquei": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/hockey.png",
     "Tênis": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/tennis.png",
     "Atletismo": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/Athletics.png",
     "Corrida de Cavalos": "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/horse.png",
@@ -46,7 +46,7 @@ SPORT_TRANSLATION_MAP = {
     "Motorsport": "Automobilismo",
     "TV Shows": "Programas de TV",
     "Baseball": "Beisebol",
-    "Ice Hockey": "Hóquei no Gelo",
+    "Ice Hockey": "Hóquei",
     "Tennis": "Tênis",
     "Athletics": "Atletismo",
     "Horse Racing": "Corrida de Cavalos",
