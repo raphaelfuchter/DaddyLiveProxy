@@ -86,7 +86,7 @@ def _generate_static_channels_epg(xml_lines: List[str]):
     Gera as entradas de canal e programação para a lista de canais estáticos,
     usando uma verificação de live aprimorada com yt-dlp e tratando múltiplos streams.
     """
-    print("\nVerificando status dos canais estáticos para o EPG (lógica aprimorada)...")
+    print("\nVerificando status dos canais estáticos para o EPG...")
 
     for channel in config.STATIC_CHANNELS:
         base_channel_id = channel["id"]
@@ -236,7 +236,7 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
 
 def _format_title(title: str) -> str:
     if not title: return "Ao Vivo"
-    pattern = r'ao vivo(?: e com imagens)?:?\s*\|?\s*'
+    pattern = r'(?:ao vivo(?: e com imagens)?|com imagens):?\s*\|?\s*'
     cleaned_title = re.sub(pattern, '', title, flags=re.IGNORECASE).strip()
     return cleaned_title.title() if cleaned_title else "Ao Vivo"
 
