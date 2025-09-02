@@ -58,10 +58,15 @@ class StepDaddy:
 
         try:
             response = await self._session.get(f"{base_url}/24-7-channels.php", headers=self._headers())
-            channels_block = re.compile("<center><h1(.+?)tab-2", re.MULTILINE | re.DOTALL).findall(str(response.text))
-            channels_data = re.compile('''href=\\"(.*)\\" target(.*)<strong>(.*)</strong>''').findall(channels_block[0])
+            response.raise_for_status()
+            channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(response.text)
+            channels = []
+            processed_ids = set()
             for channel_data in channels_data:
-                channels.append(self._get_channel(channel_data))
+                channel = self._get_channel(channel_data)
+                if channel and channel.id not in processed_ids:
+                    channels.append(channel)
+                    processed_ids.add(channel.id)
         finally:
             self.channels = sorted(channels, key=lambda channel: (channel.name.startswith("18"), channel.name))
 
