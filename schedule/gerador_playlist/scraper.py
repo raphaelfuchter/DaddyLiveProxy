@@ -77,7 +77,10 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
             if not base_event_date: continue
 
             for sport_category, events in categories.items():
-                translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
+                if 'ATP' in sport_category or 'WTA' in sport_category:
+                    translated_sport = 'Tênis'
+                else:
+                    translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
 
                 last_event_time = None
                 current_event_date = base_event_date
