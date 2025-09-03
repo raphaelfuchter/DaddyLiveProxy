@@ -93,8 +93,8 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/SportyNet.png/500px-SportyNet.png",
     },
     {
-        "id": "getv.br", "name": "GETV", "platform": "youtube",
-        "url": "https://www.youtube.com/@geglobo/streams",
+        "id": "getv.br", "name": "geTV", "platform": "youtube",
+        "url": "https://www.youtube.com/@getv/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/pt/d/d7/Logotipo_da_GE_TV.png",
     },
     {
