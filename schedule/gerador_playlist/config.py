@@ -123,6 +123,11 @@ STATIC_CHANNELS = [
         "logo": "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/74034541867565.56070a2d84cd4.png",
     },
     {
+        "id": "flowgames.br", "name": "Flow Games", "platform": "youtube",
+        "url": "https://www.youtube.com/@FlowGamesPodcast/streams",
+        "logo": "https://flowgames.gg/wp-content/uploads/2022/10/logo.png",
+    },
+    {
         "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
         "url": "https://www.youtube.com/@TopTVSports/streams",
         "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
