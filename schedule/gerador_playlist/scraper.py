@@ -12,22 +12,7 @@ from selenium.common.exceptions import TimeoutException
 
 # Importando de outros módulos do nosso pacote
 from . import config
-from .utils import find_best_logo_url
-
-
-def _parse_date_from_key(date_key: str) -> datetime.date:
-    """Extrai e converte a data a partir da chave do JSON (ex: 'Monday 12 Aug 2024')."""
-    date_str_part = date_key.split(' - ')[0]
-    date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str_part)
-    possible_formats = ['%A %d %b %Y', '%A %d %B %Y']
-    for date_format in possible_formats:
-        try:
-            return datetime.strptime(date_str_cleaned, date_format).date()
-        except ValueError:
-            continue
-    print(f"AVISO: Não foi possível parsear a data '{date_key}'. Usando data de hoje.")
-    return datetime.now().date()
-
+from .utils import find_best_logo_url, _parse_date_from_key
 
 def _reformat_event_name(original_name: str) -> str:
     """Re-formata o nome do evento para 'Partida : Liga'."""
@@ -82,7 +67,6 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                 else:
                     translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
 
-                last_event_time = None
                 current_event_date = base_event_date
 
                 for event in events:
@@ -101,20 +85,10 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                         event_time_obj = datetime.strptime(event['time'], '%H:%M').time()
                         
                         # Heurística para detectar a passagem da meia-noite
-                        # Apenas incrementa o dia se a hora anterior for tarde (ex: >=20h) e a atual for cedo (ex: <=6h)
-                        # Isso evita incrementos por dados não ordenados (ex: 15h -> 14h)
-                        if last_event_time and event_time_obj < last_event_time:
-                            if last_event_time.hour >= 20 and event_time_obj.hour <= 6:
-                                current_event_date += timedelta(days=1)
-                        # Se a hora "pular" de volta para um horário normal durante o dia,
-                        # e a data já tiver sido incrementada, reseta para a data base.
-                        # Isso corrige casos onde a lista de eventos não está ordenada por hora.
-                        elif last_event_time and current_event_date > base_event_date and event_time_obj.hour > last_event_time.hour:
-                            if last_event_time.hour <= 6: # O evento anterior era de madrugada
-                                current_event_date = base_event_date
+                        if 00 <= event_time_obj.hour <= 4:
+                            current_event_date += timedelta(days=1)
                         
                         start_dt_utc = datetime.combine(current_event_date, event_time_obj).replace(tzinfo=timezone.utc)
-                        last_event_time = event_time_obj
                         start_timestamp_ms = int(start_dt_utc.timestamp() * 1000)
 
                         for channel in all_channels:

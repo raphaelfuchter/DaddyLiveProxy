@@ -84,3 +84,16 @@ def find_best_logo_url(source_name: str, logo_cache: dict, sport_icon: str) -> s
 
 def sanitize_id(name: str) -> str:
     return re.sub(r'[^a-zA-Z0-9.-]', '', name.replace(' ', ''))
+
+def _parse_date_from_key(date_key: str) -> datetime.date:
+    """Extrai e converte a data a partir da chave do JSON (ex: 'Monday 12 Aug 2024')."""
+    date_str_part = date_key.split(' - ')[0]
+    date_str_cleaned = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str_part)
+    possible_formats = ['%A %d %b %Y', '%A %d %B %Y']
+    for date_format in possible_formats:
+        try:
+            return datetime.strptime(date_str_cleaned, date_format).date()
+        except ValueError:
+            continue
+    print(f"AVISO: Não foi possível parsear a data '{date_key}'. Usando data de hoje.")
+    return datetime.now().date()
