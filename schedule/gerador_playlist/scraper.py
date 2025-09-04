@@ -67,7 +67,10 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                 else:
                     translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
 
-                current_event_date = base_event_date
+                events.sort(key=lambda e: e['time'])
+
+                #last_event_time = datetime.strptime('00:00', '%H:%M').time()
+                #current_event_date = base_event_date
 
                 for event in events:
                     all_channels = []
@@ -83,12 +86,13 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                     
                     try:
                         event_time_obj = datetime.strptime(event['time'], '%H:%M').time()
-                        
-                        # Heurística para detectar a passagem da meia-noite
-                        if 00 <= event_time_obj.hour <= 4:
-                            current_event_date += timedelta(days=1)
-                        
-                        start_dt_utc = datetime.combine(current_event_date, event_time_obj).replace(tzinfo=timezone.utc)
+
+                        event_date = base_event_date
+                        # Assume que eventos entre 00:00 e 05:00 são do dia seguinte
+                        if 0 <= event_time_obj.hour < 5:
+                            event_date += timedelta(days=1)
+
+                        start_dt_utc = datetime.combine(event_date, event_time_obj).replace(tzinfo=timezone.utc)
                         start_timestamp_ms = int(start_dt_utc.timestamp() * 1000)
 
                         for channel in all_channels:
