@@ -58,6 +58,8 @@ SPORT_TRANSLATION_MAP = {
     "Water polo": "Polo Aquático",
     "Water Sports": "Esportes Aquáticos",
     "Equestrian": "Equestres",
+    "Rugby League": "Rugby",
+    "Rugby Union": "Rugby",
 
     "WWE": "Luta Livre",
     "Badminton": "Badminton",
