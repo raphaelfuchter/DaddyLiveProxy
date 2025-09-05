@@ -45,6 +45,7 @@ SPORT_TRANSLATION_MAP = {
     "Basketball": "Basquete",
     "Am. Football": "Futebol Americano",
     "Motorsport": "Automobilismo",
+    "Motorsports": "Automobilismo",
     "TV Shows": "Programas de TV",
     "TV Show": "Programas de TV",
     "Baseball": "Beisebol",
@@ -60,6 +61,10 @@ SPORT_TRANSLATION_MAP = {
     "Equestrian": "Equestres",
     "Rugby League": "Rugby",
     "Rugby Union": "Rugby",
+    "Beach soccer": "Futebol de Areia",
+    "Biathlon": "Biatlo",
+    "Climbing": "Escalada",
+    "Sailing / Boating": "Vela",
 
     "WWE": "Luta Livre",
     "Badminton": "Badminton",
