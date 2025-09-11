@@ -108,7 +108,7 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/pt/d/d7/Logotipo_da_GE_TV.png",
     },
     {
-        "id": "gauleskick.br", "name": "Gaules Kick", "platform": "youtube",
+        "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
         "url": "https://www.kick.com/gaules",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
