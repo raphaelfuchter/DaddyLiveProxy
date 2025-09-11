@@ -105,7 +105,7 @@ STATIC_CHANNELS = [
     {
         "id": "getv.br", "name": "geTV", "platform": "youtube",
         "url": "https://www.youtube.com/@getv/streams",
-        "logo": "https://upload.wikimedia.org/wikipedia/pt/d/d7/Logotipo_da_GE_TV.png",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/03/GE_TV.png",
     },
     {
         "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
