@@ -108,8 +108,8 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/pt/d/d7/Logotipo_da_GE_TV.png",
     },
     {
-        "id": "gaules.br", "name": "Gaules", "platform": "youtube",
-        "url": "https://www.youtube.com/gaules/streams",
+        "id": "gauleskick.br", "name": "Gaules Kick", "platform": "youtube",
+        "url": "https://www.kick.com/gaules",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
     {
@@ -146,6 +146,11 @@ STATIC_CHANNELS = [
         "id": "flowgames.br", "name": "Flow Games", "platform": "youtube",
         "url": "https://www.youtube.com/@FlowGamesPodcast/streams",
         "logo": "https://flowgames.gg/wp-content/uploads/2022/10/logo.png",
+    },
+    {
+        "id": "gaules.br", "name": "Gaules", "platform": "youtube",
+        "url": "https://www.youtube.com/gaules/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
     {
         "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
