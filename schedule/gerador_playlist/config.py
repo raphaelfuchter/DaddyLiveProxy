@@ -124,7 +124,7 @@ STATIC_CHANNELS = [
     },
     {
         "id": "thedarknesskick.br", "name": "TheDarkness Kick", "platform": "kick",
-        "url": "http://kick.com/thedarknesspgdm",
+        "url": "http://kick.com/thedarkness",
         "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
     },
     {
