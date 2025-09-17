@@ -59,7 +59,13 @@ class StepDaddy:
         try:
             response = await self._session.get(f"{base_url}/24-7-channels.php", headers=self._headers())
             response.raise_for_status()
-            channels_data = re.compile("href=\"(.*)\" target(.*)<strong>(.*)</strong>").findall(response.text)
+
+            # Updated regex for the new HTML structure
+            channels_data = re.compile(
+                r'<a class="card"[^>]*href="/watch\.php\?id=(\d+)"[^>]*>.*?<div class="card__title">(.*?)</div>',
+                re.DOTALL
+            ).findall(response.text)
+
             channels = []
             processed_ids = set()
             for channel_data in channels_data:
@@ -71,15 +77,16 @@ class StepDaddy:
             self.channels = sorted(channels, key=lambda channel: (channel.name.startswith("18"), channel.name))
 
     def _get_channel(self, channel_data) -> Channel:
-        channel_id = channel_data[0].split('-')[1].replace('.php', '')
-        channel_name = channel_data[2]
+        channel_id = channel_data[0]
+        channel_name = channel_data[1].replace("&amp;", "&")
+
         if channel_id == "666":
             channel_name = "Nick Music"
         if channel_id == "609":
             channel_name = "Yas TV UAE"
-        if channel_data[2] == "#0 Spain":
+        if channel_name == "#0 Spain":
             channel_name = "Movistar Plus+"
-        elif channel_data[2] == "#Vamos Spain":
+        elif channel_name == "#Vamos Spain":
             channel_name = "Vamos Spain"
         clean_channel_name = re.sub(r"\s*\(.*?\)", "", channel_name)
         meta = self._meta.get(clean_channel_name, {})
