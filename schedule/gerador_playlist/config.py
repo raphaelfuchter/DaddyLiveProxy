@@ -42,6 +42,10 @@ SPORT_ICON_MAP = {
 }
 SPORT_TRANSLATION_MAP = {
     "Soccer": "Futebol",
+    "All Soccer Events": "Futebol",
+    "England - Championship/League One/League Two/Scottish": "Futebol",
+    "Major League Soccer": "Futebol",
+
     "Basketball": "Basquete",
     "Am. Football": "Futebol Americano",
     "Motorsport": "Automobilismo",
