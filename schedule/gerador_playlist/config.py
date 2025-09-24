@@ -50,10 +50,18 @@ SPORT_TRANSLATION_MAP = {
     "Am. Football": "Futebol Americano",
     "Motorsport": "Automobilismo",
     "Motorsports": "Automobilismo",
+
     "TV Shows": "Programas de TV",
     "TV Show": "Programas de TV",
+    "Big Brother 27 USA 2025 Live": "Programas de TV",
+    "Big Brother Naija 2025 Live": "Programas de TV",
+
     "Baseball": "Beisebol",
+    "Baseball (MLB)": "Beisebol",
+
     "Ice Hockey": "Hóquei",
+    "NHL": "Hóquei",
+
     "Tennis": "Tênis",
     "Athletics": "Atletismo",
     "Horse Racing": "Corrida de Cavalos",
@@ -67,6 +75,7 @@ SPORT_TRANSLATION_MAP = {
     "Rugby Union": "Rugby",
     "Beach Soccer": "Futebol de Areia",
     "Biathlon": "Biatlo",
+    "Triathlon": "Triatlo",
     "Climbing": "Escalada",
     "Sailing / Boating": "Vela",
 
@@ -76,7 +85,10 @@ SPORT_TRANSLATION_MAP = {
     "Boxing": "Boxe",
     "Cycling": "Ciclismo",
     "Bowling": "Boliche",
+
     "Volleyball": "Voleibol",
+    "NCAA Women's Volleyball": "Voleibol",
+
     "Fencing": "Esgrima",
     "Field Hockey": "Hóquei na Grama",
     "Handball": "Handebol",
@@ -90,6 +102,11 @@ STATIC_CHANNELS = [
         "id": "cazetv.br", "name": "CazéTV", "platform": "youtube",
         "url": "https://www.youtube.com/@CazeTV/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/pt/2/22/Logotipo_da_Caz%C3%A9TV.png",
+    },
+    {
+        "id": "getv.br", "name": "geTV", "platform": "youtube",
+        "url": "https://www.youtube.com/@getv/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/03/GE_TV.png",
     },
     {
         "id": "canalgoat.br", "name": "Canal Goat", "platform": "youtube",
@@ -107,14 +124,24 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/SportyNet.png/500px-SportyNet.png",
     },
     {
-        "id": "getv.br", "name": "geTV", "platform": "youtube",
-        "url": "https://www.youtube.com/@getv/streams",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/03/GE_TV.png",
+        "id": "tntsportsbr.br", "name": "TNT Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/@TNTSportsBR/streams",
+        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/tnt-br.png?raw=true",
     },
     {
-        "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
+        "id": "sbtsports.br", "name": "SBT Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/SBTSports",
+        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sbt-br.png?raw=true",
+    },
+    {
+        "id": "gauleskick.br", "name": "Gaules", "platform": "kick",
         "url": "https://www.kick.com/gaules",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
+    },
+    {
+        "id": "madhouse.br", "name": "MadHouse", "platform": "youtube",
+        "url": "https://www.youtube.com/@madhouse_tv/streams",
+        "logo": "https://yt3.googleusercontent.com/_M2g8lJ9um3e2P_s27WNrStVeCiXhnZb4PrNF3tdM73Xd1iywqM6sI7XQOLV-j5ODaNzGLBiBg=s900-c-k-c0x00ffffff-no-rj",
     },
     {
         "id": "zigueira.br", "name": "Zigueira", "platform": "kick",
@@ -122,12 +149,7 @@ STATIC_CHANNELS = [
         "logo": "https://files.kick.com/images/user/55276375/profile_image/bc9947ee-9f86-4036-8236-82252e8c4d9c",
     },
     {
-        "id": "thedarkness.br", "name": "TheDarkness", "platform": "youtube",
-        "url": "https://www.youtube.com/@pioresgamersdomundo/streams",
-        "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
-    },
-    {
-        "id": "thedarknesskick.br", "name": "TheDarkness Kick", "platform": "kick",
+        "id": "thedarknesskick.br", "name": "TheDarkness", "platform": "kick",
         "url": "http://kick.com/thedarkness",
         "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
     },
@@ -150,16 +172,6 @@ STATIC_CHANNELS = [
         "id": "flowgames.br", "name": "Flow Games", "platform": "youtube",
         "url": "https://www.youtube.com/@FlowGamesPodcast/streams",
         "logo": "https://flowgames.gg/wp-content/uploads/2022/10/logo.png",
-    },
-    {
-        "id": "gaules.br", "name": "Gaules", "platform": "youtube",
-        "url": "https://www.youtube.com/gaules/streams",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
-    },
-    {
-        "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
-        "url": "https://www.youtube.com/@TopTVSports/streams",
-        "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
     },
     {
         "id": "nbabrasil.br", "name": "NBA Brasil", "platform": "youtube",
@@ -187,6 +199,11 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/pt/6/64/FCFsc.png",
     },
     {
+        "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/@TopTVSports/streams",
+        "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
+    },
+    {
         "id": "sdplives.br", "name": "SDP", "platform": "youtube",
         "url": "https://www.youtube.com/SDPLivesEsportivas/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SDP_Logo.png",
@@ -205,6 +222,16 @@ STATIC_CHANNELS = [
         "id": "carvoeirodoentetv.br", "name": "Carvoeiro Doente TV", "platform": "youtube",
         "url": "https://www.youtube.com/@CarvoeiroDoenteTV/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EscudoCriciumaEC.svg/2560px-EscudoCriciumaEC.svg.png",
+    },
+    {
+        "id": "gaules.br", "name": "Gaules", "platform": "youtube",
+        "url": "https://www.youtube.com/gaules/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
+    },
+    {
+        "id": "thedarkness.br", "name": "TheDarkness", "platform": "youtube",
+        "url": "https://www.youtube.com/@pioresgamersdomundo/streams",
+        "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
     },
     {
         "id": "metropoles.br", "name": "Metrópoles", "platform": "youtube",
