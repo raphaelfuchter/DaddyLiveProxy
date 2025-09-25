@@ -47,7 +47,11 @@ SPORT_TRANSLATION_MAP = {
     "Major League Soccer": "Futebol",
 
     "Basketball": "Basquete",
+    "NBA": "Basquete",
+
     "Am. Football": "Futebol Americano",
+    "NFL": "Futebol Americano",
+
     "Motorsport": "Automobilismo",
     "Motorsports": "Automobilismo",
 
@@ -88,6 +92,7 @@ SPORT_TRANSLATION_MAP = {
 
     "Volleyball": "Voleibol",
     "NCAA Women's Volleyball": "Voleibol",
+    "Beach Volleyball": "Voleibol de Praia",
 
     "Fencing": "Esgrima",
     "Field Hockey": "Hóquei na Grama",
@@ -128,11 +133,11 @@ STATIC_CHANNELS = [
         "url": "https://www.youtube.com/@TNTSportsBR/streams",
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/tnt-br.png?raw=true",
     },
-    {
-        "id": "sbtsports.br", "name": "SBT Sports", "platform": "youtube",
-        "url": "https://www.youtube.com/SBTSports",
-        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sbt-br.png?raw=true",
-    },
+    #{
+    #    "id": "sbtsports.br", "name": "SBT Sports", "platform": "youtube",
+    #    "url": "https://www.youtube.com/SBTSports",
+    #    "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sbt-br.png?raw=true",
+    #},
     {
         "id": "gauleskick.br", "name": "Gaules", "platform": "kick",
         "url": "https://www.kick.com/gaules",
@@ -197,6 +202,16 @@ STATIC_CHANNELS = [
         "id": "catarinense.br", "name": "Federação Catarinense", "platform": "youtube",
         "url": "https://www.youtube.com/@fcf_futebol/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/pt/6/64/FCFsc.png",
+    },
+    {
+        "id": "valorantbr.br", "name": "Valorant Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/valorantesportsbr/streams",
+        "logo": "https://freelogopng.com/images/all_img/1664302686valorant-icon-png.png",
+    },
+    {
+        "id": "casemiro.br", "name": "Casemiro", "platform": "twitch",
+        "url": "https://www.twitch.tv/casimito",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/32805a78-d927-48bd-8089-bf5efed53ea4-profile_image-70x70.png",
     },
     {
         "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
