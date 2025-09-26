@@ -45,6 +45,7 @@ SPORT_TRANSLATION_MAP = {
     "All Soccer Events": "Futebol",
     "England - Championship/League One/League Two/Scottish": "Futebol",
     "Major League Soccer": "Futebol",
+    "Soccer - Ireland Republic": "Futebol",
 
     "Basketball": "Basquete",
     "NBA": "Basquete",
