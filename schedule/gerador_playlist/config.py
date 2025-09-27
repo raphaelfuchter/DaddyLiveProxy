@@ -44,7 +44,9 @@ SPORT_TRANSLATION_MAP = {
     "Soccer": "Futebol",
     "All Soccer Events": "Futebol",
     "England - Championship/League One/League Two/Scottish": "Futebol",
+    "England – Championship/League One/League Two/Scottish": "Futebol",
     "Major League Soccer": "Futebol",
+    "Major League Soccer (MLS)": "Futebol",
     "Soccer - Ireland Republic": "Futebol",
 
     "Basketball": "Basquete",
@@ -52,6 +54,8 @@ SPORT_TRANSLATION_MAP = {
 
     "Am. Football": "Futebol Americano",
     "NFL": "Futebol Americano",
+    "Am. Football (NCAAF)": "Futebol Americano",
+    "NCAAF": "Futebol Americano",
 
     "Motorsport": "Automobilismo",
     "Motorsports": "Automobilismo",
@@ -100,7 +104,11 @@ SPORT_TRANSLATION_MAP = {
     "Handball": "Handebol",
     "Gymnastics": "Ginástica",
     "PPV Events": "Eventos PPV",
-    "Aussie rules": "Futebol Australiano"
+
+    "Aussie rules": "Futebol Australiano",
+    "Aussie Rules": "Futebol Australiano",
+
+    "Winter Sports": "Esportes de Inverno"
 }
 
 STATIC_CHANNELS = [
