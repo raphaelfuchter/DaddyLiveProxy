@@ -50,12 +50,16 @@ SPORT_TRANSLATION_MAP = {
     "Soccer - Ireland Republic": "Futebol",
 
     "Basketball": "Basquete",
+    "Basketball (NBA)": "Basquete",
+    "Basketball (WNBA)": "Basquete",
     "NBA": "Basquete",
+    "WNBA": "Basquete",
 
     "Am. Football": "Futebol Americano",
     "NFL": "Futebol Americano",
-    "Am. Football (NCAAF)": "Futebol Americano",
     "NCAAF": "Futebol Americano",
+    "Am. Football (NCAAF)": "Futebol Americano",
+    "Am. Football (NFL)": "Futebol Americano",
 
     "Motorsport": "Automobilismo",
     "Motorsports": "Automobilismo",
@@ -67,21 +71,30 @@ SPORT_TRANSLATION_MAP = {
 
     "Baseball": "Beisebol",
     "Baseball (MLB)": "Beisebol",
+    "MLB": "Beisebol",
 
     "Ice Hockey": "Hóquei",
+    "Ice Hockey (NHL)": "Hóquei",
     "NHL": "Hóquei",
 
     "Tennis": "Tênis",
+
     "Athletics": "Atletismo",
-    "Horse Racing": "Corrida de Cavalos",
+    "Athletic": "Atletismo",
+
+    "Horse Racing": "Cavalo",
+    "Equestrian": "Cavalo",
+
     "Cricket": "Críquete",
     "Snooker": "Sinuca",
     "Golf": "Golfe",
     "Water polo": "Polo Aquático",
     "Water Sports": "Esportes Aquáticos",
-    "Equestrian": "Equestres",
+
+
     "Rugby League": "Rugby",
     "Rugby Union": "Rugby",
+    
     "Beach Soccer": "Futebol de Areia",
     "Biathlon": "Biatlo",
     "Triathlon": "Triatlo",
@@ -107,6 +120,7 @@ SPORT_TRANSLATION_MAP = {
 
     "Aussie rules": "Futebol Australiano",
     "Aussie Rules": "Futebol Australiano",
+    "Aussie Rules (AFL)": "Futebol Australiano",
 
     "Winter Sports": "Esportes de Inverno"
 }
