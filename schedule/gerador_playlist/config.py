@@ -102,6 +102,8 @@ SPORT_TRANSLATION_MAP = {
     "Sailing / Boating": "Vela",
 
     "WWE": "Luta Livre",
+    "WWE (RAW)": "Luta Livre",
+
     "Badminton": "Badminton",
     "Darts": "Dardos",
     "Boxing": "Boxe",
