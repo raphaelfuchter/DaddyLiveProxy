@@ -43,8 +43,17 @@ SPORT_ICON_MAP = {
 SPORT_TRANSLATION_MAP = {
     "Soccer": "Futebol",
     "All Soccer Events": "Futebol",
+    "England - Championship": "Futebol",
+    "England - Championship/League One": "Futebol",
+    "England - Championship/League One/League Two": "Futebol",
     "England - Championship/League One/League Two/Scottish": "Futebol",
     "England – Championship/League One/League Two/Scottish": "Futebol",
+    "England - Championship/EFL Trophy/League One": "Futebol",
+    "England - EFL Trophy": "Futebol",
+    "England - League One": "Futebol",
+    "England - League One/League Two": "Futebol",
+    "England - League Two": "Futebol",
+
     "Major League Soccer": "Futebol",
     "Major League Soccer (MLS)": "Futebol",
     "Soccer - Ireland Republic": "Futebol",
@@ -89,6 +98,7 @@ SPORT_TRANSLATION_MAP = {
     "Snooker": "Sinuca",
     "Golf": "Golfe",
     "Water polo": "Polo Aquático",
+    "Waterpolo": "Polo Aquático",
     "Water Sports": "Esportes Aquáticos",
 
 
@@ -103,6 +113,7 @@ SPORT_TRANSLATION_MAP = {
 
     "WWE": "Luta Livre",
     "WWE (RAW)": "Luta Livre",
+    "WWE (NXT)": "Luta Livre",
 
     "Badminton": "Badminton",
     "Darts": "Dardos",
@@ -164,7 +175,7 @@ STATIC_CHANNELS = [
     #    "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sbt-br.png?raw=true",
     #},
     {
-        "id": "gauleskick.br", "name": "Gaules", "platform": "kick",
+        "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
         "url": "https://www.kick.com/gaules",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
