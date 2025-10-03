@@ -64,6 +64,8 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
             for sport_category, events in categories.items():
                 if 'ATP' in sport_category or 'WTA' in sport_category:
                     translated_sport = 'Tênis'
+                elif 'WWE' in sport_category:
+                    translated_sport = 'Luta Livre'
                 else:
                     translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
 

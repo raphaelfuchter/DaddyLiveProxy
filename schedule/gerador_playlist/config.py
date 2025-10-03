@@ -10,8 +10,8 @@ LOGO_CACHE_FILE = "logo_cache.json"
 EPG_EVENT_DURATION_HOURS = 2
 EPG_EVENT_DURATION_HOURS_FUTEBOL_AMERICANO = 3
 GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Hóquei"]
-EPG_PAST_EVENT_CUTOFF_HOURS = 0.5
-EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL = 0.5
+EPG_PAST_EVENT_CUTOFF_HOURS = 0
+EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL = 0
 EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
 GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
 LOGO_CACHE_EXPIRATION_HOURS = 2
@@ -63,12 +63,14 @@ SPORT_TRANSLATION_MAP = {
     "Basketball (WNBA)": "Basquete",
     "NBA": "Basquete",
     "WNBA": "Basquete",
+    "WNBA FINALS": "Basquete",
 
     "Am. Football": "Futebol Americano",
     "NFL": "Futebol Americano",
     "NCAAF": "Futebol Americano",
     "Am. Football (NCAAF)": "Futebol Americano",
     "Am. Football (NFL)": "Futebol Americano",
+    "NCAA College Football": "Futebol Americano",
 
     "Motorsport": "Automobilismo",
     "Motorsports": "Automobilismo",
@@ -85,8 +87,10 @@ SPORT_TRANSLATION_MAP = {
     "Ice Hockey": "Hóquei",
     "Ice Hockey (NHL)": "Hóquei",
     "NHL": "Hóquei",
+    "NCAA Ice Hockey": "Hóquei",
 
     "Tennis": "Tênis",
+    "Table Tennis": "Tênis de Mesa",
 
     "Athletics": "Atletismo",
     "Athletic": "Atletismo",
@@ -100,7 +104,6 @@ SPORT_TRANSLATION_MAP = {
     "Water polo": "Polo Aquático",
     "Waterpolo": "Polo Aquático",
     "Water Sports": "Esportes Aquáticos",
-
 
     "Rugby League": "Rugby",
     "Rugby Union": "Rugby",
