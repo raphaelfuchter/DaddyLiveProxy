@@ -9,7 +9,7 @@ from .utils import urlsafe_base64_decode
 
 fastapi_app = FastAPI()
 step_daddy = StepDaddy()
-client = httpx.AsyncClient(http2=True, timeout=None)
+client = httpx.AsyncClient(http2=True, timeout=None, verify=False)
 
 
 @fastapi_app.get("/stream/{channel_id}.m3u8")
