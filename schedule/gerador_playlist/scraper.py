@@ -66,6 +66,18 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                     translated_sport = 'Tênis'
                 elif 'WWE' in sport_category:
                     translated_sport = 'Luta Livre'
+                elif 'Soccer' in sport_category:
+                    translated_sport = 'Futebol'
+                elif 'Football' in sport_category:
+                    translated_sport = 'Futebol Americano'
+                elif 'UFC' in sport_category:
+                    translated_sport = 'MMA'
+                elif 'AFL' in sport_category:
+                    translated_sport = 'Futebol Australiano'
+                elif 'Basketball' in sport_category:
+                    translated_sport = 'Basquete'
+                elif 'Rugby' in sport_category:
+                    translated_sport = 'Rugby'
                 else:
                     translated_sport = config.SPORT_TRANSLATION_MAP.get(sport_category, sport_category)
 

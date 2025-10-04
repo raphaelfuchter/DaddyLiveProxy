@@ -53,10 +53,11 @@ SPORT_TRANSLATION_MAP = {
     "England - League One": "Futebol",
     "England - League One/League Two": "Futebol",
     "England - League Two": "Futebol",
-
     "Major League Soccer": "Futebol",
     "Major League Soccer (MLS)": "Futebol",
     "Soccer - Ireland Republic": "Futebol",
+    "USL Championship": "Futebol",
+    "Scotland Premiership": "Futebol",
 
     "Basketball": "Basquete",
     "Basketball (NBA)": "Basquete",
@@ -137,6 +138,7 @@ SPORT_TRANSLATION_MAP = {
     "Aussie rules": "Futebol Australiano",
     "Aussie Rules": "Futebol Australiano",
     "Aussie Rules (AFL)": "Futebol Australiano",
+    "Aussie rules (AFL)": "Futebol Australiano",
 
     "Winter Sports": "Esportes de Inverno"
 }
