@@ -57,12 +57,12 @@ def get_live_videos(channel: Dict) -> List[Dict]:
 
     try:
         if platform == 'youtube':
-            exclusion_filter = yt_dlp_utils.match_filter_func("live_status != 'is_upcoming' & live_status != 'was_live'")
+            exclusion_filter = yt_dlp_utils.match_filter_func("is_live & live_status != 'is_upcoming' & live_status != 'was_live' & live_status = 'is_live'")
             ydl_opts = {
                 'quiet': True,
                 'no_warnings': True,
                 'playlistend': 100,  # Verifica um número razoável de vídeos
-                'ignoreerrors': True,
+                'ignoreerrors': False,
                 'match_filter': exclusion_filter
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -75,6 +75,13 @@ def get_live_videos(channel: Dict) -> List[Dict]:
                 info = ydl.extract_info(url, download=False)
                 if info.get('is_live'):
                     live_videos.append(info)
+
+    except yt_dlp.utils.DownloadError as e:
+        # Trata o erro específico de lives agendadas, que não são capturadas pelo filtro
+        if 'This live event will begin' in str(e):
+            print(f"INFO: Ignorando live agendada para o canal '{name}'.")
+        else:
+            print(f"DEBUG: Erro de download ao processar o canal '{name}': {e}")
     except Exception as e:
         print(f"  -> AVISO: Erro ao verificar o canal '{name}': {e}")
 

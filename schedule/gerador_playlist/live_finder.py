@@ -18,13 +18,13 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
     """Processa um canal do YouTube com lógica aprimorada para priorizar o manifesto mestre (suporte a 4K)."""
 
     # Usando o seu filtro original e mais confiável para pegar apenas lives ativas
-    exclusion_filter = yt_dlp_utils.match_filter_func("live_status != 'is_upcoming' & live_status != 'was_live'")
+    exclusion_filter = yt_dlp_utils.match_filter_func("is_live & live_status != 'is_upcoming' & live_status != 'was_live' & live_status = 'is_live'")
 
     ydl_opts = {
         'quiet': True,
         'no_warnings': True,
         'playlistend': VIDEOS_A_VERIFICAR,
-        'ignoreerrors': True,
+        'ignoreerrors': False,  # Alterado para False para que a exceção seja lançada
         'match_filter': exclusion_filter
     }
 
@@ -51,34 +51,8 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
                 top_level_manifest = video_info.get('manifest_url')
                 if top_level_manifest and top_level_manifest.endswith('.m3u8'):
                     manifest_url = top_level_manifest
-                    print(f"INFO: Stream '{display_name}' selecionada via manifesto mestre (suporta todas as qualidades, incl. 4K).")
-                else:
-                    # 2. Se não houver manifesto mestre, usa a lógica de fallback (original)
-                    print(f"AVISO: Manifesto mestre não encontrado para '{display_name}'. Usando lógica de fallback.")
-                    formats = video_info.get('formats', [])
+                    print(f"INFO: Stream '{display_name}' selecionada")
 
-                    # Tenta encontrar os melhores formatos com ÁUDIO E VÍDEO (geralmente até 1080p)
-                    combined_formats = [
-                        f for f in formats
-                        if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none' and f.get('acodec') != 'none'
-                    ]
-
-                    if combined_formats:
-                        combined_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
-                        best_format = combined_formats[0]
-                        manifest_url = best_format['url']
-                        print(f"INFO: Stream '{display_name}' selecionada (fallback). Qualidade: {best_format.get('resolution', 'N/A')} (Áudio: True)")
-                    else:
-                        # Se não encontrou NENHUM com áudio e vídeo, pega o melhor com APENAS VÍDEO
-                        video_only_formats = [
-                            f for f in formats
-                            if f.get('protocol') in ('m3u8', 'm3u8_native') and f.get('vcodec') != 'none'
-                        ]
-                        if video_only_formats:
-                            video_only_formats.sort(key=lambda f: f.get('height', 0), reverse=True)
-                            best_format = video_only_formats[0]
-                            manifest_url = best_format['url']
-                            print(f"AVISO: Nenhuma stream com áudio encontrada para '{display_name}'. Usando fallback de vídeo. Qualidade: {best_format.get('resolution', 'N/A')}")
 
                 if manifest_url:
                     m3u8_lines.append(
@@ -87,6 +61,12 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
                 else:
                     print(f"AVISO: Nenhum stream M3U8 válido encontrado para '{display_name}'.")
 
+    except yt_dlp.utils.DownloadError as e:
+        # Trata o erro específico de lives agendadas, que não são capturadas pelo filtro
+        if 'This live event will begin' in str(e):
+            print(f"INFO: Ignorando live agendada para o canal '{name}'.")
+        else:
+            print(f"DEBUG: Erro de download ao processar o canal '{name}': {e}")
     except Exception as e:
         print(f"DEBUG: Erro ao processar canal '{name}': {e}")
 
