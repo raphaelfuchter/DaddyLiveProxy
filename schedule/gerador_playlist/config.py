@@ -290,11 +290,6 @@ STATIC_CHANNELS = [
         "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
     },
     {
-        "id": "futebolmarazul.br", "name": "Futebol SC - Marazul Mídia", "platform": "youtube",
-        "url": "https://www.youtube.com/@futebolmarazul/streams",
-        "logo": "https://i.ytimg.com/an/3L2ZEQJVv8siqTe6HwfyjA/featured_channel.jpg",
-    },
-    {
         "id": "metropolesesportes.br", "name": "Metrópoles Esportes", "platform": "youtube",
         "url": "https://www.youtube.com/@MetropolesEsportes/streams",
         "logo": "https://play-lh.googleusercontent.com/Eod-arKwRBPDNBTlZXrXGUvNb4vX1KF038waVYZnDW5jpULjX6MLyd2NHeiXk9EkHQ",
