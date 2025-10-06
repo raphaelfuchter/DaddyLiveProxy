@@ -76,6 +76,8 @@ def extract_streams_with_selenium(driver: webdriver.Chrome, url: str, logo_cache
                     translated_sport = 'Futebol Australiano'
                 elif 'Basketball' in sport_category:
                     translated_sport = 'Basquete'
+                elif 'NBA' in sport_category:
+                    translated_sport = 'Basquete'
                 elif 'Rugby' in sport_category:
                     translated_sport = 'Rugby'
                 else:
