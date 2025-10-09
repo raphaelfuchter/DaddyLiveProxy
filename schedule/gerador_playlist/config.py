@@ -155,6 +155,11 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/commons/0/03/GE_TV.png",
     },
     {
+        "id": "espnbrasilyt.br", "name": "ESPN Brasil", "platform": "youtube",
+        "url": "https://www.youtube.com/@espnbrasil/streams",
+        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/espn-us.png?raw=true",
+    },
+    {
         "id": "canalgoat.br", "name": "Canal Goat", "platform": "youtube",
         "url": "https://www.youtube.com/@canalgoatbr/streams",
         "logo": "https://canalgoat.com.br/wp-content/uploads/2024/10/Canal-Goat-Escudo-Color.png",
