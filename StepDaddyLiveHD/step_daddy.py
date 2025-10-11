@@ -8,20 +8,21 @@ from typing import List, Dict
 from .utils import encrypt, decrypt, urlsafe_base64, decode_bundle
 from rxconfig import config
 import logging
+import html
 
 # Silencia os logs de INFO da biblioteca subjacente de HTTP
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING) # Adicionado por segurança, caso httpx também seja usado
 
 # Configuração básica do logging para exibir mensagens de nível DEBUG
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 class Channel(rx.Base):
     id: str
     name: str
     tags: List[str]
-    logo: str
+    logo: str | None
 
 
 class StepDaddy:
@@ -53,26 +54,23 @@ class StepDaddy:
 
     async def load_channels(self):
         channels = []
-        settings = self._load_settings()
-        base_url = settings["base_url"]
-
         try:
+            settings = self._load_settings()
+            base_url = settings["base_url"]
+
             response = await self._session.get(f"{base_url}/24-7-channels.php", headers=self._headers())
-            response.raise_for_status()
-
-            # Updated regex for the new HTML structure
-            channels_data = re.compile(
-                r'<a class="card"[^>]*href="/watch\.php\?id=(\d+)"[^>]*>.*?<div class="card__title">(.*?)</div>',
+            matches = re.findall(
+                r'<a class="card"\s+href="/watch\.php\?id=(\d+)"[^>]*>\s*<div class="card__title">(.*?)</div>',
+                response.text,
                 re.DOTALL
-            ).findall(response.text)
-
-            channels = []
-            processed_ids = set()
-            for channel_data in channels_data:
-                channel = self._get_channel(channel_data)
-                if channel and channel.id not in processed_ids and not re.match(r"18\+ \(Player-\d+\)", channel.name):
-                    channels.append(channel)
-                    processed_ids.add(channel.id)
+            )
+            for channel_id, channel_name in matches:
+                channel_name = html.unescape(channel_name.strip()).replace("#", "")
+                meta = self._meta.get("18+" if channel_name.startswith("18+") else channel_name, {})
+                logo = meta.get("logo", "")
+                if logo:
+                    logo = f"{config.api_url}/logo/{urlsafe_base64(logo)}"
+                channels.append(Channel(id=channel_id, name=channel_name, tags=meta.get("tags", []), logo=logo))
         finally:
             self.channels = sorted(channels, key=lambda channel: (channel.name.startswith("18"), channel.name))
 
