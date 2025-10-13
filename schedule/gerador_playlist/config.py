@@ -179,11 +179,6 @@ STATIC_CHANNELS = [
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/tnt-br.png?raw=true",
     },
     {
-        "id": "sbtsports.br", "name": "SBT Sports", "platform": "youtube",
-        "url": "https://www.youtube.com/SBTSports",
-        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sbt-br.png?raw=true",
-    },
-    {
         "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
         "url": "https://www.kick.com/gaules",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
