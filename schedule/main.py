@@ -49,8 +49,7 @@ def gerador_main():
     filtered_streams = [
         s for s in stream_data
         if (datetime.fromtimestamp(int(s['start_timestamp_ms']) / 1000, tz=timezone.utc) + 
-            timedelta(hours=(config.EPG_EVENT_DURATION_HOURS_FUTEBOL_AMERICANO if s['sport'] == 'Futebol Americano' else config.EPG_EVENT_DURATION_HOURS))) >=
-           (now_utc - timedelta(hours=(config.EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL if s['sport'] == 'Futebol' else config.EPG_PAST_EVENT_CUTOFF_HOURS)))
+            timedelta(hours=(config.EPG_EVENT_DURATION_HOURS_FUTEBOL if s['sport'] == 'Futebol' else config.EPG_EVENT_DURATION_HOURS))) >= (now_utc - timedelta(hours=(config.EPG_PAST_EVENT_CUTOFF_HOURS)))
     ] if stream_data else []
 
     if stream_data:

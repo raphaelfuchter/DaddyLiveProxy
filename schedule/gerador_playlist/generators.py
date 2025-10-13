@@ -199,8 +199,8 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
             timestamp_ms = int(stream['start_timestamp_ms'])
             start_dt_utc = datetime.fromtimestamp(timestamp_ms / 1000, tz=timezone.utc)
             
-            if stream['sport'] == "Futebol Americano":
-                duration_hours = config.EPG_EVENT_DURATION_HOURS_FUTEBOL_AMERICANO
+            if stream['sport'] == "Futebol":
+                duration_hours = config.EPG_EVENT_DURATION_HOURS_FUTEBOL
             else:
                 duration_hours = config.EPG_EVENT_DURATION_HOURS
             end_dt_utc = start_dt_utc + timedelta(hours=duration_hours)

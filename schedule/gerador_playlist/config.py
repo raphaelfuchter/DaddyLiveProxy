@@ -7,11 +7,10 @@ SCHEDULE_PAGE_URL = "http://192.168.68.19:3000/api/schedule/"
 M3U8_OUTPUT_FILENAME = "schedule_playlist.m3u8"
 EPG_OUTPUT_FILENAME = "epg.xml"
 LOGO_CACHE_FILE = "logo_cache.json"
-EPG_EVENT_DURATION_HOURS = 2
-EPG_EVENT_DURATION_HOURS_FUTEBOL_AMERICANO = 3
+EPG_EVENT_DURATION_HOURS = 3
+EPG_EVENT_DURATION_HOURS_FUTEBOL = 2
 GROUP_SORT_ORDER = ["Futebol", "Basquete", "Futebol Americano", "Hóquei"]
 EPG_PAST_EVENT_CUTOFF_HOURS = 0
-EPG_PAST_EVENT_CUTOFF_HOURS_FUTEBOL = 0
 EPG_LOCAL_TIMEZONE_OFFSET_HOURS = -3
 GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countries"
 LOGO_CACHE_EXPIRATION_HOURS = 2
@@ -167,7 +166,7 @@ STATIC_CHANNELS = [
     {
         "id": "desimpedidos.br", "name": "Desimpedidos", "platform": "youtube",
         "url": "https://www.youtube.com/desimpedidos/streams",
-        "logo": "https://imagensempng.com.br/wp-content/uploads/2023/08/277-1.png",
+        "logo": "https://desimpedidos.com.br/assets/logos/LOGO_DESIMPEDIDOS_BRANCO.png",
     },
     {
         "id": "sportynetbrasil.br", "name": "SportyNet", "platform": "youtube",
@@ -179,11 +178,11 @@ STATIC_CHANNELS = [
         "url": "https://www.youtube.com/@TNTSportsBR/streams",
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/tnt-br.png?raw=true",
     },
-    #{
-    #    "id": "sbtsports.br", "name": "SBT Sports", "platform": "youtube",
-    #    "url": "https://www.youtube.com/SBTSports",
-    #    "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sbt-br.png?raw=true",
-    #},
+    {
+        "id": "sbtsports.br", "name": "SBT Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/SBTSports",
+        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sbt-br.png?raw=true",
+    },
     {
         "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
         "url": "https://www.kick.com/gaules",
