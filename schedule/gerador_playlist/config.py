@@ -219,6 +219,51 @@ STATIC_CHANNELS = [
         "logo": "https://flowgames.gg/wp-content/uploads/2022/10/logo.png",
     },
     {
+        "id": "yuukiing.br", "name": "YUUKiing", "platform": "kick",
+        "url": "https://kick.com/yuukiing",
+        "logo": "https://pbs.twimg.com/profile_images/1816896313641869312/gYGgEA81_400x400.jpg",
+    },
+    {
+        "id": "btfillipe.br", "name": "BT", "platform": "kick",
+        "url": "https://kick.com/btfillipe",
+        "logo": "https://files.kick.com/images/user/9353370/profile_image/conversion/6d0bc3eb-6a4f-496a-bcd7-e361773ec59b-fullsize.webp",
+    },
+    {
+        "id": "onezera.br", "name": "One", "platform": "kick",
+        "url": "https://kick.com/onezeratv",
+        "logo": "https://files.kick.com/images/user/8737828/profile_image/conversion/1567d37f-bfc1-4ff1-bfe5-f7f420dfaf98-fullsize.webp",
+    },
+    {
+        "id": "liminha.br", "name": "Liminha", "platform": "kick",
+        "url": "https://kick.com/liminhag0d",
+        "logo": "https://files.kick.com/images/user/53038940/profile_image/conversion/796a002a-d309-46d3-b5ff-ba1d6ef7ac42-fullsize.webp",
+    },
+    {
+        "id": "sks.br", "name": "SkS", "platform": "kick",
+        "url": "https://kick.com/sksfps1",
+        "logo": "https://files.kick.com/images/user/55762018/profile_image/conversion/374dc3fe-80df-4c3c-bb23-214cda57548c-fullsize.webp",
+    },
+    {
+        "id": "diogo1.br", "name": "DIOGO1fps", "platform": "kick",
+        "url": "https://kick.com/diogo1fps",
+        "logo": "https://files.kick.com/images/user/11972307/profile_image/conversion/01921796-ab08-4880-af25-2dbfe81302e9-fullsize.webp",
+    },
+    {
+        "id": "razahr6.br", "name": "RazaHR6", "platform": "kick",
+        "url": "https://kick.com/razahr6",
+        "logo": "https://files.kick.com/images/user/75979937/profile_image/conversion/0794bd16-a074-4518-8608-5a04f53c1ba8-fullsize.webp",
+    },
+    {
+        "id": "rnakano.br", "name": "RNakano", "platform": "kick",
+        "url": "https://kick.com/rnakano",
+        "logo": "https://files.kick.com/images/user/8668482/profile_image/conversion/7a6ba4fa-aa73-44da-b976-0330fd7eea7a-fullsize.webp",
+    },
+    {
+        "id": "coreano.br", "name": "Coreano", "platform": "kick",
+        "url": "https://kick.com/coreano",
+        "logo": "https://files.kick.com/images/user/8829981/profile_image/conversion/5d8b0dc8-7500-4cb6-b206-f0a6165e33af-fullsize.webp",
+    },
+    {
         "id": "nbabrasil.br", "name": "NBA Brasil", "platform": "youtube",
         "url": "https://www.youtube.com/@nbabrasil/streams",
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nba-tv-us.png?raw=true",
@@ -283,11 +328,11 @@ STATIC_CHANNELS = [
         "url": "https://www.youtube.com/gaules/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
-    {
-        "id": "thedarkness.br", "name": "TheDarkness", "platform": "youtube",
-        "url": "https://www.youtube.com/@pioresgamersdomundo/streams",
-        "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
-    },
+    #{
+    #    "id": "thedarkness.br", "name": "TheDarkness", "platform": "youtube",
+    #    "url": "https://www.youtube.com/@pioresgamersdomundo/streams",
+    #    "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
+    #},
     {
         "id": "metropolesesportes.br", "name": "Metrópoles Esportes", "platform": "youtube",
         "url": "https://www.youtube.com/@MetropolesEsportes/streams",
