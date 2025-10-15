@@ -49,17 +49,31 @@ def extract_and_decode_var(var_name: str, response: str) -> str:
     return base64.b64decode(b64).decode("utf-8")
 
 
-def decode_bundle(bundle: str) -> dict:
-    decoded_bundle = base64.b64decode(bundle).decode("utf-8")
-    data = json.loads(decoded_bundle)
-    decoded = {}
-    for k, v in data.items():
-        if isinstance(v, str):
-            try:
-                pad = '=' * (-len(v) % 4)
-                decoded[k] = base64.b64decode(v + pad).decode("utf-8")
-            except Exception:
-                decoded[k] = v
-        else:
-            decoded[k] = v
-    return decoded
+def decode_bundle(response_text: str) -> dict:
+    candidates = set()
+    candidates.update(re.findall(r'JSON\.parse\s*\(\s*atob\s*\(\s*["\']([^"\']{40,})["\']\s*\)\s*\)', response_text))
+    candidates.update(re.findall(r'atob\s*\(\s*["\'](eyJ[A-Za-z0-9+/=]{40,})["\']\s*\)', response_text))
+    candidates.update(re.findall(r'(?:const|let|var)\s+[A-Za-z_$][\w$]*\s*=\s*["\'](eyJ[A-Za-z0-9+/=]{40,})["\']', response_text))
+    candidates.update(re.findall(r'["\'](eyJ[A-Za-z0-9+/=]{40,})["\']', response_text))
+    candidates.update(re.findall(r'["\']([A-Za-z0-9+/=]{80,})["\']', response_text))
+
+    for candidate in candidates:
+        try:
+            decoded_candidate = base64.b64decode(candidate).decode("utf-8")
+            data = json.loads(decoded_candidate)
+            if not all(key in data for key in ['b_ts', 'b_sig', 'b_rnd', 'b_host']):
+                continue
+            decoded = {}
+            for k, v in data.items():
+                if isinstance(v, str):
+                    try:
+                        pad = '=' * (-len(v) % 4)
+                        decoded[k] = base64.b64decode(v + pad).decode("utf-8")
+                    except Exception:
+                        decoded[k] = v
+                else:
+                    decoded[k] = v
+            return decoded
+        except Exception:
+            continue
+    return {}
