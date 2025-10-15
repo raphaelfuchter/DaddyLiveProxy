@@ -179,6 +179,56 @@ STATIC_CHANNELS = [
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/tnt-br.png?raw=true",
     },
     {
+        "id": "nbabrasil.br", "name": "NBA Brasil", "platform": "youtube",
+        "url": "https://www.youtube.com/@nbabrasil/streams",
+        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nba-tv-us.png?raw=true",
+    },
+    {
+        "id": "catarinense.br", "name": "Federação Catarinense", "platform": "youtube",
+        "url": "https://www.youtube.com/@fcf_futebol/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/pt/6/64/FCFsc.png",
+    },
+    {
+        "id": "paulista.br", "name": "Paulista", "platform": "youtube",
+        "url": "https://www.youtube.com/@futebolpaulista/streams",
+        "logo": "https://logodownload.org/wp-content/uploads/2020/01/fpf-federacao-paulista-de-futebol-logo-0.png",
+    },
+    {
+        "id": "paulistao.br", "name": "Paulistão", "platform": "youtube",
+        "url": "https://www.youtube.com/paulistao/streams",
+        "logo": "https://logodownload.org/wp-content/uploads/2020/01/fpf-federacao-paulista-de-futebol-logo-0.png",
+    },
+    {
+        "id": "gauchao.br", "name": "Federação Gaúcha", "platform": "youtube",
+        "url": "https://www.youtube.com/@FGFTV/streams",
+        "logo": "https://cdn.freebiesupply.com/logos/large/2x/federacao-gaucha-de-futebol-rs-logo-svg-vector.svg",
+    },
+    {
+        "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
+        "url": "https://www.youtube.com/@TopTVSports/streams",
+        "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
+    },
+    {
+        "id": "sdplives.br", "name": "SDP", "platform": "youtube",
+        "url": "https://www.youtube.com/SDPLivesEsportivas/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SDP_Logo.png",
+    },
+    {
+        "id": "canaldofabricio.br", "name": "Canal do Fabrício", "platform": "youtube",
+        "url": "https://www.youtube.com/@ocanaldofabricio/streams",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsERCiMmfLUlKzMsTzY_vSABSXO_77HpOgkg&s",
+    },
+    {
+        "id": "caterinensefutsal.br", "name": "Catarinense Futsal", "platform": "youtube",
+        "url": "https://www.youtube.com/@catarinensefutsal/streams",
+        "logo": "https://placarsoft-fcfs.nyc3.digitaloceanspaces.com/01/setting/d3/0a/368359963854250271/fcfs-escudo-368361547053018944.png",
+    },
+    {
+        "id": "carvoeirodoentetv.br", "name": "Carvoeiro Doente TV", "platform": "youtube",
+        "url": "https://www.youtube.com/@CarvoeiroDoenteTV/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EscudoCriciumaEC.svg/2560px-EscudoCriciumaEC.svg.png",
+    },
+    {
         "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
         "url": "https://www.kick.com/gaules",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
@@ -219,14 +269,44 @@ STATIC_CHANNELS = [
         "logo": "https://flowgames.gg/wp-content/uploads/2022/10/logo.png",
     },
     {
+        "id": "casemiro.br", "name": "Casemiro", "platform": "twitch",
+        "url": "https://www.twitch.tv/casimito",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/32805a78-d927-48bd-8089-bf5efed53ea4-profile_image-70x70.png",
+    },
+    {
+        "id": "revo1tzgg.br", "name": "Revo1Tzgg", "platform": "kick",
+        "url": "https://www.twitch.tv/revo1tzgg",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6f1a3f1b-bd6c-404a-9bc3-ab099e7a60af-profile_image-70x70.png",
+    },
+    {
+        "id": "shroud.br", "name": "Shroud", "platform": "twitch",
+        "url": "https://www.twitch.tv/shroud",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
+    },
+    {
+        "id": "summit1g.br", "name": "Summit1g", "platform": "twitch",
+        "url": "https://www.twitch.tv/summit1g",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-70x70.png",
+    },
+    {
+        "id": "skadoodle.br", "name": "Skadoodle", "platform": "twitch",
+        "url": "https://www.twitch.tv/skadoodle",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/8d88427e-923e-4613-97cb-390b4efab238-profile_image-70x70.png",
+    },
+    {
+        "id": "tecnosh.br", "name": "Tecnosh", "platform": "kick",
+        "url": "https://www.twitch.tv/skadoodle",
+        "logo": "https://files.kick.com/images/user/80483557/profile_image/conversion/4f7e564f-128c-4f4d-b04b-68a8636156ca-fullsize.webp",
+    },
+    {
+        "id": "brino.br", "name": "Brino", "platform": "twitch",
+        "url": "https://www.twitch.tv/brino",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/62c899c1-fdda-4d3a-aefc-7993c41c1618-profile_image-70x70.png",
+    },
+    {
         "id": "yuukiing.br", "name": "YUUKiing", "platform": "kick",
         "url": "https://kick.com/yuukiing",
         "logo": "https://pbs.twimg.com/profile_images/1816896313641869312/gYGgEA81_400x400.jpg",
-    },
-    {
-        "id": "btfillipe.br", "name": "BT", "platform": "kick",
-        "url": "https://kick.com/btfillipe",
-        "logo": "https://files.kick.com/images/user/9353370/profile_image/conversion/6d0bc3eb-6a4f-496a-bcd7-e361773ec59b-fullsize.webp",
     },
     {
         "id": "onezera.br", "name": "One", "platform": "kick",
@@ -234,9 +314,9 @@ STATIC_CHANNELS = [
         "logo": "https://files.kick.com/images/user/8737828/profile_image/conversion/1567d37f-bfc1-4ff1-bfe5-f7f420dfaf98-fullsize.webp",
     },
     {
-        "id": "liminha.br", "name": "Liminha", "platform": "kick",
-        "url": "https://kick.com/liminhag0d",
-        "logo": "https://files.kick.com/images/user/53038940/profile_image/conversion/796a002a-d309-46d3-b5ff-ba1d6ef7ac42-fullsize.webp",
+        "id": "diogo1.br", "name": "DIOGO1fps", "platform": "kick",
+        "url": "https://kick.com/diogo1fps",
+        "logo": "https://files.kick.com/images/user/11972307/profile_image/conversion/01921796-ab08-4880-af25-2dbfe81302e9-fullsize.webp",
     },
     {
         "id": "sks.br", "name": "SkS", "platform": "kick",
@@ -244,19 +324,9 @@ STATIC_CHANNELS = [
         "logo": "https://files.kick.com/images/user/55762018/profile_image/conversion/374dc3fe-80df-4c3c-bb23-214cda57548c-fullsize.webp",
     },
     {
-        "id": "diogo1.br", "name": "DIOGO1fps", "platform": "kick",
-        "url": "https://kick.com/diogo1fps",
-        "logo": "https://files.kick.com/images/user/11972307/profile_image/conversion/01921796-ab08-4880-af25-2dbfe81302e9-fullsize.webp",
-    },
-    {
-        "id": "razahr6.br", "name": "RazaHR6", "platform": "kick",
-        "url": "https://kick.com/razahr6",
-        "logo": "https://files.kick.com/images/user/75979937/profile_image/conversion/0794bd16-a074-4518-8608-5a04f53c1ba8-fullsize.webp",
-    },
-    {
-        "id": "rnakano.br", "name": "RNakano", "platform": "kick",
-        "url": "https://kick.com/rnakano",
-        "logo": "https://files.kick.com/images/user/8668482/profile_image/conversion/7a6ba4fa-aa73-44da-b976-0330fd7eea7a-fullsize.webp",
+        "id": "liminha.br", "name": "Liminha", "platform": "kick",
+        "url": "https://kick.com/liminhag0d",
+        "logo": "https://files.kick.com/images/user/53038940/profile_image/conversion/796a002a-d309-46d3-b5ff-ba1d6ef7ac42-fullsize.webp",
     },
     {
         "id": "coreano.br", "name": "Coreano", "platform": "kick",
@@ -264,64 +334,14 @@ STATIC_CHANNELS = [
         "logo": "https://files.kick.com/images/user/8829981/profile_image/conversion/5d8b0dc8-7500-4cb6-b206-f0a6165e33af-fullsize.webp",
     },
     {
-        "id": "nbabrasil.br", "name": "NBA Brasil", "platform": "youtube",
-        "url": "https://www.youtube.com/@nbabrasil/streams",
-        "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nba-tv-us.png?raw=true",
-    },
-    {
-        "id": "paulista.br", "name": "Paulista", "platform": "youtube",
-        "url": "https://www.youtube.com/@futebolpaulista/streams",
-        "logo": "https://logodownload.org/wp-content/uploads/2020/01/fpf-federacao-paulista-de-futebol-logo-0.png",
-    },
-    {
-        "id": "paulistao.br", "name": "Paulistão", "platform": "youtube",
-        "url": "https://www.youtube.com/paulistao/streams",
-        "logo": "https://logodownload.org/wp-content/uploads/2020/01/fpf-federacao-paulista-de-futebol-logo-0.png",
-    },
-    {
-        "id": "gauchao.br", "name": "Federação Gaúcha", "platform": "youtube",
-        "url": "https://www.youtube.com/@FGFTV/streams",
-        "logo": "https://cdn.freebiesupply.com/logos/large/2x/federacao-gaucha-de-futebol-rs-logo-svg-vector.svg",
-    },
-    {
-        "id": "catarinense.br", "name": "Federação Catarinense", "platform": "youtube",
-        "url": "https://www.youtube.com/@fcf_futebol/streams",
-        "logo": "https://upload.wikimedia.org/wikipedia/pt/6/64/FCFsc.png",
-    },
-    {
         "id": "valorantbr.br", "name": "Valorant Sports", "platform": "youtube",
         "url": "https://www.youtube.com/valorantesportsbr/streams",
         "logo": "https://freelogopng.com/images/all_img/1664302686valorant-icon-png.png",
     },
     {
-        "id": "casemiro.br", "name": "Casemiro", "platform": "twitch",
-        "url": "https://www.twitch.tv/casimito",
-        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/32805a78-d927-48bd-8089-bf5efed53ea4-profile_image-70x70.png",
-    },
-    {
-        "id": "toptvsports.br", "name": "TopTV Sports", "platform": "youtube",
-        "url": "https://www.youtube.com/@TopTVSports/streams",
-        "logo": "https://play-lh.googleusercontent.com/CNiyVHxKoH3DgF-8ldwVLmAZFGUkNLPRS5zfOQUSBxLXlg8X0x_RKXrHrBI-2cswvg",
-    },
-    {
-        "id": "sdplives.br", "name": "SDP", "platform": "youtube",
-        "url": "https://www.youtube.com/SDPLivesEsportivas/streams",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SDP_Logo.png",
-    },
-    {
-        "id": "canaldofabricio.br", "name": "Canal do Fabrício", "platform": "youtube",
-        "url": "https://www.youtube.com/@ocanaldofabricio/streams",
-        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsERCiMmfLUlKzMsTzY_vSABSXO_77HpOgkg&s",
-    },
-    {
-        "id": "caterinensefutsal.br", "name": "Catarinense Futsal", "platform": "youtube",
-        "url": "https://www.youtube.com/@catarinensefutsal/streams",
-        "logo": "https://placarsoft-fcfs.nyc3.digitaloceanspaces.com/01/setting/d3/0a/368359963854250271/fcfs-escudo-368361547053018944.png",
-    },
-    {
-        "id": "carvoeirodoentetv.br", "name": "Carvoeiro Doente TV", "platform": "youtube",
-        "url": "https://www.youtube.com/@CarvoeiroDoenteTV/streams",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EscudoCriciumaEC.svg/2560px-EscudoCriciumaEC.svg.png",
+        "id": "rainbow6br.br", "name": "Rainbow6 BR", "platform": "youtube",
+        "url": "https://www.youtube.com/@Rainbow6BR/streams",
+        "logo": "https://yt3.googleusercontent.com/Wn05v8kKrKqv7mGzA7PtvP0bK3WvOKCQQHgFhLXX_qTsDWC0RF5rtMFv2La_UOHbnUB4JGkAgls=s160-c-k-c0x00ffffff-no-rj",
     },
     {
         "id": "gaules.br", "name": "Gaules", "platform": "youtube",
