@@ -106,19 +106,6 @@ def _generate_static_channels_epg(xml_lines: List[str]):
         # Se não houver lives, gera um único canal offline para o ID base
         if not live_videos:
             print(f"  -> {base_channel_name} está offline.")
-            xml_lines.append(f'  <channel id="{base_channel_id}">')
-            xml_lines.append(f'    <display-name>{html.escape(base_channel_name)}</display-name>')
-            xml_lines.append(f'    <icon src="{html.escape(base_channel_logo)}" />')
-            xml_lines.append('  </channel>')
-
-            now_local = now_utc.astimezone(config.LOCAL_TZ)
-            local_day_end = now_local.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
-            day_end_utc = local_day_end.astimezone(timezone.utc)
-            start_str = now_utc.strftime('%Y%m%d%H%M%S %z')
-            stop_str = day_end_utc.strftime('%Y%m%d%H%M%S %z')
-            xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{base_channel_id}">')
-            xml_lines.append(f'    <title lang="pt">{config.PLACEHOLDER_TEXT}</title>')
-            xml_lines.append('  </programme>')
             continue
 
         # Se houver uma ou mais lives, processa cada uma
@@ -152,6 +139,7 @@ def _generate_static_channels_epg(xml_lines: List[str]):
             day_end_utc = local_day_end.astimezone(timezone.utc)
 
             if event_start_utc > day_start_utc:
+                day_start_utc = day_start_utc - timedelta(days=1)
                 start_str = day_start_utc.strftime('%Y%m%d%H%M%S %z')
                 stop_str = event_start_utc.strftime('%Y%m%d%H%M%S %z')
                 xml_lines.append(f'  <programme start="{start_str}" stop="{stop_str}" channel="{current_tvg_id}">')
@@ -243,9 +231,10 @@ def _generate_dynamic_streams_epg(xml_lines: List[str], stream_list: List[Dict])
 
 def _format_title(title: str) -> str:
     if not title: return "Ao Vivo"
-    pattern = r'(?:ao vivo(?: e com imagens)?|com imagens):?\s*\|?\s*'
+    pattern = r'(?:ao vivo(?: e com imagens)?|com imagens):?\s*\|?\s*|\s*\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}$'
     cleaned_title = re.sub(pattern, '', title, flags=re.IGNORECASE).strip()
-    return cleaned_title.title() if cleaned_title else "Ao Vivo"
+    title = cleaned_title.title() if cleaned_title else "Ao Vivo"
+    return title
 
 def generate_xmltv_epg(stream_list: List[Dict]) -> str:
     """Orquestra a geração do arquivo EPG completo chamando as funções especializadas."""
