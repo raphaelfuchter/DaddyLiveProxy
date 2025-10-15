@@ -279,36 +279,6 @@ STATIC_CHANNELS = [
         "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/32805a78-d927-48bd-8089-bf5efed53ea4-profile_image-70x70.png",
     },
     {
-        "id": "revo1tzgg.br", "name": "Revo1Tzgg", "platform": "kick",
-        "url": "https://www.twitch.tv/revo1tzgg",
-        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6f1a3f1b-bd6c-404a-9bc3-ab099e7a60af-profile_image-70x70.png",
-    },
-    {
-        "id": "shroud.br", "name": "Shroud", "platform": "twitch",
-        "url": "https://www.twitch.tv/shroud",
-        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
-    },
-    {
-        "id": "summit1g.br", "name": "Summit1g", "platform": "twitch",
-        "url": "https://www.twitch.tv/summit1g",
-        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-70x70.png",
-    },
-    {
-        "id": "skadoodle.br", "name": "Skadoodle", "platform": "twitch",
-        "url": "https://www.twitch.tv/skadoodle",
-        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/8d88427e-923e-4613-97cb-390b4efab238-profile_image-70x70.png",
-    },
-    {
-        "id": "tecnosh.br", "name": "Tecnosh", "platform": "kick",
-        "url": "https://www.twitch.tv/skadoodle",
-        "logo": "https://files.kick.com/images/user/80483557/profile_image/conversion/4f7e564f-128c-4f4d-b04b-68a8636156ca-fullsize.webp",
-    },
-    {
-        "id": "brino.br", "name": "Brino", "platform": "twitch",
-        "url": "https://www.twitch.tv/brino",
-        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/62c899c1-fdda-4d3a-aefc-7993c41c1618-profile_image-70x70.png",
-    },
-    {
         "id": "yuukiing.br", "name": "YUUKiing", "platform": "kick",
         "url": "https://kick.com/yuukiing",
         "logo": "https://pbs.twimg.com/profile_images/1816896313641869312/gYGgEA81_400x400.jpg",
@@ -333,6 +303,36 @@ STATIC_CHANNELS = [
         "url": "https://kick.com/liminhag0d",
         "logo": "https://files.kick.com/images/user/53038940/profile_image/conversion/796a002a-d309-46d3-b5ff-ba1d6ef7ac42-fullsize.webp",
     },
+{
+        "id": "revo1tzgg.br", "name": "Revo1Tzgg", "platform": "twitch",
+        "url": "https://www.twitch.tv/revo1tzgg",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6f1a3f1b-bd6c-404a-9bc3-ab099e7a60af-profile_image-70x70.png",
+    },
+    {
+        "id": "shroud.br", "name": "Shroud", "platform": "twitch",
+        "url": "https://www.twitch.tv/shroud",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
+    },
+    {
+        "id": "summit1g.br", "name": "Summit1g", "platform": "twitch",
+        "url": "https://www.twitch.tv/summit1g",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/99aa4739-21d6-40af-86ae-4b4d3457fce4-profile_image-70x70.png",
+    },
+    {
+        "id": "skadoodle.br", "name": "Skadoodle", "platform": "twitch",
+        "url": "https://www.twitch.tv/skadoodle",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/8d88427e-923e-4613-97cb-390b4efab238-profile_image-70x70.png",
+    },
+    {
+        "id": "tecnosh.br", "name": "Tecnosh", "platform": "kick",
+        "url": "https://www.kick.com/tecnosh",
+        "logo": "https://files.kick.com/images/user/80483557/profile_image/conversion/4f7e564f-128c-4f4d-b04b-68a8636156ca-fullsize.webp",
+    },
+    {
+        "id": "brino.br", "name": "Brino", "platform": "twitch",
+        "url": "https://www.twitch.tv/brino",
+        "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/62c899c1-fdda-4d3a-aefc-7993c41c1618-profile_image-70x70.png",
+    },
     {
         "id": "coreano.br", "name": "Coreano", "platform": "kick",
         "url": "https://kick.com/coreano",
@@ -353,11 +353,6 @@ STATIC_CHANNELS = [
         "url": "https://www.youtube.com/gaules/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
     },
-    #{
-    #    "id": "thedarkness.br", "name": "TheDarkness", "platform": "youtube",
-    #    "url": "https://www.youtube.com/@pioresgamersdomundo/streams",
-    #    "logo": "https://yt3.googleusercontent.com/GV7bRHNG0juAAZ-twtvfJ31CdIa5v1jEtQZFL2bhRKHIe2pMPrs3nnBcOaNnNmi7ffLFJ2Ud=s900-c-k-c0x00ffffff-no-rj",
-    #},
     {
         "id": "metropolesesportes.br", "name": "Metrópoles Esportes", "platform": "youtube",
         "url": "https://www.youtube.com/@MetropolesEsportes/streams",
