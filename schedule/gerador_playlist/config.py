@@ -184,6 +184,11 @@ STATIC_CHANNELS = [
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nba-tv-us.png?raw=true",
     },
     {
+        "id": "xsports.br", "name": "XSports", "platform": "youtube",
+        "url": "https://www.youtube.com/@xsports.brasil/streams",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Xsports_logo.png",
+    },
+    {
         "id": "catarinense.br", "name": "Federação Catarinense", "platform": "youtube",
         "url": "https://www.youtube.com/@fcf_futebol/streams",
         "logo": "https://upload.wikimedia.org/wikipedia/pt/6/64/FCFsc.png",
@@ -388,6 +393,13 @@ GLOBOPLAY_CHANNELS = [
         "video_id": "7339123",
         "tvg_id": "sportv3(Portuguese).br",
         "tvg_logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/brazil/sportv3-br.png?raw=true",
+        "group_title": "GloboPlay"
+    },
+    {
+        "name": "GE TV",
+        "video_id": "11134179",
+        "tvg_id": "Sports.Dummy.us",
+        "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/0/03/GE_TV.png",
         "group_title": "GloboPlay"
     },
     {
