@@ -40,26 +40,28 @@ def process_youtube_channel(url: str, name: str, channel_id: str, category: str,
 
             for index, video_info in enumerate(live_videos, 1):
                 display_name = f"{name} {index}" if len(live_videos) > 1 else name
-                current_tvg_id = f"{channel_id.split('.')[0]}{index}.{channel_id.split('.')[-1]}" if len(live_videos) > 1 else channel_id
 
-                manifest_url = None
+                for index, video_info in enumerate(live_videos, 1):
+                    live_title = video_info.get('title', 'Live Stream')
 
-                # --- NOVA LÓGICA DE SELEÇÃO PRIORIZANDO O MANIFESTO MESTRE ---
+                    if 'rerun' not in live_title.lower():
+                        current_tvg_id = f"{channel_id.split('.')[0]}{index}.{channel_id.split('.')[-1]}" if len(live_videos) > 1 else channel_id
 
-                # 1. Tenta obter o manifest_url principal. Esta é a melhor abordagem para HLS/DASH (4K).
-                #    Ele contém todas as qualidades e áudios disponíveis.
-                top_level_manifest = video_info.get('manifest_url')
-                if top_level_manifest and top_level_manifest.endswith('.m3u8'):
-                    manifest_url = top_level_manifest
-                    print(f"INFO: Stream '{display_name}' selecionada")
+                        manifest_url = None
 
+                        top_level_manifest = video_info.get('manifest_url')
+                        if top_level_manifest and top_level_manifest.endswith('.m3u8'):
+                            manifest_url = top_level_manifest
+                            print(f"INFO: Stream '{display_name}' selecionada")
 
-                if manifest_url:
-                    m3u8_lines.append(
-                        f'#EXTINF:-1 tvg-id="{current_tvg_id}" tvg-name="{display_name}" group-title="Streams",{display_name}')
-                    m3u8_lines.append(manifest_url)
-                else:
-                    print(f"AVISO: Nenhum stream M3U8 válido encontrado para '{display_name}'.")
+                        if manifest_url:
+                            m3u8_lines.append(f'#EXTINF:-1 tvg-id="{current_tvg_id}" tvg-name="{display_name}" group-title="Streams",{display_name}')
+                            m3u8_lines.append(manifest_url)
+                        else:
+                            print(f"AVISO: Nenhum stream M3U8 válido encontrado para '{display_name}'.")
+
+                    else:
+                        print(f"Ignorando, pois é um rerun: '{display_name}'")
 
     except yt_dlp.utils.DownloadError as e:
         # Trata o erro específico de lives agendadas, que não são capturadas pelo filtro
