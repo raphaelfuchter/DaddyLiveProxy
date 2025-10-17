@@ -234,6 +234,11 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EscudoCriciumaEC.svg/2560px-EscudoCriciumaEC.svg.png",
     },
     {
+        "id": "kingleaguebrasil.br", "name": "Kings League Brasil", "platform": "youtube",
+        "url": "https://www.youtube.com/@KingsLeagueBrazil/streams",
+        "logo": "https://kingsleaguesp.com.br/wp-content/uploads/2025/01/IMG_3613.png",
+    },
+    {
         "id": "gauleskick.br", "name": "Gaules Kick", "platform": "kick",
         "url": "https://www.kick.com/gaules",
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Gaules_logo_blue.svg/2560px-Gaules_logo_blue.svg.png",
