@@ -7,6 +7,7 @@ from curl_cffi import AsyncSession
 from typing import List, Dict
 from .utils import encrypt, decrypt, urlsafe_base64, decode_bundle
 from rxconfig import config
+from .gerador_schedule import extrair_schedule
 import logging
 import html
 
@@ -15,7 +16,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING) # Adicionado por segurança, caso httpx também seja usado
 
 # Configuração básica do logging para exibir mensagens de nível DEBUG
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 class Channel(rx.Base):
@@ -243,5 +244,5 @@ class StepDaddy:
         settings = self._load_settings()
         base_url = settings["base_url"]
 
-        response = await self._session.get(f"{base_url}/schedule/schedule-generated.php", headers=self._headers())
-        return response.json()
+        response = extrair_schedule()
+        return json.loads(response)
