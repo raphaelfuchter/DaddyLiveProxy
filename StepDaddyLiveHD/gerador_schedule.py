@@ -3,15 +3,10 @@ from bs4 import BeautifulSoup
 import json
 from urllib.parse import urlsplit, parse_qs
 import urllib3
+from .utils import load_settings
 
 # Desabilita os avisos de SSL (por causa do verify=False)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-# --- Configuração ---
-URL = "https://dlhd.dad/"
-
-
-# --------------------
 
 def extrair_schedule():
     """
@@ -33,6 +28,9 @@ def extrair_schedule():
     }
 
     try:
+        settings = load_settings()
+        URL = settings["base_url"]
+
         # 1. Baixar o conteúdo HTML da página
         print(f"Acessando {URL}...")
         response = requests.get(URL, headers=headers, verify=False)
@@ -151,7 +149,3 @@ def extrair_schedule():
     except Exception as e:
         print(f"Ocorreu um erro inesperado: {e}")
         return None
-
-# Remova ou comente o bloco if __name__ == "__main__"
-# if __name__ == "__main__":
-#     print(extrair_schedule())

@@ -2,6 +2,7 @@ import os
 import re
 import base64
 import json
+from typing import Dict
 
 key_bytes = os.urandom(64)
 
@@ -77,3 +78,19 @@ def decode_bundle(response_text: str) -> dict:
         except Exception:
             continue
     return {}
+
+def load_settings() -> Dict[str, str]:
+        """Carrega as configurações do arquivo settings.json."""
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        settings_path = os.path.join(current_dir, "settings.json")
+
+        try:
+            with open(settings_path, "r", encoding="utf-8") as f:
+                settings = json.load(f)
+
+                return {
+                    "base_url": settings.get("base_url"),
+                    "prefix": settings.get("prefix")
+                }
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            raise ValueError("Falha ao encontrar ou ler o arquivo settings.json")

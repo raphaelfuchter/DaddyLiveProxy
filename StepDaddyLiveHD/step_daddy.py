@@ -5,7 +5,7 @@ import reflex as rx
 from urllib.parse import quote, urlparse
 from curl_cffi import AsyncSession
 from typing import List, Dict
-from .utils import encrypt, decrypt, urlsafe_base64, decode_bundle
+from .utils import encrypt, decrypt, urlsafe_base64, decode_bundle, load_settings
 from rxconfig import config
 from .gerador_schedule import extrair_schedule
 import logging
@@ -40,7 +40,7 @@ class StepDaddy:
         self._cache = {}
 
     def _headers(self, referer: str = None, origin: str = None):
-        settings = self._load_settings()
+        settings = load_settings()
         base_url = settings["base_url"]
 
         if referer is None:
@@ -56,7 +56,7 @@ class StepDaddy:
     async def load_channels(self):
         channels = []
         try:
-            settings = self._load_settings()
+            settings = load_settings()
             base_url = settings["base_url"]
 
             response = await self._session.get(f"{base_url}/24-7-channels.php", headers=self._headers())
@@ -94,23 +94,6 @@ class StepDaddy:
             logo = f"{config.api_url}/logo/{urlsafe_base64(logo)}"
         return Channel(id=channel_id, name=channel_name, tags=meta.get("tags", []), logo=logo)
 
-    @staticmethod
-    def _load_settings() -> Dict[str, str]:
-        """Carrega as configurações do arquivo settings.json."""
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        settings_path = os.path.join(current_dir, "settings.json")
-
-        try:
-            with open(settings_path, "r", encoding="utf-8") as f:
-                settings = json.load(f)
-
-                return {
-                    "base_url": settings.get("base_url"),
-                    "prefix": settings.get("prefix")
-                }
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            raise ValueError("Falha ao encontrar ou ler o arquivo settings.json")
-
     # Not generic
     async def stream(self, channel_id: str):
         logging.info(f"Iniciando método stream para o channel_id: {channel_id}")
@@ -121,7 +104,7 @@ class StepDaddy:
             source_url = self._cache["source_url"]
         else:
             self._cache.clear()
-            settings = self._load_settings()
+            settings = load_settings()
             base_url = settings["base_url"]
             user_prefix = settings["prefix"]
             logging.info(f"Configurações carregadas: base_url='{base_url}', prefix='{user_prefix}'")
@@ -241,8 +224,5 @@ class StepDaddy:
         return data
 
     async def schedule(self):
-        settings = self._load_settings()
-        base_url = settings["base_url"]
-
         response = extrair_schedule()
         return json.loads(response)
