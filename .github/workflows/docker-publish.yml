@@ -2,7 +2,7 @@ name: Build e Push - GitHub Container Registry (GHCR)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 # Define permissões para que o job possa escrever no GHCR
 permissions:
