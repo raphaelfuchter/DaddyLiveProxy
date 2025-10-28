@@ -1,45 +1,52 @@
-name: Build e Push - Múltiplas Imagens
+name: Build e Push - GitHub Container Registry (GHCR)
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
+
+# Define permissões para que o job possa escrever no GHCR
+permissions:
+  contents: read
+  packages: write # <--- Esta linha é essencial
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Login no Docker Hub
+      # 1. Faz login no GitHub Container Registry (ghcr.io)
+      # Ele usa um token automático do GitHub, não precisa de Secrets!
+      - name: Login no GHCR
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          registry: ghcr.io
+          username: ${{ github.repository_owner }} # Seu nome de usuário (raphaelfuchter)
+          password: ${{ secrets.GITHUB_TOKEN }}  # Este é um token especial gerado pelo GitHub
 
       # --- Builda a Imagem do PROXY ---
       - name: Build e push do PROXY (step-daddy-live-hd)
         uses: docker/build-push-action@v5
         with:
-          context: .  # Contexto é a raiz
+          context: .
           file: ./Dockerfile
           push: true
-          # A Action vai pegar os Secrets do GitHub e injetar como 'args' no build
           build-args: |
             PORT=${{ secrets.PORT }}
             API_URL=${{ secrets.API_URL }}
             PROXY_CONTENT=${{ secrets.PROXY_CONTENT }}
             SOCKS5=${{ secrets.SOCKS5 }}
-          # Mude o nome da imagem como preferir
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/daddyliveproxy-proxy:latest
+          # 2. O nome da imagem agora usa o prefixo ghcr.io
+          tags: ghcr.io/${{ github.repository_owner }}/daddyliveproxy-proxy:latest
 
       # --- Builda a Imagem do GERADOR ---
       - name: Build e push do GERADOR (gerador-live)
         uses: docker/build-push-action@v5
         with:
-          context: ./schedule # Contexto é a pasta 'schedule'
+          context: ./schedule
           file: ./schedule/Dockerfile
           push: true
-          # Este não precisa de 'build-args'
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/daddyliveproxy-scheduler:latest
+          # 3. O nome da imagem aqui também usa ghcr.io
+          tags: ghcr.io/${{ github.repository_owner }}/daddyliveproxy-scheduler:latest
