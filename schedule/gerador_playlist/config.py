@@ -55,8 +55,10 @@ SPORT_TRANSLATION_MAP = {
     "Major League Soccer": "Futebol",
     "Major League Soccer (MLS)": "Futebol",
     "Soccer - Ireland Republic": "Futebol",
+    "Ireland Republic": "Futebol",
     "USL Championship": "Futebol",
     "Scotland Premiership": "Futebol",
+    "Premiership Scotland": "Futebol",
 
     "Basketball": "Basquete",
     "Basketball (NBA)": "Basquete",
@@ -139,7 +141,9 @@ SPORT_TRANSLATION_MAP = {
     "Aussie Rules (AFL)": "Futebol Australiano",
     "Aussie rules (AFL)": "Futebol Australiano",
 
-    "Winter Sports": "Esportes de Inverno"
+    "Winter Sports": "Esportes de Inverno",
+    "Ice Skating": "Patinação no Gelo"
+
 }
 
 STATIC_CHANNELS = [
@@ -154,7 +158,7 @@ STATIC_CHANNELS = [
         "logo": "https://upload.wikimedia.org/wikipedia/commons/0/03/GE_TV.png",
     },
     {
-        "id": "espnbrasilyt.br", "name": "ESPN Brasil", "platform": "youtube",
+        "id": "esbrasilyt.br", "name": "ESPN Brasil YouTube", "platform": "youtube",
         "url": "https://www.youtube.com/@espnbrasil/streams",
         "logo": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/espn-us.png?raw=true",
     },
@@ -222,6 +226,11 @@ STATIC_CHANNELS = [
         "id": "canaldofabricio.br", "name": "Canal do Fabrício", "platform": "youtube",
         "url": "https://www.youtube.com/@ocanaldofabricio/streams",
         "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsERCiMmfLUlKzMsTzY_vSABSXO_77HpOgkg&s",
+    },
+    {
+        "id": "canalcn.br", "name": "Canal CN", "platform": "youtube",
+        "url": "https://www.youtube.com/@CanalCNSL/streams",
+        "logo": "https://yt3.googleusercontent.com/DxIQ6cI1fqqj-LgHuHMGWLAUdyy2gB5EL1mojWhy1uACz-_xvuXv3SjUZZXcRADJ0MnrKfATqg=s160-c-k-c0x00ffffff-no-rj",
     },
     {
         "id": "caterinensefutsal.br", "name": "Catarinense Futsal", "platform": "youtube",
