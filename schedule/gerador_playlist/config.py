@@ -1,9 +1,9 @@
 # gerador_playlist/config.py
-
+import os
 from datetime import timedelta, timezone
 
 # --- Configuração do Gerador ---
-SCHEDULE_PAGE_URL = "http://raphaelfuchter.tplinkdns.com:3000/api/schedule/"
+SCHEDULE_PAGE_URL = os.getenv("API_URL") + "/api/schedule/"
 M3U8_OUTPUT_FILENAME = "schedule_playlist.m3u8"
 EPG_OUTPUT_FILENAME = "epg.xml"
 LOGO_CACHE_FILE = "logo_cache.json"
@@ -16,7 +16,7 @@ GITHUB_API_URL = "https://api.github.com/repos/tv-logo/tv-logos/contents/countri
 LOGO_CACHE_EXPIRATION_HOURS = 2
 DEFAULT_SPORT_ICON = "https://raw.githubusercontent.com/raphaelfuchter/DaddyLiveProxy/refs/heads/master/schedule/gerador_playlist/logos/sports.png"
 PLACEHOLDER_TEXT = "Offline"
-SERVER_IP = "raphaelfuchter.tplinkdns.com"
+SERVER_IP = "192.168.68.19"
 SERVER_PORT = 8007
 LOCAL_TZ = timezone(timedelta(hours=EPG_LOCAL_TIMEZONE_OFFSET_HOURS))
 
