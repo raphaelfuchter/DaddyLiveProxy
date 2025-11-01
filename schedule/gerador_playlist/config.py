@@ -3,7 +3,7 @@ import os
 from datetime import timedelta, timezone
 
 # --- Configuração do Gerador ---
-SCHEDULE_PAGE_URL = os.getenv("API_URL") + ":3000/api/schedule/"
+SCHEDULE_PAGE_URL = os.getenv("API_URL") + "/api/schedule/"
 M3U8_OUTPUT_FILENAME = "schedule_playlist.m3u8"
 EPG_OUTPUT_FILENAME = "epg.xml"
 LOGO_CACHE_FILE = "logo_cache.json"
